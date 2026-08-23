@@ -32,18 +32,11 @@ crawls:
     tags: [intents, docs, api]
 
   - protocol: near
-    slug: near-com
-    sitemap: https://near.com/sitemap.xml
-    include_prefixes: [https://near.com/]
-    max_pages: 500
-    tags: [near, frontend, product]
-
-  - protocol: near
-    slug: rhea
-    sitemap: https://www.rhea.finance/sitemap.xml
-    include_prefixes: [https://www.rhea.finance/]
+    slug: rhea-guide
+    sitemap: https://guide.rhea.finance/sitemap.xml
+    include_prefixes: [https://guide.rhea.finance/]
     max_pages: 300
-    tags: [rhea, intents, integration]
+    tags: [rhea, intents, integration, docs]
 
 # Direct targets are retained as safety-critical fallbacks even if a site's sitemap changes.
 targets:
@@ -88,10 +81,10 @@ targets:
     tags: [intents, api, sdk]
 
   - protocol: near
-    slug: rhea-home
-    url: https://www.rhea.finance/
-    tags: [rhea, intents, confidential-trading]
-
+    slug: rhea-app
+    url: https://x.rhea.finance/
+    tags: [rhea, intents, confidential-trading, frontend]
+    
 repositories:
   # HPL — product, risk, SDK and deployment-adjacent code.
   - protocol: hpl
