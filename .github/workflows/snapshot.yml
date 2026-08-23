@@ -40,7 +40,7 @@ jobs:
       - name: Commit only meaningful content changes
         shell: bash
         run: |
-          if git diff --quiet -- snapshots/; then
+          if [ -z "$(git status --porcelain -- snapshots/)" ]; then
             echo "No normalized documentation changes."
             exit 0
           fi
