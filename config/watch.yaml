@@ -79,11 +79,6 @@ targets:
     slug: intents-home
     url: https://docs.near-intents.org/
     tags: [intents, api, sdk]
-
-  - protocol: near
-    slug: rhea-app
-    url: https://x.rhea.finance/
-    tags: [rhea, intents, confidential-trading, frontend]
     
 repositories:
   # HPL — product, risk, SDK and deployment-adjacent code.
