@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "content_changed_at": "2026-08-23T17:02:42+00:00",
   "protocol": "near",
-  "sha256": "a42802dffbf806573b9ba662876b96d7fed9dfa084b3aa7b52fde191e807f2c9",
+  "sha256": "ba001aa26c812531476105b77bd48925231fed5d94729d2dc02899dc71743c1c",
   "slug": "api-reference__oneclick__request-a-swap-quote__1b9244492b",
   "tags": [
     "intents",

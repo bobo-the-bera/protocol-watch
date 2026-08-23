@@ -11,9 +11,15 @@ status
 Try it
 Check swap execution status
 cURL
-curl --request GET \
---url https://1click.chaindefuser.com/v0/status \
---header 'X-API-Key: <api-key>'
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/status
+\
+--header
+'X-API-Key: <api-key>'
 import requests
 url = "https://1click.chaindefuser.com/v0/status"
 headers = {"X-API-Key": "<api-key>"}
@@ -76,119 +82,345 @@ puts response.read_body
 200
 404
 {
-"correlationId": "550e8400-e29b-41d4-a716-446655440000",
-"quoteResponse": {
-"correlationId": "550e8400-e29b-41d4-a716-446655440000",
-"timestamp": "2019-08-24T14:15:22Z",
-"signature": "<string>",
-"quoteRequest": {
-"dry": true,
-"swapType": "EXACT_INPUT",
-"slippageTolerance": 100,
-"originAsset": "nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near",
-"depositType": "ORIGIN_CHAIN",
-"destinationAsset": "nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near",
-"amount": "1000",
-"refundTo": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
-"refundType": "ORIGIN_CHAIN",
-"recipient": "13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK",
-"recipientType": "DESTINATION_CHAIN",
-"deadline": "2019-08-24T14:15:22Z",
-"depositMode": "SIMPLE",
-"connectedWallets": [
-"0x123...",
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
+,
+"quoteResponse"
+: {
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
+,
+"timestamp"
+:
+"2019-08-24T14:15:22Z"
+,
+"signature"
+:
+"<string>"
+,
+"quoteRequest"
+: {
+"dry"
+:
+true
+,
+"swapType"
+:
+"EXACT_INPUT"
+,
+"slippageTolerance"
+:
+100
+,
+"originAsset"
+:
+"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"destinationAsset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"amount"
+:
+"1000"
+,
+"refundTo"
+:
+"0x2527D02599Ba641c19FEa793cD0F167589a0f10D"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"recipient"
+:
+"13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"deadline"
+:
+"2019-08-24T14:15:22Z"
+,
+"depositMode"
+:
+"SIMPLE"
+,
+"connectedWallets"
+: [
+"0x123..."
+,
 "0x456..."
 ],
-"sessionId": "session_abc123",
-"virtualChainRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"virtualChainRefundRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"customRecipientMsg": "smart-contract-recipient.near",
-"confidentiality": "basic",
-"referral": "ledger",
-"rebates": [
+"sessionId"
+:
+"session_abc123"
+,
+"virtualChainRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"virtualChainRefundRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"customRecipientMsg"
+:
+"smart-contract-recipient.near"
+,
+"confidentiality"
+:
+"basic"
+,
+"referral"
+:
+"ledger"
+,
+"rebates"
+: [
 {
-"recipient": "rebate-recipient.near",
-"share": 20
+"recipient"
+:
+"rebate-recipient.near"
+,
+"share"
+:
+20
 },
 {
-"recipient": "partner-2.near",
-"share": 80
+"recipient"
+:
+"partner-2.near"
+,
+"share"
+:
+80
 }
 ],
-"quoteWaitingTimeMs": 3000,
-"appFees": [
+"quoteWaitingTimeMs"
+:
+3000
+,
+"appFees"
+: [
 {
-"recipient": "recipient.near",
-"fee": 100
+"recipient"
+:
+"recipient.near"
+,
+"fee"
+:
+100
 }
 ],
-"insured": false
+"insured"
+:
+false
 },
-"quote": {
-"amountIn": "1000000",
-"amountInFormatted": "1",
-"amountInUsd": "1",
-"minAmountIn": "995000",
-"amountOut": "9950000",
-"amountOutFormatted": "9.95",
-"amountOutUsd": "9.95",
-"minAmountOut": "9900000",
-"timeEstimate": 120,
-"depositAddress": "0x76b4c56085ED136a8744D52bE956396624a730E8",
-"depositMemo": "1111111",
-"chainDepositAddresses": [
+"quote"
+: {
+"amountIn"
+:
+"1000000"
+,
+"amountInFormatted"
+:
+"1"
+,
+"amountInUsd"
+:
+"1"
+,
+"minAmountIn"
+:
+"995000"
+,
+"amountOut"
+:
+"9950000"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"minAmountOut"
+:
+"9900000"
+,
+"timeEstimate"
+:
+120
+,
+"depositAddress"
+:
+"0x76b4c56085ED136a8744D52bE956396624a730E8"
+,
+"depositMemo"
+:
+"1111111"
+,
+"chainDepositAddresses"
+: [
 {
-"blockchain": "eth",
-"address": "0x76b4c56085ED136a8744D52bE956396624a730E8",
-"memo": "1111111"
+"blockchain"
+:
+"eth"
+,
+"address"
+:
+"0x76b4c56085ED136a8744D52bE956396624a730E8"
+,
+"memo"
+:
+"1111111"
 }
 ],
-"deadline": "2025-03-04T15:00:00Z",
-"timeWhenInactive": "2025-03-04T15:00:00Z",
-"virtualChainRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"virtualChainRefundRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"customRecipientMsg": "smart-contract-recipient.near",
-"refundFee": "10000",
-"withdrawFee": "10000"
+"deadline"
+:
+"2025-03-04T15:00:00Z"
+,
+"timeWhenInactive"
+:
+"2025-03-04T15:00:00Z"
+,
+"virtualChainRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"virtualChainRefundRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"customRecipientMsg"
+:
+"smart-contract-recipient.near"
+,
+"refundFee"
+:
+"10000"
+,
+"withdrawFee"
+:
+"10000"
 }
 },
-"status": "KNOWN_DEPOSIT_TX",
-"updatedAt": "2023-11-07T05:31:56Z",
-"swapDetails": {
-"intentHashes": [
+"status"
+:
+"KNOWN_DEPOSIT_TX"
+,
+"updatedAt"
+:
+"2023-11-07T05:31:56Z"
+,
+"swapDetails"
+: {
+"intentHashes"
+: [
 "<string>"
 ],
-"nearTxHashes": [
+"nearTxHashes"
+: [
 "<string>"
 ],
-"originChainTxHashes": [
+"originChainTxHashes"
+: [
 {
-"hash": "0x123abc456def789",
-"explorerUrl": "<string>"
+"hash"
+:
+"0x123abc456def789"
+,
+"explorerUrl"
+:
+"<string>"
 }
 ],
-"destinationChainTxHashes": [
+"destinationChainTxHashes"
+: [
 {
-"hash": "0x123abc456def789",
-"explorerUrl": "<string>"
+"hash"
+:
+"0x123abc456def789"
+,
+"explorerUrl"
+:
+"<string>"
 }
 ],
-"amountIn": "1000",
-"amountInFormatted": "0.1",
-"amountInUsd": "0.1",
-"amountOut": "9950000",
-"amountOutFormatted": "9.95",
-"amountOutUsd": "9.95",
-"slippage": 50,
-"refundedAmount": "1000",
-"refundedAmountFormatted": "0.1",
-"refundedAmountUsd": "0.1",
-"refundReason": "PARTIAL_DEPOSIT",
-"depositedAmount": "<string>",
-"depositedAmountFormatted": "<string>",
-"depositedAmountUsd": "<string>",
-"withdrawFee": "10000",
-"referral": "referral"
+"amountIn"
+:
+"1000"
+,
+"amountInFormatted"
+:
+"0.1"
+,
+"amountInUsd"
+:
+"0.1"
+,
+"amountOut"
+:
+"9950000"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"slippage"
+:
+50
+,
+"refundedAmount"
+:
+"1000"
+,
+"refundedAmountFormatted"
+:
+"0.1"
+,
+"refundedAmountUsd"
+:
+"0.1"
+,
+"refundReason"
+:
+"PARTIAL_DEPOSIT"
+,
+"depositedAmount"
+:
+"<string>"
+,
+"depositedAmountFormatted"
+:
+"<string>"
+,
+"depositedAmountUsd"
+:
+"<string>"
+,
+"withdrawFee"
+:
+"10000"
+,
+"referral"
+:
+"referral"
 }
 {
 "message": "error message"
@@ -267,9 +499,15 @@ No
 I
 Check swap execution status
 cURL
-curl --request GET \
---url https://1click.chaindefuser.com/v0/status \
---header 'X-API-Key: <api-key>'
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/status
+\
+--header
+'X-API-Key: <api-key>'
 import requests
 url = "https://1click.chaindefuser.com/v0/status"
 headers = {"X-API-Key": "<api-key>"}
@@ -332,119 +570,345 @@ puts response.read_body
 200
 404
 {
-"correlationId": "550e8400-e29b-41d4-a716-446655440000",
-"quoteResponse": {
-"correlationId": "550e8400-e29b-41d4-a716-446655440000",
-"timestamp": "2019-08-24T14:15:22Z",
-"signature": "<string>",
-"quoteRequest": {
-"dry": true,
-"swapType": "EXACT_INPUT",
-"slippageTolerance": 100,
-"originAsset": "nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near",
-"depositType": "ORIGIN_CHAIN",
-"destinationAsset": "nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near",
-"amount": "1000",
-"refundTo": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
-"refundType": "ORIGIN_CHAIN",
-"recipient": "13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK",
-"recipientType": "DESTINATION_CHAIN",
-"deadline": "2019-08-24T14:15:22Z",
-"depositMode": "SIMPLE",
-"connectedWallets": [
-"0x123...",
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
+,
+"quoteResponse"
+: {
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
+,
+"timestamp"
+:
+"2019-08-24T14:15:22Z"
+,
+"signature"
+:
+"<string>"
+,
+"quoteRequest"
+: {
+"dry"
+:
+true
+,
+"swapType"
+:
+"EXACT_INPUT"
+,
+"slippageTolerance"
+:
+100
+,
+"originAsset"
+:
+"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"destinationAsset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"amount"
+:
+"1000"
+,
+"refundTo"
+:
+"0x2527D02599Ba641c19FEa793cD0F167589a0f10D"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"recipient"
+:
+"13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"deadline"
+:
+"2019-08-24T14:15:22Z"
+,
+"depositMode"
+:
+"SIMPLE"
+,
+"connectedWallets"
+: [
+"0x123..."
+,
 "0x456..."
 ],
-"sessionId": "session_abc123",
-"virtualChainRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"virtualChainRefundRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"customRecipientMsg": "smart-contract-recipient.near",
-"confidentiality": "basic",
-"referral": "ledger",
-"rebates": [
+"sessionId"
+:
+"session_abc123"
+,
+"virtualChainRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"virtualChainRefundRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"customRecipientMsg"
+:
+"smart-contract-recipient.near"
+,
+"confidentiality"
+:
+"basic"
+,
+"referral"
+:
+"ledger"
+,
+"rebates"
+: [
 {
-"recipient": "rebate-recipient.near",
-"share": 20
+"recipient"
+:
+"rebate-recipient.near"
+,
+"share"
+:
+20
 },
 {
-"recipient": "partner-2.near",
-"share": 80
+"recipient"
+:
+"partner-2.near"
+,
+"share"
+:
+80
 }
 ],
-"quoteWaitingTimeMs": 3000,
-"appFees": [
+"quoteWaitingTimeMs"
+:
+3000
+,
+"appFees"
+: [
 {
-"recipient": "recipient.near",
-"fee": 100
+"recipient"
+:
+"recipient.near"
+,
+"fee"
+:
+100
 }
 ],
-"insured": false
+"insured"
+:
+false
 },
-"quote": {
-"amountIn": "1000000",
-"amountInFormatted": "1",
-"amountInUsd": "1",
-"minAmountIn": "995000",
-"amountOut": "9950000",
-"amountOutFormatted": "9.95",
-"amountOutUsd": "9.95",
-"minAmountOut": "9900000",
-"timeEstimate": 120,
-"depositAddress": "0x76b4c56085ED136a8744D52bE956396624a730E8",
-"depositMemo": "1111111",
-"chainDepositAddresses": [
+"quote"
+: {
+"amountIn"
+:
+"1000000"
+,
+"amountInFormatted"
+:
+"1"
+,
+"amountInUsd"
+:
+"1"
+,
+"minAmountIn"
+:
+"995000"
+,
+"amountOut"
+:
+"9950000"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"minAmountOut"
+:
+"9900000"
+,
+"timeEstimate"
+:
+120
+,
+"depositAddress"
+:
+"0x76b4c56085ED136a8744D52bE956396624a730E8"
+,
+"depositMemo"
+:
+"1111111"
+,
+"chainDepositAddresses"
+: [
 {
-"blockchain": "eth",
-"address": "0x76b4c56085ED136a8744D52bE956396624a730E8",
-"memo": "1111111"
+"blockchain"
+:
+"eth"
+,
+"address"
+:
+"0x76b4c56085ED136a8744D52bE956396624a730E8"
+,
+"memo"
+:
+"1111111"
 }
 ],
-"deadline": "2025-03-04T15:00:00Z",
-"timeWhenInactive": "2025-03-04T15:00:00Z",
-"virtualChainRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"virtualChainRefundRecipient": "0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C",
-"customRecipientMsg": "smart-contract-recipient.near",
-"refundFee": "10000",
-"withdrawFee": "10000"
+"deadline"
+:
+"2025-03-04T15:00:00Z"
+,
+"timeWhenInactive"
+:
+"2025-03-04T15:00:00Z"
+,
+"virtualChainRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"virtualChainRefundRecipient"
+:
+"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
+,
+"customRecipientMsg"
+:
+"smart-contract-recipient.near"
+,
+"refundFee"
+:
+"10000"
+,
+"withdrawFee"
+:
+"10000"
 }
 },
-"status": "KNOWN_DEPOSIT_TX",
-"updatedAt": "2023-11-07T05:31:56Z",
-"swapDetails": {
-"intentHashes": [
+"status"
+:
+"KNOWN_DEPOSIT_TX"
+,
+"updatedAt"
+:
+"2023-11-07T05:31:56Z"
+,
+"swapDetails"
+: {
+"intentHashes"
+: [
 "<string>"
 ],
-"nearTxHashes": [
+"nearTxHashes"
+: [
 "<string>"
 ],
-"originChainTxHashes": [
+"originChainTxHashes"
+: [
 {
-"hash": "0x123abc456def789",
-"explorerUrl": "<string>"
+"hash"
+:
+"0x123abc456def789"
+,
+"explorerUrl"
+:
+"<string>"
 }
 ],
-"destinationChainTxHashes": [
+"destinationChainTxHashes"
+: [
 {
-"hash": "0x123abc456def789",
-"explorerUrl": "<string>"
+"hash"
+:
+"0x123abc456def789"
+,
+"explorerUrl"
+:
+"<string>"
 }
 ],
-"amountIn": "1000",
-"amountInFormatted": "0.1",
-"amountInUsd": "0.1",
-"amountOut": "9950000",
-"amountOutFormatted": "9.95",
-"amountOutUsd": "9.95",
-"slippage": 50,
-"refundedAmount": "1000",
-"refundedAmountFormatted": "0.1",
-"refundedAmountUsd": "0.1",
-"refundReason": "PARTIAL_DEPOSIT",
-"depositedAmount": "<string>",
-"depositedAmountFormatted": "<string>",
-"depositedAmountUsd": "<string>",
-"withdrawFee": "10000",
-"referral": "referral"
+"amountIn"
+:
+"1000"
+,
+"amountInFormatted"
+:
+"0.1"
+,
+"amountInUsd"
+:
+"0.1"
+,
+"amountOut"
+:
+"9950000"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"slippage"
+:
+50
+,
+"refundedAmount"
+:
+"1000"
+,
+"refundedAmountFormatted"
+:
+"0.1"
+,
+"refundedAmountUsd"
+:
+"0.1"
+,
+"refundReason"
+:
+"PARTIAL_DEPOSIT"
+,
+"depositedAmount"
+:
+"<string>"
+,
+"depositedAmountFormatted"
+:
+"<string>"
+,
+"depositedAmountUsd"
+:
+"<string>"
+,
+"withdrawFee"
+:
+"10000"
+,
+"referral"
+:
+"referral"
 }
 {
 "message": "error message"

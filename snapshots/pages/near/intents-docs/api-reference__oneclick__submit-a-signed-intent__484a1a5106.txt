@@ -11,11 +11,21 @@ submit-intent
 Try it
 Submit a signed intent
 cURL
-curl --request POST \
---url https://1click.chaindefuser.com/v0/submit-intent \
---header 'Content-Type: application/json' \
---header 'X-API-Key: <api-key>' \
---data '
+curl
+--request
+POST
+\
+--url
+https://1click.chaindefuser.com/v0/submit-intent
+\
+--header
+'Content-Type: application/json'
+\
+--header
+'X-API-Key: <api-key>'
+\
+--data
+'
 {
 "type": "swap_transfer",
 "signedData": {
@@ -147,8 +157,13 @@ puts response.read_body
 200
 400
 {
-"intentHash": "44XpLRAuZKoVGs9T4qbSNv33MDKMePPAibA52geVLWFw",
-"correlationId": "550e8400-e29b-41d4-a716-446655440000"
+"intentHash"
+:
+"44XpLRAuZKoVGs9T4qbSNv33MDKMePPAibA52geVLWFw"
+,
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
 }
 {
 "message": "error message"
@@ -216,11 +231,21 @@ No
 I
 Submit a signed intent
 cURL
-curl --request POST \
---url https://1click.chaindefuser.com/v0/submit-intent \
---header 'Content-Type: application/json' \
---header 'X-API-Key: <api-key>' \
---data '
+curl
+--request
+POST
+\
+--url
+https://1click.chaindefuser.com/v0/submit-intent
+\
+--header
+'Content-Type: application/json'
+\
+--header
+'X-API-Key: <api-key>'
+\
+--data
+'
 {
 "type": "swap_transfer",
 "signedData": {
@@ -352,8 +377,13 @@ puts response.read_body
 200
 400
 {
-"intentHash": "44XpLRAuZKoVGs9T4qbSNv33MDKMePPAibA52geVLWFw",
-"correlationId": "550e8400-e29b-41d4-a716-446655440000"
+"intentHash"
+:
+"44XpLRAuZKoVGs9T4qbSNv33MDKMePPAibA52geVLWFw"
+,
+"correlationId"
+:
+"550e8400-e29b-41d4-a716-446655440000"
 }
 {
 "message": "error message"

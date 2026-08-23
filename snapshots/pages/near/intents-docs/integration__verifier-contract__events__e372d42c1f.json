@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T15:57:19+00:00",
+  "content_changed_at": "2026-08-23T17:02:53+00:00",
   "protocol": "near",
-  "sha256": "4e123da1e8363bf546933dee30d18da0f0969b1aa16bd4f5b049cd9e79905115",
+  "sha256": "876fc7d4b33a8e1164a34540a340bfb9ac2024828cc23b2ac971fd3f40c57332",
   "slug": "integration__verifier-contract__events__e372d42c1f",
   "tags": [
     "intents",
