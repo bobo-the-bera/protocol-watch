@@ -3,7 +3,6 @@ name: Hourly protocol snapshots
 on:
   workflow_dispatch:
   schedule:
-    # Off the top of the hour to reduce GitHub Actions scheduling congestion.
     - cron: '17 * * * *'
 
 permissions:
@@ -17,6 +16,7 @@ jobs:
   snapshot:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Check out archive
         uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-            - name: Snapshot watched pages and repo heads
+      - name: Snapshot watched pages and repo heads
         id: collect
         continue-on-error: true
         env:
