@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:50+00:00",
+  "content_changed_at": "2026-08-23T12:18:54+00:00",
   "protocol": "hpl",
-  "sha256": "55ae419b11e4897a67b710a981a2d193ecbde490ee268a53f6fef7083b4200ca",
+  "sha256": "3a85f82a61490a0fa5098476fa962b2732ec3d98242e4b39b7ba10601ae42217",
   "slug": "hyperliquid-docs__hyperliquid-improvement-proposals-hips__hip-3-builder-deployed-perpetuals__891bb7ea27",
   "tags": [
     "hyperliquid",

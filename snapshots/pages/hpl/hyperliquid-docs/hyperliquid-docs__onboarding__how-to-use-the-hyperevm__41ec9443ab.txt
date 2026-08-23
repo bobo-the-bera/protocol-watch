@@ -76,7 +76,7 @@ How to start trading
 Next
 How to stake HYPE
 Last updated
-5 days ago
+6 days ago
 [[LINK TARGETS]]
 LINK | How do I bridge assets to the HyperEVM from another chain? | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-bridge-assets-to-the-hyperevm-from-another-chain
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm.md

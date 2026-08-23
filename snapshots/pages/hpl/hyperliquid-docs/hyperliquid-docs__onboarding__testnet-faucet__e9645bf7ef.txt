@@ -15,7 +15,7 @@ Export your email wallet
 Next
 HyperCore
 Last updated
-5 days ago
+6 days ago
 [[LINK TARGETS]]
 LINK | Export your email wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/testnet-faucet.md

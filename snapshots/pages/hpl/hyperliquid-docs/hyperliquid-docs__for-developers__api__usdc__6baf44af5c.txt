@@ -315,7 +315,7 @@ Priority fees
 Next
 Deploying HIP-1 and HIP-2 assets
 Last updated
-16 days ago
+15 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/usdc.md
 LINK | Next Deploying HIP-1 and HIP-2 assets | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/deploying-hip-1-and-hip-2-assets

@@ -35,7 +35,7 @@ Order book
 Next
 Take profit and stop loss orders (TP/SL)
 Last updated
-21 days ago
+22 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types.md
 LINK | Next Take profit and stop loss orders (TP/SL) | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl

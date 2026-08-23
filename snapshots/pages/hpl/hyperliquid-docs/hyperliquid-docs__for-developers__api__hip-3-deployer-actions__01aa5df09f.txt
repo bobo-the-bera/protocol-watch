@@ -279,7 +279,7 @@ Deploying HIP-1 and HIP-2 assets
 Next
 HIP-4 deployer actions
 Last updated
-17 days ago
+18 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions.md
 LINK | Next HIP-4 deployer actions | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-4-deployer-actions

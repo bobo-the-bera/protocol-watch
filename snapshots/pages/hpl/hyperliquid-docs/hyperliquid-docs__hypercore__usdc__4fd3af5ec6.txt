@@ -17,7 +17,7 @@ Overview
 Next
 API servers
 Last updated
-16 days ago
+15 days ago
 [[LINK TARGETS]]
 LINK | Audits | https://hyperliquid.gitbook.io/hyperliquid-docs/audits
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/usdc.md

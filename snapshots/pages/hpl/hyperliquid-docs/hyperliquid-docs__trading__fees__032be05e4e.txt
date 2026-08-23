@@ -364,7 +364,7 @@ Trading
 Next
 Sub-accounts
 Last updated
-3 days ago
+4 days ago
 [[LINK TARGETS]]
 LINK | Aligned quote assets | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets
 LINK | HIP-3 deployer actions | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions

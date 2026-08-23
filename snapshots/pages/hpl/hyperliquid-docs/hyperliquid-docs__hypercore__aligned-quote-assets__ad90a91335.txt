@@ -44,7 +44,7 @@ Permissionless spot quote assets
 Next
 HyperEVM
 Last updated
-6 days ago
+5 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets.md
 LINK | Next HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm

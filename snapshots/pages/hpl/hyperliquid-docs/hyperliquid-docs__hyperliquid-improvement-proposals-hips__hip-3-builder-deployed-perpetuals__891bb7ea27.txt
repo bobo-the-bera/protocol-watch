@@ -54,7 +54,7 @@ HIP-2: Hyperliquidity
 Next
 HIP-4: Outcome markets
 Last updated
-17 days ago
+18 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals.md
 LINK | Next HIP-4: Outcome markets | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-4-outcome-markets

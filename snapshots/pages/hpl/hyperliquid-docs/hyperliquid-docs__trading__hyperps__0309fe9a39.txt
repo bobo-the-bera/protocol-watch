@@ -31,7 +31,7 @@ Self-trade prevention
 Next
 Delisting
 Last updated
-5 days ago
+6 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps.md
 LINK | Next Delisting | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting

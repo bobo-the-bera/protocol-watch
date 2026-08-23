@@ -317,7 +317,7 @@ HIP-3 deployer actions
 Next
 HyperEVM
 Last updated
-10 days ago
+9 days ago
 [[LINK TARGETS]]
 LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-4-deployer-actions.md
 LINK | Next HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm
