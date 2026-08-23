@@ -1,0 +1,363 @@
+--- near/intents-docs/api-reference__oneclick__get-supported-tokens__0c5931970c:previous
++++ near/intents-docs/api-reference__oneclick__get-supported-tokens__0c5931970c:current
+@@ -0,0 +1,360 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++GET
++/
++v0
++/
++tokens
++Try it
++Get supported tokens
++cURL
++curl
++--request
++GET
++\
++--url
++https://1click.chaindefuser.com/v0/tokens
++import requests
++url = "https://1click.chaindefuser.com/v0/tokens"
++response = requests.get(url)
++print(response.text)
++const options = {method: 'GET'};
++fetch('https://1click.chaindefuser.com/v0/tokens', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/tokens",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "GET",
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/tokens"
++req, _ := http.NewRequest("GET", url, nil)
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/tokens")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/tokens")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Get.new(url)
++response = http.request(request)
++puts response.read_body
++200
++[
++{
++"assetId"
++:
++"nep141:wrap.near"
++,
++"decimals"
++:
++24
++,
++"blockchain"
++:
++"near"
++,
++"symbol"
++:
++"wNEAR"
++,
++"price"
++:
++"2.79"
++,
++"priceUpdatedAt"
++:
++"2025-03-28T12:23:00.070Z"
++,
++"contractAddress"
++:
++"wrap.near"
++,
++"coingeckoId"
++:
++"wrapped-near"
++}
++]
++Query Parameters
++​
++ondoTokens
++string
++Show Ondo tokens if the query is set
++Response
++200 - application/json
++​
++assetId
++string
++required
++Unique asset identifier
++Example
++:
++"nep141:wrap.near"
++​
++decimals
++number
++required
++Number of decimals for the token
++Example
++:
++24
++​
++blockchain
++enum<string>
++required
++Blockchain associated with the token
++Available options
++:
++near
++,
++eth
++,
++base
++,
++arb
++,
++btc
++,
++sol
++,
++ton
++,
++dash
++,
++doge
++,
++xrp
++,
++zec
++,
++gnosis
++,
++bera
++,
++bsc
++,
++pol
++,
++tron
++,
++sui
++,
++movement
++,
++op
++,
++avax
++,
++stellar
++,
++aptos
++,
++cardano
++,
++ltc
++,
++xlayer
++,
++monad
++,
++bch
++,
++adi
++,
++plasma
++,
++scroll
++,
++starknet
++,
++aleo
++,
++hypercore
++,
++fogo
++Example
++:
++"near"
++​
++symbol
++string
++required
++Token symbol (e.g. BTC, ETH)
++Example
++:
++"wNEAR"
++​
++price
++number
++required
++Current price of the token in USD
++Example
++:
++"2.79"
++​
++priceUpdatedAt
++string<date-time>
++required
++Date when the token price was last updated
++Example
++:
++"2025-03-28T12:23:00.070Z"
++​
++contractAddress
++string
++Contract address of the token
++Example
++:
++"wrap.near"
++​
++coingeckoId
++string
++CoinGecko coin id, when known. Use it to fetch price history from CoinGecko.
++Example
++:
++"wrapped-near"
++Yes
++No
++⌘
++I
++Get supported tokens
++cURL
++curl
++--request
++GET
++\
++--url
++https://1click.chaindefuser.com/v0/tokens
++import requests
++url = "https://1click.chaindefuser.com/v0/tokens"
++response = requests.get(url)
++print(response.text)
++const options = {method: 'GET'};
++fetch('https://1click.chaindefuser.com/v0/tokens', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/tokens",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "GET",
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/tokens"
++req, _ := http.NewRequest("GET", url, nil)
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/tokens")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/tokens")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Get.new(url)
++response = http.request(request)
++puts response.read_body
++200
++[
++{
++"assetId"
++:
++"nep141:wrap.near"
++,
++"decimals"
++:
++24
++,
++"blockchain"
++:
++"near"
++,
++"symbol"
++:
++"wNEAR"
++,
++"price"
++:
++"2.79"
++,
++"priceUpdatedAt"
++:
++"2025-03-28T12:23:00.070Z"
++,
++"contractAddress"
++:
++"wrap.near"
++,
++"coingeckoId"
++:
++"wrapped-near"
++}
++]
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#parameter-ondo-tokens
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-asset-id
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-blockchain
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-coingecko-id
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-contract-address
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-decimals
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-price
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-price-updated-at
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens#response-items-symbol

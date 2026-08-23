@@ -1,0 +1,13 @@
+{
+  "committed_at": "2024-10-23T17:15:05Z",
+  "html_url": "https://github.com/near/chainsig-lib/commit/ae1d3f261859eb09069fa5bf284ebd26c0dccab9",
+  "message": "update readme, deprecation notice",
+  "protocol": "near",
+  "repo": "near/chainsig-lib",
+  "sha": "ae1d3f261859eb09069fa5bf284ebd26c0dccab9",
+  "slug": "chainsig-lib",
+  "tags": [
+    "chain-signatures",
+    "signing"
+  ]
+}

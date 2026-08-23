@@ -1,0 +1,48 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__foundation-non-validating-node-for-infra-providers__360cd003d1:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__foundation-non-validating-node-for-infra-providers__360cd003d1:current
+@@ -0,0 +1,45 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Builders should be able to connect to any of the infrastructure providers' peering services below. They have committed to offer high-quality peering services to the public for a reasonable price. If any of the peering services listed below do not meet this committment, please notify the Foundation team via email (bugbounty [at] hyperfoundation [dot] org).
++Available peers for builders to connect to
++Allium -
++https://docs.allium.so/nodes/hyperliquid-sentry-peer
++Dwellir -
++https://www.dwellir.com/docs/hyperliquid/peering
++Hydromancer -
++https://docs.hydromancer.xyz/peering
++Hyperdash -
++https://docs.hyperdash.com/data/direct-sentry-peering
++Quicknode -
++https://www.quicknode.com/hyperliquid-peering
++Eligibility
++To further reduce the barrier to entry for obtaining high-quality onchain data, the Foundation non-validating node is open to high-quality infrastructure providers as a reliable peer.
++Reputable infrastructure provider with track record of excellent SLAs, used by a diverse set of builders. Criteria for consideration include: minimum operating history of 1 year as an infrastructure provider, with a minimum of 100 clients operated across 5 distinct networks/protocols, and no history of a peering or service agreement terminated for cause by another network or foundation in the preceding 3 months.
++Uptime of 99.9%.
++Open access with non-discriminatory pricing. The current benchmark price is less than $1k/month, which covers compute and egress costs.
++Auto-scaling with number of peers connected to the service.
++No preferential treatment of specific clients (e.g., market makers).
++Apply
++If you are eligible, you may fill out the
++form
++.
++Previous
++Foundation non-validating node
++Last updated
++3 days ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers.md
++LINK | Previous Foundation non-validating node | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers#apply
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers#available-peers-for-builders-to-connect-to
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers#eligibility
++LINK | form | https://forms.gle/pqht3DFBg5ycSpAb7
++LINK | https://docs.allium.so/nodes/hyperliquid-sentry-peer | https://docs.allium.so/nodes/hyperliquid-sentry-peer
++LINK | https://docs.hydromancer.xyz/peering | https://docs.hydromancer.xyz/peering
++LINK | https://docs.hyperdash.com/data/direct-sentry-peering | https://docs.hyperdash.com/data/direct-sentry-peering
++LINK | https://www.dwellir.com/docs/hyperliquid/peering | https://www.dwellir.com/docs/hyperliquid/peering
++LINK | https://www.quicknode.com/hyperliquid-peering | https://www.quicknode.com/hyperliquid-peering
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

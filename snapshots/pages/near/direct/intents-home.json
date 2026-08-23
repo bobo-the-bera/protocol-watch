@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:14:08+00:00",
+  "protocol": "near",
+  "sha256": "993030435675c72628fa2a34e89871c3ea4d66a5bd6fb13e3a5c5edd86aa02e4",
+  "slug": "intents-home",
+  "tags": [
+    "intents",
+    "api",
+    "sdk"
+  ],
+  "url": "https://docs.near-intents.org/"
+}

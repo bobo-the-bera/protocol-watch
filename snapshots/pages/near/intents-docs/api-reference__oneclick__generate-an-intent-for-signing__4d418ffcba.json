@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "protocol": "near",
+  "sha256": "5d6b9cbfa8fb8217330e02c3d01d6f14a197dd7499cdefcdf20fd1a6233c0dcb",
+  "slug": "api-reference__oneclick__generate-an-intent-for-signing__4d418ffcba",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/generate-an-intent-for-signing"
+}

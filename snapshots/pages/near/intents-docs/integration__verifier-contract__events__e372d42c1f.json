@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:27+00:00",
+  "protocol": "near",
+  "sha256": "7b5eb2dd8a8d4d46848c0747406f5c3adfba25f90ec3d0faefd7e24260dbeaed",
+  "slug": "integration__verifier-contract__events__e372d42c1f",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/verifier-contract/events"
+}

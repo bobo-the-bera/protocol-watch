@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:20+00:00",
+  "protocol": "near",
+  "sha256": "e3aad1da7cf6d3e9c70eed33330b2df512b6c782d4c49b7f93508b841517dddd",
+  "slug": "api-reference__oneclick__submit-deposit-transaction-hash__00be084916",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash"
+}

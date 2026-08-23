@@ -1,0 +1,191 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+The
+NEAR Intents SDK
+provides tools for intent execution, deposits, withdrawals, and interacting with various bridge implementations across multiple blockchains.
+For a higher-level API focused on cross-chain swaps, check out the
+1Click Swap API
+and its SDK libraries for TypeScript, Go, and Rust.
+Feature Status
+Feature
+Status
+Description
+Intent Execution
+✅
+Sign, submit, and track intent execution on NEAR Intents
+Deposits
+❌
+Deposit funds to NEAR Intents (use bridge interfaces directly)
+Withdrawals
+✅
+Complete withdrawal functionality from NEAR Intents to external chains
+The Intents SDK provides low-level functionality for interacting with NEAR Intents, check out the
+1Click Swap API
+for a higher-level API focused on cross-chain swaps
+​
+Using the SDK
+1
+Install the SDK
+npm
+install
+@defuse-protocol/intents-sdk
+--save-exact
+2
+Initialize the SDK
+import
+{
+IntentsSDK
+,
+createIntentSignerNearKeyPair
+}
+from
+'@defuse-protocol/intents-sdk'
+;
+import
+{
+KeyPair
+}
+from
+'near-api-js'
+;
+const
+sdk
+=
+new
+IntentsSDK
+({
+referral:
+'your-referral-code'
+,
+intentSigner:
+createIntentSignerNearKeyPair
+({
+signer:
+KeyPair
+.
+fromString
+(
+'your-private-key'
+),
+accountId:
+'your-account.near'
+,
+}),
+});
+3
+Process a withdrawal
+The most common use case — withdraw funds from NEAR Intents to an external chain:
+const
+result
+=
+await
+sdk
+.
+processWithdrawal
+({
+withdrawalParams:
+{
+assetId:
+'nep141:usdt.tether-token.near'
+,
+amount:
+1000000
+n
+,
+// 1 USDT (6 decimals)
+destinationAddress:
+'0x742d35Cc6634C0532925a3b8D84B2021F90a51A3'
+,
+feeInclusive:
+false
+,
+},
+});
+console
+.
+log
+(
+'Intent hash:'
+,
+result
+.
+intentHash
+);
+console
+.
+log
+(
+'Destination tx:'
+,
+result
+.
+destinationTx
+);
+4
+Or execute a custom intent
+For advanced use cases beyond withdrawals, use the lower-level
+signAndSendIntent
+method:
+const
+result
+=
+await
+sdk
+.
+signAndSendIntent
+({
+intents:
+[
+{
+intent:
+'transfer'
+,
+receiver_id:
+'recipient.near'
+,
+tokens:
+{
+'usdt.tether-token.near'
+:
+'1000000'
+},
+],
+});
+console
+.
+log
+(
+'Intent hash:'
+,
+result
+.
+intentHash
+);
+Use
+processWithdrawal
+for withdrawals and
+signAndSendIntent
+for custom intent logic. The withdrawal method handles fee estimation, validation, and completion tracking automatically.
+​
+Next steps
+Explore the
+Github Repository
+for the Intents SDK to learn about asset identifiers, intent signers, withdrawals, withdrawal routes, and intent management.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | 1Click Swap API | https://docs.near-intents.org/integration/distribution-channels/1click-api/about-1click-api
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Github Repository | https://github.com/defuse-protocol/sdk-monorepo/tree/main/packages/intents-sdk
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | NEAR Intents SDK | https://github.com/defuse-protocol/sdk-monorepo/tree/main/packages/intents-sdk
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/integration/devkit/intents-sdk#next-steps
+LINK | ​ | https://docs.near-intents.org/integration/devkit/intents-sdk#using-the-sdk

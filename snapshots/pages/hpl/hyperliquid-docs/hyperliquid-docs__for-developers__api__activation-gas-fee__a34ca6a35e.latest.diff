@@ -1,0 +1,21 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__activation-gas-fee__a34ca6a35e:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__activation-gas-fee__a34ca6a35e:current
+@@ -0,0 +1,18 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++New HyperCore accounts require 1 quote token (e.g., 1 USDC, 1 USDT) of fees for the first transaction which has the new account as destination address. This applies regardless of the asset being transfered to the new account.
++Unactivated accounts cannot send CoreWriter actions. Contract deployers who do not want this one-time behavior could manually send an activation transaction to the EVM contract address on HyperCore.
++Previous
++Rate limits and user limits
++Next
++Optimizing latency
++Last updated
++2 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/activation-gas-fee.md
++LINK | Next Optimizing latency | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/optimizing-latency
++LINK | Previous Rate limits and user limits | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

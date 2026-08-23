@@ -1,0 +1,31 @@
+--- near/rhea-guide/x-chain-guides__lending-and-borrowing__apy__32e38d0106:previous
++++ near/rhea-guide/x-chain-guides__lending-and-borrowing__apy__32e38d0106:current
+@@ -0,0 +1,28 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Introduction
++Annual Percentage Yield (APY) is the compounding interest on a deposit or a loan after a year, calculated based on the initial principal. Each asset has its own market of supply and demand with its own APY that evolves with time. You may find more details about Burrow's interest rate model
++here
++Supply APY
++Supply APY is the current interest APY of the asset when you supply. Each asset has a different set of parameters that determines its actual yield at different points. You may find more details about the interest rate model
++here
++.
++When you supply, you may get liquidity mining rewards like BRRR, USN, or other tokens. As a result, the actual supply APY may be higher.
++Borrow APY
++Borrow APY is the current interest APY of the asset when you borrow. Each asset has a different set of parameters that determines its actual yield at different points. You may find more details about the interest rate model
++here
++.
++When you borrow, you may get liquidity mining rewards. As a result, the actual borrow APY may be lower.
++Last updated
++10 months ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Markdown | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/apy.md
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/apy#borrow-apy
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/apy#introduction
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/apy#supply-apy
++LINK | here | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model
++LINK | llms.txt | https://guide.rhea.finance/llms.txt

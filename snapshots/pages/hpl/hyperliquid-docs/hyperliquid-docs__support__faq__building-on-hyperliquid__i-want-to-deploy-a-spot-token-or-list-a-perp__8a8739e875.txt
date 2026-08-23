@@ -1,0 +1,26 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Spot deployment
+Spot deployments are permissionless
+https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-1-native-token-standard
+Perpetuals listings
+Perps listings are based on community request and organic demand:
+https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals
+Previous
+I have API related questions
+Next
+I got scammed/hacked
+Last updated
+1 year ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-want-to-deploy-a-spot-token-or-list-a-perp.md
+LINK | Next I got scammed/hacked | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/i-got-scammed-hacked
+LINK | Previous I have API related questions | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-have-api-related-questions
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-want-to-deploy-a-spot-token-or-list-a-perp#perpetuals-listings
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-want-to-deploy-a-spot-token-or-list-a-perp#spot-deployment
+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-1-native-token-standard | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-1-native-token-standard
+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-3-builder-deployed-perpetuals
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

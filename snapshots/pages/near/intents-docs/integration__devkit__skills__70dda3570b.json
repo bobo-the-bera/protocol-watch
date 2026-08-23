@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:21+00:00",
+  "protocol": "near",
+  "sha256": "1e2f4af7be9e0adc59712c9b8da86968940501e1279c2c0efcd890f9a54897b4",
+  "slug": "integration__devkit__skills__70dda3570b",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/devkit/skills"
+}

@@ -1,0 +1,45 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__trading__hyperps__0309fe9a39:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__trading__hyperps__0309fe9a39:current
+@@ -0,0 +1,42 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++High level summary
++Hyperps
++(Hyperliquid-only perps) trade like vanilla perpetual contracts, but do not require an underlying spot or index oracle price. Instead, the funding rate is determined relative to a moving average hyperp mark price in place of the usual spot price. This makes the hyperp price more stable and less susceptible to manipulation, unlike usual pre-launch futures.
++This new derivative design does not require an underlying asset or index that exists at all points of the hyperp's lifetime, only that the underlying asset or index eventually exists for settlement or conversion.
++When trading hyperps, funding rates are very important to consider. If there is heavy price momentum in one direction, funding will heavily incentivize positions in the opposite direction for the next eight hours. As always, be sure to understand the contract before trading.
++Conversion to vanilla perps
++For a hyperp tracking ABC, shortly after when ABC/USDT is listed on Binance, OKX, or Bybit spot trading, ABC-USD will convert to a normal ABC-USD perp.
++Hyperp mechanism details
++Hyperps work just like normal perpetual contracts, except the external spot/index oracle price is replaced with an 8 hour exponentially weighted moving average of the last day's minutely mark prices.
++Precisely,
++oracle_price(t) = min[sum_{i=0}^1439 [(t - i minutes < t_list ? initial_mark_price : mark_price(t - i minutes)) * exp(-i/480)] * (1 - exp(-1/480)) / (1 - exp(-3)), intial_mark_price * 4]
++Here
++a ? b : c
++evaluates to
++b
++if
++a
++is true and otherwise
++c.
++Samples are taken on the first block after each unix minute, but the timestamps used are the nearest exact minute multiples. When there are fewer than 480 mark price samples, the initial mark price is used as the padding value.
++Funding rate premium samples are computed as 1% of the usual clamped interest rate and premium formula. See Funding docs for more details.
++The mark price of Hyperps incorporate the weighted median of pre-launch perp prices from CEXs as a component in the usual mark price formula. Despite the often significantly different contract specifications between hyperps and other venues' pre-launch perp markets, they are nonetheless included as mark price inputs to provide greater mark price stability during volatility.
++The mark price of hyperps are capped at 3x the 8-hour mark price EMA. Hyperps with external prelaunch perp listings have mark price capped to 1.5x the median external perp price (the third component of the mark price). The oracle price is also restricted to be at most 4 times the one month average mark price as an additional safeguard against manipulation.
++Previous
++Self-trade prevention
++Next
++Delisting
++Last updated
++5 days ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps.md
++LINK | Next Delisting | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting
++LINK | Previous Self-trade prevention | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps#conversion-to-vanilla-perps
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps#high-level-summary
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps#hyperp-mechanism-details
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

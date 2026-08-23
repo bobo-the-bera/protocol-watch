@@ -1,0 +1,219 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+This guide covers the partner-facing flow for pulling active Shield incidents and submitting new incidents. It does not cover admin-only incident operations. For the concepts and security model behind incidents, see
+Proactive Intents Security
+.
+For non-programmatic viewing and submitting incidents, use
+https://partners.near-intents.org/shield/console
+.
+Incidents endpoint:
+https://shield.chaindefuser.com/incident
+Get a JWT token at
+https://partners.near-intents.org/api-keys
+by requesting
+key_type: SHIELD
+.
+To submit incidents, contact Intents Support so support can grant the required incident permissions.
+All requests use:
+Authorization
+:
+Bearer <PARTNER_TOKEN>
+Accept
+:
+application/json
+​
+Pull active incidents
+Use
+GET https://shield.chaindefuser.com/incident
+to check whether Shield currently has active incidents.
+curl
+-sS
+"https://shield.chaindefuser.com/incident"
+\
+-H
+"Authorization: Bearer
+$PARTNER_TOKEN
+"
+\
+-H
+"Accept: application/json"
+When there are no active incidents, Shield returns:
+{
+"status"
+:
+"operational"
+}
+When incidents are active, Shield returns:
+{
+"status"
+:
+"incidents"
+,
+"incidents"
+: [
+{
+"scopeType"
+:
+"chain"
+,
+"scopeValue"
+:
+"eth"
+,
+"direction"
+:
+"withdraw"
+,
+"publicDescription"
+:
+"ETH withdrawals are delayed"
+}
+]
+}
+Partners with the
+status_read
+grant receive the full internal incident record, including
+id
+,
+status
+,
+description
+,
+createdBy
+,
+metadata
+, and timestamps.
+​
+Submit an incident
+Use
+POST https://shield.chaindefuser.com/incident
+to open a scoped incident. A matching active incident blocks Shield evaluation for that scope and direction.
+curl
+-sS
+-X
+POST
+"https://shield.chaindefuser.com/incident"
+\
+-H
+"Authorization: Bearer
+$PARTNER_TOKEN
+"
+\
+-H
+"Content-Type: application/json"
+\
+-d
+'{
+"scopeType": "chain",
+"scopeValue": "eth",
+"direction": "withdraw",
+"description": "ETH withdrawals are temporarily unavailable"
+}'
+Successful response:
+{
+"incident"
+: {
+"id"
+:
+"<id>"
+,
+"status"
+:
+"active"
+,
+"scopeType"
+:
+"chain"
+,
+"scopeValue"
+:
+"eth"
+,
+"direction"
+:
+"withdraw"
+,
+"description"
+:
+"ETH withdrawals are temporarily unavailable"
+,
+"publicDescription"
+:
+null
+,
+"createdBy"
+:
+"partner-id"
+,
+"resolvedBy"
+:
+null
+,
+"metadata"
+:
+null
+,
+"createdAt"
+:
+"2026-06-29T08:00:00.000Z"
+,
+"updatedAt"
+:
+"2026-06-29T08:00:00.000Z"
+,
+"resolvedAt"
+:
+null
+}
+​
+Incident scope
+Field
+Required
+Values
+Notes
+scopeType
+Yes
+chain
+,
+bridge
+,
+token
+,
+address
+What kind of surface is affected
+scopeValue
+Yes
+Scope-specific string
+Examples:
+eth
+,
+poa
+,
+nep141:<contract>
+, or an address
+description
+No
+String
+Incident context
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | GET https://shield.chaindefuser.com/incident | https://shield.chaindefuser.com/incident
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | POST https://shield.chaindefuser.com/incident | https://shield.chaindefuser.com/incident
+LINK | Proactive Intents Security | https://docs.near-intents.org/security-compliance/proactive-intents-security
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | https://partners.near-intents.org/api-keys | https://partners.near-intents.org/api-keys
+LINK | https://partners.near-intents.org/shield/console | https://partners.near-intents.org/shield/console
+LINK | https://shield.chaindefuser.com/incident | https://shield.chaindefuser.com/incident
+LINK | ​ | https://docs.near-intents.org/security-compliance/shield-incident-api#incident-scope
+LINK | ​ | https://docs.near-intents.org/security-compliance/shield-incident-api#pull-active-incidents
+LINK | ​ | https://docs.near-intents.org/security-compliance/shield-incident-api#submit-an-incident

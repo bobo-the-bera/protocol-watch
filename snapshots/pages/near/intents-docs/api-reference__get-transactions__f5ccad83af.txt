@@ -1,0 +1,1065 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+GET
+/
+api
+/
+v0
+/
+transactions
+Try it
+Get transactions
+cURL
+curl
+--request
+GET
+\
+--url
+https://api.example.com/api/v0/transactions
+\
+--header
+'Authorization: Bearer <token>'
+import requests
+url = "https://api.example.com/api/v0/transactions"
+headers = {"Authorization": "Bearer <token>"}
+response = requests.get(url, headers=headers)
+print(response.text)
+const options = {method: 'GET', headers: {Authorization: 'Bearer <token>'}};
+fetch('https://api.example.com/api/v0/transactions', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://api.example.com/api/v0/transactions",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+CURLOPT_HTTPHEADER => [
+"Authorization: Bearer <token>"
+],
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://api.example.com/api/v0/transactions"
+req, _ := http.NewRequest("GET", url, nil)
+req.Header.Add("Authorization", "Bearer <token>")
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://api.example.com/api/v0/transactions")
+.header("Authorization", "Bearer <token>")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://api.example.com/api/v0/transactions")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Bearer <token>'
+response = http.request(request)
+puts response.read_body
+200
+400
+401
+429
+[
+{
+"originAsset"
+:
+"nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near"
+,
+"destinationAsset"
+:
+"nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+,
+"depositAddress"
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK"
+,
+"depositMemo"
+:
+"12345"
+,
+"depositAddressAndMemo"
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK_12345"
+,
+"recipient"
+:
+"somebody.near"
+,
+"status"
+:
+"SUCCESS"
+,
+"createdAt"
+:
+"2025-12-31T12:00:00.000Z"
+,
+"createdAtTimestamp"
+:
+1767182400
+,
+"intentHashes"
+:
+"GnGk38hvi92tTWDYMMS8CWYnVT4fixmfBrnqSErCDMTu"
+,
+"referral"
+:
+"some-referral"
+,
+"amountInFormatted"
+:
+"22.130108"
+,
+"amountOutFormatted"
+:
+"22.113697"
+,
+"appFees"
+: [
+{
+"fee"
+:
+50
+,
+"recipient"
+:
+"some.near"
+},
+{
+"fee"
+:
+5
+,
+"recipient"
+:
+"somebody.near"
+}
+],
+"nearTxHashes"
+: [
+"6XqqDwoaopgg39QsEiFGs9HfwP2Vum9tCCyqHDYXWBBH"
+,
+"EVcgKukwf38XsYcgvkEgiMPWR7qwLfLK5rsVtjgctPBn"
+],
+"originChainTxHashes"
+: [
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+],
+"destinationChainTxHashes"
+: [
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+],
+"amountIn"
+:
+"22130108"
+,
+"amountInUsd"
+:
+"22.1272"
+,
+"amountOut"
+:
+"22113697"
+,
+"amountOutUsd"
+:
+"22.1108"
+,
+"refundTo"
+:
+"somebody.near"
+,
+"senders"
+: [
+"0x1234567890abcdef1234567890abcdef12345678"
+],
+"refundFeeFormatted"
+:
+"0.001"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"refundReason"
+:
+"AMOUNT_MORE_THAN_BALANCE"
+,
+"refundFee"
+:
+"1000"
+}
+]
+{
+"status": 400,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+{
+"status": 400,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+{
+"status": 429,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+Authorizations
+​
+Authorization
+string
+header
+required
+JWT token for API authentication.
+Query Parameters
+​
+numberOfTransactions
+number
+The number of transactions to return. Default: 50. Max: 1000. Min: 1.
+Required range
+:
+1 <= x <= 1000
+​
+lastDepositAddressAndMemo
+string
+DEPRECATED: Use lastDepositAddress and lastDepositMemo instead. Combined deposit address and memo value for pagination.
+​
+lastDepositAddress
+string
+Last known deposit address for pagination. Use the depositAddress from the last transaction of the previous page.
+​
+lastDepositMemo
+string
+Last known deposit memo for pagination. Use the depositMemo from the last transaction of the previous page.
+​
+direction
+enum<string>
+Direction of pagination.
+next
+- get older transactions,
+prev
+- get newer transactions. Default:
+next
+.
+Available options
+:
+next
+,
+prev
+​
+search
+string
+Search by deposit address, recipient, sender, or tx hash.
+​
+fromChainId
+enum<string>
+enum<string>[]
+enum<string>
+enum<string>[]
+Filter by origin chain IDs. Repeat the parameter to pass multiple ids (matched as OR). Swap-specific: setting this excludes masking transactions.
+Available options
+:
+near
+,
+eth
+,
+base
+,
+arb
+,
+btc
+,
+sol
+,
+ton
+,
+doge
+,
+xrp
+,
+zec
+,
+gnosis
+,
+bera
+,
+bsc
+,
+pol
+,
+tron
+,
+sui
+,
+op
+,
+avax
+,
+cardano
+,
+stellar
+,
+aptos
+,
+ltc
+,
+monad
+,
+xlayer
+,
+starknet
+,
+bch
+,
+adi
+,
+plasma
+,
+scroll
+,
+aleo
+,
+movement
+,
+dash
+,
+abs
+,
+hypercore
+,
+fogo
+​
+fromTokenId
+string
+string[]
+string
+string[]
+Filter by origin token IDs. Repeat the parameter to pass multiple ids (matched as OR). Overrides fromChainId. Swap-specific: setting this excludes masking transactions.
+​
+toChainId
+enum<string>
+enum<string>[]
+enum<string>
+enum<string>[]
+Filter by destination chain IDs. Repeat the parameter to pass multiple ids (matched as OR). Swap-specific: setting this excludes masking transactions.
+Available options
+:
+near
+,
+eth
+,
+base
+,
+arb
+,
+btc
+,
+sol
+,
+ton
+,
+doge
+,
+xrp
+,
+zec
+,
+gnosis
+,
+bera
+,
+bsc
+,
+pol
+,
+tron
+,
+sui
+,
+op
+,
+avax
+,
+cardano
+,
+stellar
+,
+aptos
+,
+ltc
+,
+monad
+,
+xlayer
+,
+starknet
+,
+bch
+,
+adi
+,
+plasma
+,
+scroll
+,
+aleo
+,
+movement
+,
+dash
+,
+abs
+,
+hypercore
+,
+fogo
+​
+toTokenId
+string
+string[]
+string
+string[]
+Filter by destination token IDs. Repeat the parameter to pass multiple ids (matched as OR). Overrides toChainId. Swap-specific: setting this excludes masking transactions.
+​
+depositMemo
+string
+Deposit memo to narrow search by deposit address.
+​
+referral
+string
+Filter by referral. Swap-specific: setting this excludes masking transactions.
+​
+affiliate
+string
+Filter by an affiliate stored in the fees. Swap-specific: setting this excludes masking transactions.
+​
+statuses
+string
+Filter by comma-separated statuses. Allowed values: FAILED, INCOMPLETE_DEPOSIT, PENDING_DEPOSIT, PROCESSING, REFUNDED, SUCCESS. Default: FAILED, PROCESSING, REFUNDED, SUCCESS.
+​
+showTestTxs
+string
+Show transactions from test accounts and with test-related referrals.
+​
+minUsdPrice
+number | null
+Filter by minimum USD price for both input and output amounts. Swap-specific: setting this excludes masking transactions.
+Required range
+:
+x >= 0
+​
+maxUsdPrice
+number | null
+Filter by maximum USD price for both input and output amounts. Swap-specific: setting this excludes masking transactions.
+Required range
+:
+x >= 0
+​
+endTimestamp
+string<date-time> | null
+Filter by end timestamp (non-inclusive). Use ISO 8601 format.
+​
+endTimestampUnix
+number | null
+Filter by end timestamp (non-inclusive). Use Unix timestamp.
+​
+startTimestamp
+string<date-time> | null
+Filter by start timestamp (non-inclusive). Use ISO 8601 format.
+​
+startTimestampUnix
+number | null
+Filter by start timestamp (non-inclusive). Use Unix timestamp.
+Response
+200
+application/json
+Transactions
+​
+originAsset
+string
+required
+Example
+:
+"nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near"
+​
+destinationAsset
+string
+required
+Example
+:
+"nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+​
+depositAddress
+string
+required
+The deposit address.
+Example
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK"
+​
+depositMemo
+string | null
+required
+The deposit memo, if it exists.
+Example
+:
+"12345"
+​
+depositAddressAndMemo
+string
+required
+DEPRECATED: Use depositAddress and depositMemo instead. Combined deposit address and memo.
+Example
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK_12345"
+​
+recipient
+string
+required
+Example
+:
+"somebody.near"
+​
+status
+enum<string>
+required
+Available options
+:
+SUCCESS
+,
+FAILED
+,
+INCOMPLETE_DEPOSIT
+,
+PENDING_DEPOSIT
+,
+PROCESSING
+,
+REFUNDED
+Example
+:
+"SUCCESS"
+​
+createdAt
+string
+required
+Example
+:
+"2025-12-31T12:00:00.000Z"
+​
+createdAtTimestamp
+number
+required
+Example
+:
+1767182400
+​
+intentHashes
+string | null
+required
+Example
+:
+"GnGk38hvi92tTWDYMMS8CWYnVT4fixmfBrnqSErCDMTu"
+​
+referral
+string | null
+required
+Example
+:
+"some-referral"
+​
+amountInFormatted
+string
+required
+Example
+:
+"22.130108"
+​
+amountOutFormatted
+string
+required
+Example
+:
+"22.113697"
+​
+appFees
+object[]
+required
+Show
+child attributes
+Example
+:
+[
+{
+"fee"
+:
+50
+,
+"recipient"
+:
+"some.near"
+},
+{
+"fee"
+:
+5
+,
+"recipient"
+:
+"somebody.near"
+}
+]
+​
+nearTxHashes
+string[]
+required
+Example
+:
+[
+"6XqqDwoaopgg39QsEiFGs9HfwP2Vum9tCCyqHDYXWBBH"
+,
+"EVcgKukwf38XsYcgvkEgiMPWR7qwLfLK5rsVtjgctPBn"
+]
+​
+originChainTxHashes
+string[]
+required
+Example
+:
+[
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+]
+​
+destinationChainTxHashes
+string[]
+required
+Example
+:
+[
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+]
+​
+amountIn
+string
+required
+Example
+:
+"22130108"
+​
+amountInUsd
+string
+required
+Example
+:
+"22.1272"
+​
+amountOut
+string
+required
+Example
+:
+"22113697"
+​
+amountOutUsd
+string
+required
+Example
+:
+"22.1108"
+​
+refundTo
+string
+required
+Example
+:
+"somebody.near"
+​
+senders
+string[]
+required
+Example
+:
+[
+"0x1234567890abcdef1234567890abcdef12345678"
+]
+​
+refundFeeFormatted
+string | null
+required
+Example
+:
+"0.001"
+​
+depositType
+enum<string>
+required
+Available options
+:
+ORIGIN_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+Example
+:
+"ORIGIN_CHAIN"
+​
+recipientType
+enum<string>
+required
+Available options
+:
+DESTINATION_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+Example
+:
+"DESTINATION_CHAIN"
+​
+refundType
+enum<string>
+required
+Available options
+:
+ORIGIN_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+Example
+:
+"ORIGIN_CHAIN"
+​
+refundReason
+string | null
+Known values: AMOUNT_LESS_THAN_MIN_AMOUNT_OUT, AMOUNT_MORE_THAN_BALANCE, INTENT_SUBMIT_FAILED, PARTIAL_DEPOSIT, CIRCUIT_BREAKER_BLOCKED, FEE_ESTIMATION_FAILED, NO_LIQUIDITY, AMOUNT_LESS_THAN_MIN_WITHDRAWABLE, INSUFFICIENT_BALANCE, REFUND_ADD_FAILED, UNKNOWN
+Example
+:
+"AMOUNT_MORE_THAN_BALANCE"
+​
+refundFee
+string | null
+Example
+:
+"1000"
+Yes
+No
+⌘
+I
+Get transactions
+cURL
+curl
+--request
+GET
+\
+--url
+https://api.example.com/api/v0/transactions
+\
+--header
+'Authorization: Bearer <token>'
+import requests
+url = "https://api.example.com/api/v0/transactions"
+headers = {"Authorization": "Bearer <token>"}
+response = requests.get(url, headers=headers)
+print(response.text)
+const options = {method: 'GET', headers: {Authorization: 'Bearer <token>'}};
+fetch('https://api.example.com/api/v0/transactions', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://api.example.com/api/v0/transactions",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+CURLOPT_HTTPHEADER => [
+"Authorization: Bearer <token>"
+],
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://api.example.com/api/v0/transactions"
+req, _ := http.NewRequest("GET", url, nil)
+req.Header.Add("Authorization", "Bearer <token>")
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://api.example.com/api/v0/transactions")
+.header("Authorization", "Bearer <token>")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://api.example.com/api/v0/transactions")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Bearer <token>'
+response = http.request(request)
+puts response.read_body
+200
+400
+401
+429
+[
+{
+"originAsset"
+:
+"nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near"
+,
+"destinationAsset"
+:
+"nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+,
+"depositAddress"
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK"
+,
+"depositMemo"
+:
+"12345"
+,
+"depositAddressAndMemo"
+:
+"GDJ4JZXZELZD737NVFORH4PSSQDWFDZTKW3AIDKHYQG23ZXBPDGGQBJK_12345"
+,
+"recipient"
+:
+"somebody.near"
+,
+"status"
+:
+"SUCCESS"
+,
+"createdAt"
+:
+"2025-12-31T12:00:00.000Z"
+,
+"createdAtTimestamp"
+:
+1767182400
+,
+"intentHashes"
+:
+"GnGk38hvi92tTWDYMMS8CWYnVT4fixmfBrnqSErCDMTu"
+,
+"referral"
+:
+"some-referral"
+,
+"amountInFormatted"
+:
+"22.130108"
+,
+"amountOutFormatted"
+:
+"22.113697"
+,
+"appFees"
+: [
+{
+"fee"
+:
+50
+,
+"recipient"
+:
+"some.near"
+},
+{
+"fee"
+:
+5
+,
+"recipient"
+:
+"somebody.near"
+}
+],
+"nearTxHashes"
+: [
+"6XqqDwoaopgg39QsEiFGs9HfwP2Vum9tCCyqHDYXWBBH"
+,
+"EVcgKukwf38XsYcgvkEgiMPWR7qwLfLK5rsVtjgctPBn"
+],
+"originChainTxHashes"
+: [
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+],
+"destinationChainTxHashes"
+: [
+"0x9bcff372aee89b648c922b850573b22387c31d693079f5e37cd255814e2d615a"
+],
+"amountIn"
+:
+"22130108"
+,
+"amountInUsd"
+:
+"22.1272"
+,
+"amountOut"
+:
+"22113697"
+,
+"amountOutUsd"
+:
+"22.1108"
+,
+"refundTo"
+:
+"somebody.near"
+,
+"senders"
+: [
+"0x1234567890abcdef1234567890abcdef12345678"
+],
+"refundFeeFormatted"
+:
+"0.001"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"refundReason"
+:
+"AMOUNT_MORE_THAN_BALANCE"
+,
+"refundFee"
+:
+"1000"
+}
+]
+{
+"status": 400,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+{
+"status": 400,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+{
+"status": 429,
+"error": {
+"code": "<string>",
+"message": "<string>"
+}
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#authorization-authorization
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-affiliate
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-deposit-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-direction
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-last-deposit-address
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-last-deposit-address-and-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-last-deposit-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-number-of-transactions
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-referral
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-search
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-show-test-txs
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#parameter-statuses
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-in
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-in-formatted
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-in-usd
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-out
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-out-formatted
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-amount-out-usd
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-app-fees
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-created-at
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-created-at-timestamp
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-deposit-address
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-deposit-address-and-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-deposit-memo-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-deposit-type
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-destination-asset
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-destination-chain-tx-hashes
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-intent-hashes-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-near-tx-hashes
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-origin-asset
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-origin-chain-tx-hashes
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-recipient
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-recipient-type
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-referral-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-refund-fee-formatted-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-refund-fee-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-refund-reason-one-of-0
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-refund-to
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-refund-type
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-senders
+LINK | ​ | https://docs.near-intents.org/api-reference/get-transactions#response-items-status

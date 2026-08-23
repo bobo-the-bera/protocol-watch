@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:26+00:00",
+  "protocol": "near",
+  "sha256": "3a1bad71596121dc562521bdf01b4edba05d8d71076d3e10e99368f85dfddc4d",
+  "slug": "integration__verifier-contract__account-abstraction__6cc1ac150f",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/verifier-contract/account-abstraction"
+}

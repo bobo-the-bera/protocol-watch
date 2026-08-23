@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:22+00:00",
+  "protocol": "near",
+  "sha256": "18aae4a4438bab7a3efffaa3d36656394262ff80fbbeb9d2b893b261793454b5",
+  "slug": "integration__distribution-channels__1click-api__fee-config__6b7f886c26",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/distribution-channels/1click-api/fee-config"
+}

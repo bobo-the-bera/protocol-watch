@@ -1,0 +1,19 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+This error message appears if you perform an action (e.g., placing an order) and it's not accepted by the L1 within 15 seconds. This is meant to prevent against situations where your connection is unstable or the chain is congested and you would not want the action to be delayed by more than 15 seconds.
+If you still want the action to go through (e.g., in a situation where your internet connection is bad, but you still want to trade), go to the settings dropdown and check the box next to "Disable Transaction Delay Protection".
+Important: Be aware that disabling this protection may cause delayed orders to be placed after reconnection or when congestion eases. This may result in multiple order placements (if you made multiple attempts to execute an order during the delay) when you only intended for a single action to take place. As an example, placing a short order to close a long position may result in closing the long and opening a short position if multiple short orders were attempted during the delay.
+Previous
+I can't sell leftover spot assets
+Next
+HyperEVM issues
+Last updated
+8 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/what-does-action-already-expired-mean.md
+LINK | Next HyperEVM issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues
+LINK | Previous I can't sell leftover spot assets | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/i-cant-sell-leftover-spot-assets
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

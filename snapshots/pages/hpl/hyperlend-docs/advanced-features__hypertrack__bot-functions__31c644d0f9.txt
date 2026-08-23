@@ -1,0 +1,28 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+WATCH ADDRESS
+Monitor wallet activity and stay updated in real-time.
+REMOVE ADDRESS
+Effortlessly delete tracked wallets from your list.
+LIQUIDATIONS ALERT
+Get notified instantly when liquidation risks emerge.
+HEALTH FACTOR
+Track the stability and safety of your collateral.
+BORROW RATE
+Keep an eye on interest rates for optimal borrowing.
+ADVANCED APPROACH
+Customize alerts and track insights tailored to your needs.
+Previous
+Getting Started
+Next
+↪ Watch Address
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions.md
+LINK | Next ↪ Watch Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address
+LINK | Previous Getting Started | https://docs.hyperlend.finance/advanced-features/hypertrack/getting-started
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

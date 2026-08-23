@@ -1,0 +1,56 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+How do I fix "Nonce too low" or "Nonce too high" errors?
+This happens when your wallet has pending transactions that are out of sync with the network.
+MetaMask Fix:
+Settings → Advanced → Clear Activity Tab / Reset Account.
+Rabby Fix:
+More →
+Clear pending locally
+→
+Reset my local nonce data.
+• Why am I seeing "Execution reverted: arithmetic underflow or overflow (0x11)"?
+This is common during withdrawals because your balance updates with every block. The "approval" set by your wallet might become slightly lower than your real-time balance.
+Fix:
+Increase your token approval by one or two tokens manually. Alternatively, go to the
+Markets
+page, select the asset, click
+MAX
+, and
+Approve
+a higher amount before withdrawing.
+• My transaction is stuck or pending (OneKey/Ledger).
+Ensure all firmware (Ledger Live/OneKey) is updated.
+Cancel all pending transactions and clear local data.
+Reset Nonce:
+Send a 0 value transfer to yourself and set the nonce to 0 in advanced settings.
+Note: For Ledger + Keplr users, ensure both software and hardware are fully updated.
+• What should I do if a HyperLoop transaction fails?
+Enable
+Big Blocks
+at the bottom of the HyperLoop page.
+Raise the
+Gas Limit to 3,000,000 (3M)
+.
+Important:
+Switch back to
+Small Blocks
+after success to maintain faster execution for future trades.
+Previous
+Network & Connectivity
+Next
+Lending, Borrowing & Liquidations
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/support/faq/transaction-issues.md
+LINK | Next Lending, Borrowing & Liquidations | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations
+LINK | Previous Network & Connectivity | https://docs.hyperlend.finance/support/faq/network-and-connectivity
+LINK | [no text] | https://docs.hyperlend.finance/support/faq/transaction-issues#how-do-i-fix-nonce-too-low-or-nonce-too-high-errors
+LINK | [no text] | https://docs.hyperlend.finance/support/faq/transaction-issues#my-transaction-is-stuck-or-pending-onekey-ledger
+LINK | [no text] | https://docs.hyperlend.finance/support/faq/transaction-issues#what-should-i-do-if-a-hyperloop-transaction-fails
+LINK | [no text] | https://docs.hyperlend.finance/support/faq/transaction-issues#why-am-i-seeing-execution-reverted-arithmetic-underflow-or-overflow-0x11
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

@@ -1,0 +1,116 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+HyperlendOracle
+Contract for obtaining asset prices and managing price sources.
+This contract is governed by Hyperlend Governance.
+View Methods
+getAssetPrice
+Copy
+solidityCopy codefunction
+getAssetPrice
+(
+address
+asset
+)
+public
+view
+override
+returns
+(
+uint256
+)
+Retrieves the price of the supported
+asset
+in the
+BASE_CURRENCY
+of the Hyperlend Market, denominated in wei.
+Input Parameters:
+Name
+Type
+Description
+asset
+address
+The address of the asset
+Return Values:
+Type
+Description
+uint256
+The price of the asset in the
+BASE_CURRENCY
+of Hyperlend Market in wei
+getAssetsPrices
+Copy
+solidityCopy codefunction
+getAssetsPrices
+(
+address
+[]
+calldata
+assets
+)
+external
+view
+override
+returns
+(
+uint256
+[]
+memory
+)
+Retrieves a list of prices for a given list of supported
+assets
+in the
+BASE_CURRENCY
+of the Hyperlend Market. All prices are denominated in wei.
+Input Parameters:
+Name
+Type
+Description
+assets
+address[]
+The list of asset addresses to query prices for
+Return Values:
+Type
+Description
+uint256[]
+The prices of the specified assets in the
+BASE_CURRENCY
+of Hyperlend Market in wei
+getSourceOfAsset
+Returns the address of the price source for a specific
+asset
+.
+Input Parameters:
+Name
+Type
+Description
+asset
+address
+The address of the asset
+Return Values:
+Type
+Description
+address
+The address of the price source
+getFallbackOracle
+Retrieves the address of the fallback oracle.
+Return Values:
+Type
+Description
+address
+The address of the fallback oracle
+Previous
+↪ pool
+Next
+↪ dual-oracles
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/oracles.md
+LINK | Next ↪ dual-oracles | https://docs.hyperlend.finance/developer-documentation/core-pools/dual-oracles
+LINK | Previous ↪ pool | https://docs.hyperlend.finance/developer-documentation/core-pools/pool
+LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/oracles#hyperlendoracle
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

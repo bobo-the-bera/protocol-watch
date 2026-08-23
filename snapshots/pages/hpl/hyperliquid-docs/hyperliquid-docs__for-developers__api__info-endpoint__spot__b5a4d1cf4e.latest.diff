@@ -1,0 +1,438 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__spot__b5a4d1cf4e:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__spot__b5a4d1cf4e:current
+@@ -0,0 +1,435 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Retrieve spot metadata
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"spotMeta"
++Response
++200: OK Successful Response
++Copy
++{
++"
++tokens
++"
++:
++[
++{
++"
++name
++"
++:
++"
++USDC
++"
++,
++"
++szDecimals
++"
++:
++8
++,
++"
++weiDecimals
++"
++8,
++"
++index
++"
++:
++0
++,
++"
++tokenId
++"
++:
++"
++0x6d1e7cde53ba9467b783cb7c530ce054
++"
++,
++"
++isCanonical
++"
++:
++true
++,
++"
++evmContract
++"
++:
++null
++,
++"
++fullName
++"
++:
++null
++},
++{
++"
++name
++"
++:
++"
++PURR
++"
++,
++"
++szDecimals
++"
++:
++0
++,
++"
++weiDecimals
++"
++:
++5
++,
++"
++index
++"
++:
++1
++,
++"
++tokenId
++"
++:
++"
++0xc1fb593aeffbeb02f85e0308e9956a90
++"
++,
++"
++isCanonical
++"
++:
++true
++,
++"
++evmContract
++"
++:
++null
++,
++"
++fullName
++"
++:
++null
++},
++{
++"
++name
++"
++:
++"
++HFUN
++"
++,
++"
++szDecimals
++"
++:
++2
++,
++"
++weiDecimals
++"
++:
++8
++,
++"
++index
++"
++:
++2
++,
++"
++tokenId
++"
++:
++"
++0xbaf265ef389da684513d98d68edf4eae
++"
++,
++"
++isCanonical
++"
++:
++false
++,
++"
++evmContract
++"
++:
++null
++,
++"
++fullName
++"
++:
++null
++},
++],
++"
++universe
++"
++:
++[
++{
++"
++name
++"
++:
++"
++PURR/USDC
++"
++,
++"
++tokens
++"
++:
++[
++1
++,
++0
++],
++"
++index
++"
++:
++0
++,
++"
++isCanonical
++"
++:
++true
++},
++{
++"
++tokens
++"
++:
++[
++2
++,
++0
++],
++"
++name
++"
++:
++"
++@1
++"
++,
++"
++index
++"
++:
++1
++,
++"
++isCanonical
++"
++:
++false
++},
++]
++}
++Retrieve spot asset contexts
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"spotMetaAndAssetCtxs"
++200: OK Successful Response
++Retrieve a user's token balances
++POST
++https://api.hyperliquid.xyz/info
++See a user's token balances.
++Under unified account or portfolio margin, this is the source of truth for trading account balance across spot and perps.
++Headers
++Name
++Type
++Description
++Content-Type
++*
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"spotClearinghouseState"
++user
++*
++String
++Onchain address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK Successful Response
++Retrieve information about the Spot Deploy Auction
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"spotDeployState"
++user
++*
++String
++Onchain address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++Response
++200: OK Successful Response
++Retrieve information about the Spot Pair Deploy Auction
++POST
++https://api.hyperliquid.xyz/info
++Note: This returns the status of the Dutch auction for spot pair deployments between existing base and quote tokens. Participation in this auction is permissionless through the same action as the
++registerSpot
++phase of base token deployment.
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"spotPairDeployAuctionStatus"
++200: OK Successful Response
++Retrieve information about a token
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"tokenDetails"
++tokenId
++*
++String
++Onchain id in 34-character hexadecimal format; e.g. 0x00000000000000000000000000000000.
++Response
++200: OK Successful Response
++Retrieve outcome metadata
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"outcomeMeta"
++Response
++200: OK Successful Response
++Retrieve information about a settled outcome
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"settledOutcome"
++outcome
++*
++int
++outcome
++Response
++200: OK Successful Response
++Previous
++Perpetuals
++Next
++Exchange endpoint
++Last updated
++2 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot.md
++LINK | Next Exchange endpoint | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint
++LINK | Previous Perpetuals | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#body
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#headers
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#headers-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#headers-2
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#request-body
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#request-body-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-a-users-token-balances
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-information-about-a-settled-outcome
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-information-about-a-token
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-information-about-the-spot-deploy-auction
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-information-about-the-spot-pair-deploy-auction
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-outcome-metadata
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-spot-asset-contexts
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot#retrieve-spot-metadata
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

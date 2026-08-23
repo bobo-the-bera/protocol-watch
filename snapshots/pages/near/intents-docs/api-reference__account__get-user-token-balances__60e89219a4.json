@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:18+00:00",
+  "protocol": "near",
+  "sha256": "ac9cce3a37051bd97e3c30341633c12d48103bed7926d5bc59adcc945980d485",
+  "slug": "api-reference__account__get-user-token-balances__60e89219a4",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/account/get-user-token-balances"
+}

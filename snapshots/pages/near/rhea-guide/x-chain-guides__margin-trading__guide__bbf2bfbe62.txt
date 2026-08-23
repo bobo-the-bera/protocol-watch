@@ -1,0 +1,38 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Step 1: Access
+https://lending.rhea.finance/marginTrading
+and connect your wallet
+Step 2: Select the market you would like to margin trade:
+Example shown using nBTC as the asset choice
+Step 3: Navigate the Margin trading Interface.
+Chart on the left indicates price movement, and the interface on the right displays 3 interactive buttons:
+Long/Short nBTC
+Stablecoin choice, token balance, input amount for trading
+Leverage Bar
+Lets break it down:
+Users can choose to Long or Short an Asset using the Navigation Bar
+Long nBTC
+Short nBTC
+Pick your asset choice and fill in the desired number
+Adjust the leverage that you are comfortable with. Notice that the liquidation price varies varies depending on the leverage.
+Note: Its important to keep track of the liquidation price to ensure your position is not liquidated.
+If you go long on an asset, your position will be liquidated if its below the liquidation price
+If you shorted an asset, your position will be liquidated if its above the liquidation price
+Step 4: Click on the button and confirm the transaction
+Step 5: Done! Your can track your positions at the bottom of the interface or your one stop dashboard at
+https://lending.rhea.finance/dashboard
+Last updated
+1 year ago
+Was this helpful?
+[[LINK TARGETS]]
+LINK | Markdown | https://guide.rhea.finance/x-chain-guides/margin-trading/guide.md
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/margin-trading/guide#step-1-access-https-lending.rhea.finance-margintrading-and-connect-your-wallet
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/margin-trading/guide#step-2-select-the-market-you-would-like-to-margin-trade
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/margin-trading/guide#step-3-navigate-the-margin-trading-interface
+LINK | https://lending.rhea.finance/dashboard | https://lending.rhea.finance/dashboard
+LINK | https://lending.rhea.finance/marginTrading | https://lending.rhea.finance/marginTrading
+LINK | llms.txt | https://guide.rhea.finance/llms.txt

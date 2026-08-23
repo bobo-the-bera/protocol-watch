@@ -1,0 +1,41 @@
+--- hpl/hyperlend-docs/developer-documentation__bug-bounty__61f3abaac4:previous
++++ hpl/hyperlend-docs/developer-documentation__bug-bounty__61f3abaac4:current
+@@ -0,0 +1,38 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++The Hyperlend Bug Bounty Program invites security researchers and developers to help protect the protocol. We value the community’s role in ensuring the safety of user assets and the stability of our lending markets.
++Submission Process
++To qualify for a reward, please follow these steps:
++Report: Write a detailed report including the potential impact and a technical description of the vulnerability.
++PoC: Include a Proof of Concept or a set of reproduction steps (e.g., a Foundry test or Hardhat script).
++Contact: Please send reports to:
++[email protected]
++First-to-Report: If multiple researchers find the same bug, only the first valid report will be rewarded.
++Rewards: Payouts are made in USDC (or protocol-native tokens) on Hyperliquid based on the severity of the finding.
++Ineligibility Criteria
++:
++Reports based on "theoretical" risks without a clear path to exploitation.
++Issues requiring physical access to a user’s device or "jailbroken" hardware.
++Vulnerabilities in third-party integrations (e.g., an external DEX where collateral is swapped) that Hyperlend does not control.
++UI/UX "papercuts" or minor spelling errors that do not impact security or financial logic.
++Market risks inherent to DeFi (e.g., loss of collateral value due to standard market volatility).
++Classification & Rewards
++Rewards are determined by the Hyperlend team based on the Impact and Likelihood.
++For more info, see:
++https://github.com/hyperlendx/bug-bounty/
++Previous
++Building on HyperLend
++Next
++API
++Last updated
++25 days ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/bug-bounty.md
++LINK | Next API | https://docs.hyperlend.finance/developer-documentation/api
++LINK | Previous Building on HyperLend | https://docs.hyperlend.finance/support/faq/building-on-hyperlend
++LINK | [email protected] | https://docs.hyperlend.finance/cdn-cgi/l/email-protection
++LINK | https://github.com/hyperlendx/bug-bounty/ | https://github.com/hyperlendx/bug-bounty/
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

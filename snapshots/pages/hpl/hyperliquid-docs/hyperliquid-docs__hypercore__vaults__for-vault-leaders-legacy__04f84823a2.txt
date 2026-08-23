@@ -1,0 +1,41 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+What are the benefits of creating a vault as a leader?
+Vault leaders receive a 10% profit share for managing the vault. Traders can share their approach to trading with their community via vaults.
+How do I create a vault?
+Anyone can create a vault:
+Choose a name and write a description for your vault. Note that this cannot be changed later.
+Deposit a minimum of 100 USDC into your vault.
+Creating a vault requires a 10k USDC gas fee, which is distributed to the protocol in the same manner as trading fees.
+To ensure vault leaders have skin in the game, you must maintain ≥5% of the vault at all times. You cannot withdraw from your vault if it would cause your share to fall below 5%.
+How do I manage my vault?
+On the Trade page, select the address dropdown in the navigation bar. Select the vault you want to trade on behalf of in the dropdown. Now, all trades you make will apply to your vault, and everything on the Trade page will reflect your vault.
+To switch back to your personal account, select "Master" at the top of the address dropdown.
+What assets can a vault trade?
+Vaults can trade validator-operated perps. They cannot trade spot or HIP-3 perps.
+How do I close my vault?
+On your vault’s dedicated page, click the Leader Actions dropdown and select “Close Vault.” A modal will appear to confirm that you want to close your vault. All positions must be closed before the vault can close. All depositors will receive their share of the vault when it is closed.
+What happens to open positions in a vault when someone withdraws?
+When someone withdraws from a vault, if there is enough margin to keep the open positions according to the leverages set, the withdrawal does not affect open positions.
+If there is not enough margin available, open orders that are using margin will be canceled. Orders will be canceled in increasing order of margin used.
+If there is still not enough margin available, 20% of positions are automatically closed. This is repeated until enough margin is freed up such that the user's withdrawal can be processed. Vault leaders can also set vaults to always proportionally close positions on withdrawals to maintain similar liquidation prices for positions.
+Previous
+HyperCore vaults (legacy)
+Next
+For vault depositors (legacy)
+Last updated
+6 days ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy.md
+LINK | Next For vault depositors (legacy) | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-depositors-legacy
+LINK | Previous HyperCore vaults (legacy) | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/hypercore-vaults-legacy
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#how-do-i-close-my-vault
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#how-do-i-create-a-vault
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#how-do-i-manage-my-vault
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#what-are-the-benefits-of-creating-a-vault-as-a-leader
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#what-assets-can-a-vault-trade
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/for-vault-leaders-legacy#what-happens-to-open-positions-in-a-vault-when-someone-withdraws
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

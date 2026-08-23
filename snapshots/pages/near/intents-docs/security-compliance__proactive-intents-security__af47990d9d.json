@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:28+00:00",
+  "protocol": "near",
+  "sha256": "ab4b948c483c8fb4a8605c9fdd81e6ff1b93d1f8653d2fb6d5c297b7cd603894",
+  "slug": "security-compliance__proactive-intents-security__af47990d9d",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/security-compliance/proactive-intents-security"
+}

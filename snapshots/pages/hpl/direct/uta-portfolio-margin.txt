@@ -1,0 +1,47 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Through the Unified Trading Account (UTA), users can use their
+idle balances as margin
+across: HyperCore, HIP-3 markets and all builder-code exchange markets (e.g., Ventuals, pvp.trade, BasedApp) Everything runs through
+one account
+with shared collateral and unified risk management. Risk parameters (LTVs, caps, rate curves) are governed by
+Block Analitica
+.
+The HyperLend UTA stack provides the foundation for advanced margining across the Hyperliquid ecosystem:
+Liquidation Guard:
+Automatic safety net
+One-Click Borrow/Repay:
+Clean multi-asset flows
+Collateral Swap:
+Adjust collateral without closing positions
+Read-Only Margin View:
+Seamless dApp integrations
+HyperLend unifies collateral, risk, and execution so users can trade efficiently across the entire Hyperliquid ecosystem.
+If you're interested in adding
+UTA-style functionality
+to your product or integrating any of the features above, feel free to reach out to us directly on:
+HyperLend Twitter (
+X
+) or Ness' Twitter (
+X
+)
+We’ve also prepared a
+simplified UI/UX template
+that partners can use to understand exactly what needs to be showcased and how the integration flow should look. This makes the onboarding process fast, clear, and consistent.
+Previous
+Liquid Hyperliquidity Provider (wHLP)
+Next
+HyperTrack
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Block Analitica | https://blockanalitica.com/
+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/uta-portfolio-margin.md
+LINK | Next HyperTrack | https://docs.hyperlend.finance/advanced-features/hypertrack
+LINK | Previous Liquid Hyperliquidity Provider (wHLP) | https://docs.hyperlend.finance/advanced-features/liquid-hyperliquidity-provider-whlp
+LINK | X | https://x.com/0xNessus
+LINK | X | https://x.com/hyperlendx
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

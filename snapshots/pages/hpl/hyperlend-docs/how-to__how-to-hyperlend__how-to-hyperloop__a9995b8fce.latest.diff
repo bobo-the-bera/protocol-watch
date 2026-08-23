@@ -1,0 +1,113 @@
+--- hpl/hyperlend-docs/how-to__how-to-hyperlend__how-to-hyperloop__a9995b8fce:previous
++++ hpl/hyperlend-docs/how-to__how-to-hyperlend__how-to-hyperloop__a9995b8fce:current
+@@ -0,0 +1,110 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Earn up to 2x your staking yield with stHYPE or kHYPE — automatically.
++Looping is a yield-maximizing strategy compounding your exposure and returns automatically.
++HyperLoop
++lets you open a leveraged loop position using any two tokens: one is supplied, one is borrowed.
++• How it works
++Yield asset
++: The token you supply to earn interest or rewards.
++Debt asset
++: The token you borrow in the looped position, which accrues interest.
++When you deposit, HyperLoop uses a flashloan to instantly build your leveraged position in a single transaction. It works like this:
++A flashloan of the
++debt asset
++is taken.
++That debt token is
++swapped
++into the
++yield asset
++.
++The resulting
++yield asset
++is supplied as collateral.
++The same
++debt asset
++is then borrowed against the new collateral.
++The borrowed amount, along with your initial supplied funds, is used to
++repay the flashloan
++(since the collateral's LTV is less than 100%).
++Note: Each position is held in an isolated contract. Keep in mind that the HyperLoop position will be shown seperately on "Loop" section on your dashboard.
++The entire process is completed atomically using flashloans- no manual steps or repeated cycles required- and incurs a
++0.04% flashloan
++fee
++on the amount used during the transaction.
++• Steps to Loop
++Navigate to the “Loop” section of the HyperLend platform.
++Select your Yield Asset-
++Choose stHYPE or kHYPE — both are liquid staking tokens for HYPE and will earn interest.
++Select your Debt Asset-
++Set wHYPE as the debt asset. This is what you'll borrow to loop back into your yield position.
++Adjust Your Leverage-
++Use the slider to set your desired leverage. Higher leverage means higher potential returns — and higher risk.
++Enter the Amount You Want to Loop-
++Choose how much of your stHYPE or kHYPE to deposit into the strategy.
++Click “Open Position”-
++HyperLend will automatically handle the looping process via Liquid Launch (aggregator).
++Once your position is opened, it appears in the
++“Your Positions”
++section. From there, you can track your performance and make changes.
++↝ Managing Your Position
++Click “Modify”
++next to your active position.
++You can
++Add
++more collateral or
++Remove
++some, adjusting your exposure dynamically without closing the loop.
++Big/Small Blocks:
++HyperLend utilizes Hyperliquid’s unique dual-block system, allowing users to choose between near-instant execution and high-capacity, lower-cost processing.
++By default, HyperLoop transactions are routed through Small Blocks. To switch:
++Navigate to HyperLoop section and scroll down.
++Click on "Enable Big Blocks"> popup pops up> click on "Switch to Big Blocks" and confirm in your wallet
++Your preferred block type has been successfully updated.
++Small blocks have a block time of 2 seconds and a gas limit of 2M gas. The expected gas price is 0.96 gwei.
++Big blocks have a block time of 60 seconds and a gas limit of 30M gas. The expected gas price is 0.1 gwei.
++Switching will require 2 signatures (approving and removing an agent address).
++↝⚠️ Risk Considerations
++Looping with leverage can boost your returns- but it introduces serious risks you must manage.
++Liquidation Risk
++: If the price of your collateral drops or your
++Health Factor
++falls too low, your position may be liquidated.
++LST Depeg Risk
++: Since you're swapping and looping between
++HYPE
++and its liquid staking derivatives (
++stHYPE
++or
++kHYPE
++), any
++depeg
++from the underlying HYPE value can put your position at risk. If stHYPE or kHYPE trades below its expected redemption value, it can cause unexpected losses and accelerate liquidation risk.
++Leverage Risk
++: Leveraging amplifies both your gains and your downside. A 3x position falls apart 3x faster in volatile markets.
++Swap Impact
++: The protocol performs swaps automatically to rebalance your loop. In thin markets or large positions, this can cause
++price impact
++and affect your final execution price.
++Borrow Rate Volatility
++: Borrow rates on wHYPE are dynamic and can spike with utilization. That can erode your net yield and flip your position negative.
++Always monitor your Health Factor and price relationships between HYPE and its LSTs.
++Stay well within your risk tolerance and adjust your position proactively when needed.
++Previous
++↪ How to Borrow from HyperLend
++Next
++↪ How to Refer on HyperLend
++Last updated
++4 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop.md
++LINK | Next ↪ How to Refer on HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend
++LINK | Previous ↪ How to Borrow from HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend
++LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop#how-it-works
++LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop#managing-your-position
++LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop#risk-considerations
++LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop#steps-to-loop
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

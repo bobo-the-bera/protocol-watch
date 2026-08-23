@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:14:07+00:00",
+  "protocol": "near",
+  "sha256": "c1da7088848684727199267af412f9f20576f661ee33e504031e6e108c98a796",
+  "slug": "intents-docs-index",
+  "tags": [
+    "intents",
+    "docs-index",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/llms.txt"
+}

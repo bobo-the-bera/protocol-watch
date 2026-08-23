@@ -1,0 +1,14 @@
+{
+  "committed_at": "2026-03-12T11:20:28Z",
+  "html_url": "https://github.com/near-examples/near-intents-examples/commit/2d9d44e4ebe11c658e497764c9c2d85678006584",
+  "message": "Merge pull request #1 from near-examples/feat/new-examples",
+  "protocol": "near",
+  "repo": "near-examples/near-intents-examples",
+  "sha": "2d9d44e4ebe11c658e497764c9c2d85678006584",
+  "slug": "intents-examples",
+  "tags": [
+    "intents",
+    "examples",
+    "integration"
+  ]
+}

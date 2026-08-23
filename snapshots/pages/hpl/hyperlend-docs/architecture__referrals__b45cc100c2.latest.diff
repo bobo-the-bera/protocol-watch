@@ -1,0 +1,23 @@
+--- hpl/hyperlend-docs/architecture__referrals__b45cc100c2:previous
++++ hpl/hyperlend-docs/architecture__referrals__b45cc100c2:current
+@@ -0,0 +1,20 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++You can generate your personal referral code directly within the HyperLend app by opening the "Referrals" pop-up.
++Share your referral link to invite other traders to HyperLend. The code matches the username you have set on the dashboard page:
++https://app.hyperlend.finance/?ref=CODE
++Referral details and invited users are visible within the referrals pop-up.
++Previous
++Points
++Next
++Borrow Against L1 Spot Positions
++Last updated
++4 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/architecture/referrals.md
++LINK | Next Borrow Against L1 Spot Positions | https://docs.hyperlend.finance/advanced-features/borrow-against-l1-spot-positions
++LINK | Previous Points | https://docs.hyperlend.finance/architecture/points
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

@@ -1,0 +1,39 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+The current v0 API currently uses some nonstandard notation. Relevant standardization will be batched into a breaking v1 API change.
+Abbreviation
+Full name
+Explanation
+Px
+Price
+Sz
+Size
+In units of coin, i.e. base currency
+Szi
+Signed size
+Positive for long, negative for short
+Ntl
+Notional
+USD amount, Px * Sz
+Side
+Side of trade or book
+B = Bid = Buy, A = Ask = Short. Side is aggressing side for trades.
+Asset
+An integer representing the asset being traded. See below for explanation
+Tif
+Time in force
+GTC = good until canceled, ALO = add liquidity only (post only), IOC = immediate or cancel
+Previous
+API
+Next
+Asset IDs
+Last updated
+2 years ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/notation.md
+LINK | Next Asset IDs | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids
+LINK | Previous API | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

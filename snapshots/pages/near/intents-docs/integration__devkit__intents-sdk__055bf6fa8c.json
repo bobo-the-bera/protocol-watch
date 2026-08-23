@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:21+00:00",
+  "protocol": "near",
+  "sha256": "39628ac52fdc604e39331b4d604f6e4c6a83f4e9a55749fc31b290f5a6102710",
+  "slug": "integration__devkit__intents-sdk__055bf6fa8c",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/devkit/intents-sdk"
+}

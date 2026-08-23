@@ -1,0 +1,77 @@
+--- near/rhea-guide/developers-1__cli-farming__3bcb3ee776:previous
++++ near/rhea-guide/developers-1__cli-farming__3bcb3ee776:current
+@@ -0,0 +1,74 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Always
++check that a wallet has a sufficient
++storage deposit
++on a token's smart contract
++before
++initiating swaps, withdrawing liquidity, or withdrawing rewards. Failure to do so may result in the tokens being placed in the contract's "owner" account, requiring a vote by the RHEA Community DAO to remove them.
++You can setup the following parameters:
++Copy
++export FARMING=ref-farming.testnet
++export EX=ref-finance.testnet
++export TOKEN=token.ref-finance.testnet
++View general information
++Copy
++near view $FARMING get_metadata
++View all farms with pagination
++Copy
++near view $FARMING list_farms '{"from_index": 0, "limit": 100}'
++Notes:
++Outdated_farms are excluded
++There are three
++farm_status
++in contract, they are Created, Running, Ended
++start_at
++is timestamp in seconds
++session_interval
++is timestamp in seconds
++View all seeds with pagination
++View all rewards with pagination
++View single seed information
++View all farms per seed
++View single farm information
++View rewards per user
++View unclaimed rewards per user
++View seeds per user
++Stake/Unstake seed
++Claim rewards
++Withdraw reward token
++Create farm
++At the moment, only the owner of this contract can create farms
++To create a farm, you need to prepare the farming terms accordingly.
++At this point, this is a farm with no reward deposited, farm status is Created.
++To activate a farm, deposit some reward tokens into the farm with ft_transfer_call.
++Previous
++CLI Trading
++Next
++RHEA SDK
++Last updated
++1 year ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Markdown | https://guide.rhea.finance/developers-1/cli-farming.md
++LINK | Next RHEA SDK | https://guide.rhea.finance/developers-1/rhea-sdk
++LINK | Previous CLI Trading | https://guide.rhea.finance/developers-1/cli-trading
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#claim-rewards
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#create-farm
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#stake-unstake-seed
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-all-farms-per-seed
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-all-farms-with-pagination
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-all-rewards-with-pagination
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-all-seeds-with-pagination
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-general-information
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-rewards-per-user
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-seeds-per-user
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-single-farm-information
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-single-seed-information
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#view-unclaimed-rewards-per-user
++LINK | [no text] | https://guide.rhea.finance/developers-1/cli-farming#withdraw-reward-token
++LINK | llms.txt | https://guide.rhea.finance/llms.txt
++LINK | storage deposit | https://nomicon.io/Standards/StorageManagement#example-1-fungible-token-contract

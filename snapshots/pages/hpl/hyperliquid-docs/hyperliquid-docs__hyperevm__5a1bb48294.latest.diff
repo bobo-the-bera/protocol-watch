@@ -1,0 +1,53 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__hyperevm__5a1bb48294:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__hyperevm__5a1bb48294:current
+@@ -0,0 +1,50 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++The Hyperliquid blockchain features two key parts: HyperCore and HyperEVM. The HyperEVM is not a separate chain, but rather, secured by the same HyperBFT consensus as HyperCore. This lets the HyperEVM interact directly with parts of HyperCore, such as spot and perp order books.
++What can I do on the HyperEVM?
++Explore directories of apps, tools, and more built by community members:
++ASXN
++,
++HypurrCo
++, and
++HL Eco
++. Visit the
++HyperEVM onboarding FAQ
++for more questions.
++Why build on the HyperEVM?
++Builders can plug into the onchain order book liquidity of HyperCore via the HyperEVM. In addition, many Hyperliquid users are early adopters and want to try new onchain financial applications. See the
++HyperEVM developer section
++for more technical details and
++tools for HyperEVM builders
++for resources.
++As one example, a project XYZ could deploy an ERC20 contract on the HyperEVM using standard EVM tooling and deploy a corresponding spot asset XYZ permissionlessly in the HyperCore spot auction. Once the HyperCore token and HyperEVM contract are linked, users can use the same XYZ token on HyperEVM applications and trade it on the native spot order book. This has two key improvements compared to CEX listings: 1) The entire process is permissionless, with no behind-the-scenes negotiations for preferential treatment and 2) There is no bridging risk between HyperCore and HyperEVM as one unified state.
++As another example, a lending protocol could set up a pool contract that accepts token XYZ as collateral and lends out another token ABC to the borrower. To determine the liquidation threshold, the lending smart contract can read XYZ/ABC prices directly from the HyperCore order books using a read precompile. For a Solidity developer, this is as simple as calling a built-in function. Suppose the borrower's position requires liquidation. The lending smart contract can send orders directly swapping XYZ and ABC on the HyperCore order books using a write system contract. Again, this is a simple built-in function in Solidity. In a few lines of code, the lending protocol has implemented protocolized liquidations similar to how perps function on HyperCore. A theme of the HyperEVM is to abstract away the deep liquidity on HyperCore as a building block for arbitrary user applications.
++What stage is the HyperEVM in?
++The HyperEVM is in the alpha stage. There are three reasons behind this gradual roll-out approach.
++First, this stays true to Hyperliquid’s “no insiders” principle; everyone has equal access and starts on a level playing field. The tradeoff is that HyperEVM did not launch with the same tooling you might see on other chains, since no one is given a heads up nor paid for an integration or marketing. These short-term obstacles are worth it to be a fair, credibly neutral platform in the long run.
++Second, a gradual roll-out is the safest way to upgrade a complex system doing billions of dollars of volume a day and protect against performance degradation or downtime.
++Third, shipping an MVP and iterating live with user feedback allows development to adjust more nimbly. Testnets are useful for technical testing, but systems can only be hardened through real economic use.
++As such, higher throughput and write system contracts are not live on mainnet yet, but will be in due time.
++Previous
++Aligned quote assets
++Next
++Tools for HyperEVM builders
++Last updated
++5 days ago
++[[LINK TARGETS]]
++LINK | ASXN | https://hyperscreener.asxn.xyz/ecosystem
++LINK | HL Eco | https://hl.eco/projects
++LINK | HyperEVM developer section | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm
++LINK | HyperEVM onboarding FAQ | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm
++LINK | HypurrCo | https://www.hypurr.co/ecosystem-projects
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm.md
++LINK | Next Tools for HyperEVM builders | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/tools-for-hyperevm-builders
++LINK | Previous Aligned quote assets | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm#what-can-i-do-on-the-hyperevm
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm#what-stage-is-the-hyperevm-in
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm#why-build-on-the-hyperevm
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++LINK | tools for HyperEVM builders | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm/tools-for-hyperevm-builders

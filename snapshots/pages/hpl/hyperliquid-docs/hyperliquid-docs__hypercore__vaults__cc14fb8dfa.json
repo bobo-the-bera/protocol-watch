@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:12:45+00:00",
+  "protocol": "hpl",
+  "sha256": "3c0251942fb493653e677d7c210d9d759baba7f68f43245f0d31689f28aa642f",
+  "slug": "hyperliquid-docs__hypercore__vaults__cc14fb8dfa",
+  "tags": [
+    "hyperliquid",
+    "docs",
+    "integration-surface"
+  ],
+  "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults"
+}

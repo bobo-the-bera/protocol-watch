@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:24+00:00",
+  "protocol": "near",
+  "sha256": "cb13d6ced9d5880ac2a0d4772dcfd27969954f3606a04203f1210bd1d8e510aa",
+  "slug": "integration__distribution-channels__1click-api__verify-quote-signature__420e553480",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/distribution-channels/1click-api/verify-quote-signature"
+}

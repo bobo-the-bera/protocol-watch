@@ -1,0 +1,21 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Welcome to the Hyperlend support channel. For immediate answers to common questions regarding lending mechanics, liquidations, and protocol parameters, please refer to our FAQ. Most technical and general inquiries can be resolved quickly by reviewing these resources first.
+If you are unable to find the information you need here, you are welcome to join our official
+Discord
+and open a support ticket. Our team is happy to provide one-on-one assistance to resolve your issue as quickly as possible.
+Previous
+MiCA Whitepaper
+Next
+I got scammed/hacked
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Discord | https://discord.gg/HhbANtPPT6
+LINK | Markdown | https://docs.hyperlend.finance/support/help.md
+LINK | Next I got scammed/hacked | https://docs.hyperlend.finance/support/i-got-scammed-hacked
+LINK | Previous MiCA Whitepaper | https://docs.hyperlend.finance/support/mica-whitepaper
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

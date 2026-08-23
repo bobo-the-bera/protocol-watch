@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:12:42+00:00",
+  "protocol": "hpl",
+  "sha256": "4310ccb878f5a24b987d141756520fde62e221e8bd7370ecf7034cd510ccb758",
+  "slug": "hyperliquid-docs__hypercore__multi-sig__7761a31d7e",
+  "tags": [
+    "hyperliquid",
+    "docs",
+    "integration-surface"
+  ],
+  "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/multi-sig"
+}

@@ -1,0 +1,181 @@
+--- hpl/hyperlend-docs/developer-documentation__core-pools__flash-loans__36a6984803:previous
++++ hpl/hyperlend-docs/developer-documentation__core-pools__flash-loans__36a6984803:current
+@@ -0,0 +1,178 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Flash Loans
++Flash Loans are unique transactions that allow users to borrow assets without upfront collateral, provided that the borrowed amount plus a fee is returned within the same transaction (also known as "one-block borrows"). Since there is no real-world equivalent, understanding how blockchain state transitions occur within blocks is essential.
++Note:
++Flash Loans are an advanced feature intended for developers. A solid grasp of the Ethereum Virtual Machine (EVM), programming, and smart contract development is necessary to utilize this functionality.
++Overview
++Flash Loans enable users to access the pool's liquidity for a single transaction, on the condition that the borrowed amount plus a fee is returned or a debt position is opened (if permitted) by the end of the transaction. This feature is applicable only to reserves where borrowing is enabled.
++HyperLend offers two methods for flash loans:
++flashLoan()
++Allows borrowers to access liquidity from multiple reserves within a single flash loan transaction. Borrowers also have the option to open a variable-rate borrowing position backed by supplied collateral or via credit delegation.
++Note:
++The flash loan fee is waived for approved flash borrowers managed by the
++ACLManager
++.
++flashLoanSimple()
++Enables borrowers to access liquidity from a single reserve in a transaction. In this case, the flash loan fee is not waived, and borrowers cannot open any debt positions at the end of the transaction. This method is more gas-efficient for those seeking a straightforward flash loan with a single asset.
++Execution Flow
++For developers, here's a conceptual framework to assist in building your solution:
++Initiate the Flash Loan
++Your contract calls the
++Pool
++contract, requesting a flash loan of specific amounts of reserves using either
++flashLoanSimple()
++or
++flashLoan()
++.
++Funds Transfer and Callback
++After performing necessary checks, the
++Pool
++transfers the requested amounts to your contract and then calls
++executeOperation()
++on your contract.
++Execute Custom Logic
++With the flash-loaned funds now in your contract, you can perform any arbitrary operations within your code.
++Repayment or Debt Opening
++For
++flashLoanSimple()
++:
++After your operations, you must approve the
++Pool
++to pull the flash-loaned amount plus the fee.
++For
++flashLoan()
++:
++Depending on the
++interestRateMode
++for each asset, you must either approve the
++Pool
++for the amount plus fee or ensure sufficient collateral or credit delegation is available to open a debt position.
++Transaction Completion
++If the owed amount is not available due to insufficient balance, lack of approval, or inadequate collateral for debt, the transaction will revert.
++All these steps occur within a single transaction, meaning they happen within one Ethereum block.
++Applications of Flash Loans
++Flash Loans have various practical applications, including:
++Arbitrage Opportunities
++Execute arbitrage between assets without needing the principal amount upfront.
++Liquidation of Positions
++Liquidate borrowing positions without repaying the debt upfront by using the discounted collateral obtained to repay the flash loan amount plus the fee.
++Flash Loan Fee
++The flash loan fee is initially set to
++0.04%
++at deployment and can be adjusted via a governance vote. Use
++FLASHLOAN_PREMIUM_TOTAL
++to retrieve the current value.
++The fee is shared between liquidity providers (LPs) and the protocol treasury:
++Fee to LPs:
++FLASHLOAN_PREMIUM_TOTAL
++minus
++FLASHLOAN_PREMIUM_TO_PROTOCOL
++Fee to Protocol Treasury:
++FLASHLOAN_PREMIUM_TO_PROTOCOL
++Initially,
++FLASHLOAN_PREMIUM_TO_PROTOCOL
++is set to 0.
++Step-by-Step Guide
++1. Setting Up
++Implement the Receiver Interface
++Your contract that will receive the flash-loaned funds must implement the
++IFlashLoanSimpleReceiver
++or
++IFlashLoanReceiver
++interface by defining the appropriate
++executeOperation()
++function.
++Grant Allowance
++Since the owed amounts will be pulled from your contract, you must grant the
++Pool
++contract an allowance to transfer the funds needed to repay the flash loan amount plus premiums.
++2. Invoking
++flashLoan()
++or
++flashLoanSimple()
++There are three ways to call the flash loan methods:
++From an Externally Owned Account (EOA):
++Send a transaction to the
++Pool
++contract calling
++flashLoan()
++or
++flashLoanSimple()
++. Refer to the
++Pool
++documentation for parameter details, ensuring you use your contract address from step 1 as the
++receiverAddress
++.
++From a Different Contract:
++Similar to the EOA method but initiated from another contract. Ensure the
++receiverAddress
++is your contract address from step 1.
++From the Same Contract:
++If you're using the same contract as in step 1, use
++address(this)
++for the
++receiverAddress
++parameter.
++Security Tip:
++Never store funds permanently on your flash loan receiver contract, as they could be vulnerable to 'griefing' attacks where an attacker exploits the stored funds.
++Completing the Flash Loan
++Repayment:
++After executing your custom logic in
++executeOperation()
++, you need to repay the flash-loaned amounts if you used
++flashLoanSimple()
++or set
++interestRateModes = 0
++in
++flashLoan()
++.
++Calculating the Amount Owed:
++Ensure your contract holds the required amount plus the premium. This can be calculated by summing the relevant entries in the
++amounts
++and
++premiums
++arrays provided in
++executeOperation()
++.
++Automatic Pull of Funds:
++You don't need to manually transfer the owed amount back to the
++Pool
++; the funds will be automatically pulled at the end of your operation.
++Incurring a Debt (Deferred Repayment)
++If you used
++mode=1
++or
++mode=2
++for any assets in the
++modes
++parameter, the
++onBehalfOf
++address will incur the debt, provided that it has authorized the
++msg.sender
++to incur debts on its behalf.
++This allows for a mix of assets—some can be repaid immediately, while others result in an open debt position.
++Previous
++↪ interest rate strategy
++Next
++Isolated Pools
++Last updated
++4 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans.md
++LINK | Next Isolated Pools | https://docs.hyperlend.finance/developer-documentation/isolated-pools
++LINK | Previous ↪ interest rate strategy | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#applications-of-flash-loans
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#completing-the-flash-loan
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#execution-flow
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#flash-loan-fee
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#flash-loans
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#id-1.-setting-up
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#id-2.-invoking-flashloan-or-flashloansimple
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#incurring-a-debt-deferred-repayment
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#overview
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans#step-by-step-guide
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

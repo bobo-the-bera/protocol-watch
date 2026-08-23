@@ -1,0 +1,25 @@
+--- hpl/hyperlend-docs/advanced-features__borrow-against-l1-spot-positions__1a72bba061:previous
++++ hpl/hyperlend-docs/advanced-features__borrow-against-l1-spot-positions__1a72bba061:current
+@@ -0,0 +1,22 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++This section lets you borrow assets against your Hyperliquid L1 assets such as HYPE, USDT0, uBTC, all from one simple interface. Instead of selling your position, you can deposit your tokens as collateral and borrow directly against them, giving you access to instant liquidity while keeping your core holdings intact.
++From depositing to borrowing, its all done in just a few clicks.
++When you deposit your L1 collateral, it is bridged to the EVM layer to be used for borrowing. Once you borrow, the stablecoins (borrowed assets) are bridged back from the EVM to L1, making them immediately usable on Hyperliquid Core.
++Watch the video here
++to see exactly how the borrowing interface works step-by-step.
++Previous
++Referrals
++Next
++Liquid Hyperliquidity Provider (wHLP)
++Last updated
++5 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/advanced-features/borrow-against-l1-spot-positions.md
++LINK | Next Liquid Hyperliquidity Provider (wHLP) | https://docs.hyperlend.finance/advanced-features/liquid-hyperliquidity-provider-whlp
++LINK | Previous Referrals | https://docs.hyperlend.finance/architecture/referrals
++LINK | Watch the video here | https://x.com/hyperlendx/status/1929626448882463079
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

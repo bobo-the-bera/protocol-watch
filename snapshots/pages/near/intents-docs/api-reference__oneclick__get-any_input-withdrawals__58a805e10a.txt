@@ -1,0 +1,359 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+GET
+/
+v0
+/
+any-input
+/
+withdrawals
+Try it
+Get ANY_INPUT withdrawals
+cURL
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/any-input/withdrawals
+\
+--header
+'X-API-Key: <api-key>'
+import requests
+url = "https://1click.chaindefuser.com/v0/any-input/withdrawals"
+headers = {"X-API-Key": "<api-key>"}
+response = requests.get(url, headers=headers)
+print(response.text)
+const options = {method: 'GET', headers: {'X-API-Key': '<api-key>'}};
+fetch('https://1click.chaindefuser.com/v0/any-input/withdrawals', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://1click.chaindefuser.com/v0/any-input/withdrawals",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+CURLOPT_HTTPHEADER => [
+"X-API-Key: <api-key>"
+],
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://1click.chaindefuser.com/v0/any-input/withdrawals"
+req, _ := http.NewRequest("GET", url, nil)
+req.Header.Add("X-API-Key", "<api-key>")
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/any-input/withdrawals")
+.header("X-API-Key", "<api-key>")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://1click.chaindefuser.com/v0/any-input/withdrawals")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+request["X-API-Key"] = '<api-key>'
+response = http.request(request)
+puts response.read_body
+200
+404
+{
+"asset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"recipient"
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+,
+"affiliateRecipient"
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+,
+"withdrawals"
+: {
+"status"
+:
+"SUCCESS"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"amountOut"
+:
+"9950000"
+,
+"withdrawFeeFormatted"
+:
+"0.01"
+,
+"withdrawFee"
+:
+"10000"
+,
+"withdrawFeeUsd"
+:
+"0.01"
+,
+"timestamp"
+:
+"2019-08-24T14:15:22Z"
+,
+"hash"
+:
+"0x123abc456def789"
+}
+{
+"message": "error message"
+}
+Authorizations
+X-API-Key
+JWT-auth
+X-API-Key
+JWT-auth
+​
+X-API-Key
+string
+header
+required
+API key for partner authentication (recommended)
+Query Parameters
+​
+depositAddress
+string
+required
+​
+depositMemo
+string
+​
+timestampFrom
+string
+Filter withdrawals from this timestamp (ISO string)
+​
+page
+number
+Page number for pagination (default: 1)
+​
+limit
+number
+Number of withdrawals per page (max: 50, default: 50)
+​
+sortOrder
+enum<string>
+Sort order
+Available options
+:
+asc
+,
+desc
+Response
+200
+application/json
+​
+asset
+string
+required
+ID of the destination asset.
+Example
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+​
+recipient
+string
+required
+Recipient address
+Example
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+​
+affiliateRecipient
+string
+required
+Affiliate recipient address
+Example
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+​
+withdrawals
+object
+Details of withdrawals
+Show
+child attributes
+Yes
+No
+⌘
+I
+Get ANY_INPUT withdrawals
+cURL
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/any-input/withdrawals
+\
+--header
+'X-API-Key: <api-key>'
+import requests
+url = "https://1click.chaindefuser.com/v0/any-input/withdrawals"
+headers = {"X-API-Key": "<api-key>"}
+response = requests.get(url, headers=headers)
+print(response.text)
+const options = {method: 'GET', headers: {'X-API-Key': '<api-key>'}};
+fetch('https://1click.chaindefuser.com/v0/any-input/withdrawals', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://1click.chaindefuser.com/v0/any-input/withdrawals",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+CURLOPT_HTTPHEADER => [
+"X-API-Key: <api-key>"
+],
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://1click.chaindefuser.com/v0/any-input/withdrawals"
+req, _ := http.NewRequest("GET", url, nil)
+req.Header.Add("X-API-Key", "<api-key>")
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/any-input/withdrawals")
+.header("X-API-Key", "<api-key>")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://1click.chaindefuser.com/v0/any-input/withdrawals")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+request["X-API-Key"] = '<api-key>'
+response = http.request(request)
+puts response.read_body
+200
+404
+{
+"asset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"recipient"
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+,
+"affiliateRecipient"
+:
+"0x2527d02599ba641c19fea793cd0f167589a0f10d"
+,
+"withdrawals"
+: {
+"status"
+:
+"SUCCESS"
+,
+"amountOutFormatted"
+:
+"9.95"
+,
+"amountOutUsd"
+:
+"9.95"
+,
+"amountOut"
+:
+"9950000"
+,
+"withdrawFeeFormatted"
+:
+"0.01"
+,
+"withdrawFee"
+:
+"10000"
+,
+"withdrawFeeUsd"
+:
+"0.01"
+,
+"timestamp"
+:
+"2019-08-24T14:15:22Z"
+,
+"hash"
+:
+"0x123abc456def789"
+}
+{
+"message": "error message"
+}
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#authorization-x-api-key
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-deposit-address
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-deposit-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-limit
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-page
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-sort-order
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#parameter-timestamp-from
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#response-affiliate-recipient
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#response-asset
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#response-recipient
+LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals#response-withdrawals

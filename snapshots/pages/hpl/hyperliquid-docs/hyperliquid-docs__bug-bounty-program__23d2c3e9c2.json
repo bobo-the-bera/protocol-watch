@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:12:22+00:00",
+  "protocol": "hpl",
+  "sha256": "50127afe9d1b5d5303ee14f495b2b158392f4de8847893d4c585c4443190b3e3",
+  "slug": "hyperliquid-docs__bug-bounty-program__23d2c3e9c2",
+  "tags": [
+    "hyperliquid",
+    "docs",
+    "integration-surface"
+  ],
+  "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/bug-bounty-program"
+}

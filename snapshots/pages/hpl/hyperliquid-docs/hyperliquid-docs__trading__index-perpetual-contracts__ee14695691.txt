@@ -1,0 +1,40 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Index contracts track a formula instead of a spot asset price as the underlying index, but otherwise function exactly the same as normal perpetual contracts.
+Instead of tracking the median price across a set of liquid CEXs, index perpetual contracts require the validators to periodically publish the value of the index formula to the Hyperliquid L1. The median of these reported values are then used in place of the spot oracle formula to compute funding rates.
+NFTI-USD
+is an index of blue-chip NFT collections, including Bored Ape Yacht Club, Mutant Ape Yacht Club, Azuki, DeGods, Pudgy Penguins, and Milady Maker.
+The index is a 3-minute EMA of the aggregate floor price. The aggregate floor price is sum of the floor price of each collection, with BAYC divided by 10. Floor prices are computed by aggregating OpenSea and Blur. CryptoPunks were not included because they predate the NFT standard and are not listed on these marketplaces.
+Floor prices are converted to USDT using the ETH-USDT spot oracle price
+Index = 3 minute ema of [(BAYC floor price / 10) + (MAYC floor price) + (Azuki floor price) + (DeGods floor price) + (Pudgy Penguins floor price) + (Milady Maker floor price)] / 10000
+FRIEND-USD
+is the first index perpetual contract listed by Hyperliquid.
+Previously based on community feedback, the top 20 friendtech index rebalanced biweekly. The top subjects were announced by EOD Monday UTC every other week, and the rebalance occured at 14:30 UTC on Wednesday every other week. The scale factor was set at time of rebalance so that the perp index value has a continuous change between old and new index definitions. The criterion for choosing subjects is top 20 subjects by price, 5k twitter followers, and filtering out outliers in trading activity and number of holders. If the community detects manipulation in a pending index change, the criterion may be adjusted accordingly.
+Beginning October 4, the
+FRIEND-USD
+index will track the average one-share buy price of the middle 8 subjects of the following 20 accounts: 0xCaptainLevi, Dingalingts, 0xRacerAlt, HsakaTrades, HerroCrypto, HanweChang, Christianeth, 0xLawliette, CL207, Cryptoyieldinfo, CapitalGrug, iloveponzi, cobie, sayinshallah, pokeepandaa, pranksy, VentureCoinist, 0xBreadguy, saliencexbt, blknoiz06.
+From September 13-October 4, the
+FRIEND-USD
+index tracked the following accounts: 0xRacerAlt, HsakaTrades, 0xCaptainLevi, HerroCrypto, cobie, CL207, 0xLawliette, blknoiz06, 0xSisyphus, Christianeth, Banks, Cryptoyieldinfo, lBattleRhino, CapitalGrug, saliencexbt, zhusu, basedkarbon, RookieXBT, xcurveth, Pancakesbrah. From September 13-20, the median price of the above 20 subjects was used instead of the average one-share buy price of the middle 8 subjects. The median price was scaled by
+0.002469
+to ensure a continuous transition from the previous index oracle (dated August 23-September 13).
+From August 23-September 13, the
+FRIEND-USD
+index tracked: ‘cobie’, ‘HsakaTrades’, ‘0xRacerAlt’, ‘Banks’, ‘zhusu’, ‘0xSisyphus’, ‘blknoiz06’, ‘RookieXBT’, ‘gainzy222’, ‘xcurveth’, ‘inversebrah’, ‘shrimppepe’, ‘0xLawliette’, ‘dingalingts’, ‘BigDickBull69’, ‘zachxbt’, ‘izebel_eth’, ‘loomdart’, ‘icebergy_’, and ‘saliencexbt’. The median price is scaled by
+0.00431
+to ensure a continuous transition from the previous TVL oracle.
+The contract from which the index is derived can be found here:
+https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4
+.
+Friendtech key prices are converted to USDT prices based on the robust CEX median ETH/USDT mid price.
+Last updated
+1 year ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts.md
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts#friend-usd
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts#nfti-usd
+LINK | https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4 | https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

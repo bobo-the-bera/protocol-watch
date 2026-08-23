@@ -1,0 +1,95 @@
+--- near/rhea-guide/developers__audits__3a707719eb:previous
++++ near/rhea-guide/developers__audits__3a707719eb:current
+@@ -0,0 +1,92 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Auditor: Resonance
++Website:
++https://www.resonance.security/
++Date: October 9th 2025
++Scope: Liquid Staking Protocol
++Report:
++Audit_Report_RHEA-LSP_FINAL_21.pdf
++PDF · 2MB
++Download
++Open
++LST-rNear Audit
++Auditor: BlockSec
++Website:
++https://blocksec.com/
++Date: August 5th 2025
++Scope: rNEAR Contract
++Report:
++blocksec_Rhea_rNEAR_V1.0-signed.pdf
++PDF · 2MB
++Download
++Open
++Margin Trading
++Auditor: BlockSec
++Website:
++https://blocksec.com/
++Date: April 2nd 2025
++Scope: Margin Trading
++Report
++blocksec_burrow-margin-trading_v1.2-signed.pdf
++PDF · 2MB
++Download
++Open
++RHEA X Chain Lending and Trading
++Audit_Report_RHEA-MCA_FINAL_21.pdf
++PDF · 3MB
++Download
++Open
++Audit_Report_RHEA-ZTV_FINAL_21.pdf
++PDF · 2MB
++Download
++Open
++Audit_Report_RHEA-LSP_FINAL_21.pdf
++PDF · 2MB
++Download
++Open
++Smart Contract
++Auditor: trailofbit
++Website:
++https://www.trailofbits.com/
++Date: February 19th 2025
++Scope: Smart Contract
++Report
++Ref_Finance_DeFi_Protocol_Smart_Contracts_Final_Comprehensive_Report.pdf
++PDF · 972KB
++Download
++Open
++Previous
++Oracles
++Next
++Previous Audits
++Last updated
++7 months ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Audit_Report_RHEA-LSP_FINAL_21.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FFK7P9ZbNlZOs7I6aJavr%2FAudit_Report_RHEA-LSP_FINAL_21.pdf?alt=media&token=05bead4f-e840-49e9-b898-2519ee526573
++LINK | Audit_Report_RHEA-MCA_FINAL_21.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FSDHzNLKWKOrGvtZYNEfO%2FAudit_Report_RHEA-MCA_FINAL_21.pdf?alt=media&token=30ccf0c6-dde8-49c7-9c75-f71fb0251da3
++LINK | Audit_Report_RHEA-ZTV_FINAL_21.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FKrJ5iJ9CWmgByT3HRc8y%2FAudit_Report_RHEA-ZTV_FINAL_21.pdf?alt=media&token=668b2362-9b15-43c4-95de-26f2039ee93a
++LINK | Markdown | https://guide.rhea.finance/developers/audits.md
++LINK | Next Previous Audits | https://guide.rhea.finance/developers/audits/previous-audits
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FDVRL3NqY6q0gjYyTDDXs%2Fblocksec_Rhea_rNEAR_V1.0-signed.pdf?alt=media&token=6da0970f-1f8c-4526-8c35-af63c2e311bd
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FFK7P9ZbNlZOs7I6aJavr%2FAudit_Report_RHEA-LSP_FINAL_21.pdf?alt=media&token=05bead4f-e840-49e9-b898-2519ee526573
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FKrJ5iJ9CWmgByT3HRc8y%2FAudit_Report_RHEA-ZTV_FINAL_21.pdf?alt=media&token=668b2362-9b15-43c4-95de-26f2039ee93a
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FLgIcEZcu3dKjiXaAeQnE%2Fblocksec_burrow-margin-trading_v1.2-signed.pdf?alt=media&token=06556b65-3d4c-41da-90d2-b6932daaa616
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FSDHzNLKWKOrGvtZYNEfO%2FAudit_Report_RHEA-MCA_FINAL_21.pdf?alt=media&token=30ccf0c6-dde8-49c7-9c75-f71fb0251da3
++LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2Fz7VXAWXuW0Ln7809rgUn%2FRef_Finance_DeFi_Protocol_Smart_Contracts_Final_Comprehensive_Report.pdf?alt=media&token=66823fbf-56a9-4dd3-966c-205a73e2ac0e
++LINK | Previous Oracles | https://guide.rhea.finance/developers/oracles
++LINK | Ref_Finance_DeFi_Protocol_Smart_Contracts_Final_Comprehensive_Report.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2Fz7VXAWXuW0Ln7809rgUn%2FRef_Finance_DeFi_Protocol_Smart_Contracts_Final_Comprehensive_Report.pdf?alt=media&token=66823fbf-56a9-4dd3-966c-205a73e2ac0e
++LINK | [no text] | https://guide.rhea.finance/developers/audits#blocksec
++LINK | [no text] | https://guide.rhea.finance/developers/audits#lst-rnear-audit
++LINK | [no text] | https://guide.rhea.finance/developers/audits#trailofbit
++LINK | [no text] | https://guide.rhea.finance/developers/audits#trailofbit-1
++LINK | blocksec_Rhea_rNEAR_V1.0-signed.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FDVRL3NqY6q0gjYyTDDXs%2Fblocksec_Rhea_rNEAR_V1.0-signed.pdf?alt=media&token=6da0970f-1f8c-4526-8c35-af63c2e311bd
++LINK | blocksec_burrow-margin-trading_v1.2-signed.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FLgIcEZcu3dKjiXaAeQnE%2Fblocksec_burrow-margin-trading_v1.2-signed.pdf?alt=media&token=06556b65-3d4c-41da-90d2-b6932daaa616
++LINK | https://blocksec.com/ | https://blocksec.com/
++LINK | https://www.resonance.security/ | https://www.resonance.security/
++LINK | https://www.trailofbits.com/ | https://www.trailofbits.com/
++LINK | llms.txt | https://guide.rhea.finance/llms.txt

@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:27+00:00",
+  "protocol": "near",
+  "sha256": "9b8ac310b89abe07214fa4fe2b9ed6dfdd45c845e1547de254ae30a57dd0769a",
+  "slug": "integration__verifier-contract__signing-intents__96f84426a8",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/verifier-contract/signing-intents"
+}

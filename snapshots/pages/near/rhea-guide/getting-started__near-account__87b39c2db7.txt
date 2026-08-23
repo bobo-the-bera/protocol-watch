@@ -1,0 +1,44 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Using Hot Wallet
+HOT Wallet — a multichain wallet seamlessly integrating both EVM and non-EVM blockchains.
+Download the browser extension:
+https://hot-labs.org/wallet/
+Using Meteor
+Wallet
+A powerful, self-custody wallet built to connect you to the decentralized web — safely and securely
+Get Started:
+https://meteorwallet.app/
+Using My
+Near Wallet
+The
+MyNear Wallet is a non-custodial, web-based wallet for the NEAR blockchain.
+Please follow the official guide:
+https://app.mynearwallet.com/
+Using Sender Wallet
+Sender is a browser extension wallet built for NEAR Protocol, aiming at providing a secure and easy-to-use wallet for DeFi and NFT users.
+Download the browser extension:
+https://senderwallet.io/
+Previous
+Buy RHEA Token
+Next
+Using the Platform
+Last updated
+10 months ago
+Was this helpful?
+[[LINK TARGETS]]
+LINK | Markdown | https://guide.rhea.finance/getting-started/near-account.md
+LINK | Next Using the Platform | https://guide.rhea.finance/getting-started/using-the-platform
+LINK | Previous Buy RHEA Token | https://guide.rhea.finance/getting-started/buy-rhea-token
+LINK | [no text] | https://guide.rhea.finance/getting-started/near-account#using-hot-wallet
+LINK | [no text] | https://guide.rhea.finance/getting-started/near-account#using-meteor-wallet
+LINK | [no text] | https://guide.rhea.finance/getting-started/near-account#using-mynear-wallet
+LINK | [no text] | https://guide.rhea.finance/getting-started/near-account#using-sender-wallet
+LINK | https://app.mynearwallet.com/ | https://app.mynearwallet.com/
+LINK | https://hot-labs.org/wallet/ | https://hot-labs.org/wallet/
+LINK | https://meteorwallet.app/ | https://meteorwallet.app/
+LINK | https://senderwallet.io/ | https://senderwallet.io/
+LINK | llms.txt | https://guide.rhea.finance/llms.txt

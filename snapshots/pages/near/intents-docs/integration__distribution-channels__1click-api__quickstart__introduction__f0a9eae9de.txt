@@ -1,0 +1,45 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+1Click API enables you to specify a cross-chain swap
+intent
+(
+what
+you want to swap), and handles the
+execution
+for you.
+There is no testnet version of NEAR Intents - use small amounts for test swaps.
+​
+Prerequisites
+A small amount of tokens on ANY
+supported chain
+.
+A
+JWT token
+to avoid the 0.2% fee.
+​
+Choose your flow
+Making a Request
+The standard flow: query tokens, request a quote, send your deposit, and track it to completion.
+Confidential Swaps
+Add privacy to a swap, either foreign-to-foreign or from an embedded Confidential Intents balance.
+Signed Intent Execution
+Authorize a swap by signing an intent off-chain instead of sending an on-chain deposit.
+Going Live
+Next steps and troubleshooting once your first swap works.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | JWT token | https://docs.near-intents.org/integration/distribution-channels/1click-api/authentication
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | supported chain | https://docs.near-intents.org/resources/chain-support
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/introduction#choose-your-flow
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/introduction#prerequisites

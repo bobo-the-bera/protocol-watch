@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:20+00:00",
+  "protocol": "near",
+  "sha256": "055159a6f0ebd07262170bc27f52b855900f1e3ae44329c29e87303642dd6e47",
+  "slug": "integration__bridging__btc-deposit-refund__d212c235b5",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/bridging/btc-deposit-refund"
+}

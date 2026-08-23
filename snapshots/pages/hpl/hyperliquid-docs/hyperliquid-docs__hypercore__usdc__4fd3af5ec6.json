@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:12:45+00:00",
+  "protocol": "hpl",
+  "sha256": "6ed9580374fb0190b66f84c0cf0884f9f382d03ad49fa8f96d04bad1264fc180",
+  "slug": "hyperliquid-docs__hypercore__usdc__4fd3af5ec6",
+  "tags": [
+    "hyperliquid",
+    "docs",
+    "integration-surface"
+  ],
+  "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/usdc"
+}

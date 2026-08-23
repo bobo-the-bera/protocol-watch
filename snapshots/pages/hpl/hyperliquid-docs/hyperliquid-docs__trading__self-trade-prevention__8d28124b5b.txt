@@ -1,0 +1,18 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Trades between the same address cancel the resting order instead of causing a fill. No fees are deducted, nor does the the cancel show up in the trade feed.
+On CEXs this behavior is often labeled as "expire maker." This is a commonly preferred behavior for market making algorithms, where the aggressing order would like to continue getting fills against liquidity behind the maker order up until the limit price.
+Previous
+Entry price and pnl
+Next
+Hyperps
+Last updated
+1 year ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention.md
+LINK | Next Hyperps | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps
+LINK | Previous Entry price and pnl | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

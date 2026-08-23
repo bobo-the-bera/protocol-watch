@@ -1,0 +1,28 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Interest Rate Models in Isolated Pools
+In HyperLend, each market pair features an interest rate model that adjusts according to the utilization of deposited assets. Utilization reflects the percentage of deposited tokens currently lent out to borrowers.
+Linear Time-Weighted Variable Interest Rate
+When a new interest rate contract is deployed, the following settings are determined:
+vertex utilization: The utilization at which the interest rate slope increases
+vertex rate delta: Determines how far the vertex rate sits between the base rate and the max rate.
+minimum target utilization: The minimum utilization wherein no adjustment to full utilization and vertex rates occurs
+maximum target utilization: The maximum utilization wherein no adjustment to full utilization and vertex rates occurs
+zero utilization interest rate: The interest rate when utilization is 0%
+minimum full utilization interest rate: The minimum interest rate at 100% utilization
+maximum full utilization interest rate: The maximum interest rate at 100% utilization
+interest rate half-life: The half-life for interest rate adjustments
+Linear Time-Weighted Variable Interest Rate uses a linear formula to calculate the current interest rate, but changes vertex and max rate based on time.
+If utilization is low, the vertex and max rate will slowly decrease over time (if utilization is 0%, it will decrease by 50% per half-life). However, if utilization is high, it will keep increasing until it hits the maximum full utilization interest rate (if utilization is 100%, it will increase by 100% per half-life).
+Previous
+↪ liquidations
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/isolated-pools/interest-rates.md
+LINK | Previous ↪ liquidations | https://docs.hyperlend.finance/developer-documentation/isolated-pools/liquidations
+LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/isolated-pools/interest-rates#linear-rate
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

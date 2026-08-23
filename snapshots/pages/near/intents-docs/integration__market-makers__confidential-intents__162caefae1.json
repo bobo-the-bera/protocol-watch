@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:24+00:00",
+  "protocol": "near",
+  "sha256": "84bc7953481aeed9e1f256533a193f3554a22dfcb5ee4ee7fc893a669411ec11",
+  "slug": "integration__market-makers__confidential-intents__162caefae1",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/market-makers/confidential-intents"
+}

@@ -1,0 +1,74 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+RHEA Finance offers
+several types of Liquidity Pools
+, Classic, Stable, Rated, and DCL. Classic pools are based on the Uniswap v2 algorithm; Stable pools, which can contain two or more tokens, use Curve's StableSwap algorithm; Rated pools are for yield-bearing tokens, and are based on a variation of Curve's StableSwap algorithm; and
+Ref v2's "DCL" Pools
+, which are based on
+iZUMi Finance’s Discretized Liquidity AMM
+.
+Classic pools are fully permissionless, meaning that anyone can create a Classic pool, and set the fee for that pool. Currently only
+Guardians
+can create Stable, Rated, and DCL pools.
+Stable Pool
+Stable Pools are designed for assets that are expected to regularly trade either very close to parity or at a predetermined exchange rate. The Algorithm design is based on
+Stableswap
+(introduce by Curve Finance), which enable significant size swap to occur without triggering considerable price impact, greatly enhancing capital efficiency for swaps involving similar or correlated assets.
+RHEA Finance offers a variety of pool types, including:
+4 pools: support USDT Native, USDC Native, USDT.e and USDC.e
+3 pools: USDT.e, USDC.e and DAI
+Correlated Assets: tokens that swap near 1:R with some slowly changing exchange rate R (stNEAR, LINEAR, NearX)
+To understand more about logic design behind the contracts, refer to this
+paper
+from the Curve Finance Team.
+Trading Fees
+Trades that take place using liquidity from a pool are charged a fee. The fee is defined at the creation of the pool, and cannot be modified once the pool is created. The pool fee usually varies from 0.05% to 0.3%.
+Users can earn a share of the trading fees by depositing tokens into the pool (also known as "adding liquidity"). When a trade is made, the share of the trading fees a liquidity provider receives is directly proportional to their share of the liquidity in the pool used for that trade. A user who has 1% of the total liquidity will receive 1% of the trading fees designated for liquidity providers.
+Pool Tokens
+When a user adds liquidity to a pool, they will receive one or more tokens representing their share of the pool. Shares of Classic, Stable, and Rated pools are represented by LP Tokens (LPT). LPTs are fungible tokens where the quantity held is equal to the amount of shares of the pool (e.g. 1 LPT token = 1 pool share, and 0.25 LPTs = 0.25 pool shares). On the other hand, shares of DCL pools are represented by non-fungible tokens (NFT). When a user adds liquidity to a DCL pool, they will receive
+one
+NFT containing the details of their position, including the number of shares it is worth. In other words, a DCL NFT can be worth 1 pool share, or 0.25 pool shares. Users can hold multiple NFTs for the same DCL pool, each of which will represent a position in that pool.
+Pool APR
+Pool APR is the yield you accrue by adding liquidity to a pool. You earn 80% of the pool fee for all trades on the associated pair (or triple for stablecoin pool) proportional to your share of the pool.
+For Classic pools, if there is no account to receive the Referral Fee, it goes to all LPs of that pool as a form of increased LP tokens. For the other types of pools, it goes to the Protocol Fee as a form of increased LP tokens
+Fees are added to the pool, accrue in real-time, and can be claimed when you withdraw your Liquidity.
+Your share will be accrued in real-time and will be paid in addition to your existing position when you remove liquidity from the pool
+Viewing liquidity position(s)
+There are two locations where users can see their liquidity positions, the Your Liquidity page, and the Portfolio page.
+The "Your Liquidity" page
+You can see all pools you have liquidity in by going to the Your Liquidity page. You can get to the Your Liquidity page by clicking Earn > Your Liquidity in the main menu of the site.
+You can see details like how many shares you have, the USD value of your shares, and the amount of each token your shares are worth. There are also buttons to add more liquidity and remove liquidity from the pool.
+The Portfolio page
+The "Your Liquidity" tab of the Portfolio page shows you your current liquidity positions. You can get to the Portfolio page by clicking "Portfolio" on the main menu. Each item has a drop-down icon that, when clicked, will reveal details about the position.
+Risks
+Providing liquidity is not without risk, as you may be exposed to
+Divergence Loss
+or
+Impermanent Loss (IL).
+Simply put, impermanent loss is the difference between holding tokens in an AMM and holding them in your wallet. -
+Beginner’s Guide to (Getting Rekt by) Impermanent Loss
+, Nate Hindman, 2020
+Last updated
+1 year ago
+Was this helpful?
+[[LINK TARGETS]]
+LINK | Beginner’s Guide to (Getting Rekt by) Impermanent Loss | https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22
+LINK | Guardians | https://guide.rhea.finance/developers/guardians
+LINK | Markdown | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling.md
+LINK | Ref v2's "DCL" Pools | https://guide.rhea.finance/near-chain-guides/liquidity-pools/rhea-v2-pools
+LINK | Stableswap | https://classic.curve.fi/files/stableswap-paper.pdf
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#pool-apr
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#pool-tokens
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#risks
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#stable-pool
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#the-portfolio-page
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#the-your-liquidity-page
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#trading-fees
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#undefined
+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling#viewing-liquidity-position-s
+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+LINK | paper | https://classic.curve.fi/files/stableswap-paper.pdf
+LINK | several types of Liquidity Pools | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works

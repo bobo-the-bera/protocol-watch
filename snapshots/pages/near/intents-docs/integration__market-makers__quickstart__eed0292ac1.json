@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:25+00:00",
+  "protocol": "near",
+  "sha256": "70572bd015f7c7b3d691befd926dd7c3889a5645d427beda92d3505d924f7457",
+  "slug": "integration__market-makers__quickstart__eed0292ac1",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/market-makers/quickstart"
+}

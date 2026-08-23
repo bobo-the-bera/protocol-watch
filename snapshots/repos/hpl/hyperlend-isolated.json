@@ -1,0 +1,13 @@
+{
+  "committed_at": "2025-12-21T22:52:30Z",
+  "html_url": "https://github.com/hyperlendx/hyperlend-isolated/commit/6d4ec6325a75d0f6409d0520e21f52c1e59360e7",
+  "message": "add LinearInterestRate",
+  "protocol": "hpl",
+  "repo": "hyperlendx/hyperlend-isolated",
+  "sha": "6d4ec6325a75d0f6409d0520e21f52c1e59360e7",
+  "slug": "hyperlend-isolated",
+  "tags": [
+    "isolated-pools",
+    "collateral"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:12:42+00:00",
+  "protocol": "hpl",
+  "sha256": "813df7c45a9730e4278135679b413d6240f76a60671c5e63bc28aac2225c0773",
+  "slug": "hyperliquid-docs__hypercore__oracle__5e9cbb400a",
+  "tags": [
+    "hyperliquid",
+    "docs",
+    "integration-surface"
+  ],
+  "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/oracle"
+}

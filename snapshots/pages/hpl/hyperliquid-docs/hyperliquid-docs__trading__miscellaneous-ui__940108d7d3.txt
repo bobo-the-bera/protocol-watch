@@ -1,0 +1,24 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Max Drawdown
+The max drawdown on the portfolio page is only used on the frontend for users' convenience. It does not affect any margining or computations on Hyperliquid. Users who care about the precise formula can get their account value and pnl history and compute it however they choose.
+The formula used on the frontend is the maximum over times
+end > start
+of the value
+(pnl(end) - pnl(start)) / account_value(start)
+Note that the denominator is account value and the numerator is pnl. Also note that this not equal to absolute max drawdown divided by some account value. Each possible time range considered uses its own denominator.
+Previous
+Portfolio graphs
+Next
+Validators
+Last updated
+1 year ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/miscellaneous-ui.md
+LINK | Next Validators | https://hyperliquid.gitbook.io/hyperliquid-docs/validators
+LINK | Previous Portfolio graphs | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-graphs
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/miscellaneous-ui#max-drawdown
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

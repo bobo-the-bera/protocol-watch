@@ -1,0 +1,68 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+The Explorer API provides read-only access to historical 1Click Swap transactions and their statuses, mirroring the data available on the
+NEAR Intents Explorer
+.
+Base URL:
+https://explorer.near-intents.org/api/v0
+​
+Overview
+This API is designed for distribution channels and analytical services that need to:
+Retrieve historical swap transaction data
+Filter swaps by chains, tokens, timestamps, and status
+Build dashboards and analytics tools
+Monitor swap activity programmatically
+The Explorer API is read-only and specifically for 1Click Swap transactions.
+​
+Authentication
+Include the token in your requests:
+curl
+-X
+GET
+"https://explorer.near-intents.org/api/v0/transactions"
+\
+-H
+"Authorization: Bearer YOUR_JWT_TOKEN"
+A JWT token is
+required
+for all requests. Get your token from the
+Partner Dashboard
+.
+​
+Rate Limiting
+All API endpoints are rate-limited per partner:
+1 request every 5 seconds
+per partner ID
+Rate limits are enforced based on your JWT token
+Exceeding the limit returns
+429 Too Many Requests
+​
+Endpoints
+Get Transactions
+Cursor-based pagination for efficient traversal
+​
+API Specification
+Swagger UI
+Interactive API documentation
+OpenAPI Spec
+Download the YAML specification
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | NEAR Intents Explorer | https://explorer.near-intents.org/
+LINK | Partner Dashboard | https://partners.near-intents.org/
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/explorer/introduction#api-specification
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/explorer/introduction#authentication
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/explorer/introduction#endpoints
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/explorer/introduction#overview
+LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/explorer/introduction#rate-limiting

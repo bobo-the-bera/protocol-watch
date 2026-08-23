@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:26+00:00",
+  "protocol": "near",
+  "sha256": "fef02359b6806e51be3dd8a8fed070e34d896cf5758a74fd8098d75406156bf5",
+  "slug": "integration__verifier-contract__deposits-and-withdrawals__near-token__8dd144b9dd",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/near-token"
+}

@@ -1,0 +1,47 @@
+--- near/intents-docs/integration__distribution-channels__1click-api__quickstart__going-live__d48c11b1af:previous
++++ near/intents-docs/integration__distribution-channels__1click-api__quickstart__going-live__d48c11b1af:current
+@@ -0,0 +1,44 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++​
++Next steps
++Clone the Example Repo
++Clone and run a working TypeScript implementation to get started quickly.
++Watch NEAR Intents 102
++Follow along with this guided workshop explaining all the steps in detail.
++Use the SDK
++Integrate with our official SDK libraries for TypeScript, Go, or Rust.
++NEAR Intents Explorer
++Track transactions and view swap history
++​
++Troubleshooting
++Swap taking a long time
++Check the blockchain explorer for your deposit transaction
++Verify the deposit address matches the quote response
++Allow up to 15 minutes for cross-chain processing
++Use the status endpoint to check current state
++Swap failed or was refunded
++Verify you sent the exact amount specified in the quote
++Check your refund address for returned funds
++Ensure your destination address format is correct for the target chain
++Request a new quote and try again
++Need help?
++Join our
++Telegram community
++for support.
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Telegram community | https://t.me/near_intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/going-live#next-steps
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/going-live#troubleshooting

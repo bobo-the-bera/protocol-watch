@@ -1,0 +1,36 @@
+--- hpl/hyperlend-docs/architecture__cap-automator__67ba41238d:previous
++++ hpl/hyperlend-docs/architecture__cap-automator__67ba41238d:current
+@@ -0,0 +1,33 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Since launch, supply and borrow caps have been managed by our risk team
++@BlockAnalitica
++.
++But as liquidity matured over time, the maximum possible caps were often larger than the on-chain demand (e.g., USDT0, at one point our largest stablecoin market, had a 95M supply cap, with only 10-15M actually supplied). While not inherently problematic, this creates unnecessary risk exposure in long-tail risk scenarios (as seen in cases like rsETH).
++To address this, we adopted the on-chain
++Cap Automator
++contract (originally developed by
++SparkLend
++), deployed at
++0x01f550365b99aE5B76533241c5BA8255441BA312
++.
++Caps now expand based on demand, within predefined limits and rate controls:
++Under normal conditions, caps adjust automatically in line with usage (with limits and timers visible in the UI).
++During stressed conditions, automation can be paused to limit exposure
++Previous
++Staking
++Next
++Points
++Last updated
++3 months ago
++[[LINK TARGETS]]
++LINK | 0x01f550365b99aE5B76533241c5BA8255441BA312 | https://hyperevmscan.io/address/0x01f550365b99aE5B76533241c5BA8255441BA312
++LINK | @BlockAnalitica | https://twitter.com/BlockAnalitica
++LINK | Markdown | https://docs.hyperlend.finance/architecture/cap-automator.md
++LINK | Next Points | https://docs.hyperlend.finance/architecture/points
++LINK | Previous Staking | https://docs.hyperlend.finance/architecture/staking
++LINK | SparkLend | https://x.com/BlockAnalitica/status/1765395680833740892
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

@@ -1,0 +1,44 @@
+--- near/intents-docs/integration__market-makers__message-bus__introduction__86a68f2767:previous
++++ near/intents-docs/integration__market-makers__message-bus__introduction__86a68f2767:current
+@@ -0,0 +1,41 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++The Message Bus is a system component that optimizes price discovery between users and market makers. It handles communication and submits settlement transactions to the Verifier contract.
++The protocol can operate without the Message Bus:
++Frontends
++can use any quoting mechanism to compose and publish signed intents
++Market makers
++can index the NEAR blockchain directly to find intents to fill
++​
++How it works
++User requests a quote
++- A frontend sends a quote request to the Message Bus
++Market makers receive the request
++- The Message Bus broadcasts the request to all connected solvers via WebSocket
++Market makers respond
++- Solvers evaluate the trade and respond with signed intents
++User accepts a quote
++- The frontend displays options to the user, who selects and signs their intent
++Settlement
++- The Message Bus bundles the matching intents and submits them to the Verifier contract
++​
++Next steps
++API Reference
++Read the API documentation for the Message Bus
++WebSocket Reference
++Subscribe and respond to quote requests in real-time
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/integration/market-makers/message-bus/introduction#how-it-works
++LINK | ​ | https://docs.near-intents.org/integration/market-makers/message-bus/introduction#next-steps

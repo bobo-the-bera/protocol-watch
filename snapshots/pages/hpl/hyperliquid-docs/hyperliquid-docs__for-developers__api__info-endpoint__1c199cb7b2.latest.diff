@@ -1,0 +1,923 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__1c199cb7b2:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__1c199cb7b2:current
+@@ -0,0 +1,920 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Pagination
++Responses that take a time range will only return 500 elements or distinct blocks of data. To query larger ranges, use the last returned timestamp as the next
++startTime
++for pagination.
++Perpetuals vs Spot
++The endpoints in this section as well as websocket subscriptions work for both Perpetuals and Spot. For perpetuals
++coin
++is the name returned in the
++meta
++response. For Spot, coin should be
++PURR/USDC
++for PURR, and
++@{index}
++e.g.
++@1
++for all other spot tokens where index is the index of the spot pair in the
++universe
++field of the
++spotMeta
++response. For example, the spot index for HYPE on mainnet is
++@107
++because the token index of HYPE is 150 and the spot pair
++@107
++has tokens
++[150, 0]
++. Note that some assets may be remapped on user interfaces. For example,
++BTC/USDC
++on app.hyperliquid.xyz corresponds to
++UBTC/USDC
++on mainnet HyperCore. The L1 name on the
++token details page
++can be used to detect remappings.
++User address
++To query the account data associated with a master or sub-account, you must pass in the actual address of that account. A common pitfall is to use an agent wallet's address which leads to an empty result.
++Retrieve mids for all coins
++POST
++https://api.hyperliquid.xyz/info
++Note that if the book is empty, the last trade price will be used as a fallback
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"allMids"
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex. Spot mids are only included with the first perp dex..
++200: OK Successful Response
++Retrieve a user's open orders
++POST
++https://api.hyperliquid.xyz/info
++See a user's open orders
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"openOrders"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex. Spot open orders are only included with the first perp dex.
++200: OK Successful R
++Retrieve a user's open orders with additional frontend info
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"frontendOpenOrders"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex. Spot open orders are only included with the first perp dex.
++200: OK
++Retrieve a user's fills
++POST
++https://api.hyperliquid.xyz/info
++Returns at most 2000 most recent fills
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userFills"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++aggregateByTime
++bool
++When true, partial fills are combined when a crossing order gets filled by multiple different resting orders. Resting orders filled by multiple crossing orders are only aggregated if in the same block.
++200: OK
++Retrieve a user's fills by time
++POST
++https://api.hyperliquid.xyz/info
++Returns at most 2000 fills per response and only the 10000 most recent fills are available
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++userFillsByTime
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++startTime
++*
++int
++Start time in milliseconds, inclusive
++endTime
++int
++End time in milliseconds, inclusive. Defaults to current time.
++aggregateByTime
++bool
++When true, partial fills are combined when a crossing order gets filled by multiple different resting orders. Resting orders filled by multiple crossing orders are only aggregated if in the same block.
++200: OK Number of fills is limited to 2000
++Query user rate limits
++POST
++https://api.hyperliquid.xyz/info
++Request Body
++Name
++Type
++Description
++user
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000
++type
++String
++userRateLimit
++200: OK A successful response
++Query order status by oid or cloid
++POST
++https://api.hyperliquid.xyz/info
++Request Body
++Name
++Type
++Description
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++type
++*
++String
++"orderStatus"
++oid
++*
++uint64 or string
++Either u64 representing the order id or 16-byte hex string representing the client order id
++The <status> string returned has the following possible values:
++Order status
++Explanation
++open
++Placed successfully
++filled
++Filled
++canceled
++Canceled by user
++triggered
++Trigger order triggered
++rejected
++Rejected at time of placement
++marginCanceled
++Canceled because insufficient margin to fill
++vaultWithdrawalCanceled
++Vaults only. Canceled due to a user's withdrawal from vault
++openInterestCapCanceled
++Canceled due to order being too aggressive when open interest was at cap
++selfTradeCanceled
++Canceled due to self-trade prevention
++reduceOnlyCanceled
++Canceled reduced-only order that does not reduce position
++siblingFilledCanceled
++TP/SL only. Canceled due to sibling ordering being filled
++delistedCanceled
++Canceled due to asset delisting
++liquidatedCanceled
++Canceled due to liquidation
++scheduledCancel
++API only. Canceled due to exceeding scheduled cancel deadline (dead man's switch)
++tickRejected
++Rejected due to invalid tick price
++minTradeNtlRejected
++Rejected due to order notional below minimum
++perpMarginRejected
++Rejected due to insufficient margin
++reduceOnlyRejected
++Rejected due to reduce only
++badAloPxRejected
++Rejected due to post-only immediate match
++iocCancelRejected
++Rejected due to IOC not able to match
++badTriggerPxRejected
++Rejected due to invalid TP/SL price
++marketOrderNoLiquidityRejected
++Rejected due to lack of liquidity for market order
++positionIncreaseAtOpenInterestCapRejected
++Rejected due to open interest cap
++positionFlipAtOpenInterestCapRejected
++Rejected due to open interest cap
++tooAggressiveAtOpenInterestCapRejected
++Rejected due to price too aggressive at open interest cap
++openInterestIncreaseRejected
++Rejected due to open interest cap
++insufficientSpotBalanceRejected
++Rejected due to insufficient spot balance
++oracleRejected
++Rejected due to price too far from oracle
++perpMaxPositionRejected
++Rejected due to exceeding margin tier limit at current leverage
++200: OK A successful response
++200: OK Missing Order
++L2 book snapshot
++POST
++https://api.hyperliquid.xyz/info
++Returns at most 20 levels per side
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"l2Book"
++coin
++*
++String
++coin
++nSigFigs
++Number
++Optional field to aggregate levels to
++nSigFigs
++significant figures. Valid values are 2, 3, 4, 5, and
++null
++, which means full precision
++mantissa
++Number
++Optional field to aggregate levels. This field is only allowed if nSigFigs is 5. Accepts values of 1, 2 or 5.
++Response
++200: OK
++Candle snapshot
++POST
++https://api.hyperliquid.xyz/info
++Only the most recent 5000 candles are available
++Supported intervals: "1m", "3m", "5m", "15m", "30m", "1h", "2h", "4h", "8h", "12h", "1d", "3d", "1w", "1M"
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"candleSnapshot"
++req
++*
++Object
++{"coin": <coin>, "interval": "15m", "startTime": <epoch millis>, "endTime": <epoch millis>}
++For HIP-3, you need to prefix with the dex name, e.g. "xyz:XYZ100"
++Response
++200: OK
++Check builder fee approval
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Value
++Content-Type
++*
++"application/json"
++Body
++Name
++Type
++Description
++type
++*
++String
++"maxBuilderFee"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++builder
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++Response
++200: OK
++Retrieve a user's historical orders
++POST
++https://api.hyperliquid.xyz/info
++Returns at most 2000 most recent historical orders
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"historicalOrders"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Retrieve a user's TWAP slice fills
++POST
++https://api.hyperliquid.xyz/info
++Returns at most 2000 most recent TWAP slice fills
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userTwapSliceFills"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Retrieve a user's subaccounts
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"subAccounts"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Retrieve details for a vault
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"vaultDetails"
++vaultAddress
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++user
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Retrieve a user's vault deposits
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userVaultEquities"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's role
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userRole"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++User
++Agent
++Vault
++Subaccount
++Missing
++Query a user's portfolio
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"portfolio"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's referral information
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"referral"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Note that rewardHistory is for legacy rewards. Claimed rewards are now returned in nonFundingLedgerUpdate
++Query a user's fees
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userFees"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's staking delegations
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"delegations"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's staking summary
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"delegatorSummary"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's staking history
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"delegatorHistory"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's staking rewards
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"delegatorRewards"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's HIP-3 DEX abstraction state
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userDexAbstraction"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query a user's abstraction state
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userAbstraction"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query borrow/lend user state
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"borrowLendUserState"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Query borrow/lend reserve state
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"borrowLendReserveState"
++token
++*
++Number
++token index
++200: OK
++Query all borrow/lend reserve states
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"allBorrowLendReserveStates"
++200: OK
++Query approved builders for user
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"approvedBuilders"
++user
++*
++String
++hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++200: OK
++Previous
++Nonces and API wallets
++Next
++Perpetuals
++Last updated
++2 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint.md
++LINK | Next Perpetuals | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals
++LINK | Previous Nonces and API wallets | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/nonces-and-api-wallets
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#candle-snapshot
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#check-builder-fee-approval
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-10
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-11
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-12
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-13
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-14
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-15
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-16
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-17
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-18
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-19
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-2
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-20
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-21
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-22
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-23
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-3
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-4
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-5
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-6
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-7
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-8
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#headers-9
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#l2-book-snapshot
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#pagination
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#perpetuals-vs-spot
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-abstraction-state
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-fees
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-hip-3-dex-abstraction-state
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-portfolio
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-referral-information
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-role
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-staking-delegations
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-staking-history
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-staking-rewards
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-a-users-staking-summary
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-all-borrow-lend-reserve-states
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-approved-builders-for-user
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-borrow-lend-reserve-state
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-borrow-lend-user-state
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-order-status-by-oid-or-cloid
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#query-user-rate-limits
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-10
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-11
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-12
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-13
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-14
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-15
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-16
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-17
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-18
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-19
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-2
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-20
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-21
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-22
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-23
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-24
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-25
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-3
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-4
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-5
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-6
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-7
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-8
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#request-body-9
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-fills
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-fills-by-time
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-historical-orders
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-open-orders
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-open-orders-with-additional-frontend-info
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-subaccounts
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-twap-slice-fills
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-a-users-vault-deposits
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-details-for-a-vault
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#retrieve-mids-for-all-coins
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#user-address
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++LINK | token details page | https://app.hyperliquid.xyz/explorer/token/0x8f254b963e8468305d409b33aa137c67

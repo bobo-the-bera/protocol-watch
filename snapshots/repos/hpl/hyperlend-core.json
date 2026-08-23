@@ -1,0 +1,14 @@
+{
+  "committed_at": "2026-07-01T10:08:45Z",
+  "html_url": "https://github.com/hyperlendx/hyperlend-core/commit/7a2632a22ae2e620b69839f9d08fe9419df050d3",
+  "message": "Update README.md",
+  "protocol": "hpl",
+  "repo": "hyperlendx/hyperlend-core",
+  "sha": "7a2632a22ae2e620b69839f9d08fe9419df050d3",
+  "slug": "hyperlend-core",
+  "tags": [
+    "core",
+    "lending",
+    "contracts"
+  ]
+}

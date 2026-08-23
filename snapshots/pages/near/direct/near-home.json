@@ -1,0 +1,13 @@
+{
+  "content_changed_at": "2026-08-23T12:14:07+00:00",
+  "protocol": "near",
+  "sha256": "1980692e7cab157a22b13cbd85c76b99c0848010d9d13cf8169b1a405a6be9f3",
+  "slug": "near-home",
+  "tags": [
+    "confidential",
+    "perps",
+    "frontend",
+    "frontend-bundles"
+  ],
+  "url": "https://near.com/"
+}

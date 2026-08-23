@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:25+00:00",
+  "protocol": "near",
+  "sha256": "abffe5838c2ade6f913876c7900181638dd1914cce7e46393457436cad2d55a4",
+  "slug": "integration__market-makers__message-bus__guaranteed-delivery__b67fd7bab8",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/market-makers/message-bus/guaranteed-delivery"
+}

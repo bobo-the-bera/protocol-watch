@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:27+00:00",
+  "protocol": "near",
+  "sha256": "5f3ff1947c29611e6da60bac009dc3d3d783f240bc05804d6601f6acec923571",
+  "slug": "integration__verifier-contract__intent-types-and-execution__ddddc17151",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/verifier-contract/intent-types-and-execution"
+}

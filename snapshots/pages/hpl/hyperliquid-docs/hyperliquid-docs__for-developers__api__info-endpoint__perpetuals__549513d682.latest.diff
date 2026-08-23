@@ -1,0 +1,542 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__perpetuals__549513d682:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__info-endpoint__perpetuals__549513d682:current
+@@ -0,0 +1,539 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Retrieve all perpetual dexs
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpDexs"
++200: OK Successful Response
++Copy
++[
++null
++,
++{
++"
++name
++"
++:
++"
++test
++"
++,
++"
++fullName
++"
++:
++"
++test dex
++"
++,
++"
++deployer
++"
++:
++"
++0x5e89b26d8d66da9888c835c9bfcc2aa51813e152
++"
++,
++"
++oracleUpdater
++"
++:
++null
++,
++"
++feeRecipient
++"
++:
++null
++,
++"
++assetToStreamingOiCap
++"
++:
++[[
++"
++COIN1
++"
++,
++"
++100000.0
++"
++],
++[
++"
++COIN2
++"
++,
++"
++200000.0
++"
++]],
++"
++assetToFundingMultiplier
++"
++:
++[[
++"
++COIN1
++"
++,
++"
++1.0
++"
++],
++[
++"
++COIN2
++"
++,
++"
++2.0
++"
++]]
++}
++]
++Retrieve perpetuals metadata (universe and margin tables)
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"meta"
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex.
++200: OK Successful Response
++Retrieve perpetuals asset contexts (includes mark price, current funding, open interest, etc.)
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"metaAndAssetCtxs"
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex.
++200: OK Successful Response (first perp dex)
++200: OK Successful Response (HIP-3 dex)
++Retrieve user's perpetuals account summary
++POST
++https://api.hyperliquid.xyz/info
++See a user's open positions and margin summary for perpetuals trading.
++Under unified account or portfolio margin, use spot balances endpoint instead for trading account balance across spot and perps.
++Headers
++Name
++Type
++Description
++Content-Type
++*
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"clearinghouseState"
++user
++*
++String
++Onchain address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++dex
++String
++Perp dex name. Defaults to the empty string which represents the first perp dex.
++200: OK Successful Response
++Retrieve a user's funding history or non-funding ledger updates
++POST
++https://api.hyperliquid.xyz/info
++Note: Non-funding ledger updates include deposits, transfers, and withdrawals.
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"userFunding" or "userNonFundingLedgerUpdates"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++startTime
++*
++int
++Start time in milliseconds, inclusive
++endTime
++int
++End time in milliseconds, inclusive. Defaults to current time.
++200: OK Successful Response (first perp dex)
++200: OK Successful Response (HIP-3 dex)
++Retrieve historical funding rates
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"fundingHistory"
++coin
++*
++String
++Coin, e.g. "ETH"
++startTime
++*
++int
++Start time in milliseconds, inclusive
++endTime
++int
++End time in milliseconds, inclusive. Defaults to current time.
++200: OK (first perp dex)
++200: OK (HIP-3 dex)
++Retrieve predicted funding rates for different venues
++POST
++https://api.hyperliquid.xyz/info
++Note that predicted funding rates is only supported for the first perp dex.
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"predictedFundings"
++200: OK Successful Response
++Query perps at open interest caps
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpsAtOpenInterestCap"
++dex
++String
++Perp dex name of builder-deployed dex market. If not specified, then the first perp dex is used
++200: OK Successful Response
++Retrieve information about the Perp Deploy Auction
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpDeployAuctionStatus"
++200: OK Successful Response
++Retrieve User's Active Asset Data
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"activeAssetData"
++user
++*
++String
++Address in 42-character hexadecimal format; e.g. 0x0000000000000000000000000000000000000000.
++coin
++*
++String
++Coin, e.g. "ETH". See
++here
++for more details.
++200: OK (first perp dex)
++200: OK (HIP-3 dex)
++Retrieve Builder-Deployed Perp Market Limits
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpDexLimits"
++dex
++*
++String
++Perp dex name of builder-deployed dex market. The empty string is not allowed.
++200: OK
++Get Perp Market Status
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpDexStatus"
++dex
++*
++String
++Perp dex name of builder-deployed dex market. The empty string represents the first perp dex.
++200: OK
++Retrieve all perpetuals metadata (universe and margin tables)
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"allPerpMetas"
++200: OK
++Retrieve perp annotation
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpAnnotation"
++coin
++*
++String
++coin name, e.g. "BTC"
++200: OK
++Retrieve perp categories
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpCategories"
++200: OK
++Retrieve concise perp annotations
++POST
++https://api.hyperliquid.xyz/info
++Headers
++Name
++Type
++Description
++Content-Type
++*
++String
++"application/json"
++Request Body
++Name
++Type
++Description
++type
++*
++String
++"perpConciseAnnotations"
++200: OK
++Previous
++Info endpoint
++Next
++Spot
++Last updated
++4 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals.md
++LINK | Next Spot | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/spot
++LINK | Previous Info endpoint | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#get-perp-market-status
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-10
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-11
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-12
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-13
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-14
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-15
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-2
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-3
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-4
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-5
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-6
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-7
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-8
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#headers-9
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#query-perps-at-open-interest-caps
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-1
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-10
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-11
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-12
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-13
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-14
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-15
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-2
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-3
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-4
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-5
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-6
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-7
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-8
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#request-body-9
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-a-users-funding-history-or-non-funding-ledger-updates
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-all-perpetual-dexs
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-all-perpetuals-metadata-universe-and-margin-tables
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-builder-deployed-perp-market-limits
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-concise-perp-annotations
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-historical-funding-rates
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-information-about-the-perp-deploy-auction
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-perp-annotation
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-perp-categories
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-perpetuals-asset-contexts-includes-mark-price-current-funding-open-interest-etc
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-perpetuals-metadata-universe-and-margin-tables
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-predicted-funding-rates-for-different-venues
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-users-active-asset-data
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-users-perpetuals-account-summary
++LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint#perpetuals-vs-spot
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

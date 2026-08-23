@@ -1,0 +1,71 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Steps to Lend on core markets
+Navigate to the "Markets- Core Markets" section of the HyperLend platform.
+Choose the asset you wish to supply and click on "Supply”
+Specify the amount you intend to supply and submit your transaction.
+If you opt for the Collateral button on- this means that you will be able to borrow against your supplied assets.
+Note: The initial supply of an asset requires an additional approval transaction.
+Once your transaction is confirmed, your supply is successfully registered, and you begin earning interest immediately.
+Collateral Management
+↝ Opting Out of Collateral
+After supplying assets, you can opt out of using them as collateral. This option is available in the "Supply" section of your core markets dashboard. Toggle the "use as collateral" button off for the specific asset you wish to exclude from collateral use.
+You can withdraw assets without opting out, provided they are not actively used for borrowing and their withdrawal does not trigger a liquidation or Health Factor decrease of your loans.
+• Steps to Lend on Isolated markets
+Navigate to the "Markets- Isolated Markets" section of the HyperLend platform.
+Choose the asset pair you wish to supply and click on it to enter the sub-menu
+On the right, next to supply specify the amount you intend to supply and submit your transaction.
+Note: The initial supply of an asset requires an additional approval transaction.
+Once your transaction is confirmed, your supply is successfully registered, and you begin earning interest immediately.
+Note: If you opt-in the toggle to supply collateral and supply collateral to an isolated pool, you are not earning any interest, but are able to borrow against the collateral supplied to that specific pool.
+↝ Earnings and Interest Rates
+Interest Rate Earnings
+: Earnings are derived from the interest paid by borrowers. Suppliers receive a share of these payments based on the average borrow rate multiplied by the utilization rate. Higher reserve utilization results in higher yields for suppliers.
+Flash Loan Fees
+: Suppliers also earn a portion of the Flash Loan fees, which are currently set at 0.04% of the Flash Loan volume.
+Earnings and interest rate
+earnings are accrued in each block, in the form of supplied assets
+.
+Each asset on HyperLend has its own market dynamics, influencing its Annual Percentage Yield (APY). The average annual rate over the past 1/7/30 days
+is available
+for evaluating rate trends, and additional data can be accessed in the reserve overview section of the platform.
+↝ Minimum and Maximum Supply
+There is no minimum amount required to supply. However, it is prudent to consider transaction costs, as they may exceed the earnings for very low supply amounts.
+HyperLend employs a supply cap parameter, which is governed by HyperLend Governance. This cap limits the total amount of an asset that can be supplied.
+↝Withdrawal Process
+Steps to Withdraw
+Access the "
+Markets -> Click on desired asset
+" section and select "
+Withdraw
+."
+Choose the
+amount you wish to withdraw
+and submit the transaction.
+You can use your supplied assets as liquidity without withdrawing. Ensure
+sufficient liquidity
+is available (i.e., not borrowed by others) to complete a withdrawal. If liquidity is insufficient, you must wait for more supply or borrower repayments.
+By following these guidelines, you can effectively manage your supplies, earnings, and collateral on HyperLend, ensuring a
+streamlined and efficient experience
+on the platform.
+Previous
+How to HyperLend?
+Next
+↪ How to Borrow from HyperLend
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend.md
+LINK | Next ↪ How to Borrow from HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend
+LINK | Previous How to HyperLend? | https://docs.hyperlend.finance/how-to/how-to-hyperlend
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#collateral-management
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#earnings-and-interest-rates
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#minimum-and-maximum-supply
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#steps-to-lend-on-core-markets
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#steps-to-lend-on-isolated-markets
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend#withdrawal-process
+LINK | is available | https://hyperlend.blockanalitica.com/
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

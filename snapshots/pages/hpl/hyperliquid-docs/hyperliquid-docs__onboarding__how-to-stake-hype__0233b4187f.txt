@@ -1,0 +1,39 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+You can use different websites to stake HYPE on HyperCore, including:
+https://app.hyperliquid.xyz/staking/
+https://stake.nansen.ai/stake/hyperliquid
+https://app.validao.xyz/stake/hyperliquid
+https://hypurrscan.io/staking
+You will need HYPE in your Spot Balance on HyperCore. If you have HYPE on the HyperEVM, you would need to
+transfer it from the HyperEVM
+to HyperCore.
+Transfer HYPE from your Spot Balance to your Staking Balance.
+Choose a validator to stake to. Staking to a validator has a 1 day lockup.
+To unstake, follow the same process in reverse:
+Unstake from a validator.
+Transfer from your Staking Balance to your Spot Balance. This takes 7 days.
+After 7 days, the HYPE will appear in your Spot Balance.
+For further questions, you can refer to the
+Staking
+section.
+Previous
+How to use the HyperEVM
+Next
+Connect mobile via QR code
+Last updated
+2 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype.md
+LINK | Next Connect mobile via QR code | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code
+LINK | Previous How to use the HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm
+LINK | Staking | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/staking
+LINK | https://app.hyperliquid.xyz/staking/ | https://app.hyperliquid.xyz/staking/
+LINK | https://app.validao.xyz/stake/hyperliquid | https://app.validao.xyz/stake/hyperliquid
+LINK | https://hypurrscan.io/staking | https://hypurrscan.io/staking
+LINK | https://stake.nansen.ai/stake/hyperliquid | https://stake.nansen.ai/stake/hyperliquid
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+LINK | transfer it from the HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm

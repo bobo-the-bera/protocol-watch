@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:23+00:00",
+  "protocol": "near",
+  "sha256": "4822f99212e85cfe223e25417c5cd21945925aa00a004e862571f3a0678d58ce",
+  "slug": "integration__distribution-channels__1click-api__swap-types__e879e8c326",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/distribution-channels/1click-api/swap-types"
+}

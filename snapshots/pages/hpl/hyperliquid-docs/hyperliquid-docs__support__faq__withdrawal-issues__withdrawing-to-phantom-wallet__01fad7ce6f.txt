@@ -1,0 +1,38 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Situation 1: You need 1 USDC for withdrawals and cannot deposit USDC via Phantom wallet, since Phantom does not support Arbitrum
+Option 1
+You sell some SOL/2Z/BONK/FARTCOIN/PUMP/SPX on Spot for USDC (Spot). Note that minimum transaction amount is $10.
+Option 2
+Export your Phantom wallet’s Ethereum private key and import it to another wallet like Rabby that supports the Arbitrum network.
+Export:
+https://help.phantom.com/hc/en-us/articles/25334064171795-How-to-view-your-recovery-phrase-or-private-key-in-Phantom
+Migrate to Rabby (optional):
+https://support.rabby.io/en/articles/14120403-migrating-from-metamask-or-other-wallets
+Deposit USDC via Arbitrum Network on Rabby (or other Arbitrum compatible wallets). Note that minimum deposit is $5.
+Situation 2: You withdrew USDC over Arbitrum to your Phantom wallet but cannot find it
+Your funds are not lost, they are on the Arbitrum network.
+Export your Phantom wallet’s Ethereum private key and import it to another wallet like Rabby that supports the Arbitrum network.
+Export:
+https://help.phantom.com/hc/en-us/articles/28355165637011-Exporting-Your-Private-Key
+Migrate to Rabby (optional):
+https://support.rabby.io/en/articles/14120403-migrating-from-metamask-or-other-wallets
+Previous
+My withdrawal keeps getting re-deposited
+Next
+Trade outcome looks incorrect
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet.md
+LINK | Next Trade outcome looks incorrect | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect
+LINK | Previous My withdrawal keeps getting re-deposited | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/my-withdrawal-keeps-getting-re-deposited
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet#missing-usdc
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet#need-usdc
+LINK | https://help.phantom.com/hc/en-us/articles/25334064171795-How-to-view-your-recovery-phrase-or-private-key-in-Phantom | https://help.phantom.com/hc/en-us/articles/25334064171795-How-to-view-your-recovery-phrase-or-private-key-in-Phantom
+LINK | https://help.phantom.com/hc/en-us/articles/28355165637011-Exporting-Your-Private-Key | https://help.phantom.com/hc/en-us/articles/28355165637011-Exporting-Your-Private-Key
+LINK | https://support.rabby.io/en/articles/14120403-migrating-from-metamask-or-other-wallets | https://support.rabby.io/en/articles/14120403-migrating-from-metamask-or-other-wallets
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

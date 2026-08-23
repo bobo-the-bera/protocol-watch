@@ -1,0 +1,187 @@
+--- near/intents-docs/integration__verifier-contract__deposits-and-withdrawals__balances__fd309304a9:previous
++++ near/intents-docs/integration__verifier-contract__deposits-and-withdrawals__balances__fd309304a9:current
+@@ -0,0 +1,184 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++​
++Multi Token Standard (NEP-245)
++After a successful deposit, the Verifier contract manages tokens using the
++Multi Token Standard (NEP-245)
++. This enables uniform handling of all supported token types.
++​
++Token ID format
++Each token is identified by a string-based token ID, prefixed with its standard type.
++Token Type
++Prefix
++Example
++Fungible (NEP-141)
++nep141:
++nep141:wrap.near
++Non-fungible (NEP-171)
++nep171:
++nep171:coolnfts.near:rock.near
++Multi Token (NEP-245)
++nep245:
++nep245:mygame.near:shield.near
++​
++Checking your balance
++After a successful deposit, query your balance using
++mt_balance_of
++, which adheres to the NEP-245 standard.
++NEAR CLI
++NEAR API JS
++near
++contract
++call-function
++as-read-only
++intents.near
++mt_balance_of
++\
++json-args
++'{"account_id": "your-account.near", "token_id": "nep141:wrap.near"}'
++\
++network-config
++mainnet
++now
++import
++{
++JsonRpcProvider
++}
++from
++"near-api-js"
++;
++const
++provider
++=
++new
++JsonRpcProvider
++({
++url:
++"https://rpc.fastnear.com"
++});
++const
++balance
++=
++await
++provider
++.
++callFunction
++({
++contractId:
++"intents.near"
++,
++method:
++"mt_balance_of"
++,
++args:
++{
++account_id:
++"your-account.near"
++,
++token_id:
++"nep141:wrap.near"
++,
++},
++});
++console
++.
++log
++(
++balance
++);
++See contract interaction example in
++near-api-examples
++repository.
++Parameter
++Description
++account_id
++The NEAR account to check the balance of.
++token_id
++The token ID with its standard prefix (e.g.,
++nep141:wrap.near
++). See
++Token ID format
++.
++​
++Batch balance query
++To check multiple token balances at once, use
++mt_batch_balance_of
++:
++NEAR CLI
++NEAR API JS
++near
++contract
++call-function
++as-read-only
++intents.near
++mt_batch_balance_of
++\
++json-args
++'{"account_id": "your-account.near", "token_ids": ["nep141:wrap.near", "nep141:usdt.tether-token.near"]}'
++\
++network-config
++mainnet
++now
++const
++balances
++=
++await
++provider
++.
++callFunction
++({
++contractId:
++"intents.near"
++,
++method:
++"mt_batch_balance_of"
++,
++args:
++{
++account_id:
++"your-account.near"
++,
++token_ids:
++[
++"nep141:wrap.near"
++,
++"nep141:usdt.tether-token.near"
++,
++],
++},
++});
++console
++.
++log
++(
++balances
++);
++Response:
++[
++"3000004000004000006"
++,
++"10"
++]
++Balances are returned in the smallest unit of each token (e.g., yoctoNEAR for wrapped NEAR).
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Multi Token Standard (NEP-245) | https://nomicon.io/Standards/Tokens/MultiToken/Core
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Token ID format | https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/balances#token-id-format
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | mt_balance_of | https://near.github.io/intents/defuse_nep245/trait.MultiTokenCore.html#tymethod.mt_balance_of
++LINK | mt_batch_balance_of | https://near.github.io/intents/defuse_nep245/trait.MultiTokenCore.html#tymethod.mt_batch_balance_of
++LINK | near-api-examples | https://github.com/near-examples/near-api-examples/blob/main/near-api-js/examples/contract-interaction.ts
++LINK | ​ | https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/balances#batch-balance-query
++LINK | ​ | https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/balances#checking-your-balance
++LINK | ​ | https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/balances#multi-token-standard-nep-245
++LINK | ​ | https://docs.near-intents.org/integration/verifier-contract/deposits-and-withdrawals/balances#token-id-format

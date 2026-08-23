@@ -1,0 +1,180 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__portfolio-margin__1a25dde322:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__portfolio-margin__1a25dde322:current
+@@ -0,0 +1,177 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++What is portfolio margin (PM)?
++Portfolio margin (PM) unifies spot and perps trading for greater flexibility and capital efficiency. All cross margin perps positions and spot balances are margined together within a single account.
++Eligible spot assets (HYPE and BTC) act as collateral for perps positions denominated in USDC can be used to purchase other spot assets.
++PM enables strategies such as hedging spot positions or executing carry trades. Profit and loss across spot and perps positions offset each other automatically.
++Refer to the Docs
++https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin
++How does portfolio margin work?
++Auto borrowing
++Eligible collateral assets have a Loan-to-Value (LTV) ratio that determines how much can be borrowed against them. Currently, HYPE and BTC each have an LTV of 50%.
++When placing spot or perps orders using PM, insufficient balance is automatically borrowed against eligible collateral up to
++borrowable_amount = token_balance × oracle_price × LTV
++Calculation example:
++Value
++Collateral held
++10,000
++Collateral price
++$40
++LTV
++50%
++Borrowable USDC
++10,000 × 0.5 × $40 = $200,000
++In the example above, the user has “buying power” of 200,000 USDC to open new perps positions or buy spot assets. Borrowing is handled automatically; refer to the limits
++here
++Note: Borrowable balance can only be used within PM for trading. Borrowable balance cannot be withdrawn or transferred between accounts or addresses.
++Margin sharing
++If the equity of a perps position falls below its maintenance margin due to unrealized losses, the system will automatically borrow against available collateral to prevent liquidation. As with normal cross margin without PM, gains and losses on cross margin positions offset each other.
++Automatic repayment
++Deposits and realized profits are automatically applied as repayment against outstanding borrows. Excess unrealized profits from borrowed assets repays borrows automatically.
++Yield on idle assets
++Under PM, any idle USDC balance is automatically supplied to earn yield. Interest is accrued proportionally based on each user's share of the total supplied amount.
++How to enable portfolio margin on app.hyperliquid.xyz
++Account requirements
++Account value of >$10,000, or >$5,000,000 in weighted trading volume
++Account value must be <$5,000,000
++Account must have no open positions, open orders, or active TWAP orders before enabling
++Option 1:
++Navigate to the
++Portfolio page
++and select the Portfolio Margin option.
++Option 2:
++On the Trade page for a perp asset, select the “Classic” button in the top right corner of the order form and select the Portfolio Margin option.
++Understanding information related to portfolio margin
++Portfolio Margin Ratio (PMR)
++PMR represents the overall liquidation risk of a PM account. If PMR > 95%, cross margin positions and collateral are at risk of liquidation.
++Factors that increase PMR (not exhaustive):
++Perp positions accumulating unrealized negative PnL
++Spot collateral value declining (e.g. BTC price falls from $80,000 to $70,000)
++Withdrawing or transferring out available balance
++Interest accruing on outstanding borrow
++Liquidation is triggered when the entire PM account falls below its portfolio maintenance margin requirement. For the full PMR formula, refer to the
++Docs
++.
++Loan-to-value (LTV)
++LTV is the percentage contribution of collateral assets towards portfolio margin. For example, if LTV is 50%, 50% of the collateral’s value can be used to open new positions, cover unrealized perp losses, or purchase spot tokens.
++Borrow Cap Used
++Indicates the current borrow cap utilization for USDC. Refer to the borrow caps
++here
++.
++Net Balance
++Net Balance = equity - borrowed amount
++A negative net balance indicates that the user has more borrows than equity. For example, if the user has 100 USDC, and borrowed 150 USDC, then the net balance is -50.
++Available Balance
++Borrowed amounts can only be used to trade spot and perps. They cannot be withdrawn or transferred.
++Quote assets: When trading across the DEXs simultaneously, available balance figures may differ between DEXs. Refer to the Available to Trade value shown on the relevant order form.
++The collateral amount available to withdraw is determined by how much collateral can be removed without reducing your Health Factor below 100%.
++Example: A user borrowing 100 USDC with only HYPE as collateral (50% LTV, $40 per HYPE) requires a minimum of 5 HYPE locked as collateral (100 / (0.5 × 40) = 5 HYPE).
++Available balance = total balance − locked collateral
++Where multiple collateral types are held, available balance is calculated as
++Total balance − minimum collateral required
++to keep Health Factor ≥ 100%
++Your Health Factor
++Health Factor indicates how much additional borrow capacity remains in the account. Health Factor <100% does not directly imply liquidation risk, but the account won’t be able to borrow more.
++Health Factor = Account Value weighted by LTV / Borrowed Amount
++Calculation example:
++Asset
++Balance
++LTV
++Weighted Value
++BTC
++1 @ $80,000
++50%
++$40,000
++HYPE
++200 @ $50
++50%
++$5,000
++Account value weighted by LTV
++$45,000
++If Borrowed Amount: $42,000, Health Factor = 45,000 / 42,000 = 107.14%
++Your Borrowed
++Displays total outstanding USDC borrows. Borrows accrue interest until repaid.
++Advanced technical details
++Fees and caps
++Borrow fees are charged an interest on the outstanding borrowed amount. Interest accrues continuously and is shown on the interest tab every hour.
++Borrow and supply caps:
++If the borrow cap is hit or all existing supply is lent out (100% utilization), positions are only protected against liquidation up to the borrowable amount. Users should monitor their liquidation risk and top up with the quote asset used for margining.
++If all existing supply is lent out, users who have supplied assets will not be able to withdraw their collateral until more supply is added or borrows are repaid. As in the case of borrow caps, users should be aware of increased liquidation risk.
++Liquidations
++When a PM account becomes liquidatable (PMR ≥ 95%), either perp positions or spot collateral may be liquidated first, depending on the order of oracle price updates. Users should not expect a deterministic liquidation sequence.
++Spot collateral liquidations are classified as one of two types:
++Partial borrow liquidation
++A partial borrow liquidation is triggered when the borrowed amount exceeds the midpoint between the LTV and 100% of the collateral value. This threshold is defined as:
++collateral_value × (LTV + (1 - LTV) × ½)
++.
++Occurs every 3 seconds, repeatedly, until the portfolio is no longer in a liquidatable state. Each liquidation experiences slippage analogous to perp liquidations into the order book.
++Full borrow liquidation
++A full borrow liquidation is triggered when the borrowed amount exceeds ⅔ between the LTV and 100% of the collateral value. This threshold is defined as:
++collateral_value × (LTV + (1 - LTV) × ⅔)
++.
++The entire remaining collateral and debt position is liquidated.
++Parameter
++Value
++HYPE held
++10
++Initial HYPE price
++$50
++LTV
++50%
++Borrowed amount
++10 × $50 × 0.5 = $250
++Scenario 1: HYPE price drops to $33
++Collateral value
++10 × $33 = $330
++Partial liquidation threshold
++$330 × (0.5 + (1 - 0.5) × ½ ) = $330 × 75% = $247.50
++Outcome (Scenario 1)
++Borrowed $250 > threshold $247.50, partial borrow liquidation triggered
++Scenario 2: HYPE price drops to $30
++Collateral value
++10 × $30 = $300
++Full liquidation threshold
++$300 × (0.5 + (1 - 0.5) × ⅔ ) = $300 × 83.3% = $249.90
++Outcome (Scenario 2)
++Borrowed $250 > threshold $249.90, full borrow liquidation triggered
++When a borrow liquidation occurs, the protocol takes over the user’s collateral (e.g. HYPE or BTC) along with the associated debt. For a full technical breakdown of PM liquidation mechanics, refer to the Portfolio Margin
++liquidations
++section.
++Previous
++Gas problem on EVM
++Next
++Unstaking & link staking issues
++Last updated
++3 months ago
++[[LINK TARGETS]]
++LINK | Docs | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin#liquidations
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin.md
++LINK | Next Unstaking & link staking issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/unstaking-and-link-staking-issues
++LINK | Portfolio page | https://app.hyperliquid.xyz/portfolio
++LINK | Previous Gas problem on EVM | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/gas-problem-on-evm
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#account-requirements
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#advanced-technical-details
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#auto-borrowing
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#automatic-repayment
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#available-balance
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#borrow-cap-used
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#fees-and-caps
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#how-does-portfolio-margin-work
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#how-to-enable-portfolio-margin-on-app.hyperliquid.xyz
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#liquidations
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#loan-to-value-ltv
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#margin-sharing
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#net-balance
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#portfolio-margin-ratio-pmr
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#understanding-information-related-to-portfolio-margin
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#what-is-portfolio-margin-pm
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#yield-on-idle-assets
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#your-borrowed
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/portfolio-margin#your-health-factor
++LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin
++LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin
++LINK | liquidations | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin#liquidations
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

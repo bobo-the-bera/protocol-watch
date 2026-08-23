@@ -1,0 +1,107 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+​
+July 2026
+​
+Jul 13, 2026
+Launch
+Feature
+Docs
+​
+Confidential Intents B2B launch
+Confidential Intents is live for B2B partners. Confidential swaps execute on a
+private chain with shielded balances and settle back to public NEAR through
+the Private PoA Bridge.
+Confidential Intents
+Two-chain architecture, shield and unshield flows, versioned nonces, and the solver response format.
+​
+Changelog on the docs website
+This changelog is now part of the docs site. New features, API changes, and
+launches land here as dated entries.
+Changelog
+Bookmark this page to track what’s new in NEAR Intents.
+​
+WebSocket-only whitelisted solvers on Confidential Intents
+Solver access on the confidential relay is now gated by an allowlist.
+Whitelisted solvers connect over WebSocket only, subscribing to relay streams
+and responding with signed quotes; solvers not on the list are denied entirely.
+Private Relay
+Whitelisted solvers receive quote requests and respond via
+quote_response
+over
+/ws
+. Contact the Defuse team to get whitelisted.
+​
+FE (near.com): Limit Orders on Perpetuals
+Perpetuals on near.com now support limit orders. Set your price and the order
+fills when the market reaches it.
+Trade Perps on NEAR
+Place limit orders on the Perpetuals interface at near.com.
+​
+Jul 3, 2026
+Feature
+API
+​
+Shield Incident API
+A partner-facing API to pull active Shield incidents and submit new ones. Use
+GET
+/
+POST https://shield.chaindefuser.com/incident
+with a
+SHIELD
+API key.
+Shield Incident API guide
+Endpoints, request and response shapes, scope fields, and how to get a token.
+​
+Jul 1, 2026
+Feature
+API
+​
+Confidentiality parameter
+Quote requests now accept a
+confidentiality
+field that makes a normal quote a
+confidential swap.
+Confidentiality parameter
+What changed, the two integration paths, and an example request.
+​
+June 2026
+​
+Jun 27, 2026
+Feature
+API
+​
+Verify Quote Signatures
+1Click signs quote payloads so partners can verify the payload origin and detect
+tampering before using fields like
+depositAddress
+in 1click quote response
+payloads.
+Verify Quote Signatures
+What is signed, how to verify, and code examples.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/changelog/overview#changelog-on-the-docs-website
+LINK | ​ | https://docs.near-intents.org/changelog/overview#confidential-intents-b2b-launch
+LINK | ​ | https://docs.near-intents.org/changelog/overview#confidentiality-parameter
+LINK | ​ | https://docs.near-intents.org/changelog/overview#fe-near-com--limit-orders-on-perpetuals
+LINK | ​ | https://docs.near-intents.org/changelog/overview#jul-1-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#jul-13-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#jul-3-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#july-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#jun-27-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#june-2026
+LINK | ​ | https://docs.near-intents.org/changelog/overview#shield-incident-api
+LINK | ​ | https://docs.near-intents.org/changelog/overview#verify-quote-signatures
+LINK | ​ | https://docs.near-intents.org/changelog/overview#websocket-only-whitelisted-solvers-on-confidential-intents

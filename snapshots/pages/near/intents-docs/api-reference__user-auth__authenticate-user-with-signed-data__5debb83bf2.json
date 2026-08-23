@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:20+00:00",
+  "protocol": "near",
+  "sha256": "1124a34a1f8d29fbf85eef021941bf5113df7c6e478f4a05822d21e01cb131fd",
+  "slug": "api-reference__user-auth__authenticate-user-with-signed-data__5debb83bf2",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/user-auth/authenticate-user-with-signed-data"
+}

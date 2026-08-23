@@ -1,0 +1,39 @@
+--- near/rhea-guide/near-chain-guides__how-rhea-finance-works__staking__0af152e5f1:previous
++++ near/rhea-guide/near-chain-guides__how-rhea-finance-works__staking__0af152e5f1:current
+@@ -0,0 +1,36 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Concept
++xREF is the main staking contract (xtoken.ref-finance.near) on the platform. When you stake your REF, you effectively exchange your REF for xREF. Over time, you will always earn more REF by holding xREF tokens.
++There is no Divergence Loss when you stake REF for xREF tokens
++Every swap executed on RHEA Finance generates revenue for the protocol.
++100% of the protocol fee will be used to buy back REF tokens, of which:
++75% will be transferred to the xREF contract (xtoken.ref-finance.near) and released linearly over time
++25% will be allocated to a Community/Provision treasury. This treasury will be used to fund grants and other community initiatives/programs
++Execution
++Like any liquidity provider, RHEA Finance collects its shares (16% of the total pool fee) in real-time and will be paid when it removes liquidity from the pool.
++Converting protocol LP tokens, resulting from the trading fees, involves the following actions:
++Remove liquidity from pools
++Withdraw corresponding tokens from RHEA Finance (v2.ref-finance.near) to the DAO (ref-finance.sputnik-dao.near)
++Send tokens from the DAO to a specific execution account
++Buy (back) REF tokens (with the execution account)
++Send REF tokens to the staking contract (xtoken.ref-finance.near)
++The process happens on a quarterly basis.
++The first buy back involved as many as 35 DAO proposals
++Because the conversion from LP to REF tokens happens on a quarterly basis, and because the tokens collected might be very volatile on the same period, there might be a significant difference between the daily 'observable' revenue and the 'realised' revenue, after conversion.
++Finally, rewards are being released linearly on a quarterly basis, and will have boosted markups for the first three years (subject to change):
++Year 1: 2x
++Year 2: 1.5x
++Year 3: 1.2x
++Year 4: 1x
++Last updated
++7 months ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Markdown | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/staking.md
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/staking#concept
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/staking#id-6306
++LINK | llms.txt | https://guide.rhea.finance/llms.txt

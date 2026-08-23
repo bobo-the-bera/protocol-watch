@@ -1,0 +1,200 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+The
+Intents Swap Widget
+lets you integrate a fully functional, cross-chain swap interface into your application in just a few lines of code.
+You can use the
+Intents Widget Studio
+to customize the widget’s appearance and behavior, then export the configuration for use in your app.
+​
+Quickstart
+1
+Install package
+Install the widget package using your preferred package manager:
+npm
+install
+@aurora-is-near/intents-swap-widget
+Alternatively, if you want to use the widget in standalone mode with embedded wallet connection mechanisms:
+npm
+install
+@aurora-is-near/intents-swap-widget-standalone
+2
+Set up
+Wrap your app, or just the area where the widget appears, with the
+WidgetConfigProvider
+, then render one of our prebuilt widgets within it.
+For example, the snippet below shows how to render the combined widget.
+import
+{
+WidgetConfigProvider
+,
+Widget
+,
+}
+from
+'@aurora-is-near/intents-swap-widget'
+;
+export
+default
+function
+App
+()
+{
+return
+(
+<
+WidgetConfigProvider
+config
+=
+{
+appName:
+'MyApp'
+}
+>
+<
+Widget
+/>
+</
+WidgetConfigProvider
+>
+);
+}
+There are also individual
+WidgetSwap
+,
+WidgetTransfer
+, and
+WidgetWithdraw
+widgets.
+For a full list of configuration options, see the
+Configuration
+page.
+3
+Styling
+To apply styles, you need to import the package styles into your app’s stylesheet, for example:
+@import
+'@aurora-is-near/intents-swap-widget/styles.css'
+;
+.my-class
+{
+background-color
+:
+#fff
+;
+}
+For more details about the available theming options, see the
+Theming
+page.
+4
+Connect a wallet
+If you are using standalone mode, the wallet connection mechanism is built in.
+If you want to use your existing wallet integration (e.g., AppKit, Provy, TonConnect), you can pass the connected address via the
+connectedWallets
+config option.
+Here is an example that assumes you are using
+AppKit
+and have a hook that provides the wallet address and a button for connecting.
+import
+{
+WidgetConfigProvider
+,
+Widget
+,
+}
+from
+'@aurora-is-near/intents-swap-widget'
+;
+import
+{
+useAppKitWallet
+}
+from
+'./hooks/useAppKitWallet'
+;
+import
+{
+WalletConnectButton
+}
+from
+'./components/WalletConnectButton'
+;
+export
+const
+SimpleWidgetDemo
+=
+()
+=>
+{
+const
+{
+address
+:
+walletAddress
+,
+isConnecting
+:
+isLoading
+}
+=
+useAppKitWallet
+();
+return
+(
+<
+WidgetConfigProvider
+config
+=
+{
+connectedWallets:
+{
+default:
+walletAddress
+} }
+}
+>
+<
+Widget
+isFullPage
+isLoading
+=
+{
+isLoading
+}
+FooterComponent
+=
+{
+<
+WalletConnectButton
+/>
+}
+/>
+</
+WidgetConfigProvider
+>
+);
+};
+​
+Next steps
+Explore the
+Widget Docs
+for detailed information on configuration options, theming, and advanced usage examples.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | AppKit | https://docs.reown.com/appkit/overview
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Configuration | https://docs.intents.aurora.dev/readme-1-1
+LINK | Intents Widget Studio | https://intents.aurora.dev/
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Theming | https://docs.intents.aurora.dev/theming
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | Widget Docs | https://docs.intents.aurora.dev/readme-1-1
+LINK | ​ | https://docs.near-intents.org/integration/devkit/react-widget#next-steps
+LINK | ​ | https://docs.near-intents.org/integration/devkit/react-widget#quickstart

@@ -1,0 +1,116 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+DEX Routes
+CA on Binance Smart Chain
+0x4c067DE26475E1CeFee8b8d1f6E2266b33a2372E
+CA on NEAR Protocol
+token.rhealab.near
+RHEA Finance
+Link:
+https://app.rhea.finance/swap
+Pancake Swap
+Link:
+https://bit.ly/3YIKlJr
+GemPump
+Link:
+https://www.gempump.io/token/rheafinance
+Trading pair:
+RHEA <> wBNB
+CEX Routes
+Binance Alpha
+Link:
+https://www.binance.com/en/alpha/bsc/0x4c067de26475e1cefee8b8d1f6e2266b33a2372e
+GATE US
+Link:
+https://www.gate.com/en-us/trade/RHEA_USDT
+Bitget
+Link:
+https://www.bitget.com/spot/RHEAUSDT?utmSource=Twitter
+Trading pair:
+RHEA <> USDT
+Kraken
+Link:
+app.kraken.com/JDNW/RHEA
+Trading pair:
+RHEA <> USD
+RHEA <> EUR
+Gate io
+Link:
+https://www.gate.com/trade/RHEA_USDT
+Trading pair:
+RHEA <> USDT
+MEXC
+Link:
+https://www.mexc.com/exchange/RHEA_USDT
+Trading pair:
+RHEA <> USDT
+LBank
+Link:
+https://www.lbank.com/trade/rhea_usdt
+Trading pair:
+RHEA <> USDT
+Ourbit
+Link:
+https://www.ourbit.com/exchange/RHEA_USDT
+Trading pair:
+RHEA <> USDT
+BitMart
+Link:
+https://www.bitmart.com/trade/en-US?symbol=RHEA_USDT
+Trading pair:
+RHEA <> USDT
+Bingx
+Link:
+https://bingx.com/en/spot/RHEAUSDT
+Trading pair:
+RHEA <> USDT
+HIBT
+Link:
+https://hibt.com/trade/RHEA-USDT
+Trading Pair:
+RHEA <> USDT
+Previous
+Get Started
+Next
+Setup Wallet
+Last updated
+7 months ago
+Was this helpful?
+[[LINK TARGETS]]
+LINK | Markdown | https://guide.rhea.finance/getting-started/buy-rhea-token.md
+LINK | Next Setup Wallet | https://guide.rhea.finance/getting-started/near-account
+LINK | Previous Get Started | https://guide.rhea.finance/getting-started
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#binance-alpha
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#bingx
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#bitget
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#bitmart
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#cex-routes
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#dex-routes
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#gate-io
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#gate-us
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#gempump
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#hibt
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#kraken
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#lbank
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#mexc
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#ourbit
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#pancake-swap
+LINK | [no text] | https://guide.rhea.finance/getting-started/buy-rhea-token#rhea-finance
+LINK | app.kraken.com/JDNW/RHEA | https://t.co/o3pTff1xQQ
+LINK | https://app.rhea.finance/swap | https://app.rhea.finance/swap
+LINK | https://bingx.com/en/spot/RHEAUSDT | https://bingx.com/en/spot/RHEAUSDT
+LINK | https://bit.ly/3YIKlJr | https://bit.ly/3YIKlJr
+LINK | https://hibt.com/trade/RHEA-USDT | https://hibt.com/trade/RHEA-USDT
+LINK | https://www.binance.com/en/alpha/bsc/0x4c067de26475e1cefee8b8d1f6e2266b33a2372e | https://www.binance.com/en/alpha/bsc/0x4c067de26475e1cefee8b8d1f6e2266b33a2372e
+LINK | https://www.bitget.com/spot/RHEAUSDT?utmSource=Twitter | https://www.bitget.com/spot/RHEAUSDT?utmSource=Twitter
+LINK | https://www.bitmart.com/trade/en-US?symbol=RHEA_USDT | https://www.bitmart.com/trade/en-US?symbol=RHEA_USDT
+LINK | https://www.gate.com/en-us/trade/RHEA_USDT | https://www.gate.com/en-us/trade/RHEA_USDT
+LINK | https://www.gate.com/trade/RHEA_USDT | https://www.gate.com/trade/RHEA_USDT
+LINK | https://www.gempump.io/token/rheafinance | https://www.gempump.io/token/rheafinance
+LINK | https://www.lbank.com/trade/rhea_usdt | https://www.lbank.com/trade/rhea_usdt
+LINK | https://www.mexc.com/exchange/RHEA_USDT | https://www.mexc.com/exchange/RHEA_USDT
+LINK | https://www.ourbit.com/exchange/RHEA_USDT | https://www.ourbit.com/exchange/RHEA_USDT
+LINK | llms.txt | https://guide.rhea.finance/llms.txt

@@ -1,0 +1,392 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+The list of supported chains is continuously expanding. Check this page regularly for updates or
+join our Telegram community
+for announcements.
+EVM Chains
+Bitcoin & Forks
+Layer 1 Chains
+​
+Supported Networks
+Arbitrum
+ADI
+Aurora
+Base
+Bera
+BNB Chain
+Ethereum
+Gnosis
+Optimism
+Plasma
+Polygon
+Avalanche
+Monad
+XLayer
+Scroll
+​
+Address Format
+0x
+-prefixed hexadecimal (42 characters)
+Example:
+0x85F17Cf997934a597031b2E18a9aB6ebD4B9f6a4
+​
+Signing Standard
+ERC-191 (all EVM wallets: MetaMask, Rabby, Rainbow, WalletConnect)
+✅ Fully supported with all EVM wallets
+​
+Supported Networks
+Bitcoin
+Dogecoin
+Zcash
+Bitcoin Cash
+Litecoin
+Dash
+​
+Bitcoin
+Address Types:
+Legacy
+- Starts with
+1
+Example:
+1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+P2SH
+- Starts with
+3
+Example:
+3J98t1WpEZ73CNmYviecrnyiWrnqRhWNLy
+Bech32
+- Starts with
+bc1
+Example:
+bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kygt080
+Taproot
+- Starts with
+bc1p
+Example:
+bc1p5cyxnuxmeuwuvkwfem96llyr29s8l68p7z6zgt7zdkv3g7zv3qvqz6z8h7
+Signing Standard:
+BIP-322 (Bitcoin Knots, Bitcoin Core, Sparrow)
+✅ All address types supported
+​
+Dogecoin
+Address Types:
+P2PKH/Legacy
+- Starts with
+D
+Example:
+D9nssC5jR1viPZhWwFvDkjYpJZYJVydN8k
+P2SH
+- Starts with
+A
+or
+9
+✅ Fully supported
+​
+ZCash
+Address Types:
+Transparent
+-
+t1
+or
+t3
+prefix
+Example:
+t1ZCashExample...
+⚠️ Partially supported - Transparent addresses only
+​
+Bitcoin Cash
+Address Types:
+Legacy P2PKH
+- Starts with
+1
+Example:
+1BpEi6DfDAUFd7GtittLSdBeYJvcoaVggu
+Legacy P2SH
+- Starts with
+3
+Example:
+3CWFddi6m4ndiGyKqzYvsFYagqDLPVMTzC
+CashAddr P2PKH
+- Starts with
+q
+Example:
+bitcoincash:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a
+CashAddr P2SH
+- Starts with
+p
+Example:
+bitcoincash:pqq3728yw0y47sqn6l2na30mcw6zm78dzq5ucqzc37
+✅ All address types supported
+​
+Litecoin
+Address Types:
+Legacy
+- Starts with
+L
+Example:
+LZ3v1o8qK4b7sJ9mH2f5xQp8Pd1cR6TuVa
+P2SH
+- Starts with
+M
+or
+3
+Example:
+MDf8y1Kq9Tm5sR3aP7uW4cXn2Lb6vZjQhE
+Bech32
+- Starts with
+ltc1q
+Example:
+ltc1q9k3p7u5n0s4y8v2h3w6j5c9r2t0m4k7f5p0d2
+Taproot
+- Starts with
+ltc1p
+Example:
+ltc1p4h7q9m3x5u2n8k6t4v9y3r5c2w7z0l3p5u8y6f0k2d
+✅ Fully supported
+​
+Supported Networks
+Aleo
+Aptos
+Cardano
+NEAR
+Solana
+Stellar
+Sui
+TON
+Tron
+XRP
+Starknet
+​
+Aleo
+Address Format:
+63-character Bech32 with
+aleo1
+prefix
+Example:
+aleo1kelm7k8786anyygg788ntlgkx4uqkmkpj7k5ugfuqchd8rnf858sun3qcr
+✅ Fully supported
+​
+Aptos
+Address Format:
+0x
+followed by 64 lowercase hexadecimal digits
+Example:
+0x334f8a73c50a796093399e6a7136092a9cab920b6c8096c13836666cd1a6b7dc
+✅ Fully supported
+​
+Cardano
+Address Types:
+Shelley Base
+- Full address with staking key
+Enterprise
+- Payment-only address
+Example:
+addr1v8wfpcg4qfhmnzprzysj6j9c53u5j56j8rvhyjp08s53s6g07rfjm
+Partially supported
+​
+NEAR Protocol
+Address Types:
+Named accounts
+- Human-readable (e.g.,
+alice.near
+)
+Implicit accounts
+- 64-character hex (SHA-256 of public key)
+Example:
+ed25519:DcA2MzgpJbrUATQLLceocVckhhAqrkingax4oJ9kZ847
+Signing Standard:
+NEP-413 (MyNearWallet, Meteor, Sender, Ledger)
+✅ Fully supported with native NEAR wallets
+​
+Solana
+Address Format:
+Base58-encoded Ed25519 public key (typically 44 characters)
+Example:
+BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z
+Signing Standard:
+Raw Ed25519 (Phantom, Solflare, Slope)
+✅ Fully supported with all major Solana wallets
+​
+Sui
+Address Format:
+32-byte hexadecimal address
+Example:
+0xcc64b79a3adf4d3c21ad25a97e3ecbe83e659e68964f62e6a1da8a037346a4ce
+✅ Fully supported
+​
+Stellar
+Address Format:
+56-character base32 string
+Example:
+GBD7QFQVR4QWNEJSHP4VN7RAAUKXTMZ4EJ4EBMCR7CP3HMF7RXEASTD7
+Signing Standard:
+SEP-53 (Freighter, Lumens Wallet, SatoshiPay)
+✅ Fully supported
+​
+Starknet
+Address Format:
+251-bit hexadecimal address starting with
+0x
+Example:
+0x033068F6539f8e6e6b131e6B2B814e6c34A5224bC66947c47DaB9dFeE93b35fb
+✅ Fully supported
+​
+TON (The Open Network)
+Address Format:
+TON addresses (base64-encoded)
+Example:
+EQAWzEKcdnykvXfUNouqdS62tvrp32bCxuKS6eQrS6ISgcLo
+Signing Standard:
+TON Connect 2.0 (Tonkeeper, EverWallet, HOT Wallet)
+✅ Fully supported with TON Connect wallets
+​
+Tron
+Address Format:
+Base58Check-encoded (starts with
+T
+)
+Example:
+TQ1shhBFTN2TwaRXyH1oLyCz3Yvfbzgmbk
+Signing Standard:
+TIP-191 (TronLink, Klever, Trust Wallet)
+✅ Fully supported
+​
+XRP Ledger
+Address Types:
+Classic
+- Starts with
+r
+Example:
+rDsbeomae4FXwgQTJp9Rs64Qg9vDiTCdBv
+Classic + Destination Tag
+- Classic address with numeric tag
+X-Address
+- Starts with
+X
+(encodes classic address + destination tag)
+Classic addresses with destination tags are NOT supported for our 1Click Swap service.
+​
+Signing standards reference
+NEAR Intents supports multiple signing standards to work with different wallet types and blockchain ecosystems.
+Standard
+Compatible Wallets
+Status
+NEP-413
+NEAR wallets: MyNearWallet, Meteor, Sender, Ledger-NEAR
+✅ Implemented
+ERC-191
+All EVM wallets: MetaMask, Rabby, Rainbow, WalletConnect-compatible
+✅ Implemented
+Raw Ed25519
+Solana wallets: Phantom, Solflare, Slope
+✅ Implemented
+Passkeys (WebAuthn)
+Browsers/OS: Chrome, Safari, Edge, Firefox, native apps
+✅ Implemented
+SEP-53
+Stellar wallets: Freighter, Lumens Wallet, SatoshiPay
+✅ Implemented
+TIP-191
+TRON wallets: TronLink, Klever, Trust Wallet
+✅ Implemented
+TON Connect
+TON wallets: Tonkeeper, EverWallet, HOT Wallet
+✅ Implemented
+BIP-322
+Bitcoin wallets: Sparrow, Bitcoin Knots, Bitcoin Core
+⚙️ In progress
+For technical details on how intent signing works, see
+Signing Intents
+.
+​
+Token support
+Each supported chain provides access to native tokens and popular standards:
+Category
+Supported tokens and standards
+EVM Chains
+Native tokens (ETH, BNB, MATIC, etc.); ERC-20 tokens; automatic token detection
+Bitcoin Networks
+BTC (Bitcoin), BCH (Bitcoin Cash), DOGE (Dogecoin), LTC (Litecoin), ZEC (Zcash, transparent only)
+NEAR Ecosystem
+NEAR native token; NEP-141 fungible tokens; bridged assets
+Other Layer 1 chains
+ADA (Cardano), ALEO (Aleo), SOL (Solana) + SPL tokens, SUI native and wrapped tokens, XLM (Stellar) + issued assets, TON + jettons, TRX (Tron) + TRC-20 tokens, XRP (Ripple), STRK (Starknet)
+​
+Querying supported tokens
+Check supported tokens using the
+1Click API
+tokens
+endpoint:
+curl
+https://1click.chaindefuser.com/v0/tokens
+​
+Request new chains
+How do I request support for a new chain?
+Join our
+Telegram community @near_intents
+and share your request. Our team evaluates new chains based on:
+User demand
+Technical compatibility
+Liquidity availability
+Security audits
+What determines chain priority?
+We prioritize chains with:
+High transaction volume and user demand
+Strong developer ecosystem
+Existing market maker liquidity
+Compatible signing standards
+Can I help add support for my chain?
+Yes! If you’re a blockchain developer or market maker, we welcome contributions. Contact us via Telegram to discuss integration requirements.
+​
+Next steps
+Start swapping
+Execute your first cross-chain swap in under 5 minutes.
+Integrate into your app
+Learn how to integrate NEAR Intents into wallets and applications.
+Become a market maker
+Provide liquidity and fulfill user intents profitably.
+Understand fees
+Learn about platform fees and how to obtain free API access.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | 1Click API | https://docs.near-intents.org/integration/distribution-channels/1click-api/about-1click-api
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Signing Intents | https://docs.near-intents.org/integration/verifier-contract/signing-intents
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Telegram community @near_intents | https://t.me/near_intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | join our Telegram community | https://t.me/near_intents
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#address-format
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#aleo
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#aptos
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#bitcoin
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#bitcoin-cash
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#cardano
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#dogecoin
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#litecoin
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#near-protocol
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#next-steps
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#querying-supported-tokens
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#request-new-chains
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#signing-standard
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#signing-standards-reference
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#solana
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#starknet
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#stellar
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#sui
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#supported-networks
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#supported-networks-2
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#supported-networks-3
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#token-support
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#ton-the-open-network
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#tron
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#xrp-ledger
+LINK | ​ | https://docs.near-intents.org/resources/chain-support#zcash

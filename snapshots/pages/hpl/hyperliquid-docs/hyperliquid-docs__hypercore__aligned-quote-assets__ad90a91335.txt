@@ -1,0 +1,54 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+The Hyperliquid protocol supports “aligned stablecoins” as a permissionless primitive for stablecoin issuers to leverage Hyperliquid’s unique distribution and scale together with the protocol.
+The motivation behind alignment is to introduce an opt-in setting for new stablecoin teams to bootstrap their network effects and share upside proportionally with the protocol. Similar to the builder-protocol synergy of permissionless spot listings, HIP-3, and builder codes, aligned stablecoins are part of the infrastructure to move all of finance onchain.
+AQAv2
+Based on user and deployer feedback, the AQAv2 spec extends the designation of “aligned quote asset” to stablecoins that are not exclusive to Hyperliquid. Under AQAv2, stablecoin deployers share approximately 90% of cost-adjusted reserve yield revenue on their Hyperliquid supply with the protocol.
+AQAv2 will be a requirement for quote assets to be listed against HIP-4 and validator-operated perp markets on a future network upgrade. There is no trading fee or volume contribution benefit to AQAv2. Other quote assets will continue to be supported for other markets, including spot and HIP-3 perps.
+AQAv2 allows specification of a “technical deployer” and a “treasury deployer.” The treasury deployer will designate a treasury address which will share 100% of the AQA rate (the cost-adjusted onchain reference rate oracle) with the protocol through the onchain AQA mechanic. This is twice the rate of revenue share of the existing AQA spec. The treasury deployer must stake 500k HYPE, which is slashable if the treasury address does not have sufficient balance for onchain revenue to be deducted. The technical deployer must stake 500k HYPE and ensure reliable mint, redemption, and cross-chain transfer infrastructure for the aligned quote asset. Both treasury and technical deployers require 6 months minimum notice before ceasing operation, during which their stake is slashable for the commitments above. The activation of AQAv2 is by validator vote, after both deployers have staked and sent the authorization transactions from the staking accounts. Under AQAv2, the linked HyperEVM contract that connects to HyperCore will also rebalance with the treasury address. The HyperEVM balance corresponding to minted HyperCore tokens will be held in a ratio of 9:1 between the treasury address and technical deployer’s linked EVM contract address, respectively. Reserve yield revenue accrues in 30 day intervals based on the block on each UTC date, automatically sent to the Assistance Fund 8 days after each interval completes. In the event that there is insufficient balance to deduct from the system interest address
+0x50...00 + {token_index}
+, the treasury deployer's stake is eligible to be slashed at an interest rate of 2% per day. The 30 day intervals begin on the date of activation.
+As a concrete example
+Copy
+Jan 1: X1 = balance at 0 UTC, RATE1 = AQA-publisher effective rate, published onchain by validators
+Jan 2: X2, RATE2 (analogously defined)
+...
+Jan 31: X31, RATE31
+Feb 1: X32, RATE32
+Feb 7: X38, RATE38
+Feb 28: X59, RATE59
+Mar 1: X60, RATE60
+System interest address pays X1 * RATE1 + X2 * RATE2 + ... X30 * RATE30 on Feb 7 at 0 UTC
+System interest address pays X31 * RATE31 + ... + X60 * RATE60 on Mar 9 at 0 UTC
+AQAv1
+AQAv1 offers lower trading fees, larger market maker rebates, and higher volume contribution toward fee tiers when used as the quote asset for a spot pair or the collateral asset for HIP-3 perps.
+Onchain requirements:
+Enabled as a permissionless quote token
+800k additional staked HYPE by deployer, meaning a total of 1M staked HYPE including the 200k staked HYPE for the quote token deployment. This is to give builders and users assurance to use the aligned stablecoin.
+50% of the AQA rate flows to the protocol. Validators may vote to update the calculation methodology as regulatory standards evolve. The AQA rate is updated according to an onchain stake-weighted median of validator-reported values. A CoreWriter action allows the deployer to reflect the exact minted balance from HyperEVM directly to HyperCore, allowing a fully automated fee share mechanism as part of L1 execution.
+Offchain requirements, enforced through onchain quorum of validator votes:
+The stablecoin is 1:1 backed by cash, short-term US treasuries, and tokenized US treasury or money market funds to the extent permitted under applicable regulatory frameworks. Aligned issuers must also provide par redemption at all times, with a publicly disclosed and timely redemption service consistent with their applicable regulatory regime. These conditions can be revisited by the validators, in the spirit of building a regulatorily compliant chain for payments and banking opportunities. The guiding requirement is that a large percentage of the world's circulating dollars could compliantly be converted to the aligned stablecoin in the context of existing businesses and use cases in the financial world.
+The full supply is natively minted on HyperEVM. Any supply on other chains or offchain must first be minted on HyperEVM as the source chain.
+The deployer can only deploy assets that directly support the aligned stablecoin. For example, the underlying treasuries could be issued onchain. The net effect is that the deployer must share half of its offchain yield income through the existence of the aligned stablecoin. The deployer and its affiliates may not receive any economic benefits tied to conversion of the aligned stablecoin into another asset. "Benefit" includes but is not limited to revenue share, order-flow payments, or any form of rate-linked compensation.
+The team building an aligned stablecoin must be independent and dedicated to building on Hyperliquid.
+AQAv1 benefits, applied to spot and perp trading:
+20% lower taker fees
+50% larger maker rebates
+20% more volume contribution toward fee tiers
+Offchain conditions are ultimately voted upon by validator quorum, as any such conditions are not able to be reflected directly in protocol execution. Like on most other blockchains, independent validators on Hyperliquid achieve consensus on a self-contained state machine’s execution. This state machine’s evolution is entirely onchain. In the case of the offchain conditions for an aligned stablecoin, this evolution is driven by validator vote.
+Previous
+Permissionless spot quote assets
+Next
+HyperEVM
+Last updated
+6 days ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets.md
+LINK | Next HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm
+LINK | Previous Permissionless spot quote assets | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/permissionless-spot-quote-assets
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets#aqav1
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets#aqav2
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

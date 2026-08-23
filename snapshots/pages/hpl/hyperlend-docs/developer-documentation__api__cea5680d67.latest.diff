@@ -1,0 +1,121 @@
+--- hpl/hyperlend-docs/developer-documentation__api__cea5680d67:previous
++++ hpl/hyperlend-docs/developer-documentation__api__cea5680d67:current
+@@ -0,0 +1,118 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Base URL:
++https://api.hyperlend.finance
++Available chains:
++hyperEvm
++NOTE: Addresses must be checksummed, since API is case-sensitive.
++GET /data/interestRateHistory
++Query interest rate hourly history.
++required params:
++chain
++and
++token
++(contract address)
++example:
++/data/interestRateHistory?chain=hyperEvm&token=0x5555555555555555555555555555555555555555
++currentLiquidityRate
++and
++currentVariableBorrowRate
++are expressed in Ray (unit of measurement with 27 decimals),
++response format:
++Copy
++[
++{
++"_id": "66d90e9aa6e4d9c524ef729a",
++"timestamp": 1725501082135,
++"0x5555555555555555555555555555555555555555": {
++"currentLiquidityRate": "7901245102880645706451431",
++"currentVariableBorrowRate": "29629649382709465022770918"
++}
++},
++{
++"_id": "66d91caaa6e4d9c524ef72b2",
++"timestamp": 1725504682074,
++"0x5555555555555555555555555555555555555555": {
++"currentLiquidityRate": "6971805824458391305412",
++"currentVariableBorrowRate": "880139245577900154208182"
++}
++},
++...
++]
++GET /data/user/valueChange
++Query the user's 24-hour balance change.
++required params:
++address
++and
++chain
++example:
++/data/user/valueChange?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd
++response format:
++GET /data/user/historicalNetWorth
++Query the user's hourly USD net worth.
++required params:
++address
++and
++chain
++example:
++/data/user/historicalNetWorth?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd
++response format:
++GET /data/markets
++Query current reserves state
++required params:
++chain
++response format:
++GET /data/markets/rates
++Returns borrow and supply APYs for all assets and isolated markets.
++required params:
++chain
++Returns APY and APR as percentage.
++For isolated markets, the key is the pair address, and data includes underlying and collateral asset addresses.
++GET /data/user/transactionHistory
++Returns all transactions the user was involved in.
++required params:
++chain
++and
++address
++optional params:
++limit
++(default: 100) and
++skip
++(default: 0)
++example:
++/data/user/transactionHistory?chain=hyperEvm&address=0x5748ae796AE46A4F1348a1693de4b50560485562&limit=1000&skip=0
++GET /data/transactions
++Query events data.
++optional params:
++chain
++,
++contractId
++,
++blockNumber
++,
++txHash
++,
++logIndex
++,
++event
++on data field:
++see available event parameters below
++example:
++/data/transaction?chain=hyperEvm&event=Borrow&reserve=0x5555555555555555555555555555555555555555
++response format:
++All indexed events:
++Previous
++Bug Bounty
++Next
++Data & Indexers
++Last updated
++6 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/api.md
++LINK | Next Data & Indexers | https://docs.hyperlend.finance/developer-documentation/data-and-indexers
++LINK | Previous Bug Bounty | https://docs.hyperlend.finance/developer-documentation/bug-bounty
++LINK | https://api.hyperlend.finance | https://api.hyperlend.finance
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

@@ -1,0 +1,54 @@
+--- near/intents-docs/integration__distribution-channels__1click-api__about-1click-api__05e3d5c85f:previous
++++ near/intents-docs/integration__distribution-channels__1click-api__about-1click-api__05e3d5c85f:current
+@@ -0,0 +1,51 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++1Click Swap simplifies NEAR Intents by temporarily transferring assets to a trusted swapping agent that coordinates with
++Market Makers
++to execute your intent.
++This REST API abstracts the complexity of intent creation, solver coordination, and transaction execution.
++By using the 1Click Swap API, you agree to the
++1Click Terms of Service
++.
++​
++Key Benefits
++Simple REST API
++Create intents, submit deposits, and track status with a few endpoints.
++Competitive Pricing
++Market makers compete on price through automatic solver discovery.
++Built-in Transaction Handling
++Includes status tracking, automatic retries, and refund handling.
++Fee Collection
++Configure fee collection with a single parameter in your quote requests.
++​
++Ready to Dive In?
++Quickstart Guide
++Step-by-step tutorial to make your first swap in under 10 minutes
++Keys
++Learn how to generate API keys and authenticate your requests
++SDK Libraries
++Explore our SDK libraries for TypeScript, Go, and Rust
++Fee Configuration
++Learn how to set up fee collection for your swaps
++Earn
++Offer multichain yield through the 1Click Swap API
++Explorer API
++Programmatic access to historical 1Click Swap transactions
++Proactive Intents Security
++Learn how NEAR Intents proactively manages suspicious fund flows, transaction risk, and security posture across swaps
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | 1Click Terms of Service | https://docs.near-intents.org/security-compliance/terms-of-service
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/about-1click-api#key-benefits
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/about-1click-api#ready-to-dive-in

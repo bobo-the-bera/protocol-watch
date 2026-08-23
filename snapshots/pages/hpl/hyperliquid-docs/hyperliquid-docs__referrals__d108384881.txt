@@ -1,0 +1,29 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+How do I refer someone to Hyperliquid?
+You can create a referral code on
+https://app.hyperliquid.xyz/referrals
+after you’ve done $10,000 in volume. You will receive 10% of referred users' fees, less any fee discount they receive. Referral rewards apply for a user's first $1B in volume and referral discounts apply for a user's first $25M in volume.
+Share your referral code with other traders using a unique link: app.hyperliquid.xyz/join/YOURCODE.
+Referral rewards accrue for all quote assets and can be claimed once >$1. Claimed referral rewards are reflected in your spot balance.
+How do I use a referral code?
+Enter a referral code on
+https://app.hyperliquid.xyz/referrals
+or use a friend's referral link. Using a referral code will give you a 4% discount on your fees for your first $25M in volume. Referral discounts do not apply to vaults or sub-accounts because those are treated as independent accounts in the clearinghouse.
+Previous
+Delegation program
+Next
+Points
+Last updated
+10 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/referrals.md
+LINK | Next Points | https://hyperliquid.gitbook.io/hyperliquid-docs/points
+LINK | Previous Delegation program | https://hyperliquid.gitbook.io/hyperliquid-docs/validators/delegation-program
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/referrals#how-do-i-refer-someone-to-hyperliquid
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/referrals#how-do-i-use-a-referral-code
+LINK | https://app.hyperliquid.xyz/referrals | https://app.hyperliquid.xyz/referrals
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

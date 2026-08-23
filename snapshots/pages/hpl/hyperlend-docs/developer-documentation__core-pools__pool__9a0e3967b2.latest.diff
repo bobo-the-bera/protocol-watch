@@ -1,0 +1,512 @@
+--- hpl/hyperlend-docs/developer-documentation__core-pools__pool__9a0e3967b2:previous
++++ hpl/hyperlend-docs/developer-documentation__core-pools__pool__9a0e3967b2:current
+@@ -0,0 +1,509 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Pool
++This contract serves as the primary interface for users. Most interactions with the Hyperlend Protocol occur via the
++Pool
++contract.
++Users can:
++Supply assets
++Withdraw assets
++Borrow funds
++Repay loans
++Enable or disable supplied assets as collateral
++Liquidate positions
++Execute flash loans
++The source code is available on GitHub.
++Write Methods
++supply
++Copy
++function
++supply
++(
++address
++asset
++,
++uint256
++amount
++,
++address
++onBehalfOf
++,
++uint16
++referralCode
++)
++public
++virtual
++override
++Deposits a specified
++amount
++of an
++asset
++into the protocol, minting equivalent hTokens and transferring them to the
++onBehalfOf
++address.
++Before supplying, the
++Pool
++contract must have the necessary allowance to spend funds on behalf of
++msg.sender
++for at least the specified
++amount
++of the asset.
++The referral program is currently inactive; you can pass
++0
++as
++referralCode
++. This feature may be activated in the future.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the underlying asset being supplied to the pool
++amount
++uint256
++The amount of the asset to supply
++onBehalfOf
++address
++The address that will receive the corresponding hTokens. This is the only address that can withdraw the asset from the pool.
++referralCode
++uint16
++The referral program is currently inactive; you can pass
++0
++.
++supplyWithPermit
++Allows supplying an asset using a permit signature for transfer approval, eliminating the need for a separate approval transaction before supplying the asset to the pool. See:
++EIP-2612
++.
++The permit signature must be signed by
++msg.sender
++with the spender set to the
++Pool
++address.
++The referral program is currently inactive; you can pass
++0
++as
++referralCode
++. This feature may be activated in the future through a Hyperlend governance proposal.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the underlying asset being supplied. The same asset used in the permit signature (
++v
++,
++r
++,
++s
++)
++amount
++uint256
++The amount of the asset to supply and approve via permit. The same amount used in the permit signature (
++v
++,
++r
++,
++s
++)
++onBehalfOf
++address
++The address that will receive the hTokens.
++referralCode
++uint16
++The referral program is currently inactive; you can pass
++0
++.
++deadline
++uint256
++The UNIX timestamp until which the permit signature is valid
++permitV
++uint8
++The
++v
++parameter of the ERC712 permit signature
++permitR
++bytes32
++The
++r
++parameter of the ERC712 permit signature
++permitS
++bytes32
++The
++s
++parameter of the ERC712 permit signature
++withdraw
++Withdraws a specified
++amount
++of the underlying
++asset
++from the reserve, burning the equivalent hTokens owned. For example, if a user has 100 hUSDC and calls
++withdraw()
++, they will receive 100 USDC, and the 100 hUSDC will be burned.
++If the user has any existing debt backed by the underlying token, the maximum
++amount
++available to withdraw is limited to ensure the user's health factor remains above 1 after the withdrawal.
++When withdrawing to another address,
++msg.sender
++must possess the hTokens that will be burned by the
++Pool
++.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the underlying asset to withdraw, not the hToken
++amount
++uint256
++The amount of the underlying asset to withdraw, expressed in wei units. Use
++type(uint256).max
++to withdraw the entire hToken balance
++to
++address
++The address that will receive the underlying
++asset
++. This will be the same as
++msg.sender
++if the user wants to receive the tokens themselves, or another address if the beneficiary is different
++Returns:
++Type
++Description
++uint256
++The final amount withdrawn
++borrow
++Allows users to borrow a specific
++amount
++of the reserve's underlying
++asset
++, provided the borrower has supplied enough collateral or has been granted sufficient allowance by a credit delegator on the corresponding debt token (VariableDebtToken). For example, if a user borrows 100 USDC and passes their own address as
++onBehalfOf
++, they will receive 100 USDC and 100 variable debt tokens.
++Note:
++If
++onBehalfOf
++is not the same as
++msg.sender
++, then
++onBehalfOf
++must have supplied enough collateral via
++supply()
++and have delegated credit to
++msg.sender
++via
++approveDelegation()
++on the VariableDebtToken contract.
++The referral program is currently inactive; you can pass
++0
++as
++referralCode
++.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the underlying asset to borrow
++amount
++uint256
++The amount to borrow, expressed in wei units
++interestRateMode
++uint256
++Should always be passed a value of
++2
++(variable rate mode)
++referralCode
++uint16
++The referral program is currently inactive; you can pass
++0
++.
++onBehalfOf
++address
++The address of the borrower. If they want to borrow against their own collateral, this should be their own address, or the address of the credit delegator if the caller has been granted credit delegation allowance
++repay
++Repays a borrowed
++amount
++on a specific reserve, burning the equivalent debt tokens owned. For example, if a user repays 100 USDC, the 100 variable debt tokens owned by the
++onBehalfOf
++address will be burned.
++When repaying, the
++Pool
++contract must have allowance to spend funds on behalf of
++msg.sender
++for at least the
++amount
++for the asset being repaid. This can be done via the standard ERC20
++approve()
++method on the underlying token contract.
++You cannot call
++repay()
++multiple times in the same block.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the borrowed underlying asset
++amount
++uint256
++The amount to repay, expressed in wei units. Use
++type(uint256).max
++to repay the whole debt,
++only
++when the repayment is not executed on behalf of a third party. When repaying on behalf of another user, it's recommended to send an amount slightly higher than the current borrowed amount
++interestRateMode
++uint256
++Only available option is
++2
++(variable rate mode)
++onBehalfOf
++address
++The address of the user whose debt will be reduced or removed. This should be the address of the user calling the function if they want to reduce or remove their own debt, or the address of another borrower whose debt should be removed
++Returns:
++Type
++Description
++uint256
++The final amount repaid
++repayWithPermit
++Allows repaying a borrowed amount using a permit signature for transfer approval, removing the need for a separate approval transaction before repaying the asset to the pool. See:
++EIP-2612
++.
++The permit signature must be signed by
++msg.sender
++with the spender set to the
++Pool
++address.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the borrowed underlying asset. The same asset used in the permit signature (
++v
++,
++r
++,
++s
++)
++amount
++uint256
++The amount to repay, expressed in wei units. Use
++type(uint256).max
++to repay the whole debt without leaving hToken dust. The same amount used in the permit signature (
++v
++,
++r
++,
++s
++)
++interestRateMode
++uint256
++Only available option is
++2
++(variable rate mode)
++onBehalfOf
++address
++The address of the user whose debt will be reduced or removed. This should be the address of the user calling the function if they want to reduce or remove their own debt, or the address of another borrower whose debt should be removed
++deadline
++uint256
++The UNIX timestamp until which the permit signature is valid
++permitV
++uint8
++The
++v
++parameter of the ERC712 permit signature
++permitR
++bytes32
++The
++r
++parameter of the ERC712 permit signature
++permitS
++bytes32
++The
++s
++parameter of the ERC712 permit signature
++Returns:
++Type
++Description
++uint256
++The final amount repaid
++repayWithATokens
++Allows a user to repay a borrowed
++amount
++on a specific reserve using the reserve's hTokens, burning the equivalent debt tokens. For example, a user repays 100 USDC using 100 hUSDC, burning 100 variable debt tokens. Passing
++type(uint256).max
++as the amount will clean up any residual hToken dust balance if the user's hToken balance is insufficient to cover the whole debt.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the borrowed underlying asset
++amount
++uint256
++The amount to repay. Use
++type(uint256).max
++to repay the whole debt for
++asset
++without leaving aToken dust
++interestRateMode
++uint256
++Only available option is
++2
++(variable rate mode)
++Returns:
++Type
++Description
++uint256
++The final amount repaid
++setUserUseReserveAsCollateral
++Allows suppliers to enable or disable a specific supplied asset as collateral. Sets the
++asset
++of
++msg.sender
++to be used as collateral or not.
++An asset in Isolation Mode can be enabled as collateral only if no other asset is already enabled as collateral.
++The user cannot disable an asset as collateral if they have an outstanding debt position that would cause their health factor to drop below 1 upon disabling the given asset as collateral.
++Parameters:
++Name
++Type
++Description
++asset
++address
++The address of the underlying asset supplied
++useAsCollateral
++bool
++true
++if the user wants to use the supply as collateral,
++false
++otherwise
++liquidationCall
++Allows liquidators to liquidate a non-healthy position (with a health factor below 1).
++When a user's health factor is below 1, the liquidator repays the
++debtToCover
++amount of the user's debt. This amount is a portion or the entirety of the outstanding borrowed amount on behalf of the borrower. The liquidator then receives a proportional amount of the
++collateralAsset
++(discounted collateral) plus a liquidation bonus to compensate for market risk.
++Liquidators can choose to receive an equivalent amount of collateral hTokens instead of the underlying asset. When the liquidation is successfully completed, the health factor of the position increases, bringing it above 1.
++Liquidators can only close a certain portion of the collateral defined by the close factor. Currently, the close factor is 0.5 (50%) for positions with HF above 0.95 and size above 2000 USD, and 1 (100%) for positions under 2000 USD or HF under 0.95, meaning liquidators can liquidate up to 50% (or 100%) of the amount pending to be repaid in a position. The liquidation discount applies to this amount.
++In most cases, profitable liquidators will choose to liquidate as much as allowed (50% or 100% of the user's position).
++The
++debtToCover
++parameter can be set to
++type(uint256).max
++, and the protocol will proceed with the maximum liquidation allowed by the close factor.
++To check a user's health factor, use
++getUserAccountData()
++.
++Liquidators must
++approve()
++the
++Pool
++contract to use
++debtToCover
++of the underlying ERC20 asset used for the liquidation.
++Parameters:
++Name
++Type
++Description
++collateralAsset
++address
++The address of the underlying asset used as collateral, to receive as a result of the liquidation
++debtAsset
++address
++The address of the underlying borrowed asset to be repaid during the liquidation
++user
++address
++The address of the borrower being liquidated
++debtToCover
++uint256
++The debt amount of the borrowed asset that the liquidator will repay
++receiveAToken
++bool
++true
++if the liquidator wants to receive the aTokens equivalent of the purchased collateral,
++false
++to receive the underlying collateral asset directly
++flashLoan
++Allows users to access the pool's liquidity for a given list of assets within a single transaction, as long as the amount borrowed plus a fee is returned. The receiver must approve the
++Pool
++contract for at least the amount borrowed plus the fee; otherwise, the transaction will revert.
++The flash loan fee is waived for approved
++FLASH_BORROWER
++.
++There are security considerations for developers of flash loan receiver contracts that must be taken into account. For further details, visit the Flash Loan Developers Guide.
++The referral program is currently inactive; you can pass
++0
++as
++referralCode
++. This feature may be activated in the future through a Hyperlend governance proposal.
++Parameters:
++Name
++Type
++Description
++receiverAddress
++address
++The address of the contract receiving the flash-borrowed funds, implementing the
++IFlashLoanReceiver
++interface
++assets
++address[]
++The addresses of the assets being flash-borrowed
++amounts
++uint256[]
++The amounts of the assets being flash-borrowed. This array must contain the same number of entries as
++assets
++interestRateModes
++uint256[]
++The types of the debt position to open if the flash loan is not returned:
++0
++-> Don't open any debt; the amount plus fee must be paid in this case, or the transaction will revert if the funds can't be transferred from the receiver.
++2
++-> Open a variable rate borrow position for the value of the amount flash-borrowed to the
++onBehalfOf
++address
++onBehalfOf
++address
++The address that will receive the debt if the associated
++interestRateModes
++is
++1
++or
++2
++.
++onBehalfOf
++must already have approved sufficient borrow allowance of the associated asset to
++msg.sender
++params
++bytes
++Variadic packed parameters to pass to the receiver as extra information
++referralCode
++uint16
++The referral program is currently inactive; you can pass
++0
++. This code is used to register the integrator initiating the operation for potential rewards. Use
++0
++if executed directly by the user without intermediaries
++Previous
++Core Pools
++Next
++↪ oracles
++Last updated
++2 months ago
++[[LINK TARGETS]]
++LINK | EIP-2612 | https://eips.ethereum.org/EIPS/eip-2612
++LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/pool.md
++LINK | Next ↪ oracles | https://docs.hyperlend.finance/developer-documentation/core-pools/oracles
++LINK | Previous Core Pools | https://docs.hyperlend.finance/developer-documentation/core-pools
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/pool#pool
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/pool#write-methods
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

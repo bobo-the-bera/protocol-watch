@@ -1,0 +1,55 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__trading__margining__8e95336b80:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__trading__margining__8e95336b80:current
+@@ -0,0 +1,52 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Margin computations follow similar formulas to major centralized derivatives exchanges.
++Margin Mode
++When opening a position, a margin mode is selected.
++Cross margin
++is the default, which allows for maximal capital efficiency by sharing collateral between all other cross margin positions.
++Isolated margin
++is also supported, which allows an asset's collateral to be constrained to that asset. Liquidations in that asset do not affect other isolated positions or cross positions. Similarly, cross liquidations or other isolated liquidations do not affect the original isolated position.
++Some assets are
++strict isolated
++, which functions the same as isolated margin with the additional constraint that margin cannot be removed. Margin is proportionally removed as the position is closed.
++HIP-3 Margin Modes
++When users have perp positions across multiple DEXs, cross margin behaves different depending on the user's account abstraction. For unified account and portfolio margin, the user's cross margin positions in DEXs with the same collateral all share margin. For standard abstraction, cross margin only applies to the assets within the same DEX. See
++here
++for more details.
++HIP-3 DEXs also support "no cross" margin mode, which allows isolated margin with margin removal enabled, but does not allow cross margin.
++Initial Margin and Leverage
++Leverage can be set by a user to any integer between 1 and the max leverage. Max leverage depends on the asset.
++The margin required to open a position is
++position_size * mark_price / leverage
++. The initial margin is used by the position and cannot be withdrawn for cross margin positions. Isolated positions support adding and removing margin after opening the position. Unrealized pnl for cross margin positions will automatically be available as initial margin for new positions, while isolated positions will apply unrealized pnl as additional margin for the open position.
++The leverage of an existing position can be increased without closing the position. Leverage is only checked upon opening a position. Afterwards, the user is responsible for monitoring the leverage usage to avoid liquidation. Possible actions to take on positions with negative unrealized pnl include partially or fully closing the position, adding margin (if isolated), and depositing USDC (if cross).
++Unrealized PNL and transfer margin requirements
++Unrealized pnl can be withdrawn from isolated positions or cross account, but only if the remaining margin is at least 10% of the total notional position value of all open positions. The margin remaining must also meet the initial margin requirement, i.e.
++transfer_margin_required = max(initial_margin_required, 0.1 * total_position_value)
++Here, "transferring" includes any action that removes margin from a position, other than trading. Examples include withdrawals, transfer to spot wallet, and isolated margin transfers.
++Maintenance Margin and Liquidations
++Cross positions are liquidated when the account value (including unrealized pnl) is less than the
++maintenance margin
++times the total open notional position. The maintenance margin is currently set to half of the initial margin at max leverage.
++Isolated positions are liquidated by the same maintenance margin logic, but the only inputs to the computation are the isolated margin and the notional value of the isolated position.
++Previous
++Contract specifications
++Next
++Account abstraction modes
++Last updated
++6 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining.md
++LINK | Next Account abstraction modes | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/account-abstraction-modes
++LINK | Previous Contract specifications | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#hip-3-margin-modes
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#initial-margin-and-leverage
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#maintenance-margin-and-liquidations
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#margin-mode
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements
++LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/account-abstraction-modes
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

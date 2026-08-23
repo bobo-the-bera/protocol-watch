@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "protocol": "near",
+  "sha256": "a42802dffbf806573b9ba662876b96d7fed9dfa084b3aa7b52fde191e807f2c9",
+  "slug": "api-reference__oneclick__request-a-swap-quote__1b9244492b",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/request-a-swap-quote"
+}

@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:18+00:00",
+  "protocol": "near",
+  "sha256": "6932ac400eaa095f9c9ab8f0db7287aac80e04e6a3685d565545877c27046726",
+  "slug": "api-reference__account__get-transaction-history__3a66b9a688",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/account/get-transaction-history"
+}

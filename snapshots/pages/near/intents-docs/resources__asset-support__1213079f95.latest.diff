@@ -1,0 +1,25 @@
+--- near/intents-docs/resources__asset-support__1213079f95:previous
++++ near/intents-docs/resources__asset-support__1213079f95:current
+@@ -0,0 +1,22 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++The list below is sourced live from the
++1Click API
++and reflects currently supported tokens. The list is continuously expanding —
++join our Telegram
++for announcements.
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | 1Click API | https://1click.chaindefuser.com/v0/tokens
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | join our Telegram | https://t.me/near_intents

@@ -1,0 +1,58 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+As with all DeFi platforms, there are certain risks associated with using HyperLend, and users should be aware of them before engaging with our platform. We strive to protect user assets to the best of our abilities, but no system is completely safe.
+• Smart Contract Risk
+Our smart contracts have undergone
+rigorous auditing processes
+conducted by reputable auditors, including Cantina, Ackee Blockchain and Pashov Audit Group (Everything can be seen
+here
+). We will also provide a
+bug-bounty program
+, available at
+Github
+. While these audits significantly mitigate risks, residual vulnerabilities may persist despite our best efforts to eliminate them entirely. Additionally, our smart contract will undergo extensive
+"battle-testing"
+through prolonged periods of both
+test-net and real-world deployment
+and a high volume of transactions. This phase aims to mature the code by exposing it to various scenarios and interactions, thereby refining its
+reliability and security
+.
+•
+Market and Volatility Risk
+Since HyperLend allows the
+borrowing and lending of volatile tokens
+, there is always a market risk. The most common risk is a
+rapid devaluation of an asset
+used as collateral. If the protocol is unable to liquidate unhealthy loans, it will result in
+bad debt
+(a situation where the market value of total debt is greater than the value of collateral, making the protocol insolvent).
+To mitigate this risk, we carefully consider which assets to list, considering both
+on-chain (DEX)
+and
+off-chain (CEX, OTC) liquidity
+.
+We are working with
+Block Analitica
+to provide comprehensive risk assessments, collateral onboarding, dynamic parameter management, and continuous market monitoring.
+We are also working with
+Hypernative
+to provide real-time monitoring and incident response, mitigating threats before they happen with automated detection and onchain actions.
+Previous
+Architecture
+Next
+Liquidations
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Block Analitica | https://blockanalitica.com/
+LINK | Github | https://github.com/hyperlendx/bug-bounty
+LINK | Hypernative | https://www.hypernative.io/
+LINK | Markdown | https://docs.hyperlend.finance/architecture/risks.md
+LINK | Next Liquidations | https://docs.hyperlend.finance/architecture/liquidations
+LINK | Previous Architecture | https://docs.hyperlend.finance/architecture/architecture
+LINK | [no text] | https://docs.hyperlend.finance/architecture/risks#market-and-volatility-risk
+LINK | here | https://hyperlend.finance/security
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

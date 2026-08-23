@@ -1,0 +1,612 @@
+--- near/intents-docs/integration__distribution-channels__1click-api__earn__f40f8e758c:previous
++++ near/intents-docs/integration__distribution-channels__1click-api__earn__f40f8e758c:current
+@@ -0,0 +1,609 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++Earn lets wallets and apps route users into third-party yield protocols through the
++1Click Swap API
++. The user pays a supported asset; NEAR Intents coordinates execution; the user receives
++fungible receipt tokens
++(for example vault shares) that represent the position.
++NEAR Intents does not run these yield protocols, set their APY, or guarantee principal. Protocols are operated by independent providers. See
++§7 Special asset types
++.
++​
++Integration model
++Earn uses the standard 1Click lifecycle:
++Resolve
++assetId
++s with
++GET /v0/tokens
++.
++Request a quote with
++POST /v0/quote
++.
++Complete the deposit and track status with
++GET /v0/status
++.
++Deposit quotes use a payment asset as
++originAsset
++and a receipt token as
++destinationAsset
++. Withdraw quotes reverse that. Use the same
++swap types
++as other 1Click quotes.
++These fields control where value is taken from and where it is delivered:
++Field
++On deposit
++On withdraw
++depositType
++Where the
++payment
++comes from (
++ORIGIN_CHAIN
++or
++INTENTS
++)
++Where the
++shares
++come from (
++ORIGIN_CHAIN
++or
++INTENTS
++)
++recipient
++/
++recipientType
++Where the
++receipt tokens
++go (
++DESTINATION_CHAIN
++or
++INTENTS
++)
++Where the
++payout
++goes (
++DESTINATION_CHAIN
++or
++INTENTS
++)
++Deposit and withdraw examples below cover both delivery options.
++​
++Yield and receipt assets
++curl
++https://1click.chaindefuser.com/v0/tokens
++Only instruments that appear in this list and return quotes are available for Earn via 1Click. Look up the receipt token and payment asset by
++symbol
++(or other fields you care about) and use the returned
++assetId
++values in quotes.
++You can request additional protocol support. Protocols already listed in the
++Yield.xyz DeFi yields
++catalog are usually faster to add than those outside it.
++For the examples on this page we use two vault-share symbols that are listed today —
++TLO
++and
++gtUSDCp
++— plus
++USDC
++as the payment asset. Treat the
++assetId
++strings in the snippets as illustrative snapshots; always take current IDs from
++/v0/tokens
++before you ship.
++Listings and liquidity can change. A quote may return
++No liquidity available
++or reject an unsupported delivery mode for a given asset.
++See
++Asset support
++.
++​
++Deposit — destination-chain wallet
++Use this when the user should receive receipt tokens on the protocol’s chain.
++Set
++recipient
++to their address on that chain and
++recipientType
++to
++DESTINATION_CHAIN
++. Highlighted lines are the delivery fields.
++Example below: Ethereum USDC →
++TLO
++, delivered to an Ethereum address. Resolve both
++assetId
++s from
++/v0/tokens
++(symbols
++USDC
++on
++eth
++,
++TLO
++on
++eth
++).
++cURL
++TypeScript
++curl
++-X
++POST
++https://1click.chaindefuser.com/v0/quote
++\
++-H
++"Content-Type: application/json"
++\
++-H
++"Authorization: Bearer YOUR_JWT_TOKEN"
++\
++-d
++'{
++"dry": false,
++"swapType": "EXACT_INPUT",
++"slippageTolerance": 100,
++"originAsset": "nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near",
++"destinationAsset": "nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near",
++"amount": "100000000",
++"depositType": "ORIGIN_CHAIN",
++"recipient": "0xYourEvmAddress",
++"recipientType": "DESTINATION_CHAIN",
++"refundTo": "0xYourEvmAddress",
++"refundType": "ORIGIN_CHAIN",
++"deadline": "2026-12-31T00:00:00.000Z"
++}'
++const
++quote
++=
++await
++fetch
++(
++'https://1click.chaindefuser.com/v0/quote'
++, {
++method:
++'POST'
++,
++headers:
++{
++'Content-Type'
++:
++'application/json'
++,
++'Authorization'
++:
++'Bearer YOUR_JWT_TOKEN'
++},
++body:
++JSON
++.
++stringify
++({
++dry:
++false
++,
++swapType:
++'EXACT_INPUT'
++,
++slippageTolerance:
++100
++,
++originAsset:
++'nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near'
++,
++destinationAsset:
++'nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near'
++,
++amount:
++'100000000'
++,
++depositType:
++'ORIGIN_CHAIN'
++,
++recipient:
++'0xYourEvmAddress'
++,
++recipientType:
++'DESTINATION_CHAIN'
++,
++refundTo:
++'0xYourEvmAddress'
++,
++refundType:
++'ORIGIN_CHAIN'
++,
++deadline:
++'2026-12-31T00:00:00.000Z'
++})
++});
++amount
++100000000
++is 100 USDC (6 decimals). The same pattern works with other listed receipt tokens that quote for destination-chain delivery.
++​
++Deposit — Intents balance
++Use this when the user should hold receipt tokens in Intents (bridged to NEAR) instead of on the protocol’s chain.
++Set
++recipient
++to their Intents account and
++recipientType
++to
++INTENTS
++. Highlighted lines are what differs from destination-chain delivery.
++Example below: Ethereum USDC →
++TLO
++, held in Intents. Same symbols as above; only delivery fields change.
++cURL
++TypeScript
++curl
++-X
++POST
++https://1click.chaindefuser.com/v0/quote
++\
++-H
++"Content-Type: application/json"
++\
++-H
++"Authorization: Bearer YOUR_JWT_TOKEN"
++\
++-d
++'{
++"dry": false,
++"swapType": "EXACT_INPUT",
++"slippageTolerance": 100,
++"originAsset": "nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near",
++"destinationAsset": "nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near",
++"amount": "100000000",
++"depositType": "ORIGIN_CHAIN",
++"recipient": "user.near",
++"recipientType": "INTENTS",
++"refundTo": "0xYourEvmAddress",
++"refundType": "ORIGIN_CHAIN",
++"deadline": "2026-12-31T00:00:00.000Z"
++}'
++const
++quote
++=
++await
++fetch
++(
++'https://1click.chaindefuser.com/v0/quote'
++, {
++method:
++'POST'
++,
++headers:
++{
++'Content-Type'
++:
++'application/json'
++,
++'Authorization'
++:
++'Bearer YOUR_JWT_TOKEN'
++},
++body:
++JSON
++.
++stringify
++({
++dry:
++false
++,
++swapType:
++'EXACT_INPUT'
++,
++slippageTolerance:
++100
++,
++originAsset:
++'nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near'
++,
++destinationAsset:
++'nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near'
++,
++amount:
++'100000000'
++,
++depositType:
++'ORIGIN_CHAIN'
++,
++recipient:
++'user.near'
++,
++recipientType:
++'INTENTS'
++,
++refundTo:
++'0xYourEvmAddress'
++,
++refundType:
++'ORIGIN_CHAIN'
++,
++deadline:
++'2026-12-31T00:00:00.000Z'
++})
++});
++You can use the same Intents delivery with other listed shares (for example
++gtUSDCp
++). Replace
++recipient
++,
++refundTo
++, and the JWT as needed. After the quote, deposit and track status as in the
++Quickstart
++.
++​
++Withdraw — payout to destination-chain wallet
++Quote from the receipt token back to a payment asset. Use the user’s share balance as
++amount
++.
++Example below: redeem
++TLO
++held in Intents (
++depositType: INTENTS
++) to Ethereum USDC on a chain wallet.
++amount
++10000000000
++is
++100
++TLO
++at 8 decimals — confirm decimals from
++/v0/tokens
++. Highlighted lines are the payout delivery fields.
++cURL
++TypeScript
++curl
++-X
++POST
++https://1click.chaindefuser.com/v0/quote
++\
++-H
++"Content-Type: application/json"
++\
++-H
++"Authorization: Bearer YOUR_JWT_TOKEN"
++\
++-d
++'{
++"dry": false,
++"swapType": "EXACT_INPUT",
++"slippageTolerance": 100,
++"originAsset": "nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near",
++"destinationAsset": "nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near",
++"amount": "10000000000",
++"depositType": "INTENTS",
++"recipient": "0xYourEvmAddress",
++"recipientType": "DESTINATION_CHAIN",
++"refundTo": "user.near",
++"refundType": "INTENTS",
++"deadline": "2026-12-31T00:00:00.000Z"
++}'
++const
++quote
++=
++await
++fetch
++(
++'https://1click.chaindefuser.com/v0/quote'
++, {
++method:
++'POST'
++,
++headers:
++{
++'Content-Type'
++:
++'application/json'
++,
++'Authorization'
++:
++'Bearer YOUR_JWT_TOKEN'
++},
++body:
++JSON
++.
++stringify
++({
++dry:
++false
++,
++swapType:
++'EXACT_INPUT'
++,
++slippageTolerance:
++100
++,
++originAsset:
++'nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near'
++,
++destinationAsset:
++'nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near'
++,
++amount:
++'10000000000'
++,
++depositType:
++'INTENTS'
++,
++recipient:
++'0xYourEvmAddress'
++,
++recipientType:
++'DESTINATION_CHAIN'
++,
++refundTo:
++'user.near'
++,
++refundType:
++'INTENTS'
++,
++deadline:
++'2026-12-31T00:00:00.000Z'
++})
++});
++​
++Withdraw — payout to Intents balance
++Use this when the payout should stay in Intents. Same redeem as above; only delivery fields change. Highlighted lines are what differs.
++cURL
++TypeScript
++curl
++-X
++POST
++https://1click.chaindefuser.com/v0/quote
++\
++-H
++"Content-Type: application/json"
++\
++-H
++"Authorization: Bearer YOUR_JWT_TOKEN"
++\
++-d
++'{
++"dry": false,
++"swapType": "EXACT_INPUT",
++"slippageTolerance": 100,
++"originAsset": "nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near",
++"destinationAsset": "nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near",
++"amount": "10000000000",
++"depositType": "INTENTS",
++"recipient": "user.near",
++"recipientType": "INTENTS",
++"refundTo": "user.near",
++"refundType": "INTENTS",
++"deadline": "2026-12-31T00:00:00.000Z"
++}'
++const
++quote
++=
++await
++fetch
++(
++'https://1click.chaindefuser.com/v0/quote'
++, {
++method:
++'POST'
++,
++headers:
++{
++'Content-Type'
++:
++'application/json'
++,
++'Authorization'
++:
++'Bearer YOUR_JWT_TOKEN'
++},
++body:
++JSON
++.
++stringify
++({
++dry:
++false
++,
++swapType:
++'EXACT_INPUT'
++,
++slippageTolerance:
++100
++,
++originAsset:
++'nep141:eth-0x0f38f1ce62776d4a0038bc6cac66877a5687383b.omft.near'
++,
++destinationAsset:
++'nep141:eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near'
++,
++amount:
++'10000000000'
++,
++depositType:
++'INTENTS'
++,
++recipient:
++'user.near'
++,
++recipientType:
++'INTENTS'
++,
++refundTo:
++'user.near'
++,
++refundType:
++'INTENTS'
++,
++deadline:
++'2026-12-31T00:00:00.000Z'
++})
++});
++Quote from the balance you intend to redeem; do not assume a fixed share-to-underlying rate. The same shapes work for other listed shares such as
++gtUSDCp
++. If the shares sit on the origin chain, set
++depositType
++(and matching refund fields) to
++ORIGIN_CHAIN
++and keep choosing payout with
++recipientType
++as above.
++​
++APY
++The 1Click API does not return protocol metadata such as APY. When you show rates in your UI, load them from the Yield.xyz aggregator API:
++Use
++List yields
++to find the yield that matches your receipt token (for example by protocol or token symbol).
++Use
++Get a yield
++for that yield’s APY and other metadata.
++Yield.xyz data is third-party; it is not returned or guaranteed by 1Click.
++​
++Fees and disclosures
++1Click platform fees apply as for other quotes (
++Fee configuration
++,
++Fees
++).
++Third-party protocols may charge their own fees.
++Yield, share price, and principal are not guaranteed by NEAR Intents.
++End-user disclosures for yield assets should align with
++Terms of Service §7
++.
++​
++Related
++Making a request
++Quote, deposit, and status for 1Click swaps
++Swap types
++EXACT_INPUT, EXACT_OUTPUT, and deposit handling
++Asset support
++Live token catalog from the 1Click API
++Terms of Service
++Yield-bearing assets and Earn
++Yes
++No
++⌘
++I
++[[LINK TARGETS]]
++LINK | 1Click Swap API | https://docs.near-intents.org/integration/distribution-channels/1click-api/about-1click-api
++LINK | Asset support | https://docs.near-intents.org/resources/asset-support
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Fee configuration | https://docs.near-intents.org/integration/distribution-channels/1click-api/fee-config
++LINK | Fees | https://docs.near-intents.org/resources/fees
++LINK | GET /v0/status | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/making-a-request
++LINK | GET /v0/tokens | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#yield-and-receipt-assets
++LINK | Get a yield | https://docs.yield.xyz/reference/yieldscontroller_getyield
++LINK | List yields | https://docs.yield.xyz/reference/yieldscontroller_getyields
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | POST /v0/quote | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/making-a-request
++LINK | Quickstart | https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/making-a-request
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Terms of Service §7 | https://docs.near-intents.org/security-compliance/terms-of-service#7-special-asset-types-and-disclaimers
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | Yield.xyz DeFi yields | https://docs.yield.xyz/docs/defi-yields
++LINK | swap types | https://docs.near-intents.org/integration/distribution-channels/1click-api/swap-types
++LINK | §7 Special asset types | https://docs.near-intents.org/security-compliance/terms-of-service#7-special-asset-types-and-disclaimers
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#apy
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#deposit-—-destination-chain-wallet
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#deposit-—-intents-balance
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#fees-and-disclosures
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#integration-model
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#related
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#withdraw-—-payout-to-destination-chain-wallet
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#withdraw-—-payout-to-intents-balance
++LINK | ​ | https://docs.near-intents.org/integration/distribution-channels/1click-api/earn#yield-and-receipt-assets

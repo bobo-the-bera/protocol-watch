@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:14:06+00:00",
+  "protocol": "hpl",
+  "sha256": "0b60d6a4ba712ada936ff04e969c48d9c9dc1e28019dbbf764e2df11942ad469",
+  "slug": "liquid-perpetual-positions",
+  "tags": [
+    "liquid-perps",
+    "collateral",
+    "erc4626"
+  ],
+  "url": "https://docs.hyperlend.finance/hyperlend-1/liquid-perpetual-positions"
+}

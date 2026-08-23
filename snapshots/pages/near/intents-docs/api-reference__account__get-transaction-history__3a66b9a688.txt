@@ -1,0 +1,503 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+GET
+/
+v0
+/
+account
+/
+history
+Try it
+Get transaction history
+cURL
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/account/history
+import requests
+url = "https://1click.chaindefuser.com/v0/account/history"
+response = requests.get(url)
+print(response.text)
+const options = {method: 'GET'};
+fetch('https://1click.chaindefuser.com/v0/account/history', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://1click.chaindefuser.com/v0/account/history",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://1click.chaindefuser.com/v0/account/history"
+req, _ := http.NewRequest("GET", url, nil)
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/account/history")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://1click.chaindefuser.com/v0/account/history")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+response = http.request(request)
+puts response.read_body
+200
+{
+"items"
+: [
+{
+"status"
+:
+"SUCCESS"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"createdAt"
+:
+"2025-01-15T10:30:00.000000Z"
+,
+"depositAddress"
+:
+"<string>"
+,
+"depositMemo"
+:
+"<string>"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"originAsset"
+:
+"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
+,
+"amountInFormatted"
+:
+"100.50"
+,
+"amountInUsd"
+:
+"100.50"
+,
+"destinationAsset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"amountOutFormatted"
+:
+"100.23"
+,
+"amountOutUsd"
+:
+"100.23"
+,
+"recipient"
+:
+"<string>"
+,
+"quoteTransactions"
+: [
+{
+"sender"
+:
+"<string>"
+,
+"txHash"
+:
+"<string>"
+}
+],
+"refundTo"
+:
+"<string>"
+,
+"refundReason"
+:
+"<string>"
+,
+"refundedAmountFormatted"
+:
+"<string>"
+,
+"refundedAmountUsd"
+:
+"<string>"
+,
+"refundFee"
+:
+"<string>"
+,
+"refundFeeFormatted"
+:
+"<string>"
+}
+],
+"nextCursor"
+:
+"<string>"
+,
+"prevCursor"
+:
+"<string>"
+}
+Query Parameters
+​
+prevCursor
+string
+Pass the prevCursor value from a previous response to fetch older items. Omit both cursors for the initial request. Do not pass together with nextCursor.
+​
+nextCursor
+string
+Pass the nextCursor value from a previous response to poll for newer items. Omit both cursors for the initial request. Do not pass together with prevCursor.
+​
+status
+enum<string>[]
+Filter by statuses
+Available options
+:
+PENDING_DEPOSIT
+,
+INCOMPLETE_DEPOSIT
+,
+PROCESSING
+,
+SUCCESS
+,
+REFUNDED
+,
+FAILED
+Example
+:
+[
+"PROCESSING"
+,
+"SUCCESS"
+]
+​
+limit
+integer
+default:
+20
+Maximum number of items to return per page
+Required range
+:
+1 <= x <= 100
+Example
+:
+20
+​
+depositAddress
+string
+Filter by deposit address
+​
+depositMemo
+string
+Filter by deposit memo. Only has effect when depositAddress is also provided.
+​
+search
+string
+Search by deposit address, recipient, sender, or tx hash
+​
+depositType
+enum<string>[]
+Correlated deposit type filter. Index-aligned with recipientType and refundType. Use "null" as a wildcard for that position. Multiple values form OR conditions.
+Available options
+:
+ORIGIN_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+,
+null
+Example
+:
+[
+"ORIGIN_CHAIN"
+,
+"INTENTS"
+]
+​
+recipientType
+enum<string>[]
+Correlated recipient type filter. Index-aligned with depositType and refundType. Use "null" as a wildcard for that position.
+Available options
+:
+DESTINATION_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+,
+null
+Example
+:
+[
+"DESTINATION_CHAIN"
+,
+"INTENTS"
+]
+​
+refundType
+enum<string>[]
+Correlated refund type filter. Index-aligned with depositType and recipientType. Use "null" as a wildcard for that position.
+Available options
+:
+ORIGIN_CHAIN
+,
+INTENTS
+,
+CONFIDENTIAL_INTENTS
+,
+null
+Example
+:
+[
+"ORIGIN_CHAIN"
+,
+"INTENTS"
+]
+Response
+200
+application/json
+​
+items
+object[]
+required
+History items for the current page. When fetching older items (via prevCursor), fewer items than limit means you reached the end — no need to fetch further. For newer items (via nextCursor), new data can always appear later.
+Show
+child attributes
+​
+nextCursor
+string
+Pass it back as nextCursor to poll for newer items.
+​
+prevCursor
+string
+Pass it back as prevCursor to fetch older items.
+Yes
+No
+⌘
+I
+Get transaction history
+cURL
+curl
+--request
+GET
+\
+--url
+https://1click.chaindefuser.com/v0/account/history
+import requests
+url = "https://1click.chaindefuser.com/v0/account/history"
+response = requests.get(url)
+print(response.text)
+const options = {method: 'GET'};
+fetch('https://1click.chaindefuser.com/v0/account/history', options)
+.then(res => res.json())
+.then(res => console.log(res))
+.catch(err => console.error(err));
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+CURLOPT_URL => "https://1click.chaindefuser.com/v0/account/history",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "GET",
+]);
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
+}
+package main
+import (
+"fmt"
+"net/http"
+"io"
+)
+func main() {
+url := "https://1click.chaindefuser.com/v0/account/history"
+req, _ := http.NewRequest("GET", url, nil)
+res, _ := http.DefaultClient.Do(req)
+defer res.Body.Close()
+body, _ := io.ReadAll(res.Body)
+fmt.Println(string(body))
+}
+HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/account/history")
+.asString();
+require 'uri'
+require 'net/http'
+url = URI("https://1click.chaindefuser.com/v0/account/history")
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+request = Net::HTTP::Get.new(url)
+response = http.request(request)
+puts response.read_body
+200
+{
+"items"
+: [
+{
+"status"
+:
+"SUCCESS"
+,
+"depositType"
+:
+"ORIGIN_CHAIN"
+,
+"recipientType"
+:
+"DESTINATION_CHAIN"
+,
+"createdAt"
+:
+"2025-01-15T10:30:00.000000Z"
+,
+"depositAddress"
+:
+"<string>"
+,
+"depositMemo"
+:
+"<string>"
+,
+"refundType"
+:
+"ORIGIN_CHAIN"
+,
+"originAsset"
+:
+"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
+,
+"amountInFormatted"
+:
+"100.50"
+,
+"amountInUsd"
+:
+"100.50"
+,
+"destinationAsset"
+:
+"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
+,
+"amountOutFormatted"
+:
+"100.23"
+,
+"amountOutUsd"
+:
+"100.23"
+,
+"recipient"
+:
+"<string>"
+,
+"quoteTransactions"
+: [
+{
+"sender"
+:
+"<string>"
+,
+"txHash"
+:
+"<string>"
+}
+],
+"refundTo"
+:
+"<string>"
+,
+"refundReason"
+:
+"<string>"
+,
+"refundedAmountFormatted"
+:
+"<string>"
+,
+"refundedAmountUsd"
+:
+"<string>"
+,
+"refundFee"
+:
+"<string>"
+,
+"refundFeeFormatted"
+:
+"<string>"
+}
+],
+"nextCursor"
+:
+"<string>"
+,
+"prevCursor"
+:
+"<string>"
+}
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-deposit-address
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-deposit-memo
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-deposit-type
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-limit
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-next-cursor
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-prev-cursor
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-recipient-type
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-refund-type
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-search
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#parameter-status
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#response-items
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#response-next-cursor
+LINK | ​ | https://docs.near-intents.org/api-reference/account/get-transaction-history#response-prev-cursor

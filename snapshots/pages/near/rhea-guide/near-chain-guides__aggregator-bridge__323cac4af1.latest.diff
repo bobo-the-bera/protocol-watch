@@ -1,0 +1,39 @@
+--- near/rhea-guide/near-chain-guides__aggregator-bridge__323cac4af1:previous
++++ near/rhea-guide/near-chain-guides__aggregator-bridge__323cac4af1:current
+@@ -0,0 +1,36 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++How to bridge?
++Step1: Click on the "Bridge" tab and choose Aggregate Bridge
++Step2: Select the chain you want to bridge "from" and "to" for the asset you want to bridge.
++Step3: Connect the wallet of the chain you selected.
++Step4: Enter the amount of the assets you want to bridge.
++The aggregator will automatically calculate and choose the best amount out.
++Step 5: Click "
++Preview"
++to view the bridge preview.
++Step 6: Click "
++Transfer"
++to sign transaction.
++You can check the progress anytime through the "Bridge Transaction History" page
++Previous
++NEAR Liquid Staking Tokens (LST)
++Next
++RHEA Point System
++Last updated
++7 months ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Markdown | https://guide.rhea.finance/near-chain-guides/aggregator-bridge.md
++LINK | Next RHEA Point System | https://guide.rhea.finance/near-chain-guides/rhea-point-system
++LINK | Previous NEAR Liquid Staking Tokens (LST) | https://guide.rhea.finance/near-chain-guides/near-liquid-staking-tokens-lst
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step-5-click-preview-to-view-the-bridge-preview
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step-6-click-transfer-to-sign-transaction.-you-can-check-the-progress-anytime-through-the-bridge-tra
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step1-click-on-the-bridge-tab-and-choose-aggregate-bridge
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step2-select-the-chain-you-want-to-bridge-from-and-to-for-the-asset-you-want-to-bridge
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step3-connect-the-wallet-of-the-chain-you-selected
++LINK | [no text] | https://guide.rhea.finance/near-chain-guides/aggregator-bridge#step4-enter-the-amount-of-the-assets-you-want-to-bridge
++LINK | llms.txt | https://guide.rhea.finance/llms.txt

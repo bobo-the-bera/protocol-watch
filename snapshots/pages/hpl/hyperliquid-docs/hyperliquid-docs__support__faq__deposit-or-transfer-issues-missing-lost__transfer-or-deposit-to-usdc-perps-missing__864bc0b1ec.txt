@@ -1,0 +1,23 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Situation 1: Transferred 1,000 from USDC (Spot) to USDC (Perps). When I checked, I see <1,000 USDC in my Available Balance. Where did it go?
+Situation 2: Deposited 1,000 USDC from Arbitrum, and the deposit was successful. When I checked, I see <1,000 USDC in my Available Balance. Where did it go?
+Reasoning
+If you have open positions on cross margin with negative unrealized P&L, your deposits and Spot to Perp transfers will go toward collateral for those open positions. Please refer to the Docs to understand how margining works:
+https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements
+Previous
+Deposited via Plasma network
+Next
+Withdrawal issues
+Last updated
+8 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/transfer-or-deposit-to-usdc-perps-missing.md
+LINK | Next Withdrawal issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues
+LINK | Previous Deposited via Plasma network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-plasma-network
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/transfer-or-deposit-to-usdc-perps-missing#reasoning
+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

@@ -1,0 +1,1050 @@
+--- near/intents-docs/api-reference__oneclick__submit-deposit-transaction-hash__00be084916:previous
++++ near/intents-docs/api-reference__oneclick__submit-deposit-transaction-hash__00be084916:current
+@@ -0,0 +1,1047 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++POST
++/
++v0
++/
++deposit
++/
++submit
++Try it
++Submit deposit transaction hash
++cURL
++curl
++--request
++POST
++\
++--url
++https://1click.chaindefuser.com/v0/deposit/submit
++\
++--header
++'Content-Type: application/json'
++\
++--header
++'X-API-Key: <api-key>'
++\
++--data
++'
++{
++"txHash": "0x123abc456def789",
++"depositAddress": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
++"nearSenderAccount": "relay.tg",
++"memo": "123456"
++}
++'
++import requests
++url = "https://1click.chaindefuser.com/v0/deposit/submit"
++payload = {
++"txHash": "0x123abc456def789",
++"depositAddress": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
++"nearSenderAccount": "relay.tg",
++"memo": "123456"
++}
++headers = {
++"X-API-Key": "<api-key>",
++"Content-Type": "application/json"
++}
++response = requests.post(url, json=payload, headers=headers)
++print(response.text)
++const options = {
++method: 'POST',
++headers: {'X-API-Key': '<api-key>', 'Content-Type': 'application/json'},
++body: JSON.stringify({
++txHash: '0x123abc456def789',
++depositAddress: '0x2527D02599Ba641c19FEa793cD0F167589a0f10D',
++nearSenderAccount: 'relay.tg',
++memo: '123456'
++})
++};
++fetch('https://1click.chaindefuser.com/v0/deposit/submit', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/deposit/submit",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "POST",
++CURLOPT_POSTFIELDS => json_encode([
++'txHash' => '0x123abc456def789',
++'depositAddress' => '0x2527D02599Ba641c19FEa793cD0F167589a0f10D',
++'nearSenderAccount' => 'relay.tg',
++'memo' => '123456'
++]),
++CURLOPT_HTTPHEADER => [
++"Content-Type: application/json",
++"X-API-Key: <api-key>"
++],
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"strings"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/deposit/submit"
++payload := strings.NewReader("{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}")
++req, _ := http.NewRequest("POST", url, payload)
++req.Header.Add("X-API-Key", "<api-key>")
++req.Header.Add("Content-Type", "application/json")
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.post("https://1click.chaindefuser.com/v0/deposit/submit")
++.header("X-API-Key", "<api-key>")
++.header("Content-Type", "application/json")
++.body("{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/deposit/submit")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Post.new(url)
++request["X-API-Key"] = '<api-key>'
++request["Content-Type"] = 'application/json'
++request.body = "{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}"
++response = http.request(request)
++puts response.read_body
++200
++400
++{
++"correlationId"
++:
++"550e8400-e29b-41d4-a716-446655440000"
++,
++"quoteResponse"
++: {
++"correlationId"
++:
++"550e8400-e29b-41d4-a716-446655440000"
++,
++"timestamp"
++:
++"2019-08-24T14:15:22Z"
++,
++"signature"
++:
++"<string>"
++,
++"quoteRequest"
++: {
++"dry"
++:
++true
++,
++"swapType"
++:
++"EXACT_INPUT"
++,
++"slippageTolerance"
++:
++100
++,
++"originAsset"
++:
++"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
++,
++"depositType"
++:
++"ORIGIN_CHAIN"
++,
++"destinationAsset"
++:
++"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
++,
++"amount"
++:
++"1000"
++,
++"refundTo"
++:
++"0x2527D02599Ba641c19FEa793cD0F167589a0f10D"
++,
++"refundType"
++:
++"ORIGIN_CHAIN"
++,
++"recipient"
++:
++"13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK"
++,
++"recipientType"
++:
++"DESTINATION_CHAIN"
++,
++"deadline"
++:
++"2019-08-24T14:15:22Z"
++,
++"depositMode"
++:
++"SIMPLE"
++,
++"connectedWallets"
++: [
++"0x123..."
++,
++"0x456..."
++],
++"sessionId"
++:
++"session_abc123"
++,
++"virtualChainRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"virtualChainRefundRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"customRecipientMsg"
++:
++"smart-contract-recipient.near"
++,
++"confidentiality"
++:
++"basic"
++,
++"referral"
++:
++"ledger"
++,
++"rebates"
++: [
++{
++"recipient"
++:
++"rebate-recipient.near"
++,
++"share"
++:
++20
++},
++{
++"recipient"
++:
++"partner-2.near"
++,
++"share"
++:
++80
++}
++],
++"quoteWaitingTimeMs"
++:
++3000
++,
++"appFees"
++: [
++{
++"recipient"
++:
++"recipient.near"
++,
++"fee"
++:
++100
++}
++],
++"insured"
++:
++false
++},
++"quote"
++: {
++"amountIn"
++:
++"1000000"
++,
++"amountInFormatted"
++:
++"1"
++,
++"amountInUsd"
++:
++"1"
++,
++"minAmountIn"
++:
++"995000"
++,
++"amountOut"
++:
++"9950000"
++,
++"amountOutFormatted"
++:
++"9.95"
++,
++"amountOutUsd"
++:
++"9.95"
++,
++"minAmountOut"
++:
++"9900000"
++,
++"timeEstimate"
++:
++120
++,
++"depositAddress"
++:
++"0x76b4c56085ED136a8744D52bE956396624a730E8"
++,
++"depositMemo"
++:
++"1111111"
++,
++"chainDepositAddresses"
++: [
++{
++"blockchain"
++:
++"eth"
++,
++"address"
++:
++"0x76b4c56085ED136a8744D52bE956396624a730E8"
++,
++"memo"
++:
++"1111111"
++}
++],
++"deadline"
++:
++"2025-03-04T15:00:00Z"
++,
++"timeWhenInactive"
++:
++"2025-03-04T15:00:00Z"
++,
++"virtualChainRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"virtualChainRefundRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"customRecipientMsg"
++:
++"smart-contract-recipient.near"
++,
++"refundFee"
++:
++"10000"
++,
++"withdrawFee"
++:
++"10000"
++}
++},
++"status"
++:
++"KNOWN_DEPOSIT_TX"
++,
++"updatedAt"
++:
++"2023-11-07T05:31:56Z"
++,
++"swapDetails"
++: {
++"intentHashes"
++: [
++"<string>"
++],
++"nearTxHashes"
++: [
++"<string>"
++],
++"originChainTxHashes"
++: [
++{
++"hash"
++:
++"0x123abc456def789"
++,
++"explorerUrl"
++:
++"<string>"
++}
++],
++"destinationChainTxHashes"
++: [
++{
++"hash"
++:
++"0x123abc456def789"
++,
++"explorerUrl"
++:
++"<string>"
++}
++],
++"amountIn"
++:
++"1000"
++,
++"amountInFormatted"
++:
++"0.1"
++,
++"amountInUsd"
++:
++"0.1"
++,
++"amountOut"
++:
++"9950000"
++,
++"amountOutFormatted"
++:
++"9.95"
++,
++"amountOutUsd"
++:
++"9.95"
++,
++"slippage"
++:
++50
++,
++"refundedAmount"
++:
++"1000"
++,
++"refundedAmountFormatted"
++:
++"0.1"
++,
++"refundedAmountUsd"
++:
++"0.1"
++,
++"refundReason"
++:
++"PARTIAL_DEPOSIT"
++,
++"depositedAmount"
++:
++"<string>"
++,
++"depositedAmountFormatted"
++:
++"<string>"
++,
++"depositedAmountUsd"
++:
++"<string>"
++,
++"withdrawFee"
++:
++"10000"
++,
++"referral"
++:
++"referral"
++}
++{
++"message": "error message"
++}
++Authorizations
++X-API-Key
++JWT-auth
++X-API-Key
++JWT-auth
++​
++X-API-Key
++string
++header
++required
++API key for partner authentication (recommended)
++Body
++application/json
++​
++txHash
++string
++required
++Transaction hash of your deposit
++Example
++:
++"0x123abc456def789"
++​
++depositAddress
++string
++required
++Deposit address for the quote
++Example
++:
++"0x2527D02599Ba641c19FEa793cD0F167589a0f10D"
++​
++nearSenderAccount
++string
++Sender account (used only for NEAR blockchain)
++Example
++:
++"relay.tg"
++​
++memo
++string
++Memo (use if deposit was submitted with one)
++Example
++:
++"123456"
++Response
++200
++application/json
++​
++correlationId
++string
++required
++Unique identifier for request tracing and debugging
++Example
++:
++"550e8400-e29b-41d4-a716-446655440000"
++​
++quoteResponse
++object
++required
++Quote response from the original request
++Show
++child attributes
++​
++status
++enum<string>
++required
++Available options
++:
++KNOWN_DEPOSIT_TX
++,
++PENDING_DEPOSIT
++,
++INCOMPLETE_DEPOSIT
++,
++PROCESSING
++,
++SUCCESS
++,
++REFUNDED
++,
++FAILED
++​
++updatedAt
++string<date-time>
++required
++Last time the state was updated
++​
++swapDetails
++object
++required
++Details of actual swaps and withdrawals
++Show
++child attributes
++Yes
++No
++⌘
++I
++Submit deposit transaction hash
++cURL
++curl
++--request
++POST
++\
++--url
++https://1click.chaindefuser.com/v0/deposit/submit
++\
++--header
++'Content-Type: application/json'
++\
++--header
++'X-API-Key: <api-key>'
++\
++--data
++'
++{
++"txHash": "0x123abc456def789",
++"depositAddress": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
++"nearSenderAccount": "relay.tg",
++"memo": "123456"
++}
++'
++import requests
++url = "https://1click.chaindefuser.com/v0/deposit/submit"
++payload = {
++"txHash": "0x123abc456def789",
++"depositAddress": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
++"nearSenderAccount": "relay.tg",
++"memo": "123456"
++}
++headers = {
++"X-API-Key": "<api-key>",
++"Content-Type": "application/json"
++}
++response = requests.post(url, json=payload, headers=headers)
++print(response.text)
++const options = {
++method: 'POST',
++headers: {'X-API-Key': '<api-key>', 'Content-Type': 'application/json'},
++body: JSON.stringify({
++txHash: '0x123abc456def789',
++depositAddress: '0x2527D02599Ba641c19FEa793cD0F167589a0f10D',
++nearSenderAccount: 'relay.tg',
++memo: '123456'
++})
++};
++fetch('https://1click.chaindefuser.com/v0/deposit/submit', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/deposit/submit",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "POST",
++CURLOPT_POSTFIELDS => json_encode([
++'txHash' => '0x123abc456def789',
++'depositAddress' => '0x2527D02599Ba641c19FEa793cD0F167589a0f10D',
++'nearSenderAccount' => 'relay.tg',
++'memo' => '123456'
++]),
++CURLOPT_HTTPHEADER => [
++"Content-Type: application/json",
++"X-API-Key: <api-key>"
++],
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"strings"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/deposit/submit"
++payload := strings.NewReader("{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}")
++req, _ := http.NewRequest("POST", url, payload)
++req.Header.Add("X-API-Key", "<api-key>")
++req.Header.Add("Content-Type", "application/json")
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.post("https://1click.chaindefuser.com/v0/deposit/submit")
++.header("X-API-Key", "<api-key>")
++.header("Content-Type", "application/json")
++.body("{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/deposit/submit")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Post.new(url)
++request["X-API-Key"] = '<api-key>'
++request["Content-Type"] = 'application/json'
++request.body = "{\n \"txHash\": \"0x123abc456def789\",\n \"depositAddress\": \"0x2527D02599Ba641c19FEa793cD0F167589a0f10D\",\n \"nearSenderAccount\": \"relay.tg\",\n \"memo\": \"123456\"\n}"
++response = http.request(request)
++puts response.read_body
++200
++400
++{
++"correlationId"
++:
++"550e8400-e29b-41d4-a716-446655440000"
++,
++"quoteResponse"
++: {
++"correlationId"
++:
++"550e8400-e29b-41d4-a716-446655440000"
++,
++"timestamp"
++:
++"2019-08-24T14:15:22Z"
++,
++"signature"
++:
++"<string>"
++,
++"quoteRequest"
++: {
++"dry"
++:
++true
++,
++"swapType"
++:
++"EXACT_INPUT"
++,
++"slippageTolerance"
++:
++100
++,
++"originAsset"
++:
++"nep141:arb-0xaf88d065e77c8cc2239327c5edb3a432268e5831.omft.near"
++,
++"depositType"
++:
++"ORIGIN_CHAIN"
++,
++"destinationAsset"
++:
++"nep141:sol-5ce3bf3a31af18be40ba30f721101b4341690186.omft.near"
++,
++"amount"
++:
++"1000"
++,
++"refundTo"
++:
++"0x2527D02599Ba641c19FEa793cD0F167589a0f10D"
++,
++"refundType"
++:
++"ORIGIN_CHAIN"
++,
++"recipient"
++:
++"13QkxhNMrTPxoCkRdYdJ65tFuwXPhL5gLS2Z5Nr6gjRK"
++,
++"recipientType"
++:
++"DESTINATION_CHAIN"
++,
++"deadline"
++:
++"2019-08-24T14:15:22Z"
++,
++"depositMode"
++:
++"SIMPLE"
++,
++"connectedWallets"
++: [
++"0x123..."
++,
++"0x456..."
++],
++"sessionId"
++:
++"session_abc123"
++,
++"virtualChainRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"virtualChainRefundRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"customRecipientMsg"
++:
++"smart-contract-recipient.near"
++,
++"confidentiality"
++:
++"basic"
++,
++"referral"
++:
++"ledger"
++,
++"rebates"
++: [
++{
++"recipient"
++:
++"rebate-recipient.near"
++,
++"share"
++:
++20
++},
++{
++"recipient"
++:
++"partner-2.near"
++,
++"share"
++:
++80
++}
++],
++"quoteWaitingTimeMs"
++:
++3000
++,
++"appFees"
++: [
++{
++"recipient"
++:
++"recipient.near"
++,
++"fee"
++:
++100
++}
++],
++"insured"
++:
++false
++},
++"quote"
++: {
++"amountIn"
++:
++"1000000"
++,
++"amountInFormatted"
++:
++"1"
++,
++"amountInUsd"
++:
++"1"
++,
++"minAmountIn"
++:
++"995000"
++,
++"amountOut"
++:
++"9950000"
++,
++"amountOutFormatted"
++:
++"9.95"
++,
++"amountOutUsd"
++:
++"9.95"
++,
++"minAmountOut"
++:
++"9900000"
++,
++"timeEstimate"
++:
++120
++,
++"depositAddress"
++:
++"0x76b4c56085ED136a8744D52bE956396624a730E8"
++,
++"depositMemo"
++:
++"1111111"
++,
++"chainDepositAddresses"
++: [
++{
++"blockchain"
++:
++"eth"
++,
++"address"
++:
++"0x76b4c56085ED136a8744D52bE956396624a730E8"
++,
++"memo"
++:
++"1111111"
++}
++],
++"deadline"
++:
++"2025-03-04T15:00:00Z"
++,
++"timeWhenInactive"
++:
++"2025-03-04T15:00:00Z"
++,
++"virtualChainRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"virtualChainRefundRecipient"
++:
++"0xb4c2fbec9d610F9A3a9b843c47b1A8095ceC887C"
++,
++"customRecipientMsg"
++:
++"smart-contract-recipient.near"
++,
++"refundFee"
++:
++"10000"
++,
++"withdrawFee"
++:
++"10000"
++}
++},
++"status"
++:
++"KNOWN_DEPOSIT_TX"
++,
++"updatedAt"
++:
++"2023-11-07T05:31:56Z"
++,
++"swapDetails"
++: {
++"intentHashes"
++: [
++"<string>"
++],
++"nearTxHashes"
++: [
++"<string>"
++],
++"originChainTxHashes"
++: [
++{
++"hash"
++:
++"0x123abc456def789"
++,
++"explorerUrl"
++:
++"<string>"
++}
++],
++"destinationChainTxHashes"
++: [
++{
++"hash"
++:
++"0x123abc456def789"
++,
++"explorerUrl"
++:
++"<string>"
++}
++],
++"amountIn"
++:
++"1000"
++,
++"amountInFormatted"
++:
++"0.1"
++,
++"amountInUsd"
++:
++"0.1"
++,
++"amountOut"
++:
++"9950000"
++,
++"amountOutFormatted"
++:
++"9.95"
++,
++"amountOutUsd"
++:
++"9.95"
++,
++"slippage"
++:
++50
++,
++"refundedAmount"
++:
++"1000"
++,
++"refundedAmountFormatted"
++:
++"0.1"
++,
++"refundedAmountUsd"
++:
++"0.1"
++,
++"refundReason"
++:
++"PARTIAL_DEPOSIT"
++,
++"depositedAmount"
++:
++"<string>"
++,
++"depositedAmountFormatted"
++:
++"<string>"
++,
++"depositedAmountUsd"
++:
++"<string>"
++,
++"withdrawFee"
++:
++"10000"
++,
++"referral"
++:
++"referral"
++}
++{
++"message": "error message"
++}
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#authorization-x-api-key
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#body-deposit-address
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#body-memo
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#body-near-sender-account
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#body-tx-hash
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#response-correlation-id
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#response-quote-response
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#response-status
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#response-swap-details
++LINK | ​ | https://docs.near-intents.org/api-reference/oneclick/submit-deposit-transaction-hash#response-updated-at

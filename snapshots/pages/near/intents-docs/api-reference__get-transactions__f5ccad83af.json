@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:18+00:00",
+  "protocol": "near",
+  "sha256": "f3a8af59a871cdde62505bbea0bf2808e9f0dcfe5a3fbe96328fac6a88c7a464",
+  "slug": "api-reference__get-transactions__f5ccad83af",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/get-transactions"
+}

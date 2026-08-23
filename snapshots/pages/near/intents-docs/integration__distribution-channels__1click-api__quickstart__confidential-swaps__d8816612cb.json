@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:22+00:00",
+  "protocol": "near",
+  "sha256": "e39c08064b99314a388840eaa385d892a29873dc541c6112ed496dd492af5aaa",
+  "slug": "integration__distribution-channels__1click-api__quickstart__confidential-swaps__d8816612cb",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/distribution-channels/1click-api/quickstart/confidential-swaps"
+}

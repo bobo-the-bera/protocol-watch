@@ -1,0 +1,127 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__hyperliquid-improvement-proposals-hips__frontend-checks__77033c9fa3:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__hyperliquid-improvement-proposals-hips__frontend-checks__77033c9fa3:current
+@@ -0,0 +1,124 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++There are many ways to reach invalid configurations during the spot deploy process. To avoid this, deployers can try intended deployments on testnet first. For automated deployment integrations, the following is a list of client-side checks that may be helpful.
++Token Deployment
++Copy
++if
++(
++szDecimals
++===
++undefined
++||
++weiDecimals
++===
++undefined
++)
++{
++displayAlert
++(
++"
++Size decimals and Wei decimals must be specified.
++"
++,
++"
++error
++"
++)
++;
++return
++;
++}
++if
++(
++szDecimals
++>
++2
++||
++szDecimals
++<
++0
++)
++{
++displayAlert
++(
++"
++Size decimals must be between 0 and 2.
++"
++,
++"
++error
++"
++)
++;
++return
++;
++}
++if
++(
++weiDecimals
++>
++8
++||
++weiDecimals
++<
++0
++)
++{
++displayAlert
++(
++"
++Wei decimals must be between 0 and 8.
++"
++,
++"
++error
++"
++)
++;
++return
++;
++}
++if
++(
++szDecimals
+++
++5
++>
++weiDecimals
++)
++{
++displayAlert
++(
++"
++weiDecimals must be at least szDecimals + 5.
++"
++,
++"
++error
++"
++)
++;
++return
++;
++}
++Set Deployer Trading Fee Share
++User and Anchor Token Genesis
++Hyperliquidity
++Previous
++HIP-4: Outcome markets
++Next
++Trading
++Last updated
++1 year ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks.md
++LINK | Next Trading | https://hyperliquid.gitbook.io/hyperliquid-docs/trading
++LINK | Previous HIP-4: Outcome markets | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/hip-4-outcome-markets
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks#hyperliquidity
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks#set-deployer-trading-fee-share
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks#token-deployment
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks#user-and-anchor-token-genesis
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

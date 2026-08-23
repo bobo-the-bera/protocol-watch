@@ -1,0 +1,246 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__builder-tools__hyperevm-tools__040e6489d0:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__builder-tools__hyperevm-tools__040e6489d0:current
+@@ -0,0 +1,243 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Account abstraction
++Alchemy:
++https://www.alchemy.com/hyperevm
++Biconomy:
++https://docs.biconomy.io/
++ZeroDev:
++https://docs.zerodev.app/
++Analytics
++Dune:
++https://dune.com/blockchains/hyperevm
++Archival RPC
++Alchemy:
++https://www.alchemy.com/hyperevm
++Altitude:
++https://rpc.reachaltitude.xyz/
++Chainstack:
++https://chainstack.com/build-better-with-hyperliquid/
++Dwellir:
++https://www.dwellir.com/networks/hyperliquid
++HypeRPC:
++https://hyperpc.app/
++Nanoreth (how to build an archive node):
++https://github.com/hl-archive-node/nanoreth/blob/51c43d6dbdf71e277da67bf618a71fe304aae372/README.md
++OnFinality:
++https://onfinality.io/en/networks/hyperliquid
++Quicknode:
++https://www.quicknode.com/
++Big blocks, small blocks
++Dual block architecture:
++https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/dual-block-architecture
++Python SDK example:
++https://github.com/hyperliquid-dex/hyperliquid-python-sdk/blob/master/examples/basic_evm_use_big_blocks.py
++Interface from community member, ikalgo:
++https://hyperevmblocktoggle.xyz/
++Cross-chain messaging
++DeBridge:
++https://docs.debridge.com/dmp-details/dmp/deployed-contracts
++LayerZero:
++https://docs.layerzero.network/v2/deployments/deployed-contracts?chains=hyperliquid
++Reactive:
++https://dev.reactive.network/origins-and-destinations
++Wormhole:
++https://wormhole.com/docs/products/token-transfers/native-token-transfers/guides/deploy-to-hyperliquid/
++DEX aggregator
++GlueX:
++https://gluex.xyz/chain/hyperevm
++Hyperbloom:
++https://www.hyperbloom.xyz/
++Hyperflow:
++https://hyperflow.fun/bridge
++LiquidSwap:
++https://liqd.ag/
++LlamaSwap:
++https://swap.defillama.com/?chain=hyperevm
++Matcha Meta:
++https://meta.matcha.xyz/
++Explorers
++Blockscout:
++https://www.hyperscan.com/
++Etherscan:
++https://hyperevmscan.io/
++Owlscan:
++https://owlscan.org/
++Faucet (testnet HYPE for gas)
++Chainstack (1 HYPE every 24 hours):
++https://faucet.chainstack.com/hyperliquid-testnet-faucet
++Quicknode:
++https://faucet.quicknode.com/hyperliquid
++Gas (HYPE)
++Cortex:
++https://cortexprotocol.com/agent?q=buy%20hype
++DeBridge:
++https://app.debridge.finance/
++Gas.zip:
++https://www.gas.zip/
++Hyperliquid.xyz (buy HYPE on HyperCore and then transfer it to the HyperEVM):
++https://app.hyperliquid.xyz/trade/HYPE/USDC
++Indexing / subgraphs
++Allium:
++https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid
++Covalent:
++https://goldrush.dev/docs/chains/hyperevm
++Envio:
++https://docs.envio.dev/docs/HyperIndex/hyperliquid
++Goldsky:
++https://docs.goldsky.com/chains/hyperevm
++HyperSignals:
++https://biconomy.gitbook.io/hypersignals/
++Indexing Co:
++https://www.indexing.co/
++Ormilabs:
++https://ormilabs.com/chain-list/hyperevm
++SonarX:
++https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid
++SQD:
++https://docs.sqd.ai/hyperliquid-support/
++SubQuery:
++https://subquery.network/indexer/hyperliquid-evm
++Multisig, MPC, and qualified custodians
++Bitgo (custodian):
++https://www.bitgo.com/resources/blog/bitgo-launches-hyperevm-support/
++Fireblocks (MPC/custodian):
++https://www.fireblocks.com/integrations/protocols/
++Fordefi (MPC):
++https://fordefi.com/
++Oracles
++Blocksense:
++https://coda.io/@georgi-zlatarev/blocksense-hyperevm-price-feeds
++Chainlink:
++https://data.chain.link/feeds
++DIA:
++https://www.diadata.org/docs/guides/chain-specific-guide/hyperevm
++Pyth:
++https://docs.pyth.network/price-feeds/contract-addresses/evm
++Redstone:
++https://app.redstone.finance/app/feeds/?
++Seda:
++https://docs.seda.xyz/home/for-developers/deployments
++Stork:
++https://docs.stork.network/resources/contract-addresses/evm#hyperevm
++RPC
++Mainnet:
++https://rpc.hyperliquid.xyz/evm
++Testnet:
++https://rpc.hyperliquid-testnet.xyz/evm
++Chainlink (Testnet):
++https://docs.chain.link/ccip/tools-resources/network-specific/hyperevm-testnet-rpc
++dRPC:
++https://drpc.org/chainlist/hyperliquid-mainnet-rpc
++HypurrScan:
++http://rpc.hypurrscan.io
++Quicknode:
++https://www.quicknode.com/chains/hyperliquid
++Stakely:
++https://hyperliquid-json-rpc.stakely.io
++SAFE multi-sig instances
++Safe:
++https://safe.global/
++Den:
++https://safe.onchainden.com/welcome
++Palmera:
++https://hyperliquid.palmeradao.xyz/welcome
++Smart contract tooling
++Gelato:
++https://app.gelato.network/functions
++Proof of Play RNG:
++https://docs.proofofplay.com/services/vrng/about
++Previous
++Read Me - Builder Tools
++Next
++HyperCore Tools
++Last updated
++1 month ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools.md
++LINK | Next HyperCore Tools | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools
++LINK | Previous Read Me - Builder Tools | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#account-abstraction
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#analytics
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#archival-rpc
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#big-blocks-small-blocks
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#cross-chain-messaging
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#dex-aggregator
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#explorers
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#faucet-testnet-hype-for-gas
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#gas-hype
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#indexing-subgraphs
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#multisig-mpc-and-qualified-custodians
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#oracles
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#rpc
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#safe-multi-sig-instances
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools#smart-contract-tooling
++LINK | http://rpc.hypurrscan.io | http://rpc.hypurrscan.io/
++LINK | https://app.debridge.finance/ | https://app.debridge.finance/
++LINK | https://app.gelato.network/functions | https://app.gelato.network/functions
++LINK | https://app.hyperliquid.xyz/trade/HYPE/USDC | https://app.hyperliquid.xyz/trade/HYPE/USDC
++LINK | https://app.redstone.finance/app/feeds/? | https://app.redstone.finance/app/feeds/?page=1&sortBy=popularity&sortDesc=false&perPage=32&networks=999,998
++LINK | https://biconomy.gitbook.io/hypersignals/ | https://biconomy.gitbook.io/hypersignals/
++LINK | https://chainstack.com/build-better-with-hyperliquid/ | https://chainstack.com/build-better-with-hyperliquid/
++LINK | https://coda.io/@georgi-zlatarev/blocksense-hyperevm-price-feeds | https://coda.io/@georgi-zlatarev/blocksense-hyperevm-price-feeds
++LINK | https://cortexprotocol.com/agent?q=buy%20hype | https://cortexprotocol.com/agent?q=buy%20hype
++LINK | https://data.chain.link/feeds | https://data.chain.link/feeds
++LINK | https://dev.reactive.network/origins-and-destinations | https://dev.reactive.network/origins-and-destinations
++LINK | https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid | https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid
++LINK | https://docs.biconomy.io/ | https://docs.biconomy.io/
++LINK | https://docs.chain.link/ccip/tools-resources/network-specific/hyperevm-testnet-rpc | https://docs.chain.link/ccip/tools-resources/network-specific/hyperevm-testnet-rpc
++LINK | https://docs.debridge.com/dmp-details/dmp/deployed-contracts | https://docs.debridge.com/dmp-details/dmp/deployed-contracts
++LINK | https://docs.envio.dev/docs/HyperIndex/hyperliquid | https://docs.envio.dev/docs/HyperIndex/hyperliquid
++LINK | https://docs.goldsky.com/chains/hyperevm | https://docs.goldsky.com/chains/hyperevm
++LINK | https://docs.layerzero.network/v2/deployments/deployed-contracts?chains=hyperliquid | https://docs.layerzero.network/v2/deployments/deployed-contracts?chains=hyperliquid
++LINK | https://docs.proofofplay.com/services/vrng/about | https://docs.proofofplay.com/services/vrng/about
++LINK | https://docs.pyth.network/price-feeds/contract-addresses/evm | https://docs.pyth.network/price-feeds/contract-addresses/evm
++LINK | https://docs.seda.xyz/home/for-developers/deployments | https://docs.seda.xyz/home/for-developers/deployments
++LINK | https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid | https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid
++LINK | https://docs.sqd.ai/hyperliquid-support/ | https://docs.sqd.ai/hyperliquid-support/
++LINK | https://docs.stork.network/resources/contract-addresses/evm#hyperevm | https://docs.stork.network/resources/contract-addresses/evm#hyperevm
++LINK | https://docs.zerodev.app/ | https://docs.zerodev.app/
++LINK | https://drpc.org/chainlist/hyperliquid-mainnet-rpc | https://drpc.org/chainlist/hyperliquid-mainnet-rpc
++LINK | https://dune.com/blockchains/hyperevm | https://dune.com/blockchains/hyperevm
++LINK | https://faucet.chainstack.com/hyperliquid-testnet-faucet | https://faucet.chainstack.com/hyperliquid-testnet-faucet
++LINK | https://faucet.quicknode.com/hyperliquid | https://faucet.quicknode.com/hyperliquid
++LINK | https://fordefi.com/ | https://fordefi.com/
++LINK | https://github.com/hl-archive-node/nanoreth/blob/51c43d6dbdf71e277da67bf618a71fe304aae372/README.md | https://github.com/hl-archive-node/nanoreth/blob/51c43d6dbdf71e277da67bf618a71fe304aae372/README.md
++LINK | https://github.com/hyperliquid-dex/hyperliquid-python-sdk/blob/master/examples/basic_evm_use_big_blocks.py | https://github.com/hyperliquid-dex/hyperliquid-python-sdk/blob/master/examples/basic_evm_use_big_blocks.py
++LINK | https://gluex.xyz/chain/hyperevm | https://gluex.xyz/chain/hyperevm
++LINK | https://goldrush.dev/docs/chains/hyperevm | https://goldrush.dev/docs/chains/hyperevm
++LINK | https://hyperevmblocktoggle.xyz/ | https://hyperevmblocktoggle.xyz/
++LINK | https://hyperevmscan.io/ | https://hyperevmscan.io/
++LINK | https://hyperflow.fun/bridge | https://hyperflow.fun/bridge
++LINK | https://hyperliquid-json-rpc.stakely.io | https://hyperliquid-json-rpc.stakely.io/
++LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/dual-block-architecture | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/dual-block-architecture
++LINK | https://hyperliquid.palmeradao.xyz/welcome | https://hyperliquid.palmeradao.xyz/welcome
++LINK | https://hyperpc.app/ | https://hyperpc.app/
++LINK | https://liqd.ag/ | https://liqd.ag/
++LINK | https://meta.matcha.xyz/ | https://meta.matcha.xyz/
++LINK | https://onfinality.io/en/networks/hyperliquid | https://onfinality.io/en/networks/hyperliquid
++LINK | https://ormilabs.com/chain-list/hyperevm | https://ormilabs.com/chain-list/hyperevm
++LINK | https://owlscan.org/ | https://owlscan.org/
++LINK | https://rpc.hyperliquid-testnet.xyz/evm | https://rpc.hyperliquid-testnet.xyz/evm
++LINK | https://rpc.hyperliquid.xyz/evm | https://rpc.hyperliquid.xyz/evm
++LINK | https://rpc.reachaltitude.xyz/ | https://rpc.reachaltitude.xyz/
++LINK | https://safe.global/ | https://safe.global/
++LINK | https://safe.onchainden.com/welcome | https://safe.onchainden.com/welcome
++LINK | https://subquery.network/indexer/hyperliquid-evm | https://subquery.network/indexer/hyperliquid-evm
++LINK | https://swap.defillama.com/?chain=hyperevm | https://swap.defillama.com/?chain=hyperevm
++LINK | https://wormhole.com/docs/products/token-transfers/native-token-transfers/guides/deploy-to-hyperliquid/ | https://wormhole.com/docs/products/token-transfers/native-token-transfers/guides/deploy-to-hyperliquid/
++LINK | https://www.alchemy.com/hyperevm | https://www.alchemy.com/hyperevm
++LINK | https://www.bitgo.com/resources/blog/bitgo-launches-hyperevm-support/ | https://www.bitgo.com/resources/blog/bitgo-launches-hyperevm-support/
++LINK | https://www.diadata.org/docs/guides/chain-specific-guide/hyperevm | https://www.diadata.org/docs/guides/chain-specific-guide/hyperevm
++LINK | https://www.dwellir.com/networks/hyperliquid | https://www.dwellir.com/networks/hyperliquid
++LINK | https://www.fireblocks.com/integrations/protocols/ | https://www.fireblocks.com/integrations/protocols/
++LINK | https://www.gas.zip/ | https://www.gas.zip/
++LINK | https://www.hyperbloom.xyz/ | https://www.hyperbloom.xyz/
++LINK | https://www.hyperscan.com/ | https://www.hyperscan.com/
++LINK | https://www.indexing.co/ | https://www.indexing.co/
++LINK | https://www.quicknode.com/ | https://www.quicknode.com/
++LINK | https://www.quicknode.com/chains/hyperliquid | https://www.quicknode.com/chains/hyperliquid
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

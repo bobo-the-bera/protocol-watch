@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:28+00:00",
+  "protocol": "near",
+  "sha256": "81d58c85930cedfd21c80f253ea65505e1166e2fbcc3294ffaed51312d773ed8",
+  "slug": "resources__chain-support__60afa5d52c",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/resources/chain-support"
+}

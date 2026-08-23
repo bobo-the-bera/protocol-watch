@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:20+00:00",
+  "protocol": "near",
+  "sha256": "4a1b1487b0728a81a6908d0f62f23adbd675a2916883a02fa289669328d9a2ad",
+  "slug": "api-reference__user-auth__refresh-access-token__3deccd4332",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/user-auth/refresh-access-token"
+}

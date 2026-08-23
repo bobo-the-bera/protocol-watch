@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "protocol": "near",
+  "sha256": "a22944ed50f29732e67de0e582132bc69111bd9093679caf15229b83eb23eff3",
+  "slug": "api-reference__oneclick__get-supported-tokens__0c5931970c",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/get-supported-tokens"
+}

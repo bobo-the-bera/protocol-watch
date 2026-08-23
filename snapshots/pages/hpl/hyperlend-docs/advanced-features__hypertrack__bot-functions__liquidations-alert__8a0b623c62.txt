@@ -1,0 +1,47 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Toggle liquidation alerts on or off for tracked addresses. When enabled, you’ll receive notifications if an address you’re tracking is at risk of liquidation.
+How to Use "Liquidation Alert"
+Access the Feature
+:
+Click on the
+"Liquidation Alert"
+button in the bot interface. You’ll be given the option to add a new address for liquidation monitoring or remove an existing one.
+Choose an Option
+:
+The bot will present you with buttons:
+Add New Address
+: Select this to start monitoring a new address.
+Remove Address
+: Choose this if you wish to stop monitoring an existing address.
+Click
+"Add New Address"
+to proceed with setting up a new liquidation alert.
+Input Details
+:
+You’ll be prompted to enter the name and wallet address you want to track for liquidation events.
+An example format,
+JohnDoe 0x123...abc
+, is displayed to assist you.
+Enter your information in the correct format, like:
+testing 0xB6D69449d5EEb5c7a6490d30cE9a71e34EDB933
+.
+Confirmation
+:
+Once you input the name and address, the bot will confirm that the address has been added to the liquidation alerts.
+You will receive a message indicating that monitoring is active for the address you specified.
+Previous
+↪ Remove Address
+Next
+↪ Health Factor
+Last updated
+1 year ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/liquidations-alert.md
+LINK | Next ↪ Health Factor | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/health-factor
+LINK | Previous ↪ Remove Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/remove-address
+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/liquidations-alert#how-to-use-liquidation-alert
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

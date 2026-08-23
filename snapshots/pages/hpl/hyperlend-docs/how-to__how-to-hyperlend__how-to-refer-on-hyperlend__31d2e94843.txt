@@ -1,0 +1,42 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+Steps to Refer
+Connect Your Wallet
+Navigate to the
+Referrals
+section on the dashboard and click
+Connect
+to link your wallet.
+Create Your Unique Referral Name
+Enter a personalized referral name in the provided field.
+Ensure it’s unique and memorable to share easily.
+Click
+Save
+to finalize your referral name.
+Share Your Referral Link
+Share the generated referral link with your network.
+Your link automatically tracks referred users for rewards.
+Track Your Referrals
+Visit the
+Referrals
+section to monitor the number of referrals and your earned rewards.
+HyperLend's referral system makes it easy to invite others while earning rewards for growing the community. Start now and make the most of your network!
+Previous
+↪ How to HyperLoop
+Next
+↪ How to Stake HPL
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend.md
+LINK | Next ↪ How to Stake HPL | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-stake-hpl
+LINK | Previous ↪ How to HyperLoop | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend#connect-your-wallet
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend#create-your-unique-referral-name
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend#share-your-referral-link
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend#steps-to-refer
+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend#track-your-referrals
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

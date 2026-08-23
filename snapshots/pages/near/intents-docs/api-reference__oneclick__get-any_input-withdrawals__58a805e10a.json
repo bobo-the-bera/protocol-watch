@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "protocol": "near",
+  "sha256": "fd9221f0ab75319fdaa46c5ade7e4273eb96114213c5df31528f7e1d3d1e6bc2",
+  "slug": "api-reference__oneclick__get-any_input-withdrawals__58a805e10a",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/get-any_input-withdrawals"
+}

@@ -1,0 +1,50 @@
+--- near/rhea-guide/x-chain-guides__lending-and-borrowing__step-by-step-guide__5e3783e7be:previous
++++ near/rhea-guide/x-chain-guides__lending-and-borrowing__step-by-step-guide__5e3783e7be:current
+@@ -0,0 +1,47 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Supply
++Step 1: Access
++https://lending.rhea.finance/
++and connect your wallet
++Step 2: Select one asset from the list and click “Supply”
++Step 3: Enter your desired number and turn on “Use as Collateral” (Optional)
++Step 4: Supply and sign the transaction
++Borrow
++Make sure you have already supplied your asset (and turned on Use as collateral button) first before borrowing.
++Step 1: Select a token you want to borrow
++I will borrow $DAI using $USDT as collateral in this situation
++Step 2: Choose an appropriate amount
++Step 3: Verify all the details and confirm the transaction
++Repay
++Step 1: Click on Repay Button
++Step 2: Enter an appropriate amount
++Notice that Health Factor changes every time you increase/decrease the repayment amount
++Step 3: Confirm the transaction
++Withdraw
++Step 1: Click the
++Dashboard
++button & choose the token you wish to withdraw
++Step 2: Choose an appropriate amount
++Step 3: Verify the details and confirm your transaction
++Adjusting collateral
++Step 1: Select the token and click "Adjust" button
++Step 2: Enter an appropriate amount
++Keep an eye on your Health Factor since it will adjust following your collateral position
++Step 3: Confirm the transaction
++Last updated
++1 year ago
++Was this helpful?
++[[LINK TARGETS]]
++LINK | Dashboard | https://lending.rhea.finance/dashboard
++LINK | Markdown | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide.md
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#adjusting-collateral
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#borrow
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#repay
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#supply
++LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#withdraw
++LINK | https://lending.rhea.finance/ | https://lending.rhea.finance/
++LINK | llms.txt | https://guide.rhea.finance/llms.txt

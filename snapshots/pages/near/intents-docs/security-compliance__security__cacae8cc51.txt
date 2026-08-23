@@ -1,0 +1,33 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+​
+Audits
+NEAR Intents smart contracts have been audited by independent security firms.
+View Audit Reports
+Access all security audit reports on Google Drive
+​
+Bug Bounty Program
+Found a vulnerability? We offer rewards for responsible disclosure through our bug bounty program.
+Report a Vulnerability
+Submit security vulnerabilities via Hackenproof
+​
+AML/CTF Resources
+For Anti-Money Laundering and Counter-Terrorism Financing related requests, use our dedicated AML portal.
+AML Portal
+Submit AML/CTF inquiries and requests
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | ​ | https://docs.near-intents.org/security-compliance/security#aml/ctf-resources
+LINK | ​ | https://docs.near-intents.org/security-compliance/security#audits
+LINK | ​ | https://docs.near-intents.org/security-compliance/security#bug-bounty-program

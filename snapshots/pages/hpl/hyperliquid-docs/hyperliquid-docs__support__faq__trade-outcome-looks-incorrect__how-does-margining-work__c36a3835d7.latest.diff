@@ -1,0 +1,28 @@
+--- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__trade-outcome-looks-incorrect__how-does-margining-work__c36a3835d7:previous
++++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__trade-outcome-looks-incorrect__how-does-margining-work__c36a3835d7:current
+@@ -0,0 +1,25 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++Situation: Why didn’t my margin become available after I closed a Perps position? I closed a Perps position that showed 1,000 USDC in margin, but after closing, my Available Balance increased by <1,000 USDC. Where did the rest go?
++Reasoning
++This typically happens if you're using cross margin and have other open positions with negative unrealized pnl.
++In cross margin mode, all your positions share a common pool of margin. When you close one position, the funds (~1,000 USDC in this example) are not released directly into your Available Balance if other open positions with negative unrealized pnl still require margin because they didn’t meet the initial margin requirements. New margin, be it through closing a position or depositing USDC, goes toward these existing positions.
++So while the 1,000 USDC is still part of your Total Balance, only a portion becomes available to trade, depending on your overall margin requirements.
++Please refer to the Docs to understand how Margining works:
++https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements
++Previous
++Why was I liquidated?
++Next
++My TP/SL did not execute correctly
++Last updated
++1 year ago
++[[LINK TARGETS]]
++LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/how-does-margining-work.md
++LINK | Next My TP/SL did not execute correctly | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly
++LINK | Previous Why was I liquidated? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/why-was-i-liquidated
++LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/how-does-margining-work#reasoning
++LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining#unrealized-pnl-and-transfer-margin-requirements
++LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

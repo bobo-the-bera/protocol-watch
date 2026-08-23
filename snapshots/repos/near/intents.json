@@ -1,0 +1,14 @@
+{
+  "committed_at": "2026-08-19T09:18:48Z",
+  "html_url": "https://github.com/near/intents/commit/32a7836f825e8c984c26149f4456793ec7e3d49a",
+  "message": "chore: fix audit (#349)",
+  "protocol": "near",
+  "repo": "near/intents",
+  "sha": "32a7836f825e8c984c26149f4456793ec7e3d49a",
+  "slug": "intents",
+  "tags": [
+    "intents",
+    "api",
+    "contracts"
+  ]
+}

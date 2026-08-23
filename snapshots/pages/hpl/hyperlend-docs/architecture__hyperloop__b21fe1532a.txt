@@ -1,0 +1,39 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+HyperLoop
+lets you open a leveraged loop position using any two tokens: one is supplied, one is borrowed.
+Yield asset
+: The token you supply to earn interest or rewards.
+Debt asset
+: The token you borrow in the looped position, which accrues interest.
+When you deposit, HyperLoop uses a flashloan to instantly build your leveraged position in a single transaction. It works like this:
+A flashloan of the
+debt asset
+is taken.
+That debt token is
+swapped
+into the
+yield asset
+.
+The resulting
+yield asset
+is supplied as collateral.
+The same
+debt asset
+is then borrowed against the new collateral.
+The borrowed amount, along with your initial supplied funds, is used to
+repay the flashloan
+(since the collateral's LTV is less than 100%).
+Note: Each position is held in an isolated contract, but any points earned still accrue to the user's main address. Please keep in mind that the HyperLoop position won't be shown on your dashboard page.
+The entire process is completed atomically using flashloans — no manual steps or repeated cycles required — and incurs a
+0.04% flashloan
+fee
+on the amount used during the transaction.
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://docs.hyperlend.finance/architecture/hyperloop.md
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:27+00:00",
+  "protocol": "near",
+  "sha256": "a635cf822403dd038cb739d367d7bf6df434738a18998ea7b3158d7c6179dde5",
+  "slug": "resources__asset-support__1213079f95",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/resources/asset-support"
+}

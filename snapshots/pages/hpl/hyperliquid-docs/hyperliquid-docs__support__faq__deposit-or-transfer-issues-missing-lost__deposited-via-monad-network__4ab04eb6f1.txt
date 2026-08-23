@@ -1,0 +1,24 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+The Monad address can only receive MON on the Monad network. Deposits other than MON or on other networks will fail and not be credited, e.g., Depositing USDC on Monad will fail and not be credited.
+If you accidentally sent an asset that is not supported on Monad or sent MON on a chain other than Monad, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
+If you sent the right token on the right chain and deposited more than the minimum amount, but your MON still shows up as “Failed", reach out to the Unit team, which manages Monad network deposits & withdrawals:
+https://app.hyperunit.xyz/support
+​
+There is a minimum deposit of 450 MON. Deposits below 450 MON will result in a loss of funds.
+Note that Monad deposits take ~1 minute to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.
+Previous
+Deposited via Base network
+Next
+Deposited via Plasma network
+Last updated
+5 months ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-monad-network.md
+LINK | Next Deposited via Plasma network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-plasma-network
+LINK | Previous Deposited via Base network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-base-network
+LINK | https://app.hyperunit.xyz/support | https://app.hyperunit.xyz/support
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

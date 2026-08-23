@@ -1,0 +1,44 @@
+--- hpl/hyperlend-docs/essentials__audits-and-risk__91d0a66481:previous
++++ hpl/hyperlend-docs/essentials__audits-and-risk__91d0a66481:current
+@@ -0,0 +1,41 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++HyperLend maintains a security posture through high-tier audits, risk management, and constant real-time monitoring.
++The codebase has been verified by three independent security reviews to ensure the safety of user funds and contract integrity:
++Pashov Audit Group
++,
++Ackee Blockchain
++and a
++Cantina Competition
++.
++For ongoing economic stability,
++Block Analitica
++manages active risk and collateral health, while
++Blockworks Advisory
++provides strategic oversight for the overall health of the project. This is further reinforced by
++Hypernative
++, which provides 24/7 on-chain monitoring to detect and respond to real-time security threats.
++All audit reports can be found here:
++https://github.com/hyperlendx/audits/tree/master/hyperlend
++Previous
++Partners
++Next
++Brand Kit
++Last updated
++4 months ago
++[[LINK TARGETS]]
++LINK | Ackee Blockchain | https://x.com/AckeeBlockchain
++LINK | Block Analitica | https://x.com/BlockAnalitica
++LINK | Blockworks Advisory | https://x.com/BlockworksAdv
++LINK | Cantina Competition | https://x.com/cantinaxyz
++LINK | Hypernative | https://x.com/HypernativeLabs
++LINK | Markdown | https://docs.hyperlend.finance/essentials/audits-and-risk.md
++LINK | Next Brand Kit | https://docs.hyperlend.finance/essentials/brand-kit
++LINK | Pashov Audit Group | https://x.com/PashovAuditGrp
++LINK | Previous Partners | https://docs.hyperlend.finance/essentials/partners
++LINK | [no text] | https://docs.hyperlend.finance/essentials/audits-and-risk#all-audit-reports-can-be-found-here-https-github.com-hyperlendx-audits-tree-master-hyperlend
++LINK | https://github.com/hyperlendx/audits/tree/master/hyperlend | https://github.com/hyperlendx/audits/tree/master/hyperlend
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

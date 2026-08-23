@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:19+00:00",
+  "protocol": "near",
+  "sha256": "0e570183bd7265ea48d04cddc28903df1d0ccdd4c21fa42434cf5b46dd86d0e5",
+  "slug": "api-reference__oneclick__submit-a-signed-intent__484a1a5106",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/api-reference/oneclick/submit-a-signed-intent"
+}

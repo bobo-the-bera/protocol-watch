@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:28+00:00",
+  "protocol": "near",
+  "sha256": "ed7a196374d078d00c20056efb3445a0410f34b96c4c82cf3d5557c3a94d4f78",
+  "slug": "resources__fees__a27b2e7a3e",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/resources/fees"
+}

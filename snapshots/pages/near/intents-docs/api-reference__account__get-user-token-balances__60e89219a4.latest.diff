@@ -1,0 +1,229 @@
+--- near/intents-docs/api-reference__account__get-user-token-balances__60e89219a4:previous
++++ near/intents-docs/api-reference__account__get-user-token-balances__60e89219a4:current
+@@ -0,0 +1,226 @@
++Swaps
++Market Makers
++Bridges
++Verifier Contract
++Changelog
++GET
++/
++v0
++/
++account
++/
++balances
++Try it
++Get user token balances
++cURL
++curl
++--request
++GET
++\
++--url
++https://1click.chaindefuser.com/v0/account/balances
++\
++--header
++'Authorization: Bearer <token>'
++import requests
++url = "https://1click.chaindefuser.com/v0/account/balances"
++headers = {"Authorization": "Bearer <token>"}
++response = requests.get(url, headers=headers)
++print(response.text)
++const options = {method: 'GET', headers: {Authorization: 'Bearer <token>'}};
++fetch('https://1click.chaindefuser.com/v0/account/balances', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/account/balances",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "GET",
++CURLOPT_HTTPHEADER => [
++"Authorization: Bearer <token>"
++],
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/account/balances"
++req, _ := http.NewRequest("GET", url, nil)
++req.Header.Add("Authorization", "Bearer <token>")
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/account/balances")
++.header("Authorization", "Bearer <token>")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/account/balances")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Get.new(url)
++request["Authorization"] = 'Bearer <token>'
++response = http.request(request)
++puts response.read_body
++200
++{
++"balances"
++: [
++{
++"tokenId"
++:
++"nep141:wrap.near"
++,
++"available"
++:
++"1000000000000000000000000"
++,
++"source"
++:
++"private"
++}
++]
++}
++Authorizations
++​
++Authorization
++string
++header
++required
++User session token obtained from /auth/authenticate
++Query Parameters
++​
++tokenIds
++string[]
++Comma-separated list of token IDs to query. If empty, returns all non-zero balances.
++Response
++200
++application/json
++​
++balances
++object[]
++required
++List of token balances
++Show
++child attributes
++Yes
++No
++⌘
++I
++Get user token balances
++cURL
++curl
++--request
++GET
++\
++--url
++https://1click.chaindefuser.com/v0/account/balances
++\
++--header
++'Authorization: Bearer <token>'
++import requests
++url = "https://1click.chaindefuser.com/v0/account/balances"
++headers = {"Authorization": "Bearer <token>"}
++response = requests.get(url, headers=headers)
++print(response.text)
++const options = {method: 'GET', headers: {Authorization: 'Bearer <token>'}};
++fetch('https://1click.chaindefuser.com/v0/account/balances', options)
++.then(res => res.json())
++.then(res => console.log(res))
++.catch(err => console.error(err));
++<?php
++$curl = curl_init();
++curl_setopt_array($curl, [
++CURLOPT_URL => "https://1click.chaindefuser.com/v0/account/balances",
++CURLOPT_RETURNTRANSFER => true,
++CURLOPT_ENCODING => "",
++CURLOPT_MAXREDIRS => 10,
++CURLOPT_TIMEOUT => 30,
++CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
++CURLOPT_CUSTOMREQUEST => "GET",
++CURLOPT_HTTPHEADER => [
++"Authorization: Bearer <token>"
++],
++]);
++$response = curl_exec($curl);
++$err = curl_error($curl);
++curl_close($curl);
++if ($err) {
++echo "cURL Error #:" . $err;
++} else {
++echo $response;
++}
++package main
++import (
++"fmt"
++"net/http"
++"io"
++)
++func main() {
++url := "https://1click.chaindefuser.com/v0/account/balances"
++req, _ := http.NewRequest("GET", url, nil)
++req.Header.Add("Authorization", "Bearer <token>")
++res, _ := http.DefaultClient.Do(req)
++defer res.Body.Close()
++body, _ := io.ReadAll(res.Body)
++fmt.Println(string(body))
++}
++HttpResponse<String> response = Unirest.get("https://1click.chaindefuser.com/v0/account/balances")
++.header("Authorization", "Bearer <token>")
++.asString();
++require 'uri'
++require 'net/http'
++url = URI("https://1click.chaindefuser.com/v0/account/balances")
++http = Net::HTTP.new(url.host, url.port)
++http.use_ssl = true
++request = Net::HTTP::Get.new(url)
++request["Authorization"] = 'Bearer <token>'
++response = http.request(request)
++puts response.read_body
++200
++{
++"balances"
++: [
++{
++"tokenId"
++:
++"nep141:wrap.near"
++,
++"available"
++:
++"1000000000000000000000000"
++,
++"source"
++:
++"private"
++}
++]
++}
++[[LINK TARGETS]]
++LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
++LINK | Changelog | https://docs.near-intents.org/changelog/overview
++LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
++LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
++LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
++LINK | ​ | https://docs.near-intents.org/api-reference/account/get-user-token-balances#authorization-authorization
++LINK | ​ | https://docs.near-intents.org/api-reference/account/get-user-token-balances#parameter-token-ids
++LINK | ​ | https://docs.near-intents.org/api-reference/account/get-user-token-balances#response-balances

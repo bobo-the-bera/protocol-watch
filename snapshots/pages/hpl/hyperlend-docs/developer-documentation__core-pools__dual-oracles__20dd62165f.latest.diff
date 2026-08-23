@@ -1,0 +1,37 @@
+--- hpl/hyperlend-docs/developer-documentation__core-pools__dual-oracles__20dd62165f:previous
++++ hpl/hyperlend-docs/developer-documentation__core-pools__dual-oracles__20dd62165f:current
+@@ -0,0 +1,34 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++DualOracle contracts
++Certain assets use DualOracles, which can switch between different price sources.
++Code can be found on
++Github
++.
++Primary source is used most of the time. If primary source data is stale (threshold defined per contract), the fallback source is used.
++Market governance can also manually switch to an emergency price source.
++Currently, they are used for:
++kHYPE market:
++Primary source: RedStone Price Feed for kHYPE_FUNDAMENTAL/USD
++Fallback source: Chainlink HYPE/USD * Chainlink KHYPE-HYPE Exchange Rate
++Emergency source: Chainlink kHYPE/USD Market Rate
++wstHYPE market:
++Primary source: RedStone Price Feed for HYPE/USD * wstHYPE/HYPE Ratio
++Fallback source: Chainlink HYPE/USD * Chainlink wstHYPE-HYPE Exchange Rate
++Emergency source: RedStone wstHYPE/USD Market Rate
++Previous
++↪ oracles
++Next
++↪ interest rate strategy
++Last updated
++8 months ago
++[[LINK TARGETS]]
++LINK | Github | https://github.com/hyperlendx/hyperevm-oracle/blob/master/contracts/adapters/DualFallbackOracle.sol
++LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/dual-oracles.md
++LINK | Next ↪ interest rate strategy | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy
++LINK | Previous ↪ oracles | https://docs.hyperlend.finance/developer-documentation/core-pools/oracles
++LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/dual-oracles#dualoracle-contracts
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

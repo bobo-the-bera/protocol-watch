@@ -1,0 +1,57 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+The suggestions below are for informational purposes only and a non-comprehensive starting point. They are not trading advice and do not guarantee any latency or trading outcome.
+Optimizing read latency (receiving market data)
+Run a non-validating node against a reliable peer, such as Hyper Foundation non-validator.
+Run node with
+--disable-output-file-buffering
+to get outputs as soon as blocks are executed
+Run node with sufficient machines specs, at least 32 logical cores, 128 GB RAM, and 500 MB/s disk throughput. Increasing cores can reduce latency because blocks will be faster to execute.
+Construct book and other exchange state locally using outputs from node, which has faster and more granular data than the API. See
+https://github.com/hyperliquid-dex/order_book_server
+for an example on how to build an order book on the same machine that is running a node. This repo is not actively maintained. It is recommended to fork the repo or write an implementation from scratch to incorporate details such as ALO priority fees or other edge cases.
+--batch-by-block
+on the node will wait until the end of the block to write the data. The example order book server above uses this to simplify logic, but a further optimization could include turning the flag off and inferring block boundaries otherwise.
+Latency-sensitive users may find
+split_client_blocks: true
+useful, as it streams transactions to be committed before they are included in client blocks. This can lead to 70-150ms improvement in latency when reading inputs. As documented in the node repository, these are the fastest transaction inputs to execution, broadcast even before they are executed by the L1. The tradeoff with the faster input data is that the results from execution are not yet available. However, with simple actions like orders, the consumer can stream estimated account values for all users to predict execution results with reasonable accuracy.
+The foundation non-validator is one of the highest uptime and low latency non-validator peers. See
+here
+for details on access for latency-sensitive users.
+Read priority fees are the fastest way to read raw data from the network. See
+here
+for more details.
+Optimizing write latency (sending orders and cancels)
+Cancels should be sent with the
+fast
+flag. There is no disadvantage to the fast flag, except that fast cancels cannot be used to cancel trigger orders.
+Write priority fees are the fastest way to send orders to the network. See
+here
+for more details.
+Hyperliquid's execution logic is designed to protect makers against toxic flow, so that end users see tight spreads and deep liquidity even during volatility. The primary driver of this effect is that cancels and ALO orders sent at time
+t
+will almost always execute before IOC and GTC orders sent at time
+t
+. This prioritization spans several blocks. The secondary effect is that each L1 block contains only a few consensus bundles. Within each bundle, ALO and cancels are executed before other transactions.
+End-to-end latency on Hyperliquid is not apples-to-apples with centralized matching engines, because the order book is fully onchain. End-to-end latency includes time to API server, mempool inclusion time, and time to commit (usually 2 blocks in pipelined HyperBFT consensus). The sequencing of transactions has far less noise than the end-to-end latency suggests. While a cancel or ALO order can show ~380ms end-to-end latency, users should be able to run experiments with <10ms variation between send times and see predictable ordering on the L1.
+Users who care to reduce the end-to-end write latency (for example to predict the sequence of transactions that will be committed) can read them from split client blocks in the non-validating node (see read latency section above). This approach does not include the execution result of the transaction.
+Previous
+Activation gas fee
+Next
+Priority fees
+Last updated
+1 month ago
+[[LINK TARGETS]]
+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/optimizing-latency.md
+LINK | Next Priority fees | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/priority-fees
+LINK | Previous Activation gas fee | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/activation-gas-fee
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/optimizing-latency#optimizing-read-latency-receiving-market-data
+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/optimizing-latency#optimizing-write-latency-sending-orders-and-cancels
+LINK | fast | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint#cancel-order-s
+LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/priority-fees
+LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node
+LINK | https://github.com/hyperliquid-dex/order_book_server | https://github.com/hyperliquid-dex/order_book_server
+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

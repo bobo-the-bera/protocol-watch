@@ -1,0 +1,109 @@
+--- hpl/hyperlend-docs/architecture__liquidations__30ca2881e8:previous
++++ hpl/hyperlend-docs/architecture__liquidations__30ca2881e8:current
+@@ -0,0 +1,106 @@
++For the complete documentation index, see
++llms.txt
++. This page is also available as
++Markdown
++.
++• Overview
++Each account's health on HyperLend is determined by a single value known as the
++health factor
++. This figure summarizes how well your portfolio is collateralized, effectively measuring its overall health.
++H
++f
++=
++∑
++Collateral
++i
++in ETH
++×
++Liquidation Threshold
++i
++Total Borrows in ETH
++H_f = \frac{\sum \text{Collateral}_i \text{ in ETH} \times \text{Liquidation Threshold}_i}{\text{Total Borrows in ETH}}
++H
++f
++​
++=
++Total Borrows in ETH
++∑
++Collateral
++i
++​
++in ETH
++×
++Liquidation Threshold
++i
++​
++•
++Liquidation
++occurs when a borrower's health factor falls below 1, indicating that their
++collateral value
++no longer sufficiently covers their
++loan/debt value
++. This situation can arise if the collateral decreases in value or the borrowed debt increases in value relative to each other. During a liquidation, a portion or entirety of the borrower's debt is repaid, and this amount plus a
++liquidation fee
++is deducted from the available collateral. Consequently, the liquidated debt portion is repaid.
++For debt positions under 2000 USD or when HF is under 0.95, the entire debt can be liquidated, while for positions above 2000 USD with HF between 0.95 and 1, only 50% can be liquidated. This is intended to prevent accumulation of small dust positions where liquidation bonus wouldn't cover gas costs, making liquidation unprofitable (which could lead to bad debt for the protocol).
++• Liquidation Penalty
++The
++liquidation penalty
++, or bonus for liquidators, varies based on the collateral asset. You can find the liquidation fee for each asset in the risk parameters section. For example, Joe deposits 5 ETH (when ETH is worth 1000 USDC) and borrows 4000 USDC. The next day, ETH value falls to $810, at which point Joe's health factor falls below 1. Since it's now below the liquidation threshold, a liquidator can repay the 4000 USDC loan and claim the 5 ETH (worth 4050 USDC, which they can immediately sell for a profit).
++• Avoiding Liquidation
++To
++prevent liquidation
++, you can improve your health factor by depositing more collateral assets or repaying part of your loan. Generally,
++repayments
++boost your health factor more significantly than deposits. It's crucial to monitor your health factor and maintain it at a high level to avoid liquidation. For instance, keeping your health factor above 2 provides a greater margin of safety.
++• Becoming a Liquidator
++Liquidations on HyperLend are open to anyone. If you spot an under-collateralized position, you can repay part of the borrower’s debt and claim a portion of their collateral at a discount — no whitelisting, no permissions. Whether you're running a custom keeper or just getting started, it's all composable.
++Example Bot
++:
++github.com/hyperlendx/liquidator
++– a reference Rust bot that monitors positions and executes profitable liquidations.
++Developer Docs
++: The core entry point for liquidations is the
++liquidationCall()
++function. Review the ABI, required parameters, and operational flow here.
++HyperLend uses RedStone OEV price feeds:
++https://docs.redstone.finance/docs/oev/integration/
++Liquidation Strategies & Cross-Chain Execution
++1. Onchain Flash Loan + DEX Liquidation (HyperEVM-native)
++Execute full liquidation atomically in one EVM transaction.
++Ideal for low-latency trades with sufficient onchain liquidity.
++Uses a flash loan to repay the borrow, sells collateral via DEX, and captures the bonus.
++A traditional DEX liquidity based liquidation
++2. Upfront Capital + Orderbook Exit (Cross-Chain)
++Liquidator uses own capital to repay debt on HyperEVM.
++Collateral is bridged to HyperCore and sold via the deeper L1 orderbook.
++Favored for assets like uBTC or uETH where orderbook liquidity is superior.
++Liquidation based on paying debt token upfront without bridging
++3. Debt Bridging + Orderbook Liquidation
++Liquidator bridges debt token from Core → EVM, repays loan, acquires collateral.
++Collateral is bridged back to Core and sold on the orderbook.
++This is the
++default strategy
++assumed for protocol parameter tuning.
++Higher latency and price risk but aligns with real-world liquidator setups.
++Liquidation based on paying debt and selling collateral completely via orderbook
++Guidance for Liquidators:
++Liquidators interacting with Hyperlend should be aware of the multiple viable strategies for executing liquidations, depending on their liquidity profile and desired execution venue. If operating natively on HyperEVM, liquidations can be performed atomically using flash loans, repaying debt and liquidating collateral via DEXs in a single transaction. Alternatively, if capital is concentrated on HyperCore, liquidators may bridge tokens to HyperEVM using the
++spotSend
++mechanism—ensuring the token is properly linked—then repay debt, obtain collateral, and bridge assets back to HyperCore for sale on a deeper L1 orderbook. When bridging from EVM to Core, ERC20 transfers should be directed to the system address of the linked token contract. Note that fungibility between Core and EVM spot assets is not always guaranteed; liquidators must refer to system caveats to assess slippage or market divergence risks during cross-chain transfers.
++Previous
++Risks
++Next
++Oracle
++Last updated
++2 months ago
++[[LINK TARGETS]]
++LINK | Markdown | https://docs.hyperlend.finance/architecture/liquidations.md
++LINK | Next Oracle | https://docs.hyperlend.finance/architecture/oracle
++LINK | Previous Risks | https://docs.hyperlend.finance/architecture/risks
++LINK | [no text] | https://docs.hyperlend.finance/architecture/liquidations#liquidation
++LINK | [no text] | https://docs.hyperlend.finance/architecture/liquidations#liquidation-strategies-and-cross-chain-execution
++LINK | github.com/hyperlendx/liquidator | https://github.com/hyperlendx/liquidator
++LINK | https://docs.redstone.finance/docs/oev/integration/ | https://docs.redstone.finance/docs/oev/integration/
++LINK | liquidationCall() | https://docs.hyperlend.finance/developer-documentation/core-pools/pool
++LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

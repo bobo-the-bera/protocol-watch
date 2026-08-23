@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:24+00:00",
+  "protocol": "near",
+  "sha256": "06ff18fb479bfac4029f7b88ee37938ebaa6dbef0e41192107656a8d0e70c322",
+  "slug": "integration__market-makers__example__8e98d938a4",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/integration/market-makers/example"
+}

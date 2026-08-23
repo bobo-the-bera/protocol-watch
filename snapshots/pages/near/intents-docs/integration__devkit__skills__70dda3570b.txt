@@ -1,0 +1,45 @@
+Swaps
+Market Makers
+Bridges
+Verifier Contract
+Changelog
+Most modern AI Agents support the use of
+skills
+, which are small knowledge bases that explain how to use a particular API or tool.
+By providing the
+near-intents
+skill to your agent, you can enable it to build cross-chain swap applications using the 1Click Swap API.
+Skill repo:
+near/agent-skills → skills/near-intents
+​
+Using the skill
+1
+Install the skill
+Install the
+near-intents
+skill:
+npx
+skills
+add
+near/agent-skills
+--skill
+near-intents
+2
+Ask your agent to build a swap app
+Your agent should automatically pick up the
+near-intents
+skill, otherwise you can explicitly ask the agent to read the
+SKILL.md
+file to learn how to use NEAR Intents.
+Yes
+No
+⌘
+I
+[[LINK TARGETS]]
+LINK | Bridges | https://docs.near-intents.org/integration/bridging/overview
+LINK | Changelog | https://docs.near-intents.org/changelog/overview
+LINK | Market Makers | https://docs.near-intents.org/integration/market-makers/introduction
+LINK | Swaps | https://docs.near-intents.org/getting-started/what-are-intents
+LINK | Verifier Contract | https://docs.near-intents.org/integration/verifier-contract/introduction
+LINK | near/agent-skills → skills/near-intents | https://github.com/near/agent-skills/tree/main/skills/near-intents
+LINK | ​ | https://docs.near-intents.org/integration/devkit/skills#using-the-skill

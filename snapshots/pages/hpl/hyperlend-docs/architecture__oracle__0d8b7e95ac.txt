@@ -1,0 +1,28 @@
+For the complete documentation index, see
+llms.txt
+. This page is also available as
+Markdown
+.
+We use
+the industry standard
+Chainlink
+and
+RedStone
+oracles as our primary oracle providers.
+You can find the list of oracle adapter contracts
+here
+.
+Previous
+Liquidations
+Next
+Fees and Yield
+Last updated
+4 months ago
+[[LINK TARGETS]]
+LINK | Chainlink | https://x.com/chainlink
+LINK | Markdown | https://docs.hyperlend.finance/architecture/oracle.md
+LINK | Next Fees and Yield | https://docs.hyperlend.finance/architecture/fees-and-yield
+LINK | Previous Liquidations | https://docs.hyperlend.finance/architecture/liquidations
+LINK | RedStone | https://x.com/redstone_defi
+LINK | here | https://docs.hyperlend.finance/developer-documentation/contract-addresses
+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

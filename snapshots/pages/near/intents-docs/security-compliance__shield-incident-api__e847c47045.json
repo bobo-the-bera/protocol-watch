@@ -1,0 +1,12 @@
+{
+  "content_changed_at": "2026-08-23T12:13:29+00:00",
+  "protocol": "near",
+  "sha256": "b2a8ebf4e5cad40700b9e0ea0266a246e11dd444e58676583e8304dae4377bc9",
+  "slug": "security-compliance__shield-incident-api__e847c47045",
+  "tags": [
+    "intents",
+    "docs",
+    "api"
+  ],
+  "url": "https://docs.near-intents.org/security-compliance/shield-incident-api"
+}
