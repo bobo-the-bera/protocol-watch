@@ -1,117 +1,67 @@
 --- near/direct/near-home:previous
 +++ near/direct/near-home:current
-@@ -0,0 +1,114 @@
-+One account. No borders.
-+Your financial life, onchain.
-+Crypto, stocks, bonds, precious metals, yield, and more—
-+brought together in one borderless account, confidential by design.
-+Create account
-+No email. No KYC. Ready in seconds.
-+Live demo.
-+Try a swap
-+for a real quote.
-+Balances
-+Crypto
-+8 assets
-++5 more
-+$63,148.72
-+RWA
-+6 assets
-++3 more
-+$37,429.15
-+Perps
-+4 positions
-+$1,736
-+unrealized P&L
-+$28,563.40
-+Earn
-+2 positions
-+8.4%
-+blended APY
-+$21,074.88
-+Swap anything to anything
-+Buy ZEC with USDC? AAPL with BTC? Powered by NEAR Intents, swap nearly any asset across networks and asset classes—confidentially. Place your order and let market makers compete to offer you the best available price.
-+Send anything, anywhere
-+Invest in real-world assets
-+Earn on your assets
-+Trade perpetual markets
-+Bank and spend from one account
-+Coming soon
-+Understand your finances with AI
-+Coming soon
-+5000
-+USDC
-+$5000
-+0.0771
-+BTC
-+$4999.3
-+Exchange rate
-+1 BTC = 64,850.84 USDC
-+Max slippage
-+0.50%
-+Receive at least
-+0.076715 BTC
-+Finding best price
-+One payment shouldn’t reveal everything
-+Transact without exposing the rest of your balances, positions, or financial activity.
-+More than private transfers
-+Keep balances, swaps, positions, and other financial activity confidential.
-+Choose what you reveal
-+Share specific activity when needed without exposing the rest of your account.
-+NEAR Protocol
-+One of the fastest, most reliable blockchains in the world. The foundation that keeps your account secure and your transactions instant.
-+NEAR Intents
-+The engine behind every swap. Market makers compete to get you the best price across 35+ networks — settled in seconds.
-+NEAR Confidential
-+Onchain doesn’t have to mean public. The technology that keeps your balances and activity confidential — while you control who sees what.
-+NEAR AI
-+Your data stays private. AI models run in secure environments so your information is never exposed — not even to us.
-+$26B
-+all-time volume
-+113
-+supported assets
-+34
-+supported chains
-+What is near.com?
-+How do I create an account?
-+How do cross-chain swaps work?
-+What can I invest in through near.com?
-+How do I earn interest on my assets?
-+Can my business integrate?
-+Need help?
-+Your account is seconds away.
-+No email. No KYC. Pick a wallet or passkey and you’re in.
-+Create account
-+[[LINK TARGETS]]
-+LINK | Create account | https://near.com/login
-+LINK | NEAR AI Your data stays private. AI models run in secure environments so your information is never exposed — not even to us. | https://near.ai
-+LINK | NEAR Confidential Onchain doesn’t have to mean public. The technology that keeps your balances and activity confidential — while you control who sees what. | https://x.com/NEARProtocol/status/2074515816670781812?s=20
-+LINK | NEAR Intents The engine behind every swap. Market makers compete to get you the best price across 35+ networks — settled in seconds. | https://docs.near-intents.org
-+LINK | NEAR Protocol One of the fastest, most reliable blockchains in the world. The foundation that keeps your account secure and your transactions instant. | https://near.org
-+[[FRONTEND SCRIPT ASSETS]]
-+SCRIPT | https://near.com/_next/static/chunks/0.7vofpba8mq3.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/03~yq9q893hmn.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/04tjshshq8gdu.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/065dlhdy2db3j.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/06_e-26tt4o~a.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/06tkxowir-vxv.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/08~qplg140~wg.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/093gridn94m7i.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0_zp8-7ss~zod.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0aldwhtm.olqc.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0aluhflia5qm-.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0bjfd.v4zz1z6.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0dhr~lg7u.jag.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0ekd0elz1p199.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0m04-nr1tfy-b.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0oe-ieqhtb639.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0uz~0go0s7d~r.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0vl.5i0i6..f7.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0z-38g9i3f8x4.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/0~a5gg6nl.po..js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/106w1ocd8yls2.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/10lzq.77~o6pa.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/121ra9um8~sdf.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/15m9dnzl223rm.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/15n71wxukuoyu.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
-+SCRIPT | https://near.com/_next/static/chunks/turbopack-08-kn3ie5o9b7.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+@@ -1,6 +1,6 @@
+ One account. No borders.
+-Your financial life, onchain.
++Your financial life, onchain and confidential.
+ Crypto, stocks, bonds, precious metals, yield, and more—
+ brought together in one borderless account, confidential by design.
+ Create account
+ No email. No KYC. Ready in seconds.
+@@ -85,30 +85,30 @@
+ LINK | NEAR Confidential Onchain doesn’t have to mean public. The technology that keeps your balances and activity confidential — while you control who sees what. | https://x.com/NEARProtocol/status/2074515816670781812?s=20
+ LINK | NEAR Intents The engine behind every swap. Market makers compete to get you the best price across 35+ networks — settled in seconds. | https://docs.near-intents.org
+ LINK | NEAR Protocol One of the fastest, most reliable blockchains in the world. The foundation that keeps your account secure and your transactions instant. | https://near.org
+ [[FRONTEND SCRIPT ASSETS]]
+-SCRIPT | https://near.com/_next/static/chunks/0.7vofpba8mq3.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/03~yq9q893hmn.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/04tjshshq8gdu.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/065dlhdy2db3j.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/06_e-26tt4o~a.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/06tkxowir-vxv.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/08~qplg140~wg.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/093gridn94m7i.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0_zp8-7ss~zod.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0aldwhtm.olqc.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0aluhflia5qm-.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0bjfd.v4zz1z6.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0dhr~lg7u.jag.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0ekd0elz1p199.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0m04-nr1tfy-b.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0oe-ieqhtb639.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0uz~0go0s7d~r.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0vl.5i0i6..f7.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0z-38g9i3f8x4.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/0~a5gg6nl.po..js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/106w1ocd8yls2.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/10lzq.77~o6pa.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/121ra9um8~sdf.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/15m9dnzl223rm.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/15n71wxukuoyu.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
+-SCRIPT | https://near.com/_next/static/chunks/turbopack-08-kn3ie5o9b7.js?dpl=dpl_9zbhYj1S8kscdESSZv6gR3ttigmk
++SCRIPT | https://near.com/_next/static/chunks/0.7vofpba8mq3.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/03~yq9q893hmn.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/04tjshshq8gdu.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/065dlhdy2db3j.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/06_e-26tt4o~a.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/06tkxowir-vxv.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/07mc.hk0nx._2.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/08~qplg140~wg.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/093gridn94m7i.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0_zp8-7ss~zod.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0aldwhtm.olqc.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0bjfd.v4zz1z6.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0dhr~lg7u.jag.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0ekd0elz1p199.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0m04-nr1tfy-b.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0oe-ieqhtb639.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0uz~0go0s7d~r.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0vl.5i0i6..f7.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0z-38g9i3f8x4.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/0~a5gg6nl.po..js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/106w1ocd8yls2.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/10lzq.77~o6pa.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/121ra9um8~sdf.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/15m9dnzl223rm.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/15n71wxukuoyu.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
++SCRIPT | https://near.com/_next/static/chunks/turbopack-08-kn3ie5o9b7.js?dpl=dpl_CixWSLt1rep5XfapY1L7cjwgcHe2
