@@ -3,6 +3,7 @@ version: 2
 # Rendered metadata that changes with time but does not represent protocol content.
 global_ignore_patterns:
   - '^Last updated .*$'
+  - '^(today|yesterday|[0-9]+ (minute|hour|day|week|month|year)s? ago)$'
   - '^Was this page helpful\??$'
   - '^Yes No$'
   - '^Powered by.*$'
