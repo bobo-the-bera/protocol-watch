@@ -1,31 +1,38 @@
 --- hpl/hyperlend-docs/architecture__tokenization__5bf28db141:previous
 +++ hpl/hyperlend-docs/architecture__tokenization__5bf28db141:current
-@@ -0,0 +1,28 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+• hToken
-+hToken
-+represents a
-+tokenized supply position
-+, functioning as a
-+yield-bearing ERC-20 token
-+. These tokens are minted when assets are deposited into the Pool and are burned when the underlying assets are redeemed.
-+• DebtToken
-+DebtTokens
-+are
-+non-transferrable interest-accruing tokenized debt positions
-+. These tokens represent the debt incurred by users and accumulate interest over time.
-+Previous
-+Fees and Yield
-+Next
-+Staking
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/architecture/tokenization.md
-+LINK | Next Staking | https://docs.hyperlend.finance/architecture/staking
-+LINK | Previous Fees and Yield | https://docs.hyperlend.finance/architecture/fees-and-yield
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,28 +1,7 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-• hToken
+-hToken
+-represents a
+-tokenized supply position
+-, functioning as a
+-yield-bearing ERC-20 token
+-. These tokens are minted when assets are deposited into the Pool and are burned when the underlying assets are redeemed.
+-• DebtToken
+-DebtTokens
+-are
+-non-transferrable interest-accruing tokenized debt positions
+-. These tokens represent the debt incurred by users and accumulate interest over time.
+-Previous
+-Fees and Yield
+-Next
+-Staking
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/architecture/tokenization.md
+-LINK | Next Staking | https://docs.hyperlend.finance/architecture/staking
+-LINK | Previous Fees and Yield | https://docs.hyperlend.finance/architecture/fees-and-yield
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/tokenization.md).
++# Tokenization
++**• hToken**
++**hToken** represents a **tokenized supply position**, functioning as a **yield-bearing ERC-20 token**. These tokens are minted when assets are deposited into the Pool and are burned when the underlying assets are redeemed.
++***
++**• DebtToken**
++**DebtTokens** are **non-transferrable interest-accruing tokenized debt positions**. These tokens represent the debt incurred by users and accumulate interest over time.

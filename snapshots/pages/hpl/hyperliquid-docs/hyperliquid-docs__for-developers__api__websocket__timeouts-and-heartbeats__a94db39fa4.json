@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:35+00:00",
+  "content_changed_at": "2026-08-23T12:29:05+00:00",
   "protocol": "hpl",
-  "sha256": "f4f2d9e85d47c90730805385a6432f2f33b06dcdc0f61465dcefc13fda2be05d",
+  "sha256": "7628f5264913a6dcb9041c4784eaebef5bfb40a21a806396c6b750c3c048ea20",
   "slug": "hyperliquid-docs__for-developers__api__websocket__timeouts-and-heartbeats__a94db39fa4",
   "tags": [
     "hyperliquid",

@@ -1,47 +1,56 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__trading__entry-price-and-pnl__3adcc74fb5:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__trading__entry-price-and-pnl__3adcc74fb5:current
-@@ -0,0 +1,44 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+On the Hyperliquid DEX, entry price, unrealized pnl, and closed pnl are purely frontend components provided for user convenience. The fundamental accounting is based on margin (balance for spot) and trades.
-+Perps
-+Perp trades are considered
-+opening
-+when the absolute value of the position increases. In other words, longing when already long or shorting when already short.
-+For opening trades, the entry price is updated to an average of current entry price and trade price weighted by size.
-+For closing trades, the entry price is kept the same.
-+Unrealized pnl is defined as
-+side * (mark_price - entry_price) * position_size
-+where
-+side = 1
-+for a long position and
-+side = -1
-+for a short position
-+Closed pnl is
-+fee + side * (mark_price - entry_price) * position_size
-+for a closing trade and only the fee for an opening trade.
-+Spot
-+Spot trades use the same formulas as perps with the following modifications: Spot trades are considered
-+opening
-+for buys and
-+closing
-+for sells. Transfers are treated as buys or sells at mark price, and genesis distributions are treated as having entry price at
-+10000 USDC
-+market cap. Note that while 0 is the correct answer as genesis distributions are not bought, it leads to undefined return on equity.
-+Pre-existing spot balances are assigned an entry price equal to the first trade or send after the feature was enabled around July 3 08:00 UTC.
-+Previous
-+Take profit and stop loss orders (TP/SL)
-+Next
-+Self-trade prevention
-+Last updated
-+2 years ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl.md
-+LINK | Next Self-trade prevention | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention
-+LINK | Previous Take profit and stop loss orders (TP/SL) | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl#perps
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl#spot
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,44 +1,12 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-On the Hyperliquid DEX, entry price, unrealized pnl, and closed pnl are purely frontend components provided for user convenience. The fundamental accounting is based on margin (balance for spot) and trades.
+-Perps
+-Perp trades are considered
+-opening
+-when the absolute value of the position increases. In other words, longing when already long or shorting when already short.
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl.md).
++# Entry price and pnl
++On the Hyperliquid DEX, entry price, unrealized pnl, and closed pnl are purely frontend components provided for user convenience. The fundamental accounting is based on margin (balance for spot) and trades.&#x20;
++### Perps
++Perp trades are considered `opening` when the absolute value of the position increases. In other words, longing when already long or shorting when already short.
+ For opening trades, the entry price is updated to an average of current entry price and trade price weighted by size.
+ For closing trades, the entry price is kept the same.
+-Unrealized pnl is defined as
+-side * (mark_price - entry_price) * position_size
+-where
+-side = 1
+-for a long position and
+-side = -1
+-for a short position
+-Closed pnl is
+-fee + side * (mark_price - entry_price) * position_size
+-for a closing trade and only the fee for an opening trade.
+-Spot
+-Spot trades use the same formulas as perps with the following modifications: Spot trades are considered
+-opening
+-for buys and
+-closing
+-for sells. Transfers are treated as buys or sells at mark price, and genesis distributions are treated as having entry price at
+-10000 USDC
+-market cap. Note that while 0 is the correct answer as genesis distributions are not bought, it leads to undefined return on equity.
++Unrealized pnl is defined as `side * (mark_price - entry_price) * position_size` where `side = 1` for a long position and `side = -1` for a short position
++Closed pnl is `fee + side * (mark_price - entry_price) * position_size` for a closing trade and only the fee for an opening trade.
++### Spot
++Spot trades use the same formulas as perps with the following modifications: Spot trades are considered `opening` for buys and `closing` for sells. Transfers are treated as buys or sells at mark price, and genesis distributions are treated as having entry price at `10000 USDC` market cap. Note that while 0 is the correct answer as genesis distributions are not bought, it leads to undefined return on equity.&#x20;
+ Pre-existing spot balances are assigned an entry price equal to the first trade or send after the feature was enabled around July 3 08:00 UTC.
+-Previous
+-Take profit and stop loss orders (TP/SL)
+-Next
+-Self-trade prevention
+-Last updated
+-2 years ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl.md
+-LINK | Next Self-trade prevention | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention
+-LINK | Previous Take profit and stop loss orders (TP/SL) | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl#perps
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl#spot
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

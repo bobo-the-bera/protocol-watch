@@ -1,27 +1,11 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Transfer Timing
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interaction-timings.md).
+# Interaction timings
+## Transfer Timing
 Transfers from HyperCore to HyperEVM are queued on the L1 until the next HyperEVM block. Transfers from HyperEVM to HyperCore happen in the same L1 block as the HyperEVM block, immediately after the HyperEVM block is built.
-Timing within a HyperEVM block
+## Timing within a HyperEVM block
 On an L1 block that produces a HyperEVM block:
-L1 block is built
-EVM block is built
-EVM -> Core transfers are processed
-CoreWriter actions are processed
+1. L1 block is built
+2. EVM block is built
+3. EVM -> Core transfers are processed&#x20;
+4. CoreWriter actions are processed&#x20;
 Note that the account performing the CoreWriter action must exist on HyperCore before the EVM block is built. An EVM -> Core transfer to initialize the account in the same block will still result in the CoreWriter action being rejected.
-Previous
-HyperCore <> HyperEVM transfers
-Next
-Wrapped HYPE
-Last updated
-11 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interaction-timings.md
-LINK | Next Wrapped HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/wrapped-hype
-LINK | Previous HyperCore <> HyperEVM transfers | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/hypercore-less-than-greater-than-hyperevm-transfers
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interaction-timings#timing-within-a-hyperevm-block
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interaction-timings#transfer-timing
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

@@ -1,40 +1,23 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-How to check where your withdrawal went
-1
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet.md).
+# Withdrawal has not arrived in my wallet
+### How to check where your withdrawal went <a href="#withdrawal-check" id="withdrawal-check"></a>
+{% stepper %}
+{% step %}
 Check the withdrawal action you conducted
 Go to the Portfolio page and check the Deposits & Withdrawals table
-2
+{% endstep %}
+{% step %}
 Check if you used 'Send' or 'Withdraw'
-For the withdrawal you are referring to, check if the Action column says “Send Spot,” “Send USDC (Perps Wallet),” or “Withdrawal”
-Outcome 1: If you see “Send XXX” instead of “Withdrawal”
-You used Send instead of Withdrawal. Send is only to send funds to another account on the Hyperliquid blockchain.
-If you sent funds to an address you control, you can connect the wallet to Hyperliquid and access your funds.
-If you sent it to a CEX, this means that only the CEX address can access the funds you sent. You'll have to wait for the CEX to integrate the Hyperliquid blockchain to coordinate retrieving the funds with them. There is an explicit warning message reminding users not to use Send to withdraw to a CEX.
-Outcome 2: If you see “Withdrawal”
-If the Status says “Pending,” please wait for the duration estimate stated in the Withdrawal modal. If it takes longer, there is likely congestion on the networks, and the withdrawal will be processed, but take longer than usual.
-If the Status says “Completed,” click the explorer link next to the timestamp to check the destination address that received your withdrawal.
-If the Status says “Failed,” you can try to contact the Unit team which manages BTC, ETH, and SOL deposits and withdrawals via their TG group:
-https://t.me/hyperunit
-. Note that Unit is an independent team.
-How do I use the Send feature on Hyperliquid and what is it for?
-Send is used to send tokens to another account on the Hyperliquid blockchain. It is not to withdraw to another blockchain.
-Previous
-Withdrawal issues
-Next
-My withdrawal keeps getting re-deposited
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet.md
-LINK | Next My withdrawal keeps getting re-deposited | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/my-withdrawal-keeps-getting-re-deposited
-LINK | Previous Withdrawal issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet#send-feature
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet#send-instead-of-withdraw
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet#withdrawal-check
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet#withdrawal-status
-LINK | https://t.me/hyperunit | https://t.me/hyperunit
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+For the withdrawal you are referring to, check if the Action column says “Send Spot,” “Send USDC (Perps Wallet),” or “Withdrawal”&#x20;
+{% endstep %}
+{% endstepper %}
+### **Outcome 1: If you see “Send XXX” instead of “Withdrawal”** <a href="#send-instead-of-withdraw" id="send-instead-of-withdraw"></a>
+* You used Send instead of Withdrawal. Send is only to send funds to another account on the Hyperliquid blockchain.
+* If you sent funds to an address you control, you can connect the wallet to Hyperliquid and access your funds.
+* If you sent it to a CEX, this means that only the CEX address can access the funds you sent. You'll have to wait for the CEX to integrate the Hyperliquid blockchain to coordinate retrieving the funds with them. There is an explicit warning message reminding users not to use Send to withdraw to a CEX.
+### **Outcome 2: If you see “Withdrawal”** <a href="#withdrawal-status" id="withdrawal-status"></a>
+* If the Status says “Pending,” please wait for the duration estimate stated in the Withdrawal modal. If it takes longer, there is likely congestion on the networks, and the withdrawal will be processed, but take longer than usual.
+* If the Status says “Completed,” click the explorer link next to the timestamp to check the destination address that received your withdrawal.
+* If the Status says “Failed,” you can try to contact the Unit team which manages BTC, ETH, and SOL deposits and withdrawals via their TG group: <https://t.me/hyperunit>. Note that Unit is an independent team.
+### How do I use the Send feature on Hyperliquid and what is it for? <a href="#send-feature" id="send-feature"></a>
+* Send is used to send tokens to another account on the Hyperliquid blockchain. It is not to withdraw to another blockchain.

@@ -1,111 +1,134 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__asset-ids__b02253c5c6:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__api__asset-ids__b02253c5c6:current
-@@ -0,0 +1,108 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Asset IDs are the integer representation for sending orders and cancels via actions. See
-+here
-+for more details.
-+Perps
-+Perpetual endpoints expect an integer for
-+asset
-+, which is the index of the coin found in the
-+meta
-+info response. E.g.
-+BTC = 0
-+on mainnet.
-+Builder-deployed perps expect
-+100000 + perp_dex_index * 10000 + index_in_meta
-+. For example,
-+test:ABC
-+on testnet has
-+perp_dex_index = 1
-+,
-+index_in_meta = 0
-+,
-+asset = 110000
-+. Note that builder-deployed perps always have name in the format
-+{dex}:{coin}
-+.
-+Spot
-+Spot endpoints expect
-+10000 + spotInfo["index"]
-+where
-+spotInfo
-+is the corresponding object in
-+spotMeta
-+that has the desired quote and base tokens. For example, when submitting an order for
-+PURR/USDC
-+, the asset that should be used is
-+10000
-+because its asset index in the spot info is
-+0
-+.
-+Note that spot ID is different from token ID, and that mainnet and testnet have different asset IDs. For example, for HYPE:
-+Mainnet token ID: 150
-+Mainnet spot ID: 107
-+Testnet token ID: 1105
-+Testnet spot ID: 1035
-+Outcomes
-+Outcomes share most implementation details with spot trading, with a different token representing each outcome side. However, the API representation of outcomes is different from both spot and perps.
-+Outcome assets are derived from an
-+outcome
-+id plus a binary
-+side
-+. These are found in the
-+outcomeMeta
-+info response.
-+For an outcome with id
-+outcome
-+and side
-+side
-+:
-+Only side
-+0
-+and side
-+1
-+are valid.
-+Example:
-+outcome
-+1
-+, side
-+0
-+-> encoding
-+10
-+The same
-+encoding
-+is used in three different representations:
-+Outcome spot coin:
-+#<encoding>
-+Outcome token name:
-++<encoding>
-+Outcome asset ID:
-+100_000_000 + encoding
-+Example:
-+#10
-+= outcome
-+1
-+, side
-+0
-++10
-+= the corresponding token name
-+100000010
-+= asset ID
-+Previous
-+Notation
-+Next
-+Tick and lot size
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids.md
-+LINK | Next Tick and lot size | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/tick-and-lot-size
-+LINK | Previous Notation | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/notation
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#outcomes
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#perps
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#spot
-+LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,108 +1,31 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Asset IDs are the integer representation for sending orders and cancels via actions. See
+-here
+-for more details.
+-Perps
+-Perpetual endpoints expect an integer for
+-asset
+-, which is the index of the coin found in the
+-meta
+-info response. E.g.
+-BTC = 0
+-on mainnet.
+-Builder-deployed perps expect
+-100000 + perp_dex_index * 10000 + index_in_meta
+-. For example,
+-test:ABC
+-on testnet has
+-perp_dex_index = 1
+-,
+-index_in_meta = 0
+-,
+-asset = 110000
+-. Note that builder-deployed perps always have name in the format
+-{dex}:{coin}
+-.
+-Spot
+-Spot endpoints expect
+-10000 + spotInfo["index"]
+-where
+-spotInfo
+-is the corresponding object in
+-spotMeta
+-that has the desired quote and base tokens. For example, when submitting an order for
+-PURR/USDC
+-, the asset that should be used is
+-10000
+-because its asset index in the spot info is
+-0
+-.
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids.md).
++# Asset IDs
++Asset IDs are the integer representation for sending orders and cancels via actions. See [here](/hyperliquid-docs/for-developers/api/exchange-endpoint.md) for more details.
++### Perps
++Perpetual endpoints expect an integer for `asset`, which is the index of the coin found in the `meta` info response. E.g. `BTC = 0` on mainnet.
++Builder-deployed perps expect `100000 + perp_dex_index * 10000 + index_in_meta` . For example, `test:ABC` on testnet has `perp_dex_index = 1` ,`index_in_meta = 0` , `asset = 110000` . Note that builder-deployed perps always have name in the format `{dex}:{coin}` .
++### Spot
++Spot endpoints expect `10000 + spotInfo["index"]` where `spotInfo` is the corresponding object in `spotMeta` that has the desired quote and base tokens. For example, when submitting an order for `PURR/USDC`, the asset that should be used is `10000` because its asset index in the spot info is `0`.
+ Note that spot ID is different from token ID, and that mainnet and testnet have different asset IDs. For example, for HYPE:
+ Mainnet token ID: 150
+ Mainnet spot ID: 107
+ Testnet token ID: 1105
+ Testnet spot ID: 1035
+-Outcomes
++### Outcomes
+ Outcomes share most implementation details with spot trading, with a different token representing each outcome side. However, the API representation of outcomes is different from both spot and perps.
+-Outcome assets are derived from an
+-outcome
+-id plus a binary
+-side
+-. These are found in the
+-outcomeMeta
+-info response.
+-For an outcome with id
+-outcome
+-and side
+-side
+-:
+-Only side
+-0
+-and side
+-1
+-are valid.
++Outcome assets are derived from an `outcome` id plus a binary `side`. These are found in the `outcomeMeta` info response.
++For an outcome with id `outcome` and side `side`:
++```
++encoding = 10 * outcome + side
++```
++Only side `0` and side `1` are valid.
+ Example:
+-outcome
+-1
+-, side
+-0
+--> encoding
+-10
+-The same
+-encoding
+-is used in three different representations:
+-Outcome spot coin:
+-#<encoding>
+-Outcome token name:
+-+<encoding>
+-Outcome asset ID:
+-100_000_000 + encoding
++* outcome `1`, side `0` -> encoding `10`
++The same `encoding` is used in three different representations:
++* Outcome spot coin: `#<encoding>`
++* Outcome token name: `+<encoding>`
++* Outcome asset ID: `100_000_000 + encoding`
+ Example:
+-#10
+-= outcome
+-1
+-, side
+-0
+-+10
+-= the corresponding token name
+-100000010
+-= asset ID
+-Previous
+-Notation
+-Next
+-Tick and lot size
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids.md
+-LINK | Next Tick and lot size | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/tick-and-lot-size
+-LINK | Previous Notation | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/notation
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#outcomes
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#perps
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/asset-ids#spot
+-LINK | here | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++* `#10` = outcome `1`, side `0`
++* `+10` = the corresponding token name
++* `100000010` = asset ID

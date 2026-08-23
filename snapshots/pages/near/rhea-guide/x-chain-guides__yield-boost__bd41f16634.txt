@@ -1,9 +1,4 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Markdown | https://guide.rhea.finance/x-chain-guides/yield-boost.md
-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides/yield-boost.md).
+# Yield Boost
+- [xRHEA Farming Boost](https://guide.rhea.finance/x-chain-guides/yield-boost/xrhea-farming-boost.md)
+- [xRHEA Lending Boost](https://guide.rhea.finance/x-chain-guides/yield-boost/xrhea-lending-boost.md)

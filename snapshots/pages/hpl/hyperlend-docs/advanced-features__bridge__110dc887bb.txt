@@ -1,31 +1,17 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/bridge.md).
+# Bridge
 The Hyperlend Bridge is your portal for moving liquidity into and across the ecosystem.
 It features two distinct pathways:
-Bridge Anywhere
-for external chains—leveraging deBridge primarily and Stargate for broader asset support
-Native
-Core ↔ EVM
-Bridge. The native bridge allows for seamless, instant transfers between Hyperliquid’s HyperCore and HyperEVM, ensuring your assets are always where you need them with minimal friction.
-How to Bridge
-Select Your Route:
-Choose Bridge Anywhere to move funds from external networks like Ethereum, Arbitrum, or Solana.
-Choose Core ↔ EVM to move assets internally between HyperCore and HyperEVM.
-Choose Asset & Amount: Select the token you wish to transfer and enter the amount.
-Note: External bridges have a minimum transferable amount of $10.
-Set Destination (Optional): Toggle "Convert and Route" if you want the assets to land in a different wallet address upon arrival.
-Confirm & Sign: Review and sign the transaction in your wallet to execute the bridge.
-Previous
-Collateral Swap
-Next
-MiCA Whitepaper
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/bridge.md
-LINK | Next MiCA Whitepaper | https://docs.hyperlend.finance/support/mica-whitepaper
-LINK | Previous Collateral Swap | https://docs.hyperlend.finance/advanced-features/collateral-swap
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+* **Bridge Anywhere** for external chains—leveraging deBridge primarily and Stargate for broader asset support
+* Native **Core ↔ EVM** Bridge. The native bridge allows for seamless, instant transfers between Hyperliquid’s HyperCore and HyperEVM, ensuring your assets are always where you need them with minimal friction.
+***
+**How to Bridge**
+1. Select Your Route:
+* Choose Bridge Anywhere to move funds from external networks like Ethereum, Arbitrum, or Solana.
+* Choose Core ↔ EVM to move assets internally between HyperCore and HyperEVM.
+1. Choose Asset & Amount: Select the token you wish to transfer and enter the amount.
+{% hint style="info" %}
+*Note: External bridges have a minimum transferable amount of $10.*
+{% endhint %}
+1. Set Destination (Optional): Toggle "Convert and Route" if you want the assets to land in a different wallet address upon arrival.
+2. Confirm & Sign: Review and sign the transaction in your wallet to execute the bridge.

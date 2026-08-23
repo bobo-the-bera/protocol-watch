@@ -1,43 +1,61 @@
 --- near/rhea-guide/near-chain-guides__lending-and-borrowing__supplying__761cb51538:previous
 +++ near/rhea-guide/near-chain-guides__lending-and-borrowing__supplying__761cb51538:current
-@@ -0,0 +1,40 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Introduction
-+Users can supply assets to the protocol and immediately begin earning passive interest. The
-+interest rates
-+are variable and will fluctuate based on the utilization rate for the given asset.
-+Users can withdraw their supplied assets at any time, as long as the utilization rate for the asset will be less than 100% after the withdrawal. If the withdrawal will raise the utilization rate to 100%, the withdrawal will be temporarily unavailable (note: if this does occur, it will be a very expensive situation for borrowers, and lucrative for suppliers)
-+Users can also designate a percentage of their supplied assets as collateral. Assets not designated as collateral will not be subject to liquidation and will continue to accrue interest. Users can manage which assets are designated as collateral (and what percentage of each asset) at any time.
-+Supported Assets
-+NEAR
-+STNEAR
-+LINEAR
-+NearX
-+AURORA
-+WOO
-+ETH
-+wBTC
-+USDC
-+USDT
-+DAI
-+USN
-+BRRR
-+Previous
-+Lending & Borrowing
-+Next
-+Borrowing
-+Last updated
-+7 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying.md
-+LINK | Next Borrowing | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/borrowing
-+LINK | Previous Lending & Borrowing | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying#introduction
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying#supported-assets
-+LINK | interest rates | https://app.gitbook.com/o/-MhIAeiN1ghyR-ugLhMu/s/-MhIB0bSr6nOBfTiANqT-2910905616/~/changes/141/products/guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,40 +1,20 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Introduction
+-Users can supply assets to the protocol and immediately begin earning passive interest. The
+-interest rates
+-are variable and will fluctuate based on the utilization rate for the given asset.
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying.md).
++# Supplying
++## Introduction
++Users can supply assets to the protocol and immediately begin earning passive interest. The [interest rates](https://app.gitbook.com/o/-MhIAeiN1ghyR-ugLhMu/s/-MhIB0bSr6nOBfTiANqT-2910905616/~/changes/141/products/guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model) are variable and will fluctuate based on the utilization rate for the given asset.
+ Users can withdraw their supplied assets at any time, as long as the utilization rate for the asset will be less than 100% after the withdrawal. If the withdrawal will raise the utilization rate to 100%, the withdrawal will be temporarily unavailable (note: if this does occur, it will be a very expensive situation for borrowers, and lucrative for suppliers)
+ Users can also designate a percentage of their supplied assets as collateral. Assets not designated as collateral will not be subject to liquidation and will continue to accrue interest. Users can manage which assets are designated as collateral (and what percentage of each asset) at any time.
+-Supported Assets
+-NEAR
+-STNEAR
+-LINEAR
+-NearX
+-AURORA
+-WOO
+-ETH
+-wBTC
+-USDC
+-USDT
+-DAI
+-USN
+-BRRR
+-Previous
+-Lending & Borrowing
+-Next
+-Borrowing
+-Last updated
+-7 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying.md
+-LINK | Next Borrowing | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/borrowing
+-LINK | Previous Lending & Borrowing | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying#introduction
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/supplying#supported-assets
+-LINK | interest rates | https://app.gitbook.com/o/-MhIAeiN1ghyR-ugLhMu/s/-MhIB0bSr6nOBfTiANqT-2910905616/~/changes/141/products/guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++#### Supported Assets <a href="#supported-assets" id="supported-assets"></a>
++* NEAR
++* STNEAR
++* LINEAR
++* NearX
++* AURORA
++* WOO
++* ETH
++* wBTC
++* USDC
++* USDT
++* DAI
++* USN
++* BRRR

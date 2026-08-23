@@ -1,34 +1,48 @@
 --- near/rhea-guide/roadmap-1__78b2564eec:previous
 +++ near/rhea-guide/roadmap-1__78b2564eec:current
-@@ -0,0 +1,31 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+RHEA Finance, (formally Ref Finance) was initially created by Illia Polosukhin, co-founder of NEAR Protocol. The first commit on Github was made on March 9, 2021.
-+Following the deployment of the application in April 2021, Proximity Labs, a research and development company focused on NEAR, received a grant from the NEAR Foundation to bootstrap and scale Ref Finance.
-+Early June 2021, Proximity set up the Ref Finance DAO. DAO members were selected based on their value, contribution, and activity across the board (mainly Telegram and Discord).
-+Early well-known contributors are:
-+Developers
-+Illia: https://github.com/ilblackdragon
-+Evgeny: https://github.com/evgenykuzyakov
-+Marco: https://github.com/marco-sundsk
-+Joe: https://github.com/aidai524
-+Referencedev: https://github.com/referencedev
-+Mikedotexe: https://github.com/mikedotexe
-+Business, Strategy and Product
-+ve$RUST at Proximity Labs (ex NEAR core team)
-+Kendall at Proximity Labs (ex NEAR core team)
-+Previous
-+Aggregator Bridge
-+Next
-+Contracts
-+Last updated
-+1 year ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/roadmap-1.md
-+LINK | Next Contracts | https://guide.rhea.finance/developers/contracts
-+LINK | Previous Aggregator Bridge | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/aggregator-bridge
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,31 +1,16 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-RHEA Finance, (formally Ref Finance) was initially created by Illia Polosukhin, co-founder of NEAR Protocol. The first commit on Github was made on March 9, 2021.
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/roadmap-1.md).
++# History
++RHEA Finance, (formally Ref Finance) was initially created by Illia Polosukhin, co-founder of NEAR Protocol. The first commit on Github was made on March 9, 2021.&#x20;
+ Following the deployment of the application in April 2021, Proximity Labs, a research and development company focused on NEAR, received a grant from the NEAR Foundation to bootstrap and scale Ref Finance.
+-Early June 2021, Proximity set up the Ref Finance DAO. DAO members were selected based on their value, contribution, and activity across the board (mainly Telegram and Discord).
++Early June 2021, Proximity set up the Ref Finance DAO. DAO members were selected based on their value, contribution, and activity across the board (mainly Telegram and Discord).&#x20;
+ Early well-known contributors are:
+-Developers
+-Illia: https://github.com/ilblackdragon
+-Evgeny: https://github.com/evgenykuzyakov
+-Marco: https://github.com/marco-sundsk
+-Joe: https://github.com/aidai524
+-Referencedev: https://github.com/referencedev
+-Mikedotexe: https://github.com/mikedotexe
+-Business, Strategy and Product
+-ve$RUST at Proximity Labs (ex NEAR core team)
+-Kendall at Proximity Labs (ex NEAR core team)
+-Previous
+-Aggregator Bridge
+-Next
+-Contracts
+-Last updated
+-1 year ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/roadmap-1.md
+-LINK | Next Contracts | https://guide.rhea.finance/developers/contracts
+-LINK | Previous Aggregator Bridge | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/aggregator-bridge
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++* Developers
++* Illia: <https://github.com/ilblackdragon>
++* Evgeny: <https://github.com/evgenykuzyakov>
++* Marco: <https://github.com/marco-sundsk>
++* Joe: <https://github.com/aidai524>
++* Referencedev: <https://github.com/referencedev>
++* Mikedotexe: <https://github.com/mikedotexe>
++* Business, Strategy and Product
++* ve$RUST at Proximity Labs (ex NEAR core team)
++* Kendall at Proximity Labs (ex NEAR core team)

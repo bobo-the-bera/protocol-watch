@@ -1,49 +1,65 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__foundation-non-validating-node__5db8acf02f:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__foundation-non-validating-node__5db8acf02f:current
-@@ -0,0 +1,46 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Overview
-+The Hyper Foundation runs a non-validating node to provide reliable, low latency data access. As a reminder, running a non-validating node is permissionless. This non-validating node is available for those who would benefit from a reliable peer with fewer hops to validating nodes.
-+The Foundation non-validating node is made available on a best-efforts basis to support access to publicly available data on the Hyperliquid blockchain. No guarantees are made regarding availability, latency, performance, or data completeness, and the node should not be relied upon as a sole or authoritative source of data for any trading or time-sensitive activity. Users connecting to the Foundation non-validating node are solely responsible for verifying any data received and for operating their own infrastructure if needed. Access may be modified, rate-limited, or discontinued at any time without notice.
-+The Foundation non-validating node runs in apne1-az1 on AWS.
-+Potential use cases
-+Automated traders can run a non-validating node pointing to the Foundation non-validating node. The local non-validating node can record fills and orders with output file buffering disabled for real-time streaming data. A local API server can also be pointed at this local non-validating node to provide real-time API data. For more details see:
-+https://github.com/hyperliquid-dex/node
-+and
-+L1 data schemas
-+Eligibility
-+You must have staked 10,000 HYPE.
-+You must be Tier 1 or above in Maker Rebate Tiers, i.e., >0.5% of 14 day weighted maker volume.
-+Your connecting peer must be a reliable peer in the public p2p network. This will happen automatically as long as the non-validator ports are open to the public. You should have monitoring and alerting on the node. The requirement is 98% time-weighted uptime.
-+You must comply with applicable laws and regulations.
-+You must not be from a jurisdiction subject to applicable sanctions, which includes, but is not limited to, Cuba, Iran, Myanmar, North Korea, Syria, and certain Russian-occupied regions of Ukraine.
-+You must not be from a jurisdiction subject to applicable restrictions, including certain activities involving the U.S. or Ontario.
-+The Foundation reserves the right to adjust the above eligibility criteria at any time.
-+If you do not meet these criteria at any time, you will no longer be eligible.
-+Access may also be granted, at the Foundation’s discretion, to those whose work contributes meaningfully to the Hyperliquid ecosystem and whose use cases require low-latency data access - provided that all other eligibility criteria are met.
-+Apply
-+If you are eligible, you may fill out the
-+form
-+. You may use linked trading and staking accounts to meet the requirements.
-+Previous
-+L1 data schemas
-+Next
-+Foundation non-validating node for infra providers
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | L1 data schemas | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node.md
-+LINK | Next Foundation non-validating node for infra providers | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers
-+LINK | Previous L1 data schemas | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#apply
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#eligibility
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#overview
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#potential-use-cases
-+LINK | form | https://docs.google.com/forms/d/e/1FAIpQLSeZrUJuJ5_osJuy-YnHCycvb3yTmulhIo6_jPgGPzZVWIxP8g/viewform
-+LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,46 +1,20 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Overview
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node.md).
++# Foundation non-validating node
++### Overview
+ The Hyper Foundation runs a non-validating node to provide reliable, low latency data access. As a reminder, running a non-validating node is permissionless. This non-validating node is available for those who would benefit from a reliable peer with fewer hops to validating nodes.
+ The Foundation non-validating node is made available on a best-efforts basis to support access to publicly available data on the Hyperliquid blockchain. No guarantees are made regarding availability, latency, performance, or data completeness, and the node should not be relied upon as a sole or authoritative source of data for any trading or time-sensitive activity. Users connecting to the Foundation non-validating node are solely responsible for verifying any data received and for operating their own infrastructure if needed. Access may be modified, rate-limited, or discontinued at any time without notice.
+ The Foundation non-validating node runs in apne1-az1 on AWS.
+-Potential use cases
+-Automated traders can run a non-validating node pointing to the Foundation non-validating node. The local non-validating node can record fills and orders with output file buffering disabled for real-time streaming data. A local API server can also be pointed at this local non-validating node to provide real-time API data. For more details see:
+-https://github.com/hyperliquid-dex/node
+-and
+-L1 data schemas
+-Eligibility
+-You must have staked 10,000 HYPE.
+-You must be Tier 1 or above in Maker Rebate Tiers, i.e., >0.5% of 14 day weighted maker volume.
+-Your connecting peer must be a reliable peer in the public p2p network. This will happen automatically as long as the non-validator ports are open to the public. You should have monitoring and alerting on the node. The requirement is 98% time-weighted uptime.
+-You must comply with applicable laws and regulations.
+-You must not be from a jurisdiction subject to applicable sanctions, which includes, but is not limited to, Cuba, Iran, Myanmar, North Korea, Syria, and certain Russian-occupied regions of Ukraine.
+-You must not be from a jurisdiction subject to applicable restrictions, including certain activities involving the U.S. or Ontario.
+-The Foundation reserves the right to adjust the above eligibility criteria at any time.
+-If you do not meet these criteria at any time, you will no longer be eligible.
++### Potential use cases
++Automated traders can run a non-validating node pointing to the Foundation non-validating node. The local non-validating node can record fills and orders with output file buffering disabled for real-time streaming data. A local API server can also be pointed at this local non-validating node to provide real-time API data. For more details see: <https://github.com/hyperliquid-dex/node> and [L1 data schemas](/hyperliquid-docs/for-developers/nodes/l1-data-schemas.md)
++### Eligibility&#x20;
++* You must have staked 10,000 HYPE.&#x20;
++* You must be Tier 1 or above in Maker Rebate Tiers, i.e., >0.5% of 14 day weighted maker volume.&#x20;
++* Your connecting peer must be a reliable peer in the public p2p network. This will happen automatically as long as the non-validator ports are open to the public. You should have monitoring and alerting on the node. The requirement is 98% time-weighted uptime.
++* You must comply with applicable laws and regulations.&#x20;
++* You must not be from a jurisdiction subject to applicable sanctions, which includes, but is not limited to, Cuba, Iran, Myanmar, North Korea, Syria, and certain Russian-occupied regions of Ukraine.
++* You must not be from a jurisdiction subject to applicable restrictions, including certain activities involving the U.S. or Ontario.
++* The Foundation reserves the right to adjust the above eligibility criteria at any time.
++* If you do not meet these criteria at any time, you will no longer be eligible. &#x20;
+ Access may also be granted, at the Foundation’s discretion, to those whose work contributes meaningfully to the Hyperliquid ecosystem and whose use cases require low-latency data access - provided that all other eligibility criteria are met.
+-Apply
+-If you are eligible, you may fill out the
+-form
+-. You may use linked trading and staking accounts to meet the requirements.
+-Previous
+-L1 data schemas
+-Next
+-Foundation non-validating node for infra providers
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | L1 data schemas | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node.md
+-LINK | Next Foundation non-validating node for infra providers | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node-for-infra-providers
+-LINK | Previous L1 data schemas | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#apply
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#eligibility
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#overview
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node#potential-use-cases
+-LINK | form | https://docs.google.com/forms/d/e/1FAIpQLSeZrUJuJ5_osJuy-YnHCycvb3yTmulhIo6_jPgGPzZVWIxP8g/viewform
+-LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++### Apply&#x20;
++If you are eligible, you may fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeZrUJuJ5_osJuy-YnHCycvb3yTmulhIo6_jPgGPzZVWIxP8g/viewform). You may use linked trading and staking accounts to meet the requirements.&#x20;

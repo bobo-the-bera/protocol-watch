@@ -1,31 +1,34 @@
 --- hpl/hyperlend-docs/advanced-features__hypertrack__bot-functions__31c644d0f9:previous
 +++ hpl/hyperlend-docs/advanced-features__hypertrack__bot-functions__31c644d0f9:current
-@@ -0,0 +1,28 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+WATCH ADDRESS
-+Monitor wallet activity and stay updated in real-time.
-+REMOVE ADDRESS
-+Effortlessly delete tracked wallets from your list.
-+LIQUIDATIONS ALERT
-+Get notified instantly when liquidation risks emerge.
-+HEALTH FACTOR
-+Track the stability and safety of your collateral.
-+BORROW RATE
-+Keep an eye on interest rates for optimal borrowing.
-+ADVANCED APPROACH
-+Customize alerts and track insights tailored to your needs.
-+Previous
-+Getting Started
-+Next
-+↪ Watch Address
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions.md
-+LINK | Next ↪ Watch Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address
-+LINK | Previous Getting Started | https://docs.hyperlend.finance/advanced-features/hypertrack/getting-started
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,28 +1,3 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-WATCH ADDRESS
+-Monitor wallet activity and stay updated in real-time.
+-REMOVE ADDRESS
+-Effortlessly delete tracked wallets from your list.
+-LIQUIDATIONS ALERT
+-Get notified instantly when liquidation risks emerge.
+-HEALTH FACTOR
+-Track the stability and safety of your collateral.
+-BORROW RATE
+-Keep an eye on interest rates for optimal borrowing.
+-ADVANCED APPROACH
+-Customize alerts and track insights tailored to your needs.
+-Previous
+-Getting Started
+-Next
+-↪ Watch Address
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions.md
+-LINK | Next ↪ Watch Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address
+-LINK | Previous Getting Started | https://docs.hyperlend.finance/advanced-features/hypertrack/getting-started
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions.md).
++# Bot Functions
++<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>WATCH ADDRESS</strong></td><td>Monitor wallet activity and stay updated in real-time.</td><td></td><td><a href="/pages/4V2zr6F6q04hBb7w5og1">/pages/4V2zr6F6q04hBb7w5og1</a></td><td><a href="/files/E21G0LxiptOfJxRUcO4z">/files/E21G0LxiptOfJxRUcO4z</a></td></tr><tr><td><strong>REMOVE ADDRESS</strong></td><td>Effortlessly delete tracked wallets from your list.</td><td></td><td><a href="/pages/8bllgn5C1CNzVgLqXFzi">/pages/8bllgn5C1CNzVgLqXFzi</a></td><td><a href="/files/xZgtKZ4XMTGVzWawI6eJ">/files/xZgtKZ4XMTGVzWawI6eJ</a></td></tr><tr><td><strong>LIQUIDATIONS ALERT</strong></td><td>Get notified instantly when liquidation risks emerge.</td><td></td><td><a href="/pages/JIrAwen2rzigTbNLjBtS">/pages/JIrAwen2rzigTbNLjBtS</a></td><td><a href="/files/tciX0WGZTTU3sV01rfm4">/files/tciX0WGZTTU3sV01rfm4</a></td></tr><tr><td><strong>HEALTH FACTOR</strong></td><td>Track the stability and safety of your collateral.</td><td></td><td><a href="/pages/wXstOlVK2crBly22QSwa">/pages/wXstOlVK2crBly22QSwa</a></td><td><a href="/files/rrSs28BEa7V60IVXBvzn">/files/rrSs28BEa7V60IVXBvzn</a></td></tr><tr><td><strong>BORROW RATE</strong></td><td>Keep an eye on interest rates for optimal borrowing.</td><td></td><td><a href="/pages/FRdRxZ5sXmWZ4aGcI8nd">/pages/FRdRxZ5sXmWZ4aGcI8nd</a></td><td><a href="/files/1WlzLCkHqrdxngkKibhl">/files/1WlzLCkHqrdxngkKibhl</a></td></tr><tr><td><strong>ADVANCED APPROACH</strong></td><td>Customize alerts and track insights tailored to your needs.</td><td></td><td><a href="/pages/CvlzCnd9uj6vqkk5W0oJ">/pages/CvlzCnd9uj6vqkk5W0oJ</a></td><td><a href="/files/W88l4E8bMqKlVsr07pCt">/files/W88l4E8bMqKlVsr07pCt</a></td></tr></tbody></table>

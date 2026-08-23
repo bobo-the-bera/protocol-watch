@@ -1,22 +1,7 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/points.md).
+# Points
 The HyperLend points program began with 24.3.2025, points are designed to reward users who actively contribute to the success of the protocol.
-Points are distributed on a
-weekly basis
-, with the distribution formula remaining undisclosed. The calculation methodology is updated on a recurring basis to align with protocol priorities and growth strategies.
-HyperLend reserves the right to modify past point distributions at its sole discretion.
+Points are distributed on a **weekly basis**, with the distribution formula remaining undisclosed. The calculation methodology is updated on a recurring basis to align with protocol priorities and growth strategies.
+**HyperLend reserves the right to modify past point distributions at its sole discretion.**
 The official points season ended on Oct 22 2025.
-Previous
-Cap Automator
-Next
-Referrals
-Last updated
-6 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/architecture/points.md
-LINK | Next Referrals | https://docs.hyperlend.finance/architecture/referrals
-LINK | Previous Cap Automator | https://docs.hyperlend.finance/architecture/cap-automator
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+***

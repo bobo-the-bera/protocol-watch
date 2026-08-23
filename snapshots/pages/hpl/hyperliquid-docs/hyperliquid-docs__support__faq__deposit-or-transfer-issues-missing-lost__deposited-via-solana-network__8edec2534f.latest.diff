@@ -1,33 +1,41 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__deposit-or-transfer-issues-missing-lost__deposited-via-solana-network__8edec2534f:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__deposit-or-transfer-issues-missing-lost__deposited-via-solana-network__8edec2534f:current
-@@ -0,0 +1,30 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+The Solana address can only receive SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on the Solana network. Deposits other than the assets listed above or on other networks will fail and not be credited, e.g., Depositing USDC on Solana will fail and not be credited.
-+If you accidentally sent USDC, USDT, or WSOL on Solana, you can try Unit's revert feature:
-+https://app.hyperunit.xyz/revert
-+. Instructions can be found here:
-+https://docs.hyperunit.xyz/how-to/revert
-+.
-+If you accidentally sent an asset that is not supported on Solana or sent SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on a chain other than Solana, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
-+If you sent the right token on the right chain and deposited more than the minimum amount, but your SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX still shows up as “Failed”, reach out to the Unit team, which manages Solana network deposits & withdrawals:
-+https://app.hyperunit.xyz/support
-+There are minimum deposits of 0.12 SOL, 150 2Z, 60 ANSEM, 1,800,000 BONK, 55 FARTCOIN, 5500 PUMP, and 32 SPX. Deposits below these amounts will result in a loss of funds.
-+Note that Solana deposits take ~1 minute to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.
-+Previous
-+Deposited via Ethereum network
-+Next
-+Deposited via Avalanche network
-+Last updated
-+1 month ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-solana-network.md
-+LINK | Next Deposited via Avalanche network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-avalanche-network
-+LINK | Previous Deposited via Ethereum network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-ethereum-network
-+LINK | https://app.hyperunit.xyz/revert | https://app.hyperunit.xyz/revert
-+LINK | https://app.hyperunit.xyz/support | https://app.hyperunit.xyz/support
-+LINK | https://docs.hyperunit.xyz/how-to/revert | https://docs.hyperunit.xyz/how-to/revert
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,30 +1,8 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-The Solana address can only receive SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on the Solana network. Deposits other than the assets listed above or on other networks will fail and not be credited, e.g., Depositing USDC on Solana will fail and not be credited.
+-If you accidentally sent USDC, USDT, or WSOL on Solana, you can try Unit's revert feature:
+-https://app.hyperunit.xyz/revert
+-. Instructions can be found here:
+-https://docs.hyperunit.xyz/how-to/revert
+-.
+-If you accidentally sent an asset that is not supported on Solana or sent SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on a chain other than Solana, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
+-If you sent the right token on the right chain and deposited more than the minimum amount, but your SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX still shows up as “Failed”, reach out to the Unit team, which manages Solana network deposits & withdrawals:
+-https://app.hyperunit.xyz/support
+-There are minimum deposits of 0.12 SOL, 150 2Z, 60 ANSEM, 1,800,000 BONK, 55 FARTCOIN, 5500 PUMP, and 32 SPX. Deposits below these amounts will result in a loss of funds.
+-Note that Solana deposits take ~1 minute to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.
+-Previous
+-Deposited via Ethereum network
+-Next
+-Deposited via Avalanche network
+-Last updated
+-1 month ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-solana-network.md
+-LINK | Next Deposited via Avalanche network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-avalanche-network
+-LINK | Previous Deposited via Ethereum network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-ethereum-network
+-LINK | https://app.hyperunit.xyz/revert | https://app.hyperunit.xyz/revert
+-LINK | https://app.hyperunit.xyz/support | https://app.hyperunit.xyz/support
+-LINK | https://docs.hyperunit.xyz/how-to/revert | https://docs.hyperunit.xyz/how-to/revert
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-solana-network.md).
++# Deposited via Solana network
++* The Solana address can only receive SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on the Solana network. Deposits other than the assets listed above or on other networks will fail and not be credited, e.g., Depositing USDC on Solana will fail and not be credited.
++* If you accidentally sent USDC, USDT, or WSOL on Solana, you can try Unit's revert feature: <https://app.hyperunit.xyz/revert>. Instructions can be found here: <https://docs.hyperunit.xyz/how-to/revert>.&#x20;
++* If you accidentally sent an asset that is not supported on Solana or sent SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX on a chain other than Solana, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
++* If you sent the right token on the right chain and deposited more than the minimum amount, but your SOL/2Z/ANSEM/BONK/FARTCOIN/PUMP/SPX still shows up as “Failed”, reach out to the Unit team, which manages Solana network deposits & withdrawals: [https://app.hyperunit.xyz/support](<https://app.hyperunit.xyz/support >)
++* There are minimum deposits of 0.12 SOL, 150 2Z, 60 ANSEM, 1,800,000 BONK, 55 FARTCOIN, 5500 PUMP, and 32 SPX. Deposits below these amounts will result in a loss of funds.
++* Note that Solana deposits take \~1 minute to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.

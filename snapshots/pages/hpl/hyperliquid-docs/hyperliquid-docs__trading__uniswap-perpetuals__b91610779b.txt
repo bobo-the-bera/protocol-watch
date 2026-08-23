@@ -1,15 +1,6 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/uniswap-perpetuals.md).
+# Uniswap perpetuals
 Some perpetual contracts on Hyperliquid use Uniswap V2 or V3 AMM price as the underlying spot asset. These contracts are restricted to be isolated-only, which means that cross margin is not allowed and margin cannot be manually removed from an open position. Instead, the position must be partially or fully closed to partially or fully return isolated margin.
 Uniswap pool prices are always converted to USDT prices based on the robust CEX oracle prices.
 The current contract addresses for the Uniswap pools used as oracles:
-RLB:
-0x510100d5143e011db24e2aa38abe85d73d5b2177
-Last updated
-1 year ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/uniswap-perpetuals.md
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+RLB: `0x510100d5143e011db24e2aa38abe85d73d5b2177`

@@ -1,14 +1,60 @@
 --- near/rhea-guide/x-chain-guides__83f8b898e7:previous
 +++ near/rhea-guide/x-chain-guides__83f8b898e7:current
-@@ -0,0 +1,11 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Last updated
-+7 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/x-chain-guides.md
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,11 +1,46 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Last updated
+-7 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/x-chain-guides.md
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides.md).
++# X Chain Guides&#x20;
++- [Lending & Borrowing](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing.md)
++- [Audits & Risks](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/audits-and-risks.md)
++- [Supplying](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/supplying.md)
++- [Borrowing](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/borrowing.md)
++- [APY](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/apy.md)
++- [Health Factor](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/health-factor.md)
++- [LP as Collateral](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/lp-as-collateral.md)
++- [How Lending & Borrowing works](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md)
++- [Health Factor](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor.md)
++- [Interest Rate Model](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model.md)
++- [Liquidations](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/liquidations.md)
++- [Oracle](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/oracle.md)
++- [Lending & Borrow Market Limits](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/lending-and-borrow-market-limits.md)
++- [Step by Step Guide](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide.md)
++- [Liquidity Pools](https://guide.rhea.finance/x-chain-guides/liquidity-pools.md)
++- [Adaptive Liquidity Market Maker (ALMM)](https://guide.rhea.finance/x-chain-guides/liquidity-pools/adaptive-liquidity-market-maker-almm.md)
++- [Concentrated Liquidity Market Maker (CLMM)](https://guide.rhea.finance/x-chain-guides/liquidity-pools/concentrated-liquidity-market-maker-clmm.md)
++- [Classic Pools](https://guide.rhea.finance/x-chain-guides/liquidity-pools/classic-pools.md): "Classic" Liquidity Pools
++- [Stable & Rated Pools](https://guide.rhea.finance/x-chain-guides/liquidity-pools/stable-and-rated-pools.md): Stable pools, which can contain two or three tokens, use Curve's StableSwap algorithm. Rated pools are for yield-bearing tokens, and are based on a variation of Curve's StableSwap algorithm.
++- [RHEA v2 Pools](https://guide.rhea.finance/x-chain-guides/liquidity-pools/rhea-v2-pools.md): Pooling with RHEA v2's Discretized Concentrated Liquidity AMM
++- [Margin Trading](https://guide.rhea.finance/x-chain-guides/margin-trading.md): Margin Trading is built on top of Rhea’s Lending product, allowing users to provide sufficient collateral to access 1–3x leverage.
++- [Guide](https://guide.rhea.finance/x-chain-guides/margin-trading/guide.md): Disclaimer: Margin trading carries risks. Volatility & leverage can lead to rapid fluctuations and losses. Always DYOR & apply risk management.
++- [Yield Boost](https://guide.rhea.finance/x-chain-guides/yield-boost.md)
++- [xRHEA Farming Boost](https://guide.rhea.finance/x-chain-guides/yield-boost/xrhea-farming-boost.md)
++- [xRHEA Lending Boost](https://guide.rhea.finance/x-chain-guides/yield-boost/xrhea-lending-boost.md)
++- [Liquid Staking Tokens (LST)](https://guide.rhea.finance/x-chain-guides/liquid-staking-tokens-lst.md): RHEA’s NEAR LST — Liquid Staking for $NEAR, Multichain
++- [Farming](https://guide.rhea.finance/x-chain-guides/farming.md)
++- [Aggregator Bridge](https://guide.rhea.finance/x-chain-guides/aggregator-bridge.md)
++- [RHEA Point System Season 2](https://guide.rhea.finance/x-chain-guides/rhea-point-system-season-2.md)
++- [RHEA Credits](https://guide.rhea.finance/x-chain-guides/rhea-credits.md)
++- [How RHEA Finance Works](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works.md)
++- [Auto Router](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/auto-router.md): Better prices, better liquidity utilisation
++- [Multi-chain Router](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/multi-chain-router.md): Swap Pro
++- [Pooling](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/pooling.md): Liquidity Pools
++- [Staking](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/staking.md)
++- [Aggregator Bridge](https://guide.rhea.finance/x-chain-guides/how-rhea-finance-works/aggregator-bridge.md)
++- [Copy of RHEA Point System Season 2 done (with lending borrow LP)](https://guide.rhea.finance/x-chain-guides/copy-of-rhea-point-system-season-2-done-with-lending-borrow-lp.md)
++- [Staking](https://guide.rhea.finance/x-chain-guides/staking.md): Protocol revenue sharing model
++- [Vault](https://guide.rhea.finance/x-chain-guides/vault.md)
++- [xRHEA Lending Boost (draft)](https://guide.rhea.finance/x-chain-guides/xrhea-lending-boost-draft.md)
++- [RHEA Point System (Season 1 Done)](https://guide.rhea.finance/x-chain-guides/rhea-point-system-season-1-done.md)
++- [Untitled](https://guide.rhea.finance/x-chain-guides/untitled.md)
++- [PassKey Account](https://guide.rhea.finance/x-chain-guides/passkey-account.md): To reduce onboarding friction and improve the cross-chain user experience, CrossChain Lending supports Passkey-based accounts. Allows users to create and access an account without managing private key
++- [RHEA Multi-Chain: TRON Energy Rental](https://guide.rhea.finance/x-chain-guides/rhea-multi-chain-tron-energy-rental.md)

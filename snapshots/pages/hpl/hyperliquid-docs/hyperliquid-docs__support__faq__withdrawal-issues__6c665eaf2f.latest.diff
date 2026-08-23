@@ -1,25 +1,36 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__withdrawal-issues__6c665eaf2f:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__withdrawal-issues__6c665eaf2f:current
-@@ -0,0 +1,22 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Withdrawal has not arrived in my wallet
-+My withdrawal keeps getting re-deposited
-+Withdrawing to Phantom Wallet
-+Previous
-+Transfer or deposit to USDC (Perps) missing
-+Next
-+Withdrawal has not arrived in my wallet
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues.md
-+LINK | My withdrawal keeps getting re-deposited | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/my-withdrawal-keeps-getting-re-deposited
-+LINK | Next Withdrawal has not arrived in my wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet
-+LINK | Previous Transfer or deposit to USDC (Perps) missing | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/transfer-or-deposit-to-usdc-perps-missing
-+LINK | Withdrawal has not arrived in my wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet
-+LINK | Withdrawing to Phantom Wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,22 +1,11 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Withdrawal has not arrived in my wallet
+-My withdrawal keeps getting re-deposited
+-Withdrawing to Phantom Wallet
+-Previous
+-Transfer or deposit to USDC (Perps) missing
+-Next
+-Withdrawal has not arrived in my wallet
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues.md
+-LINK | My withdrawal keeps getting re-deposited | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/my-withdrawal-keeps-getting-re-deposited
+-LINK | Next Withdrawal has not arrived in my wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet
+-LINK | Previous Transfer or deposit to USDC (Perps) missing | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/transfer-or-deposit-to-usdc-perps-missing
+-LINK | Withdrawal has not arrived in my wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet
+-LINK | Withdrawing to Phantom Wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/withdrawal-issues.md).
++# Withdrawal issues
++{% content-ref url="/pages/cxViyskg0wWX6SJ4nXeo" %}
++[Withdrawal has not arrived in my wallet](/hyperliquid-docs/support/faq/withdrawal-issues/withdrawal-has-not-arrived-in-my-wallet.md)
++{% endcontent-ref %}
++{% content-ref url="/pages/4wdNYpomD2UM9qBZuSM9" %}
++[My withdrawal keeps getting re-deposited](/hyperliquid-docs/support/faq/withdrawal-issues/my-withdrawal-keeps-getting-re-deposited.md)
++{% endcontent-ref %}
++{% content-ref url="/pages/sbaoGGCQFw9m7blwMhh2" %}
++[Withdrawing to Phantom Wallet](/hyperliquid-docs/support/faq/withdrawal-issues/withdrawing-to-phantom-wallet.md)
++{% endcontent-ref %}

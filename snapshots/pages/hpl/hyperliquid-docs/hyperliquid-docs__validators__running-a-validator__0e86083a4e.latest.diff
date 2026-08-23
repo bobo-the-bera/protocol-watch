@@ -1,23 +1,26 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__validators__running-a-validator__0e86083a4e:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__validators__running-a-validator__0e86083a4e:current
-@@ -0,0 +1,20 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+GitHub repository for detailed instructions on how to run a non-validator and validator:
-+https://github.com/hyperliquid-dex/node
-+Running validating and non-validating nodes is permissionless, meaning anyone can choose to do so. The active set of validators is determined transparently based on the top twenty-seven by stake.
-+Previous
-+Validators
-+Next
-+Delegation program
-+Last updated
-+15 days ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/validators/running-a-validator.md
-+LINK | Next Delegation program | https://hyperliquid.gitbook.io/hyperliquid-docs/validators/delegation-program
-+LINK | Previous Validators | https://hyperliquid.gitbook.io/hyperliquid-docs/validators
-+LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,20 +1,4 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-GitHub repository for detailed instructions on how to run a non-validator and validator:
+-https://github.com/hyperliquid-dex/node
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/validators/running-a-validator.md).
++# Running a validator
++GitHub repository for detailed instructions on how to run a non-validator and validator: <https://github.com/hyperliquid-dex/node>
+ Running validating and non-validating nodes is permissionless, meaning anyone can choose to do so. The active set of validators is determined transparently based on the top twenty-seven by stake.
+-Previous
+-Validators
+-Next
+-Delegation program
+-Last updated
+-15 days ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/validators/running-a-validator.md
+-LINK | Next Delegation program | https://hyperliquid.gitbook.io/hyperliquid-docs/validators/delegation-program
+-LINK | Previous Validators | https://hyperliquid.gitbook.io/hyperliquid-docs/validators
+-LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

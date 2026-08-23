@@ -1,93 +1,35 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Staking Mechanism: HPL to sHPL
-Users stake their
-HPL
-tokens and receive
-sHPL
-(staked HPL) on the HyperEVM. This system is designed for maximum liquidity, meaning there is no rigid lock-up period and users are free to unstake or swap their sHPL back to HPL at any time. Beyond simple possession, holding sHPL provides immediate utility by automatically qualifying the user for the Rebate Program.
-Staking Contract:
-0x09B2236327D76FCd9E4B72Db70a6608C21A94292
-To participate in the program and begin earning rewards, a minimum stake of 10,000 HPL tokens is required before the borrow portion of the formula comes into effect (if stake is under 10,000,
-α
-= 0).
-The Rebate Program
-How it works:
-Accrual:
-A percentage of your borrow costs is calculated as a rebate every day.
-Accumulation:
-These rebates stack over time.
-Claiming:
-The
-"Claim"
-button becomes visible once your accumulated rebate reaches at least
-$0.10
-.
-Distribution:
-Rebates are claimable once a week.
-Rebate Formula
-The rebate percentage is determined by a combination of your borrowing activity and your staking volume.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/staking.md).
+# Staking
+### Staking Mechanism: HPL to sHPL <a href="#staking-mechanism-hpl-to-shpl" id="staking-mechanism-hpl-to-shpl"></a>
+Users stake their **HPL** tokens and receive **sHPL** (staked HPL) on the HyperEVM. This system is designed for maximum liquidity, meaning there is no rigid lock-up period and users are free to unstake or swap their sHPL back to HPL at any time. Beyond simple possession, holding sHPL provides immediate utility by automatically qualifying the user for the Rebate Program.
+Staking Contract: [0x09B2236327D76FCd9E4B72Db70a6608C21A94292](https://hyperevmscan.io/address/0x09b2236327d76fcd9e4b72db70a6608c21a94292)
+{% hint style="info" %}
+**To participate in the program and begin earning rewards, a minimum stake of 10,000 HPL tokens is required before the borrow portion of the formula comes into effect (if stake is under 10,000,** α **= 0).**
+{% endhint %}
+### The Rebate Program <a href="#the-rebate-program" id="the-rebate-program"></a>
+**How it works:**
+* **Accrual:** A percentage of your borrow costs is calculated as a rebate every day.
+* **Accumulation:** These rebates stack over time.
+* **Claiming:** The **"Claim"** button becomes visible once your accumulated rebate reaches at least **$0.10**.
+* **Distribution:** Rebates are claimable once a week.
+**Rebate Formula**
+The rebate percentage is determined by a combination of your borrowing activity and your staking volume.&#x20;
 The actual rebate amount is calculated based on the Reserve Factor (portion of the interest paid to the treasury) for assets you are borrowing (20% of interest paid for most assets; actual data can be viewed on the Markets page).
-α
-0.6
-Controls borrow weight, concave
-β
-0.4
-Controls staking weight, concave and additive to borrow
-γ
-0.6
-Controlos diminishing returns on staking and borrow power
-Bmax
-100M
-Maximum borrow value
-Smax
-7.2M
-Maximum staking power (0.72% FDV staked)
-Max Rebate
-80%
-Max discount (%)
-borrowed amount
-/
-Rolling 14-day average borrowed amount in USD
-Staking Tiers
-While the rebate formula is continuous (meaning every single HPL staked increases your return), our UI categorizes users into
-six tiers
-to provide a clear sense of progression.
-Tier
-Required Staked HPL
-Unranked
-0
-Tier One
-75,000
-Tier Two
-300,000
-Tier Three
-750,000
-Tier Four
-1,500,000
-Tier Five
-3,000,000
-Tier Six
-7,200,000
-You can use our
-Tier Saving Projection
-tool to see and play with different scenarios to visualize how your staking and borrowing levels impact your total savings.
-Previous
-Tokenization
-Next
-Cap Automator
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | 0x09B2236327D76FCd9E4B72Db70a6608C21A94292 | https://hyperevmscan.io/address/0x09b2236327d76fcd9e4b72db70a6608c21a94292
-LINK | Markdown | https://docs.hyperlend.finance/architecture/staking.md
-LINK | Next Cap Automator | https://docs.hyperlend.finance/architecture/cap-automator
-LINK | Previous Tokenization | https://docs.hyperlend.finance/architecture/tokenization
-LINK | Tier Saving Projection | https://app.hyperlend.finance/staking
-LINK | [no text] | https://docs.hyperlend.finance/architecture/staking#staking-mechanism-hpl-to-shpl
-LINK | [no text] | https://docs.hyperlend.finance/architecture/staking#staking-tiers
-LINK | [no text] | https://docs.hyperlend.finance/architecture/staking#the-rebate-program
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+$$
+\text{Rebate %} = \min \left( \text{MAX DISCOUNT}, \alpha \cdot \left( \frac{\text{borrowed amount}}{\text{Bmax}} \right)^{\gamma} + \beta \cdot \left( \frac{S \cdot L\_t}{\text{Smax}} \right)^{\gamma} \right)
+$$
+| | | |
+| --------------- | ---- | --------------------------------------------------------- |
+| α | 0.6 | Controls borrow weight, concave |
+| β | 0.4 | Controls staking weight, concave and additive to borrow |
+| γ | 0.6 | Controlos diminishing returns on staking and borrow power |
+| Bmax | 100M | Maximum borrow value |
+| Smax | 7.2M | Maximum staking power (0.72% FDV staked) |
+| Max Rebate | 80% | Max discount (%) |
+| borrowed amount | / | Rolling 14-day average borrowed amount in USD |
+#### Staking Tiers <a href="#staking-tiers" id="staking-tiers"></a>
+While the rebate formula is continuous (meaning every single HPL staked increases your return), our UI categorizes users into **six tiers** to provide a clear sense of progression.
+<table><thead><tr><th>Tier</th><th>Required Staked HPL</th><th data-hidden></th></tr></thead><tbody><tr><td>Unranked</td><td>0</td><td></td></tr><tr><td>Tier One</td><td>75,000</td><td></td></tr><tr><td>Tier Two</td><td>300,000</td><td></td></tr><tr><td>Tier Three</td><td>750,000</td><td></td></tr><tr><td>Tier Four</td><td>1,500,000</td><td></td></tr><tr><td>Tier Five</td><td>3,000,000</td><td></td></tr><tr><td>Tier Six</td><td>7,200,000</td><td></td></tr></tbody></table>
+{% hint style="info" %}
+You can use our [**Tier Saving Projection**](https://app.hyperlend.finance/staking) tool to see and play with different scenarios to visualize how your staking and borrowing levels impact your total savings.
+{% endhint %}

@@ -1,28 +1,16 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Base URL:
-https://api.hyperlend.finance
-Available chains:
-hyperEvm
-NOTE: Addresses must be checksummed, since API is case-sensitive.
-GET /data/interestRateHistory
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/api.md).
+# API
+Base URL: <https://api.hyperlend.finance>
+Available chains: `hyperEvm`&#x20;
+**NOTE: Addresses must be checksummed, since API is case-sensitive.**
+***
+`GET /data/interestRateHistory`
 Query interest rate hourly history.
-required params:
-chain
-and
-token
-(contract address)
-example:
-/data/interestRateHistory?chain=hyperEvm&token=0x5555555555555555555555555555555555555555
-currentLiquidityRate
-and
-currentVariableBorrowRate
-are expressed in Ray (unit of measurement with 27 decimals),
-response format:
-Copy
+* required params: `chain` and `token` (contract address)
+* example: `/data/interestRateHistory?chain=hyperEvm&token=0x5555555555555555555555555555555555555555`
+* `currentLiquidityRate` and `currentVariableBorrowRate` are expressed in Ray (unit of measurement with 27 decimals),&#x20;
+* response format:
+```
 [
 {
 "_id": "66d90e9aa6e4d9c524ef729a",
@@ -42,77 +30,389 @@ Copy
 },
 ...
 ]
-GET /data/user/valueChange
+```
+***
+`GET /data/user/valueChange`
 Query the user's 24-hour balance change.
-required params:
-address
-and
-chain
-example:
-/data/user/valueChange?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd
-response format:
-GET /data/user/historicalNetWorth
+* required params: `address` and `chain`
+* example: `/data/user/valueChange?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd`
+* response format:
+```
+{
+"prevPos": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": {
+"tokenValue": 36.492697000000135,
+"usdValue": 36.4105784364399,
+"name": "tether"
+},
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": {
+"tokenValue": -0.505677,
+"usdValue": -0.5047376206695895,
+"name": "usd-coin"
+},
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": {
+"tokenValue": 0.00033692,
+"usdValue": 19.147241624351143,
+"name": "bitcoin"
+}
+},
+"newPositions": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": {
+"tokenValue": 36.492697000000135,
+"usdValue": 36.44846785123614,
+"name": "tether"
+},
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": {
+"tokenValue": -0.505677,
+"usdValue": -0.505194584142,
+"name": "usd-coin"
+},
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": {
+"tokenValue": 0.00033692,
+"usdValue": 19.70038624,
+"name": "bitcoin"
+}
+},
+"tokenDiff": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": 0,
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": 0,
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": 0
+},
+"usdDiff": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": 0.03788941479623986,
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": -0.00045696347241053203,
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": 0.5531446156488578
+},
+"tokenPercentageDiff": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": 0,
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": 0,
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": 0
+},
+"usdPercentageDiff": {
+"0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9": 0.10400744101600679,
+"0xaf88d065e77c8cC2239327C5EDb3A432268e5831": 0.09049389062620931,
+"0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f": 2.847765210171073
+},
+"totalBalanceChange": 0.5905770669726849,
+"totalBalanceChangePercentage": 1.0670179746650437
+}
+```
+***
+`GET /data/user/historicalNetWorth`
 Query the user's hourly USD net worth.
-required params:
-address
-and
-chain
-example:
-/data/user/historicalNetWorth?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd
-response format:
-GET /data/markets
+* required params: `address` and `chain`
+* example: `/data/user/historicalNetWorth?chain=hyperEvm&address=0x0E61A8fb14f6AC999646212D30b2192cd02080Dd`
+* response format:
+```
+[
+{
+"timestamp": 1725886951424,
+"usdValue": 605.9349161471797
+},
+{
+"timestamp": 1725890548453,
+"usdValue": 604.8168613233992
+},
+{
+"timestamp": 1725894410263,
+"usdValue": 604.4794076893005
+},
+...
+]
+```
+***
+`GET /data/markets`
 Query current reserves state
-required params:
-chain
-response format:
-GET /data/markets/rates
+* required params: `chain`
+* response format:
+```
+{
+"reserves": [
+{
+"chain": "arbitrum",
+"underlyingAsset": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+"name": "USD Coin",
+"symbol": "USDC",
+"decimals": "6",
+"baseLTVasCollateral": "8000",
+"reserveLiquidationThreshold": "8500",
+"reserveLiquidationBonus": "11000",
+"reserveFactor": "2000",
+"usageAsCollateralEnabled": true,
+"borrowingEnabled": true,
+"stableBorrowRateEnabled": false,
+"isActive": true,
+"isFrozen": false,
+"liquidityIndex": "1000000000000000000000000000",
+"variableBorrowIndex": "1000000000000000000000000000",
+"liquidityRate": "400000000000000000000000",
+"variableBorrowRate": "5000000000000000000000000",
+"stableBorrowRate": "60625000000000000000000000",
+"lastUpdateTimestamp": "1722973930",
+"aTokenAddress": "0x4ed318353e3aB859F614aB41BFC33f98Cca8B3aE",
+"stableDebtTokenAddress": "0x6a970b349D8B60b57a335C0bdd16b8EEbD19Fa8F",
+"variableDebtTokenAddress": "0x82bf3C188d6397f2b9dE6D9F3834381C9C205585",
+"interestRateStrategyAddress": "0xa18DE0E9fd605be95026130FDFb592431Fc7a9B7",
+"availableLiquidity": "900000",
+"totalPrincipalStableDebt": "0",
+"averageStableRate": "0",
+"stableDebtLastUpdateTimestamp": "0",
+"totalScaledVariableDebt": "100000",
+"priceInMarketReferenceCurrency": "99996000",
+"priceOracle": "0x50834F3163758fcC1Df9973b6e91f0F0F0434aD3",
+"variableRateSlope1": "40000000000000000000000000",
+"variableRateSlope2": "750000000000000000000000000",
+"stableRateSlope1": "5000000000000000000000000",
+"stableRateSlope2": "750000000000000000000000000",
+"baseStableBorrowRate": "60000000000000000000000000",
+"baseVariableBorrowRate": "0",
+"optimalUsageRatio": "800000000000000000000000000",
+"isPaused": false,
+"isSiloedBorrowing": false,
+"accruedToTreasury": "0",
+"unbacked": "0",
+"isolationModeTotalDebt": "0",
+"flashLoanEnabled": true,
+"debtCeiling": "0",
+"debtCeilingDecimals": "2",
+"eModeCategoryId": "0",
+"borrowCap": "0",
+"supplyCap": "10000",
+"eModeLtv": "0",
+"eModeLiquidationThreshold": "0",
+"eModeLiquidationBonus": "0",
+"eModePriceSource": "0x0000000000000000000000000000000000000000",
+"eModeLabel": "",
+"borrowableInIsolation": false
+}
+]
+}
+```
+***
+`GET /data/markets/rates`&#x20;
 Returns borrow and supply APYs for all assets and isolated markets.
-required params:
-chain
-Returns APY and APR as percentage.
+* required params: `chain`
+Returns APY and APR as percentage.&#x20;
 For isolated markets, the key is the pair address, and data includes underlying and collateral asset addresses.
-GET /data/user/transactionHistory
+<pre><code><strong>{
+</strong> "0xb7379d395F3c83952ad794896205f7E33E358735": {
+"supplyAPR": 0,
+"supplyAPY": 0,
+"borrowAPR": 0,
+"borrowAPY": 0
+},
+"0x068f321Fa8Fb9f0D135f290Ef6a3e2813e1c8A29": {
+"supplyAPR": 0.46472160368365606,
+"supplyAPY": 0.4658031092092507,
+"borrowAPR": 2.278023538318724,
+"borrowAPY": 2.3041686476535927
+},
+"0x06Fd9D03b3d0F18E4919919b72D30c582f0a97E5": {
+"underlying": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+"collateral": "0x1359b05241cA5076c9F59605214f4F84114c0dE8",
+"supplyAPR": 14.7000269211344,
+"supplyAPY": 14.700027160359502,
+"borrowAPR": 22.5325064089296,
+"borrowAPY": 22.5325067756188
+}
+</code></pre>
+***
+`GET /data/user/transactionHistory`&#x20;
 Returns all transactions the user was involved in.
-required params:
-chain
-and
-address
-optional params:
-limit
-(default: 100) and
-skip
-(default: 0)
-example:
-/data/user/transactionHistory?chain=hyperEvm&address=0x5748ae796AE46A4F1348a1693de4b50560485562&limit=1000&skip=0
-GET /data/transactions
+* required params: `chain` and `address`&#x20;
+* optional params: `limit` (default: 100) and `skip` (default: 0)
+* example: `/data/user/transactionHistory?chain=hyperEvm&address=0x5748ae796AE46A4F1348a1693de4b50560485562&limit=1000&skip=0`&#x20;
+```
+{
+data: [
+{
+"_id": "67eb00824c256fa8358a4d55",
+"uniqueId": "0x4183db849780dcdf8249ee5b419f0e28c752e155e3c6ee2b26adf4e26e026690_8",
+"chain": "hyperEvm",
+"contractId": "pool",
+"blockNumber": 1861952,
+"timestamp": 1743454326,
+"txHash": "0x4183db849780dcdf8249ee5b419f0e28c752e155e3c6ee2b26adf4e26e026690",
+"logIndex": 8,
+"event": "Supply",
+"data": {
+"reserve":"0x94e8396e0869c9F2200760aF0621aFd240E1CF38",
+"user":"0x5748ae796AE46A4F1348a1693de4b50560485562",
+"onBehalfOf":"0x5748ae796AE46A4F1348a1693de4b50560485562",
+"amount":"399999999999999966445568",
+"referralCode":"0"
+}
+]
+}
+```
+***
+`GET /data/transactions`
 Query events data.
-optional params:
-chain
-,
-contractId
-,
-blockNumber
-,
-txHash
-,
-logIndex
-,
-event
-on data field:
-see available event parameters below
-example:
-/data/transaction?chain=hyperEvm&event=Borrow&reserve=0x5555555555555555555555555555555555555555
-response format:
+* optional params:&#x20;
+* `chain`, `contractId`, `blockNumber`, `txHash`, `logIndex`, `event`
+* on data field: `see available event parameters below`
+* example: `/data/transaction?chain=hyperEvm&event=Borrow&reserve=0x5555555555555555555555555555555555555555`
+* response format:
+```
+{
+uniqueId: "0x4839ef5e7ca3e0cf8eea625a2a640277980fbc0406542fcd4604fba15a325504_6"
+chain: "arbitrum"
+contractId: "pool"
+blockNumber 240136270
+txHash: "0x4839ef5e7ca3e0cf8eea625a2a640277980fbc0406542fcd4604fba15a325504"
+logIndex: 6
+event: "Borrow"
+data: {
+...eventParameters
+}
+```
 All indexed events:
-Previous
-Bug Bounty
-Next
-Data & Indexers
-Last updated
-6 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/api.md
-LINK | Next Data & Indexers | https://docs.hyperlend.finance/developer-documentation/data-and-indexers
-LINK | Previous Bug Bounty | https://docs.hyperlend.finance/developer-documentation/bug-bounty
-LINK | https://api.hyperlend.finance | https://api.hyperlend.finance
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+```
+[
+{
+"name": "BackUnbacked",
+"parameters": [
+["reserve", "address"],
+["backer", "address"],
+["amount", "uint256"],
+["fee", "uint256"]
+]
+},
+{
+"name": "Borrow",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["onBehalfOf", "address"],
+["amount", "uint256"],
+["interestRateMode", "uint8"],
+["borrowRate", "uint256"],
+["referralCode", "uint16"]
+]
+},
+{
+"name": "FlashLoan",
+"parameters": [
+["target", "address"],
+["initiator", "address"],
+["asset", "address"],
+["amount", "uint256"],
+["interestRateMode", "uint8"],
+["premium", "uint256"],
+["referralCode", "uint16"]
+]
+},
+{
+"name": "IsolationModeTotalDebtUpdated",
+"parameters": [
+["asset", "address"],
+["totalDebt", "uint256"]
+]
+},
+{
+"name": "LiquidationCall",
+"parameters": [
+["collateralAsset", "address"],
+["debtAsset", "address"],
+["user", "address"],
+["debtToCover", "uint256"],
+["liquidatedCollateralAmount", "uint256"],
+["liquidator", "address"],
+["receiveAToken", "bool"]
+]
+},
+{
+"name": "MintUnbacked",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["onBehalfOf", "address"],
+["amount", "uint256"],
+["referralCode", "uint16"]
+]
+},
+{
+"name": "MintedToTreasury",
+"parameters": [
+["reserve", "address"],
+["amountMinted", "uint256"]
+]
+},
+{
+"name": "RebalanceStableBorrowRate",
+"parameters": [
+["reserve", "address"],
+["user", "address"]
+]
+},
+{
+"name": "Repay",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["repayer", "address"],
+["amount", "uint256"],
+["useATokens", "bool"]
+]
+},
+{
+"name": "ReserveDataUpdated",
+"parameters": [
+["reserve", "address"],
+["liquidityRate", "uint256"],
+["stableBorrowRate", "uint256"],
+["variableBorrowRate", "uint256"],
+["liquidityIndex", "uint256"],
+["variableBorrowIndex", "uint256"]
+]
+},
+{
+"name": "ReserveUsedAsCollateralDisabled",
+"parameters": [
+["reserve", "address"],
+["user", "address"]
+]
+},
+{
+"name": "ReserveUsedAsCollateralEnabled",
+"parameters": [
+["reserve", "address"],
+["user", "address"]
+]
+},
+{
+"name": "Supply",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["onBehalfOf", "address"],
+["amount", "uint256"],
+["referralCode", "uint16"]
+]
+},
+{
+"name": "SwapBorrowRateMode",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["interestRateMode", "uint8"]
+]
+},
+{
+"name": "UserEModeSet",
+"parameters": [
+["user", "address"],
+["categoryId", "uint8"]
+]
+},
+{
+"name": "Withdraw",
+"parameters": [
+["reserve", "address"],
+["user", "address"],
+["to", "address"],
+["amount", "uint256"]
+]
+}
+]
+```

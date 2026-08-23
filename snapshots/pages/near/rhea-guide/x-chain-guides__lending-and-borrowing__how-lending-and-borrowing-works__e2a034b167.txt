@@ -1,9 +1,7 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Markdown | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md
-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md).
+# How Lending & Borrowing works
+- [Health Factor](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor.md)
+- [Interest Rate Model](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model.md)
+- [Liquidations](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/liquidations.md)
+- [Oracle](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/oracle.md)
+- [Lending & Borrow Market Limits](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/lending-and-borrow-market-limits.md)

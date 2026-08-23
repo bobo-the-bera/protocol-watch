@@ -1,67 +1,112 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__hyperevm__json-rpc__4f9f6ff9ed:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__hyperevm__json-rpc__4f9f6ff9ed:current
-@@ -0,0 +1,64 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+The following RPC endpoints are available
-+net_version
-+web3_clientVersion
-+eth_blockNumber
-+eth_call
-+only the latest block is supported
-+eth_chainId
-+eth_estimateGas
-+only the latest block is supported
-+eth_feeHistory
-+eth_gasPrice
-+returns the base fee for the next small block
-+eth_getBalance
-+only the latest block is supported
-+eth_getBlockByHash
-+eth_getBlockByNumber
-+eth_getBlockReceipts
-+eth_getBlockTransactionCountByHash
-+eth_getBlockTransactionCountByNumber
-+eth_getCode
-+only the latest block is supported
-+eth_getLogs
-+up to 4 topics
-+up to 50 blocks in query range
-+eth_getStorageAt
-+only the latest block is supported
-+eth_getTransactionByBlockHashAndIndex
-+eth_getTransactionByBlockNumberAndIndex
-+eth_getTransactionByHash
-+eth_getTransactionCount
-+only the latest block is supported
-+eth_getTransactionReceipt
-+eth_maxPriorityFeePerGas
-+always returns zero currently
-+eth_syncing
-+always returns false
-+The following custom endpoints are available
-+eth_bigBlockGasPrice
-+returns the base fee for the next big block
-+eth_usingBigBlocks
-+returns whether the address is using big blocks
-+eth_getSystemTxsByBlockHash
-+and
-+eth_getSystemTxsByBlockNumber
-+similar to the "getTransaction" analogs but returns the system transactions that originate from HyperCore
-+Unsupported requests
-+Requests that require historical state are not supported at this time on the default RPC implementation. However, independent archive node implementations are available for use, and the GitHub repository has examples on how to get started indexing historical data locally. Note that read precompiles are only recorded for the calls actually made on each block. Hypothetical read precompile results could be obtained from a full L1 replay.
-+Rate limits: IP based rate limits are the same as the API server.
-+Previous
-+Wrapped HYPE
-+Next
-+Nodes
-+Last updated
-+7 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/json-rpc.md
-+LINK | Next Nodes | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes
-+LINK | Previous Wrapped HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/wrapped-hype
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,64 +1,48 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/json-rpc.md).
++# JSON-RPC
+ The following RPC endpoints are available
+-net_version
+-web3_clientVersion
+-eth_blockNumber
+-eth_call
+-only the latest block is supported
+-eth_chainId
+-eth_estimateGas
+-only the latest block is supported
+-eth_feeHistory
+-eth_gasPrice
+-returns the base fee for the next small block
+-eth_getBalance
+-only the latest block is supported
+-eth_getBlockByHash
+-eth_getBlockByNumber
+-eth_getBlockReceipts
+-eth_getBlockTransactionCountByHash
+-eth_getBlockTransactionCountByNumber
+-eth_getCode
+-only the latest block is supported
+-eth_getLogs
+-up to 4 topics
+-up to 50 blocks in query range
+-eth_getStorageAt
+-only the latest block is supported
+-eth_getTransactionByBlockHashAndIndex
+-eth_getTransactionByBlockNumberAndIndex
+-eth_getTransactionByHash
+-eth_getTransactionCount
+-only the latest block is supported
+-eth_getTransactionReceipt
+-eth_maxPriorityFeePerGas
+-always returns zero currently
+-eth_syncing
+-always returns false
++* `net_version`
++* `web3_clientVersion`
++* `eth_blockNumber`
++* `eth_call`
++* only the latest block is supported
++* `eth_chainId`
++* `eth_estimateGas`
++* only the latest block is supported
++* `eth_feeHistory`
++* `eth_gasPrice`
++* returns the base fee for the next small block
++* `eth_getBalance`
++* only the latest block is supported
++* `eth_getBlockByHash`
++* `eth_getBlockByNumber`
++* `eth_getBlockReceipts`
++* `eth_getBlockTransactionCountByHash`
++* `eth_getBlockTransactionCountByNumber`
++* `eth_getCode`
++* only the latest block is supported
++* `eth_getLogs`
++* up to 4 topics
++* up to 50 blocks in query range
++* `eth_getStorageAt`
++* only the latest block is supported
++* `eth_getTransactionByBlockHashAndIndex`
++* `eth_getTransactionByBlockNumberAndIndex`
++* `eth_getTransactionByHash`
++* `eth_getTransactionCount`
++* only the latest block is supported
++* `eth_getTransactionReceipt`
++* `eth_maxPriorityFeePerGas`
++* always returns zero currently
++* `eth_syncing`
++* always returns false
+ The following custom endpoints are available
+-eth_bigBlockGasPrice
+-returns the base fee for the next big block
+-eth_usingBigBlocks
+-returns whether the address is using big blocks
+-eth_getSystemTxsByBlockHash
+-and
+-eth_getSystemTxsByBlockNumber
+-similar to the "getTransaction" analogs but returns the system transactions that originate from HyperCore
++* `eth_bigBlockGasPrice`
++* returns the base fee for the next big block
++* `eth_usingBigBlocks`
++* returns whether the address is using big blocks
++* `eth_getSystemTxsByBlockHash` and `eth_getSystemTxsByBlockNumber`
++* similar to the "getTransaction" analogs but returns the system transactions that originate from HyperCore
+ Unsupported requests
+-Requests that require historical state are not supported at this time on the default RPC implementation. However, independent archive node implementations are available for use, and the GitHub repository has examples on how to get started indexing historical data locally. Note that read precompiles are only recorded for the calls actually made on each block. Hypothetical read precompile results could be obtained from a full L1 replay.
+-Rate limits: IP based rate limits are the same as the API server.
+-Previous
+-Wrapped HYPE
+-Next
+-Nodes
+-Last updated
+-7 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/json-rpc.md
+-LINK | Next Nodes | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes
+-LINK | Previous Wrapped HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/wrapped-hype
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++* Requests that require historical state are not supported at this time on the default RPC implementation. However, independent archive node implementations are available for use, and the GitHub repository has examples on how to get started indexing historical data locally. Note that read precompiles are only recorded for the calls actually made on each block. Hypothetical read precompile results could be obtained from a full L1 replay.
++Rate limits: IP based rate limits are the same as the API server.&#x20;

@@ -1,40 +1,52 @@
 --- near/rhea-guide/near-chain-guides__2531c478ba:previous
 +++ near/rhea-guide/near-chain-guides__2531c478ba:current
-@@ -0,0 +1,37 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+RFQ DEX
-+– Core trading execution with best pricing and low slippage
-+Liquidity Pools
-+– Provide liquidity to earn trading fees
-+Liquidity Pools Farming
-+– Incentivized LP participation with additional rewards
-+Lending and Borrowing
-+– Use assets more efficiently by earning interest or accessing liquidity while borrow against it
-+Margin Trading
-+– Amplify trading strategies using borrowed capital
-+Yield Boost
-+– Enhance yields through protocol incentives and optimizations with $RHEA token
-+NEAR Liquid Staking Token (LST)
-+– Earn staking yield while maintaining liquidity
-+RHEA’s Bridge Aggregator
-+– Seamless cross-chain asset movement into the ecosystem
-+RHEA Point System
-+– Track and reward user activity and protocol participation
-+RHEA Credits
-+– Fair, controlled redemption mechanism aligned with long-term engagement. A layer of reputation from Point System
-+Previous
-+Staying Safe
-+Next
-+RFQ DEX
-+Last updated
-+7 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides.md
-+LINK | Next RFQ DEX | https://guide.rhea.finance/near-chain-guides/swap
-+LINK | Previous Staying Safe | https://guide.rhea.finance/getting-started/staying-safe
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,37 +1,12 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-RFQ DEX
+-– Core trading execution with best pricing and low slippage
+-Liquidity Pools
+-– Provide liquidity to earn trading fees
+-Liquidity Pools Farming
+-– Incentivized LP participation with additional rewards
+-Lending and Borrowing
+-– Use assets more efficiently by earning interest or accessing liquidity while borrow against it
+-Margin Trading
+-– Amplify trading strategies using borrowed capital
+-Yield Boost
+-– Enhance yields through protocol incentives and optimizations with $RHEA token
+-NEAR Liquid Staking Token (LST)
+-– Earn staking yield while maintaining liquidity
+-RHEA’s Bridge Aggregator
+-– Seamless cross-chain asset movement into the ecosystem
+-RHEA Point System
+-– Track and reward user activity and protocol participation
+-RHEA Credits
+-– Fair, controlled redemption mechanism aligned with long-term engagement. A layer of reputation from Point System
+-Previous
+-Staying Safe
+-Next
+-RFQ DEX
+-Last updated
+-7 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides.md
+-LINK | Next RFQ DEX | https://guide.rhea.finance/near-chain-guides/swap
+-LINK | Previous Staying Safe | https://guide.rhea.finance/getting-started/staying-safe
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides.md).
++# &#x20;NEAR Chain Guides
++* **RFQ DEX** – Core trading execution with best pricing and low slippage
++* **Liquidity Pools** – Provide liquidity to earn trading fees
++* **Liquidity Pools Farming** – Incentivized LP participation with additional rewards
++* **Lending and Borrowing** – Use assets more efficiently by earning interest or accessing liquidity while borrow against it&#x20;
++* **Margin Trading** – Amplify trading strategies using borrowed capital
++* **Yield Boost** – Enhance yields through protocol incentives and optimizations with $RHEA token
++* **NEAR Liquid Staking Token (LST)** – Earn staking yield while maintaining liquidity
++* **RHEA’s Bridge Aggregator** – Seamless cross-chain asset movement into the ecosystem
++* **RHEA Point System** – Track and reward user activity and protocol participation
++* **RHEA Credits** – Fair, controlled redemption mechanism aligned with long-term engagement. A layer of reputation from Point System&#x20;

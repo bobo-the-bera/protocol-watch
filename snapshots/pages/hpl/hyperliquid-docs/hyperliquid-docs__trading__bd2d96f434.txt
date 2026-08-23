@@ -1,62 +1,27 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Fees
-Sub-accounts
-Builder codes
-Perpetual assets
-Contract specifications
-Margining
-Account abstraction modes
-Portfolio margin
-Margin tiers
-Robust price indices
-Liquidations
-Auto-deleveraging
-Funding
-Order book
-Order types
-Take profit and stop loss orders (TP/SL)
-Entry price and pnl
-Self-trade prevention
-Hyperps
-Delisting
-Market making
-Portfolio graphs
-Miscellaneous UI
-Previous
-Frontend checks
-Next
-Fees
-Last updated
-8 months ago
-[[LINK TARGETS]]
-LINK | Account abstraction modes | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/account-abstraction-modes
-LINK | Auto-deleveraging | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/auto-deleveraging
-LINK | Builder codes | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes
-LINK | Contract specifications | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications
-LINK | Delisting | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting
-LINK | Entry price and pnl | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl
-LINK | Fees | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees
-LINK | Funding | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding
-LINK | Hyperps | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps
-LINK | Liquidations | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations
-LINK | Margin tiers | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margin-tiers
-LINK | Margining | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading.md
-LINK | Market making | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making
-LINK | Miscellaneous UI | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/miscellaneous-ui
-LINK | Next Fees | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees
-LINK | Order book | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-book
-LINK | Order types | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
-LINK | Perpetual assets | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/perpetual-assets
-LINK | Portfolio graphs | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-graphs
-LINK | Portfolio margin | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin
-LINK | Previous Frontend checks | https://hyperliquid.gitbook.io/hyperliquid-docs/hyperliquid-improvement-proposals-hips/frontend-checks
-LINK | Robust price indices | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/robust-price-indices
-LINK | Self-trade prevention | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention
-LINK | Sub-accounts | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/sub-accounts
-LINK | Take profit and stop loss orders (TP/SL) | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading.md).
+# Trading
+- [Fees](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees.md)
+- [Sub-accounts](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/sub-accounts.md)
+- [Builder codes](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/builder-codes.md)
+- [Perpetual assets](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/perpetual-assets.md)
+- [Contract specifications](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/contract-specifications.md)
+- [Margining](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margining.md)
+- [Account abstraction modes](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/account-abstraction-modes.md)
+- [Portfolio margin](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-margin.md)
+- [Margin tiers](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/margin-tiers.md)
+- [Robust price indices](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/robust-price-indices.md)
+- [Liquidations](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/liquidations.md)
+- [Auto-deleveraging](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/auto-deleveraging.md)
+- [Funding](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding.md)
+- [Order book](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-book.md)
+- [Order types](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types.md)
+- [Take profit and stop loss orders (TP/SL)](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl.md)
+- [Entry price and pnl](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/entry-price-and-pnl.md)
+- [Self-trade prevention](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/self-trade-prevention.md)
+- [Index perpetual contracts](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/index-perpetual-contracts.md)
+- [Uniswap perpetuals](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/uniswap-perpetuals.md)
+- [Hyperps](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps.md)
+- [Delisting](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting.md)
+- [Market making](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making.md)
+- [Portfolio graphs](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-graphs.md)
+- [Miscellaneous UI](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/miscellaneous-ui.md)

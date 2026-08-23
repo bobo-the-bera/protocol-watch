@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:13:08+00:00",
+  "content_changed_at": "2026-08-23T12:29:48+00:00",
   "protocol": "hpl",
-  "sha256": "e448fcbd3900cd958ecb9ba0b02d809a26604fba79dbccffb728d3c8709ccb86",
+  "sha256": "fe8a685f7716db492090888feb74f04c73f643006d9e55c10425e8f5cbece3c6",
   "slug": "hyperliquid-docs__trading__auto-deleveraging__c7735a77fd",
   "tags": [
     "hyperliquid",

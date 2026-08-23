@@ -1,69 +1,24 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Why can't I withdraw my assets?
-Health Factor (HF):
-If your HF is below
-1.25
-(or
-1.06
-in E-Mode, or 1.00 in Danger Zone Mode), the UI blocks withdrawals to prevent accidental liquidation.
-Direct Contract Withdrawal:
-If the UI is stuck, you can withdraw directly via the contract:
-Go to:
-HyperEVMScan Write Proxy
-Connect Web3 and find the
-withdraw
-function (usually #33).
-Input Asset Address:
-(e.g., PT-kHYPE:
-0x311dB0FDe558689550c68355783c95eFDfe25329
-)
-Input Amount:
-Use the raw amount (Balance * 10^decimals).
-Input Receiver:
-Your wallet address.
-• Can I see my exact liquidation price?
-Core Pools:
-Hard to calculate exactly because you can supply and borrow multiple different assets simultaneously. Monitor your
-Health Factor (HF)
-closely.
-Isolated Pools:
-We are working on including exact liquidation prices in the UI for these pools.
-• Who can liquidate positions?
-Anyone. We provide an open-source liquidator bot on
-GitHub
-for the community.
-• How do I calculate my Health Factor (HF)?
-HF = (Sum of Collateral in $* Liquidation Threshold) / (Sum of Debt in$)
-• How is the "24h Balance Change" calculated?
-It is
-Current Total Balance ($) - Total Balance 24h ago ($)
-.
-Note: Total Balance = Supplied Assets - Borrowed Assets.
-This represents total value change, not PnL.
-• Where can I see my full transaction history?
-Click the
-"Your Transactions"
-button on your dashboard. This provides a detailed log of all supplies, borrows, and bridge actions.
-Previous
-Transaction Issues
-Next
-Assets, staking, wHLP
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | GitHub | https://github.com/hyperlendx/liquidator
-LINK | HyperEVMScan Write Proxy | https://hyperevmscan.io/address/0x00a89d7a5a02160f20150ebea7a2b5e4879a1a8b#writeProxyContract
-LINK | Markdown | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations.md
-LINK | Next Assets, staking, wHLP | https://docs.hyperlend.finance/support/faq/assets-staking-whlp
-LINK | Previous Transaction Issues | https://docs.hyperlend.finance/support/faq/transaction-issues
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#can-i-see-my-exact-liquidation-price
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#how-do-i-calculate-my-health-factor-hf
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#how-is-the-24h-balance-change-calculated
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#where-can-i-see-my-full-transaction-history
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#who-can-liquidate-positions
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations#why-cant-i-withdraw-my-assets
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations.md).
+# Lending, Borrowing & Liquidations
+### Why can't I withdraw my assets? <a href="#why-cant-i-withdraw-my-assets" id="why-cant-i-withdraw-my-assets"></a>
+1. **Health Factor (HF):** If your HF is below **1.25** (or **1.06** in E-Mode, or 1.00 in Danger Zone Mode), the UI blocks withdrawals to prevent accidental liquidation.
+2. **Direct Contract Withdrawal:** If the UI is stuck, you can withdraw directly via the contract:
+* Go to: [HyperEVMScan Write Proxy](https://hyperevmscan.io/address/0x00a89d7a5a02160f20150ebea7a2b5e4879a1a8b#writeProxyContract)
+* Connect Web3 and find the `withdraw` function (usually #33).
+* **Input Asset Address:** (e.g., PT-kHYPE: `0x311dB0FDe558689550c68355783c95eFDfe25329`)
+* **Input Amount:** Use the raw amount (Balance \* 10^decimals).
+* **Input Receiver:** Your wallet address.
+### • Can I see my exact liquidation price? <a href="#can-i-see-my-exact-liquidation-price" id="can-i-see-my-exact-liquidation-price"></a>
+* **Core Pools:** Hard to calculate exactly because you can supply and borrow multiple different assets simultaneously. Monitor your **Health Factor (HF)** closely.
+* **Isolated Pools:** We are working on including exact liquidation prices in the UI for these pools.
+### • Who can liquidate positions? <a href="#who-can-liquidate-positions" id="who-can-liquidate-positions"></a>
+Anyone. We provide an open-source liquidator bot on [GitHub](https://github.com/hyperlendx/liquidator) for the community.
+### • How do I calculate my Health Factor (HF)? <a href="#how-do-i-calculate-my-health-factor-hf" id="how-do-i-calculate-my-health-factor-hf"></a>
+`HF = (Sum of Collateral in $* Liquidation Threshold) / (Sum of Debt in$)`
+### • How is the "24h Balance Change" calculated? <a href="#how-is-the-24h-balance-change-calculated" id="how-is-the-24h-balance-change-calculated"></a>
+It is `Current Total Balance ($) - Total Balance 24h ago ($)`.
+{% hint style="info" %}
+*Note: Total Balance = Supplied Assets - Borrowed Assets.* This represents total value change, not PnL.
+{% endhint %}
+### • Where can I see my full transaction history? <a href="#where-can-i-see-my-full-transaction-history" id="where-can-i-see-my-full-transaction-history"></a>
+Click the **"Your Transactions"** button on your dashboard. This provides a detailed log of all supplies, borrows, and bridge actions.

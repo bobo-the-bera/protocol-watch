@@ -1,150 +1,44 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-SigmaPrime
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/developers/audits/previous-audits.md).
+# Previous Audits
+### SigmaPrime <a href="#sigmaprime" id="sigmaprime"></a>
 Smart Contract
-Sigma_Prime_NEAR_Burrowland_Security_Assessment_Report_v2.0.pdf
-PDF · 449KB
-Download
-Open
-Blocksec
+{% file src="/files/fAIV5rbaxVJGINzPwWp5" %}
+### Blocksec
 you can find all reports at their git repo:
-https://github.com/blocksecteam/audit-reports/tree/main/rust
-burrow-margin-trading_v1.0 (
-audit-reports/rust/blocksec_burrow_margin_trade_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-burrowland_v3 (
-audit-reports/rust/blocksec_burrowland_v3_signed.pdf at main · blocksecteam/audit-reports
-)
-burrowland_pyth_v1.0 (
-audit-reports/rust/blocksec_burrowland_pyth_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_lp_as_collateral_v1.0 (
-audit-reports/rust/blocksec_ref_lp_as_collateral_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-burrow_v2.0 (
-audit-reports/rust/blocksec_burrow_v2.0_signed.pdf at main · blocksecteam/audit-reports
-)
-burrow_v1.0 (
-audit-reports/rust/blocksec_burrow_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-Dex:
-rhea_token_v1.0(
-https://github.com/blocksecteam/audit-reports/blob/main/solidity/blocksec_rhea_token_v1.0-signed.pdf
-)
-ref_bridge_v1.0 (
-audit-reports/rust/blocksec_ref_bridge_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_degenpool_v2.0 (
-audit-reports/rust/blocksec_ref_degenpool_v2.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_degenpool_v1.0 (
-audit-reports/rust/blocksec_ref_degenpool_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_token-locker-v2.0 (
-audit-reports/rust/blocksec_ref_token-locker-v2.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_token-locker-v1.0 (
-audit-reports/rust/blocksec_ref_token-locker-v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-ref_exchange_v4.0 (
-audit-reports/rust/blocksec_ref_exchange_v4.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_dcl_v3.0 (
-audit-reports/rust/blocksec_ref_finance_dcl_v3.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_dcl_v2.0 (
-audit-reports/rust/blocksec_ref_finance_dcl_v2.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_dcl_v1.0 (
-audit-reports/rust/blocksec_ref_finance_dcl_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-refve_v1.0 (
-audit-reports/rust/blocksec_refve_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_xref_v1.0 (
-audit-reports/rust/blocksec_ref_finance_xref_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-memefarming_v1.0 (
-audit-reports/rust/blocksec_memefarming_v1.0-signed.pdf at main · blocksecteam/audit-reports
-)
-boost_farm_v1.0 (
-audit-reports/rust/blocksec_boost_farm_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_exchange_v3.0 (
-audit-reports/rust/blocksec_ref_finance_exchange_v3.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_exchange_v2.0 (
-audit-reports/rust/blocksec_ref_finance_exchange_v2.0_signed.pdf at main · blocksecteam/audit-reports
-)
-ref_finance_exchange_v1.0 (
-audit-reports/rust/blocksec_ref_finance_exchange_v1.0_signed.pdf at main · blocksecteam/audit-reports
-)
-Jita
+<https://github.com/blocksecteam/audit-reports/tree/main/rust>
+burrow-margin-trading\_v1.0 ([audit-reports/rust/blocksec\_burrow\_margin\_trade\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_margin_trade_v1.0-signed.pdf) )
+burrowland\_v3 ([audit-reports/rust/blocksec\_burrowland\_v3\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrowland_v3_signed.pdf) )
+burrowland\_pyth\_v1.0 ([audit-reports/rust/blocksec\_burrowland\_pyth\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrowland_pyth_v1.0-signed.pdf) )
+ref\_lp\_as\_collateral\_v1.0 ([audit-reports/rust/blocksec\_ref\_lp\_as\_collateral\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_lp_as_collateral_v1.0-signed.pdf) )
+burrow\_v2.0 ([audit-reports/rust/blocksec\_burrow\_v2.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_v2.0_signed.pdf) )
+burrow\_v1.0 ([audit-reports/rust/blocksec\_burrow\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_v1.0_signed.pdf) )
+#### Dex:
+rhea\_token\_v1.0(<https://github.com/blocksecteam/audit-reports/blob/main/solidity/blocksec_rhea_token_v1.0-signed.pdf>)
+ref\_bridge\_v1.0 ([audit-reports/rust/blocksec\_ref\_bridge\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_bridge_v1.0-signed.pdf) )
+ref\_degenpool\_v2.0 ([audit-reports/rust/blocksec\_ref\_degenpool\_v2.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_degenpool_v2.0-signed.pdf) )
+ref\_degenpool\_v1.0 ([audit-reports/rust/blocksec\_ref\_degenpool\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_degenpool_v1.0-signed.pdf) )
+ref\_token-locker-v2.0 ([audit-reports/rust/blocksec\_ref\_token-locker-v2.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_token-locker-v2.0-signed.pdf) )
+ref\_token-locker-v1.0 ([audit-reports/rust/blocksec\_ref\_token-locker-v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_token-locker-v1.0-signed.pdf) )
+ref\_exchange\_v4.0 ([audit-reports/rust/blocksec\_ref\_exchange\_v4.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_exchange_v4.0_signed.pdf) )
+ref\_finance\_dcl\_v3.0 ([audit-reports/rust/blocksec\_ref\_finance\_dcl\_v3.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v3.0_signed.pdf) )
+ref\_finance\_dcl\_v2.0 ([audit-reports/rust/blocksec\_ref\_finance\_dcl\_v2.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v2.0_signed.pdf) )
+ref\_finance\_dcl\_v1.0 ([audit-reports/rust/blocksec\_ref\_finance\_dcl\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v1.0_signed.pdf) )
+refve\_v1.0 ([audit-reports/rust/blocksec\_refve\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_refve_v1.0_signed.pdf) )
+ref\_finance\_xref\_v1.0 ([audit-reports/rust/blocksec\_ref\_finance\_xref\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_xref_v1.0_signed.pdf) )
+memefarming\_v1.0 ([audit-reports/rust/blocksec\_memefarming\_v1.0-signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_memefarming_v1.0-signed.pdf) )
+boost\_farm\_v1.0 ([audit-reports/rust/blocksec\_boost\_farm\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_boost_farm_v1.0_signed.pdf) )
+ref\_finance\_exchange\_v3.0 ([audit-reports/rust/blocksec\_ref\_finance\_exchange\_v3.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v3.0_signed.pdf) )
+ref\_finance\_exchange\_v2.0 ([audit-reports/rust/blocksec\_ref\_finance\_exchange\_v2.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v2.0_signed.pdf) )
+ref\_finance\_exchange\_v1.0 ([audit-reports/rust/blocksec\_ref\_finance\_exchange\_v1.0\_signed.pdf at main · blocksecteam/audit-reports](https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v1.0_signed.pdf) )
+## Jita
 Auditor: Jita
-Website:
-https://jitadigital.com/
+Website: <https://jitadigital.com/>
 Date: February - June 2022
 Status: Completed
 Scope:
-Ref Exchange: v2.ref-finance.near
-Ref Farming: v2.ref-farming.near
+* Ref Exchange: v2.ref-finance.near
+* Ref Farming: v2.ref-farming.near
 First Report:
-Ref Finance Security Audit-1.pdf
-PDF · 849KB
-Download
-Open
+{% file src="/files/iRF7zcC0O1LF6atlMLg0" %}
 Second Report:
-Ref Finance Security Audit-2.pdf
-PDF · 1MB
-Download
-Open
-Previous
-Audits
-Next
-Bug Bounty
-Last updated
-10 months ago
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Markdown | https://guide.rhea.finance/developers/audits/previous-audits.md
-LINK | Next Bug Bounty | https://guide.rhea.finance/developers/bug-bounty
-LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2F4POI4xnQk0VP2amRsp8l%2FSigma_Prime_NEAR_Burrowland_Security_Assessment_Report_v2.0.pdf?alt=media&token=83e311bc-b46f-4a03-a424-b45270d5682c
-LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2Fh8mipVuJTakoLC6XmzfU%2FRef%20Finance%20Security%20Audit-1.pdf?alt=media&token=cf0398d1-97d5-4367-9776-07bc8e4c67ea
-LINK | Open | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FsDi3tE2Q0HLrFYVlE2y2%2FRef%20Finance%20Security%20Audit-2.pdf?alt=media&token=6f948b02-33d0-473c-9ab9-3435db526f40
-LINK | Previous Audits | https://guide.rhea.finance/developers/audits
-LINK | Ref Finance Security Audit-1.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2Fh8mipVuJTakoLC6XmzfU%2FRef%20Finance%20Security%20Audit-1.pdf?alt=media&token=cf0398d1-97d5-4367-9776-07bc8e4c67ea
-LINK | Ref Finance Security Audit-2.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2FsDi3tE2Q0HLrFYVlE2y2%2FRef%20Finance%20Security%20Audit-2.pdf?alt=media&token=6f948b02-33d0-473c-9ab9-3435db526f40
-LINK | Sigma_Prime_NEAR_Burrowland_Security_Assessment_Report_v2.0.pdf | https://2480407424-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MhIB0bSr6nOBfTiANqT-2910905616%2Fuploads%2F4POI4xnQk0VP2amRsp8l%2FSigma_Prime_NEAR_Burrowland_Security_Assessment_Report_v2.0.pdf?alt=media&token=83e311bc-b46f-4a03-a424-b45270d5682c
-LINK | [no text] | https://guide.rhea.finance/developers/audits/previous-audits#blocksec
-LINK | [no text] | https://guide.rhea.finance/developers/audits/previous-audits#dex
-LINK | [no text] | https://guide.rhea.finance/developers/audits/previous-audits#jita
-LINK | [no text] | https://guide.rhea.finance/developers/audits/previous-audits#sigmaprime
-LINK | audit-reports/rust/blocksec_boost_farm_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_boost_farm_v1.0_signed.pdf
-LINK | audit-reports/rust/blocksec_burrow_margin_trade_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_margin_trade_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_burrow_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_v1.0_signed.pdf
-LINK | audit-reports/rust/blocksec_burrow_v2.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrow_v2.0_signed.pdf
-LINK | audit-reports/rust/blocksec_burrowland_pyth_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrowland_pyth_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_burrowland_v3_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_burrowland_v3_signed.pdf
-LINK | audit-reports/rust/blocksec_memefarming_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_memefarming_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_bridge_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_bridge_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_degenpool_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_degenpool_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_degenpool_v2.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_degenpool_v2.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_exchange_v4.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_exchange_v4.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_dcl_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v1.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_dcl_v2.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v2.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_dcl_v3.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_dcl_v3.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_exchange_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v1.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_exchange_v2.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v2.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_exchange_v3.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_exchange_v3.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_finance_xref_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_finance_xref_v1.0_signed.pdf
-LINK | audit-reports/rust/blocksec_ref_lp_as_collateral_v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_lp_as_collateral_v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_token-locker-v1.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_token-locker-v1.0-signed.pdf
-LINK | audit-reports/rust/blocksec_ref_token-locker-v2.0-signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_ref_token-locker-v2.0-signed.pdf
-LINK | audit-reports/rust/blocksec_refve_v1.0_signed.pdf at main · blocksecteam/audit-reports | https://github.com/blocksecteam/audit-reports/blob/main/rust/blocksec_refve_v1.0_signed.pdf
-LINK | https://github.com/blocksecteam/audit-reports/blob/main/solidity/blocksec_rhea_token_v1.0-signed.pdf | https://github.com/blocksecteam/audit-reports/blob/main/solidity/blocksec_rhea_token_v1.0-signed.pdf
-LINK | https://github.com/blocksecteam/audit-reports/tree/main/rust | https://github.com/blocksecteam/audit-reports/tree/main/rust
-LINK | https://jitadigital.com/ | https://jitadigital.com/
-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+{% file src="/files/mbQ4gNkGyrewihSkuWa4" %}

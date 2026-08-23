@@ -1,33 +1,41 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__deposit-or-transfer-issues-missing-lost__deposited-via-ethereum-network__36fa1e279f:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__deposit-or-transfer-issues-missing-lost__deposited-via-ethereum-network__36fa1e279f:current
-@@ -0,0 +1,30 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+The Ethereum address can only receive ETH/ENA on the Ethereum network. Deposits other than ETH/ENA or on other networks will fail and not be credited, e.g., Depositing USDC on Ethereum or ETH on Base will fail and not be credited.
-+If you accidentally sent USDC, USDT, or WETH on Ethereum or ETH on Arbitrum, you can try Unit's revert feature:
-+https://app.hyperunit.xyz/revert
-+. Instructions can be found here:
-+https://docs.hyperunit.xyz/how-to/revert
-+.
-+If you accidentally sent another asset that is not supported on Ethereum or sent ETH/ENA on a chain other than Ethereum, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
-+If you sent the right token on the right chain and deposited more than the minimum amount, but your ETH/ENA still shows up as “Failed", reach out to the Unit team, which manages Ethereum network deposits & withdrawals:
-+https://app.hyperunit.xyz/support
-+There are minimum deposits of 0.007 ETH and 120 ENA. Deposits below these amounts will result in a loss of funds.
-+Note that Ethereum deposits take ~5 minutes to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.
-+Previous
-+Deposited via Bitcoin network
-+Next
-+Deposited via Solana network
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-ethereum-network.md
-+LINK | Next Deposited via Solana network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-solana-network
-+LINK | Previous Deposited via Bitcoin network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-bitcoin-network
-+LINK | https://app.hyperunit.xyz/revert | https://app.hyperunit.xyz/revert
-+LINK | https://app.hyperunit.xyz/support | https://app.hyperunit.xyz/support
-+LINK | https://docs.hyperunit.xyz/how-to/revert | https://docs.hyperunit.xyz/how-to/revert
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,30 +1,8 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-The Ethereum address can only receive ETH/ENA on the Ethereum network. Deposits other than ETH/ENA or on other networks will fail and not be credited, e.g., Depositing USDC on Ethereum or ETH on Base will fail and not be credited.
+-If you accidentally sent USDC, USDT, or WETH on Ethereum or ETH on Arbitrum, you can try Unit's revert feature:
+-https://app.hyperunit.xyz/revert
+-. Instructions can be found here:
+-https://docs.hyperunit.xyz/how-to/revert
+-.
+-If you accidentally sent another asset that is not supported on Ethereum or sent ETH/ENA on a chain other than Ethereum, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
+-If you sent the right token on the right chain and deposited more than the minimum amount, but your ETH/ENA still shows up as “Failed", reach out to the Unit team, which manages Ethereum network deposits & withdrawals:
+-https://app.hyperunit.xyz/support
+-There are minimum deposits of 0.007 ETH and 120 ENA. Deposits below these amounts will result in a loss of funds.
+-Note that Ethereum deposits take ~5 minutes to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.
+-Previous
+-Deposited via Bitcoin network
+-Next
+-Deposited via Solana network
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-ethereum-network.md
+-LINK | Next Deposited via Solana network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-solana-network
+-LINK | Previous Deposited via Bitcoin network | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-bitcoin-network
+-LINK | https://app.hyperunit.xyz/revert | https://app.hyperunit.xyz/revert
+-LINK | https://app.hyperunit.xyz/support | https://app.hyperunit.xyz/support
+-LINK | https://docs.hyperunit.xyz/how-to/revert | https://docs.hyperunit.xyz/how-to/revert
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/deposit-or-transfer-issues-missing-lost/deposited-via-ethereum-network.md).
++# Deposited via Ethereum network
++* The Ethereum address can only receive ETH/ENA on the Ethereum network. Deposits other than ETH/ENA or on other networks will fail and not be credited, e.g., Depositing USDC on Ethereum or ETH on Base will fail and not be credited.
++* If you accidentally sent USDC, USDT, or WETH on Ethereum or ETH on Arbitrum, you can try Unit's revert feature: <https://app.hyperunit.xyz/revert>. Instructions can be found here: <https://docs.hyperunit.xyz/how-to/revert>.&#x20;
++* If you accidentally sent another asset that is not supported on Ethereum or sent ETH/ENA on a chain other than Ethereum, there isn't a way to retrieve these assets currently, unless Unit adds support for them.
++* If you sent the right token on the right chain and deposited more than the minimum amount, but your ETH/ENA still shows up as “Failed", reach out to the Unit team, which manages Ethereum network deposits & withdrawals: [https://app.hyperunit.xyz/support](<https://app.hyperunit.xyz/support >)
++* There are minimum deposits of 0.007 ETH and 120 ENA. Deposits below these amounts will result in a loss of funds.
++* Note that Ethereum deposits take \~5 minutes to arrive in your wallet. You can check the time estimate in the same deposit pop-up where you copied the deposit address.

@@ -1,30 +1,45 @@
 --- near/rhea-guide/x-chain-guides__staking__2e78e174d3:previous
 +++ near/rhea-guide/x-chain-guides__staking__2e78e174d3:current
-@@ -0,0 +1,27 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+First, make sure that you are connected to Ref Finance with your wallet.
-+Step 1: Click on xREF and select Stake
-+Step 2: Enter the amount of REF tokens you want to stake
-+Step 3: Approve the transaction (i.e. using NEAR wallet)
-+Track your xREF balance
-+And how much REF you will get by unstaking
-+Unstake
-+Click on xREF and select Unstake. Enter the amount of xREF tokens you want to unstake.
-+Approve the transaction (i.e. using NEAR wallet)
-+Last updated
-+1 year ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/x-chain-guides/staking.md
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#approve-the-transaction-i.e.-using-near-wallet
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#click-on-xref-and-select-unstake.-enter-the-amount-of-xref-tokens-you-want-to-unstake
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-1-click-on-xref-and-select-stake
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-2-enter-the-amount-of-ref-tokens-you-want-to-stake
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-3-approve-the-transaction-i.e.-using-near-wallet
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#track-your-xref-balance
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#unstake
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,27 +1,17 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides/staking.md).
++# Staking
+ First, make sure that you are connected to Ref Finance with your wallet.
+-Step 1: Click on xREF and select Stake
+-Step 2: Enter the amount of REF tokens you want to stake
+-Step 3: Approve the transaction (i.e. using NEAR wallet)
+-Track your xREF balance
++### Step 1: Click on xREF and select Stake
++<figure><img src="/files/lzTLOklhKj0Cifm3QTRJ" alt=""><figcaption></figcaption></figure>
++### Step 2: Enter the amount of REF tokens you want to stake
++<figure><img src="/files/W7zsa7xmG61UyLzSEEf0" alt=""><figcaption></figcaption></figure>
++### Step 3: Approve the transaction (i.e. using NEAR wallet)
++![](/files/xp5QltE02qUPUMQGVRf8)
++## Track your xREF balance
+ And how much REF you will get by unstaking
+-Unstake
+-Click on xREF and select Unstake. Enter the amount of xREF tokens you want to unstake.
+-Approve the transaction (i.e. using NEAR wallet)
+-Last updated
+-1 year ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/x-chain-guides/staking.md
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#approve-the-transaction-i.e.-using-near-wallet
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#click-on-xref-and-select-unstake.-enter-the-amount-of-xref-tokens-you-want-to-unstake
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-1-click-on-xref-and-select-stake
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-2-enter-the-amount-of-ref-tokens-you-want-to-stake
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#step-3-approve-the-transaction-i.e.-using-near-wallet
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#track-your-xref-balance
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/staking#unstake
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++<figure><img src="/files/q8362L50PDFSkLri5IkC" alt=""><figcaption></figcaption></figure>
++## Unstake
++### Click on xREF and select Unstake. Enter the amount of xREF tokens you want to unstake.&#x20;
++<figure><img src="/files/P1Dq2TbpaAEMc32Ibm5O" alt="" width="563"><figcaption></figcaption></figure>
++### Approve the transaction (i.e. using NEAR wallet)
++![](/files/xp5QltE02qUPUMQGVRf8)

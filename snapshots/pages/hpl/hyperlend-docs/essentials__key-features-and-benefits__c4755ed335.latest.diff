@@ -1,49 +1,64 @@
 --- hpl/hyperlend-docs/essentials__key-features-and-benefits__c4755ed335:previous
 +++ hpl/hyperlend-docs/essentials__key-features-and-benefits__c4755ed335:current
-@@ -0,0 +1,46 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+HyperLend is a decentralized finance (DeFi) platform designed to simplify and secure the process of lending and borrowing cryptocurrencies.
-+Key Features:
-+Decentralized Protocol:
-+Operates transparently using secure, audited, and open-source smart contracts.
-+Flexible Lending & Borrowing:
-+Users can generate interest by supplying assets or obtain loans using deposited collateral.
-+Flash Loans:
-+Enables instant and secure loans for efficient execution of financial strategies.
-+Robust Security:
-+Employs
-+audited
-+and
-+battle-tested
-+smart contracts, ensuring maximum protection of user assets. Learn more
-+here
-+.
-+Referral Rewards:
-+Promotes community expansion by incentivising users who refer others to the platform.
-+Incentive Programs:
-+Offers diverse engagement programs to increase user activity and optimize returns.
-+User Benefits:
-+Earn Passive Income:
-+Supply assets to liquidity pools to earn competitive interest.
-+Stay Liquid
-+: Borrow against your assets to access working capital without triggering a taxable event or losing your long-term market position. Stay liquid while your portfolio grows.
-+Versatile Choices:
-+Customize your investment strategy by selecting assets and pools aligned with your objectives and risk tolerance.
-+Complete Transparency:
-+Regularly audited, fully transparent, open-source codebase.
-+Previous
-+HyperLend
-+Next
-+Partners
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/essentials/key-features-and-benefits.md
-+LINK | Next Partners | https://docs.hyperlend.finance/essentials/partners
-+LINK | Previous HyperLend | https://docs.hyperlend.finance/
-+LINK | here | https://hyperlend.finance/security
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,46 +1,16 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/essentials/key-features-and-benefits.md).
++# Key Features and Benefits
+ HyperLend is a decentralized finance (DeFi) platform designed to simplify and secure the process of lending and borrowing cryptocurrencies.
+-Key Features:
+-Decentralized Protocol:
+-Operates transparently using secure, audited, and open-source smart contracts.
+-Flexible Lending & Borrowing:
+-Users can generate interest by supplying assets or obtain loans using deposited collateral.
+-Flash Loans:
+-Enables instant and secure loans for efficient execution of financial strategies.
+-Robust Security:
+-Employs
+-audited
+-and
+-battle-tested
+-smart contracts, ensuring maximum protection of user assets. Learn more
+-here
+-.
+-Referral Rewards:
+-Promotes community expansion by incentivising users who refer others to the platform.
+-Incentive Programs:
+-Offers diverse engagement programs to increase user activity and optimize returns.
+-User Benefits:
+-Earn Passive Income:
+-Supply assets to liquidity pools to earn competitive interest.
+-Stay Liquid
+-: Borrow against your assets to access working capital without triggering a taxable event or losing your long-term market position. Stay liquid while your portfolio grows.
+-Versatile Choices:
+-Customize your investment strategy by selecting assets and pools aligned with your objectives and risk tolerance.
+-Complete Transparency:
+-Regularly audited, fully transparent, open-source codebase.
+-Previous
+-HyperLend
+-Next
+-Partners
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/essentials/key-features-and-benefits.md
+-LINK | Next Partners | https://docs.hyperlend.finance/essentials/partners
+-LINK | Previous HyperLend | https://docs.hyperlend.finance/
+-LINK | here | https://hyperlend.finance/security
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++**Key Features:**
++* **Decentralized Protocol:** Operates transparently using secure, audited, and open-source smart contracts.
++* **Flexible Lending & Borrowing:** Users can generate interest by supplying assets or obtain loans using deposited collateral.
++* **Flash Loans:** Enables instant and secure loans for efficient execution of financial strategies.
++* **Robust Security:** Employs **audited** and **battle-tested** smart contracts, ensuring maximum protection of user assets. Learn more [here](https://hyperlend.finance/security).
++* **Referral Rewards:** Promotes community expansion by incentivising users who refer others to the platform.
++* **Incentive Programs:** Offers diverse engagement programs to increase user activity and optimize returns.
++***
++**User Benefits:**
++* **Earn Passive Income:** Supply assets to liquidity pools to earn competitive interest.
++* **Stay Liquid**: Borrow against your assets to access working capital without triggering a taxable event or losing your long-term market position. Stay liquid while your portfolio grows.
++* **Versatile Choices:** Customize your investment strategy by selecting assets and pools aligned with your objectives and risk tolerance.
++* **Complete Transparency:** Regularly audited, fully transparent, open-source codebase.

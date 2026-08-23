@@ -1,28 +1,34 @@
 --- hpl/hyperlend-docs/support__mica-whitepaper__f707ef8f28:previous
 +++ hpl/hyperlend-docs/support__mica-whitepaper__f707ef8f28:current
-@@ -0,0 +1,25 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+In accordance with Regulation (EU) 2023/1114 (MiCA), Hyperlend Inc. has prepared and notified a crypto-asset white paper for the HPL token.
-+Token:
-+HPL
-+Digital Token Identifier (DTI):
-+VJ0L7N45M
-+Offeror:
-+Hyperlend Inc. (LEI: 98450008DF795FA2D049)
-+https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml
-+Previous
-+Bridge
-+Next
-+Help
-+Last updated
-+3 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/support/mica-whitepaper.md
-+LINK | Next Help | https://docs.hyperlend.finance/support/help
-+LINK | Previous Bridge | https://docs.hyperlend.finance/advanced-features/bridge
-+LINK | https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml | https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,25 +1,7 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/support/mica-whitepaper.md).
++# MiCA Whitepaper
+ In accordance with Regulation (EU) 2023/1114 (MiCA), Hyperlend Inc. has prepared and notified a crypto-asset white paper for the HPL token.
+-Token:
+-HPL
+-Digital Token Identifier (DTI):
+-VJ0L7N45M
+-Offeror:
+-Hyperlend Inc. (LEI: 98450008DF795FA2D049)
+-https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml
+-Previous
+-Bridge
+-Next
+-Help
+-Last updated
+-3 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/support/mica-whitepaper.md
+-LINK | Next Help | https://docs.hyperlend.finance/support/help
+-LINK | Previous Bridge | https://docs.hyperlend.finance/advanced-features/bridge
+-LINK | https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml | https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++* **Token:** HPL
++* **Digital Token Identifier (DTI):** VJ0L7N45M
++* **Offeror:** Hyperlend Inc. (LEI: 98450008DF795FA2D049)
++<https://www.hyperlend.finance/WhitePaper-%7BHPL%7D-%7BHyperlend%20Inc.%7D-%7BPA%7D-260413154439-en.xhtml>

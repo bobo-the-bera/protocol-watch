@@ -1,43 +1,64 @@
 --- near/rhea-guide/x-chain-guides__farming__2001bffb01:previous
 +++ near/rhea-guide/x-chain-guides__farming__2001bffb01:current
-@@ -0,0 +1,40 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Farming or Yield Farming is defined as the process of staking your LP tokens into a farm, to earn additional rewards, on top of your existing liquidity position(s) swap fee revenue.
-+Like pools, all farms are contained in one single contract (v2.ref-farming.near). Plus, a farm can support up to 16 different reward tokens.
-+Liquidity incentives are usually used by projects' owners to attract liquidity and to facilitate trading.
-+When you stake LP tokens into a farm, you also continue to earn trading fees from the corresponding liquidity pool
-+How to farm?
-+First, make sure that you are connected to Ref Finance with your wallet.
-+Step 1: Click on Farms and choose a relevent pool
-+In the Farms section, you can view all old, live, and future farms and filter them by different criteria.
-+To farm, you need LP tokens, which means you need to provide liquidity initially for the corresponding pool. To provide liquidity, please refer to the
-+Pooling section
-+.
-+Farms are limited to a certain number of pools, not all pools have a yield farming option
-+You can check the associated pool of a farm by either clicking on the pool, choosing Add liquidity or Get LP Tokens
-+Step 2: Click on Stake after adding liquidity
-+Note that you can do some yield simulations by clicking on ROI calculator. Please be careful as the simulations are 'other things being equal' (i.e. not taking into account potential Divergence Loss).
-+Enter the amount of LP tokens you want to stake.
-+Step 3: Stake & approve the transaction (i.e. using NEAR wallet)
-+Track, claim and withdraw farming rewards
-+First, make sure that you are connected to RHEA Finance with your wallet.
-+Step 1: Click on Farms and select Yours, Click your farm
-+Step 2: Claim your rewards
-+Last updated
-+1 year ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/x-chain-guides/farming.md
-+LINK | Pooling section | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/pooling
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#how-to-farm
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-1-click-on-farms-and-choose-a-relevent-pool
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-1-click-on-farms-and-select-yours-click-your-farm
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-2-claim-your-rewards
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-2-click-on-stake-after-adding-liquidity
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-3-stake-and-approve-the-transaction-i.e.-using-near-wallet
-+LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#track-claim-and-withdraw-farming-rewards
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,40 +1,31 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides/farming.md).
++# Farming
+ Farming or Yield Farming is defined as the process of staking your LP tokens into a farm, to earn additional rewards, on top of your existing liquidity position(s) swap fee revenue.
+ Like pools, all farms are contained in one single contract (v2.ref-farming.near). Plus, a farm can support up to 16 different reward tokens.
+ Liquidity incentives are usually used by projects' owners to attract liquidity and to facilitate trading.
++{% hint style="info" %}
+ When you stake LP tokens into a farm, you also continue to earn trading fees from the corresponding liquidity pool
+-How to farm?
++{% endhint %}
++## How to farm?
+ First, make sure that you are connected to Ref Finance with your wallet.
+-Step 1: Click on Farms and choose a relevent pool
++### Step 1: Click on Farms and choose a relevent pool
++<figure><img src="/files/IzdTMg3pye665ME3iZYD" alt=""><figcaption></figcaption></figure>
+ In the Farms section, you can view all old, live, and future farms and filter them by different criteria.
+-To farm, you need LP tokens, which means you need to provide liquidity initially for the corresponding pool. To provide liquidity, please refer to the
+-Pooling section
+-.
+-Farms are limited to a certain number of pools, not all pools have a yield farming option
++To farm, you need LP tokens, which means you need to provide liquidity initially for the corresponding pool. To provide liquidity, please refer to the [Pooling section](/near-chain-guides/how-rhea-finance-works/pooling.md).&#x20;
++{% hint style="info" %}
++Farms are limited to a certain number of pools, not all pools have a yield farming option &#x20;
++{% endhint %}
+ You can check the associated pool of a farm by either clicking on the pool, choosing Add liquidity or Get LP Tokens
+-Step 2: Click on Stake after adding liquidity
++<figure><img src="/files/5ZaHfUTvOSIy8qgF7yTE" alt=""><figcaption></figcaption></figure>
++### Step 2: Click on Stake after adding liquidity
+ Note that you can do some yield simulations by clicking on ROI calculator. Please be careful as the simulations are 'other things being equal' (i.e. not taking into account potential Divergence Loss).
+ Enter the amount of LP tokens you want to stake.
+-Step 3: Stake & approve the transaction (i.e. using NEAR wallet)
+-Track, claim and withdraw farming rewards
++<figure><img src="/files/qnrwYYfjM2266heuwUqL" alt=""><figcaption></figcaption></figure>
++### Step 3: Stake & approve the transaction (i.e. using NEAR wallet)
++![](/files/xp5QltE02qUPUMQGVRf8)
++## Track, claim and withdraw farming rewards
+ First, make sure that you are connected to RHEA Finance with your wallet.
+-Step 1: Click on Farms and select Yours, Click your farm
+-Step 2: Claim your rewards
+-Last updated
+-1 year ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/x-chain-guides/farming.md
+-LINK | Pooling section | https://guide.rhea.finance/near-chain-guides/how-rhea-finance-works/pooling
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#how-to-farm
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-1-click-on-farms-and-choose-a-relevent-pool
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-1-click-on-farms-and-select-yours-click-your-farm
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-2-claim-your-rewards
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-2-click-on-stake-after-adding-liquidity
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#step-3-stake-and-approve-the-transaction-i.e.-using-near-wallet
+-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/farming#track-claim-and-withdraw-farming-rewards
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++### Step 1: Click on Farms and select Yours, Click your farm
++<figure><img src="/files/ZHPnqtvwswqTGn74Yh30" alt=""><figcaption></figcaption></figure>
++### Step 2: Claim your rewards
++<figure><img src="/files/YCGzTvNCLdNoc9mrdc7R" alt=""><figcaption></figcaption></figure>

@@ -1,22 +1,26 @@
 --- near/rhea-guide/near-chain-guides__yield-boost__5cbbbc7ea4:previous
 +++ near/rhea-guide/near-chain-guides__yield-boost__5cbbbc7ea4:current
-@@ -0,0 +1,19 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+xRHEA Farming Boost
-+xRHEA Lending Boost
-+Previous
-+Guide
-+Next
-+xRHEA Farming Boost
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides/yield-boost.md
-+LINK | Next xRHEA Farming Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost
-+LINK | Previous Guide | https://guide.rhea.finance/near-chain-guides/margin-trading/guide
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
-+LINK | xRHEA Farming Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost
-+LINK | xRHEA Lending Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-lending-boost
+@@ -1,19 +1,4 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-xRHEA Farming Boost
+-xRHEA Lending Boost
+-Previous
+-Guide
+-Next
+-xRHEA Farming Boost
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/yield-boost.md
+-LINK | Next xRHEA Farming Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost
+-LINK | Previous Guide | https://guide.rhea.finance/near-chain-guides/margin-trading/guide
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+-LINK | xRHEA Farming Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost
+-LINK | xRHEA Lending Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-lending-boost
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/yield-boost.md).
++# Yield Boost
++- [xRHEA Farming Boost](https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost.md)
++- [xRHEA Lending Boost](https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-lending-boost.md)

@@ -1,21 +1,24 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__trading__delisting__321c783f30:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__trading__delisting__321c783f30:current
-@@ -0,0 +1,18 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Validators vote on whether to delist validator-operated perps. If validators vote to delist an asset, the perps will settle to the 1 hour time weighted spot oracle price before the scheduled delisting voting time. This is a settlement mechanism used by many centralized exchanges.
-+When an asset is delisted, all positions are settled and open orders are cancelled. Users who wish to avoid automatic settlement should close their positions beforehand. After settlement, no new orders will be accepted.
-+Previous
-+Hyperps
-+Next
-+Market making
-+Last updated
-+7 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting.md
-+LINK | Next Market making | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making
-+LINK | Previous Hyperps | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,18 +1,4 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Validators vote on whether to delist validator-operated perps. If validators vote to delist an asset, the perps will settle to the 1 hour time weighted spot oracle price before the scheduled delisting voting time. This is a settlement mechanism used by many centralized exchanges.
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting.md).
++# Delisting
++Validators vote on whether to delist validator-operated perps. If validators vote to delist an asset, the perps will settle to the 1 hour time weighted spot oracle price before the scheduled delisting voting time. This is a settlement mechanism used by many centralized exchanges.&#x20;
+ When an asset is delisted, all positions are settled and open orders are cancelled. Users who wish to avoid automatic settlement should close their positions beforehand. After settlement, no new orders will be accepted.
+-Previous
+-Hyperps
+-Next
+-Market making
+-Last updated
+-7 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting.md
+-LINK | Next Market making | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making
+-LINK | Previous Hyperps | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/hyperps
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

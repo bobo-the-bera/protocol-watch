@@ -1,34 +1,11 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-The Hyperliquid legacy bridge contract has been audited by Zellic.
-Circle's contracts are audited independently:
-https://github.com/circlefin/hyperevm-circle-contracts
-2312 Hyperliquid - Zellic Audit Report.pdf
-PDF · 748KB
-Download
-Open
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/audits.md).
+# Audits
+The Hyperliquid legacy bridge contract has been audited by Zellic.&#x20;
+Circle's contracts are audited independently: <https://github.com/circlefin/hyperevm-circle-contracts>
+{% file src="/files/6HQImWlcAsjk8f6xJnEy" %}
 Final report
-2308 Hyperliquid - Zellic Audit Report.pdf
-PDF · 2MB
-Download
-Open
+{% endfile %}
+{% file src="/files/Vnkes8g7IbP1zZQUKLHJ" %}
 First report
-Previous
-Bug bounty program
-Next
-Brand kit
-Last updated
-15 days ago
-[[LINK TARGETS]]
-LINK | 2308 Hyperliquid - Zellic Audit Report.pdf | https://2356094849-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyUdp569E6w18GdfqlGvJ%2Fuploads%2FuiAL7ufANHbcsrAvZgLQ%2F2308%20Hyperliquid%20-%20Zellic%20Audit%20Report.pdf?alt=media&token=7450a0f9-c2c8-4c3e-907a-5619b431e86c
-LINK | 2312 Hyperliquid - Zellic Audit Report.pdf | https://2356094849-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyUdp569E6w18GdfqlGvJ%2Fuploads%2FRhEpax5uWlJelxdFNb9c%2F2312%20Hyperliquid%20-%20Zellic%20Audit%20Report.pdf?alt=media&token=1e76a9b0-3a04-4d44-a8c9-a468e60cf7f1
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/audits.md
-LINK | Next Brand kit | https://hyperliquid.gitbook.io/hyperliquid-docs/brand-kit
-LINK | Open | https://2356094849-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyUdp569E6w18GdfqlGvJ%2Fuploads%2FRhEpax5uWlJelxdFNb9c%2F2312%20Hyperliquid%20-%20Zellic%20Audit%20Report.pdf?alt=media&token=1e76a9b0-3a04-4d44-a8c9-a468e60cf7f1
-LINK | Open | https://2356094849-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyUdp569E6w18GdfqlGvJ%2Fuploads%2FuiAL7ufANHbcsrAvZgLQ%2F2308%20Hyperliquid%20-%20Zellic%20Audit%20Report.pdf?alt=media&token=7450a0f9-c2c8-4c3e-907a-5619b431e86c
-LINK | Previous Bug bounty program | https://hyperliquid.gitbook.io/hyperliquid-docs/bug-bounty-program
-LINK | https://github.com/circlefin/hyperevm-circle-contracts | https://github.com/circlefin/hyperevm-circle-contracts
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+{% endfile %}
+&#x20;

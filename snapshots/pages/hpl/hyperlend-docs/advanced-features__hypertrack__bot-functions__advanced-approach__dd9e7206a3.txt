@@ -1,60 +1,17 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Advanced Approach
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach.md).
+# ↪ Advanced Approach
+<figure><img src="/files/oTal5RkaTCqKcvF1Bzre" alt=""><figcaption></figcaption></figure>
+***
+#### Advanced Approach
 For those who prefer a more hands-on and customizable tracking experience, HyperTrack offers an "Advanced Search" functionality. This feature allows users to manually input commands for tailored monitoring and alerts. Here's how to leverage these commands:
-/add
-name
-address
-: Begin tracking transactions for a specific address. Ideal for monitoring high-priority wallets or contracts.
-/remove
-name
-or
-address
-: Stop receiving alerts for a given name or address. Use this to declutter your tracking list.
-/add_liquidations
-name
-address
-: Enable alerts for liquidation events at the specified address. A crucial tool for risk management.
-/remove_liquidations
-name
-or
-address
-: Disable liquidation alerts when they are no longer needed.
-/hf_add
-name
-address
-min-health-factor
-: Monitor and get notified if the health factor of an address drops below a specified threshold.
-/hf_remove
-name
-or
-address
-: Stop health factor monitoring for a particular address.
-/rates_add
-name
-asset-address
-max-borrow-rate-%
-: Set alerts for when an asset's borrow rate hits a predetermined limit. Useful for optimizing borrowing strategies.
-/rates_remove
-name
-or
-asset-address
-: Remove alerts for borrow rate thresholds.
-/list
-: Display all your active alert subscriptions for easy management.
+* **/add `name`** **`address`**: Begin tracking transactions for a specific address. Ideal for monitoring high-priority wallets or contracts.
+* **/remove `name` or `address`**: Stop receiving alerts for a given name or address. Use this to declutter your tracking list.
+* **/add\_liquidations `name`** **`address`**: Enable alerts for liquidation events at the specified address. A crucial tool for risk management.
+* **/remove\_liquidations `name` or `address`**: Disable liquidation alerts when they are no longer needed.
+* **/hf\_add `name`** **`address`** **`min-health-factor`**: Monitor and get notified if the health factor of an address drops below a specified threshold.
+* **/hf\_remove `name` or `address`**: Stop health factor monitoring for a particular address.
+* **/rates\_add `name`** **`asset-address`** **`max-borrow-rate-%`**: Set alerts for when an asset's borrow rate hits a predetermined limit. Useful for optimizing borrowing strategies.
+* **/rates\_remove `name` or `asset-address`**: Remove alerts for borrow rate thresholds.
+* **/list**: Display all your active alert subscriptions for easy management.
 Feel free to experiment and fine-tune your setup to get the most out of HyperTrack's monitoring capabilities!
-Previous
-↪ Borrow Rate
-Next
-FAQ
-Last updated
-1 year ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach.md
-LINK | Next FAQ | https://docs.hyperlend.finance/advanced-features/hypertrack/faq
-LINK | Previous ↪ Borrow Rate | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate
-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach#advanced-approach
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+***

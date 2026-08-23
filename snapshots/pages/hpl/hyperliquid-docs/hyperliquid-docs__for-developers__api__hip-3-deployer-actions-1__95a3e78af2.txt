@@ -1,185 +1,54 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions-1.md).
+# HIP-3 deployer actions
 The API for deploying and operating builder-deployed perpetual dexs involves the following L1 action:
-Copy
-type
-PerpDeployAction
-=
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-registerAsset
-:
-RegisterAsset
-,
+```typescript
+type PerpDeployAction =
+| {
+type: "perpDeploy",
+registerAsset: RegisterAsset,
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setOracle
-:
-SetOracle
-,
+| {
+type: "perpDeploy",
+setOracle: SetOracle,
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setFundingMultipliers
-:
-SetFundingMultipliers
-,
+| {
+type: "perpDeploy",
+setFundingMultipliers: SetFundingMultipliers,
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-haltTrading
-:
-{
-coin
-:
-string
-,
-isHalted
-:
-boolean
-},
+| {
+type: "perpDeploy",
+haltTrading: { coin: string, isHalted: boolean },
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setMarginTableIds
-:
-SetMarginTableIds
-,
+| {
+type: "perpDeploy",
+setMarginTableIds: SetMarginTableIds,
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setFeeRecipient
-:
-{
-dex
-:
-string
-,
-feeRecipient
-:
-address
-},
+| {
+type: "perpDeploy",
+setFeeRecipient: { dex: string, feeRecipient: address },
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setOpenInterestCaps
-:
-SetOpenInterestCaps
+| {
+type: "perpDeploy",
+setOpenInterestCaps: SetOpenInterestCaps
 }
-|
-{
-type
-:
-"
-perpDeploy
-"
-,
-setSubDeployers
-:
-{
-dex
-:
-string
-,
-subDeployers
-:
-Array
-<
-SubDeployerInput
->
-}
+| {
+type: "perpDeploy",
+setSubDeployers: { dex: string, subDeployers: Array<SubDeployerInput> }
 };
 /**
 * RegisterAsset can be called to initialize a new dex and register an asset at the same time.
 * If schema is not provided, then RegisterAsset can be called multiple times to register additional assets
 * for the provided dex.
-*
-@
-param
-maxGas
-- Max gas in native token wei. If not provided, then uses current deploy auction price.
-*
-@
-param
-assetRequest
-- Contains new asset listing parameters. See RegisterAssetRequest below for details.
-*
-@
-param
-dex
-- Name of the perp dex (<= 6 characters)
-*
-@
-param
-schema
-- Contains new perp dex parameters. See PerpDexSchemaInput below for details.
+* @param maxGas - Max gas in native token wei. If not provided, then uses current deploy auction price.
+* @param assetRequest - Contains new asset listing parameters. See RegisterAssetRequest below for details.
+* @param dex - Name of the perp dex (<= 6 characters)
+* @param schema - Contains new perp dex parameters. See PerpDexSchemaInput below for details.
 */
-type
-RegisterAsset
-=
-{
-maxGas
-?:
-number
-;
-assetRequest
-:
-RegisterAssetRequest
-;
-dex
-:
-string
-;
-schema
-?:
-PerpDexSchemaInput
-;
+type RegisterAsset = {
+maxGas?: number;
+assetRequest: RegisterAssetRequest;
+dex: string;
+schema?: PerpDexSchemaInput;
 }
 /**
 * The markPxs outer list can be length 0, 1, or 2. The median of these inputs
@@ -195,254 +64,88 @@ PerpDexSchemaInput
 * All prices are clamped to 10x the start of day value.
 * markPx moves are clamped to 1% from previous markPx.
 * markPx cannot be updated such that open interest would be 10x the open interest cap.
-*
-@
-param
-dex
-- Name of the perp dex (<= 6 characters)
-*
-@
-param
-oraclePxs
-- A list (sorted by key) of asset and oracle prices.
-*
-@
-param
-markPxs
-- An outer list of inner lists (inner list sorted by key) of asset and mark prices.
-*
-@
-param
-externalPerpPxs
-- A list (sorted by key) of asset and external prices which prevent sudden mark price deviations.
+* @param dex - Name of the perp dex (<= 6 characters)
+* @param oraclePxs - A list (sorted by key) of asset and oracle prices.
+* @param markPxs - An outer list of inner lists (inner list sorted by key) of asset and mark prices.
+* @param externalPerpPxs - A list (sorted by key) of asset and external prices which prevent sudden mark price deviations.
 Ideally externally determined by deployer, but could fall back to an EMA of recent mark prices.
 Must include all assets.
 */
-type
-SetOracle
-{
-dex: string
-;
-oraclePxs
-:
-Array
-<
-[
-string
-,
-string
-]
->
-;
-markPxs
-:
-Array
-<
-Array
-<
-[
-string
-,
-string
-]
->>
-;
-externalPerpPxs
-:
-Array
-<
-[
-string
-,
-string
-]
->
-;
+type SetOracle {
+dex: string;
+oraclePxs: Array<[string, string]>;
+markPxs: Array<Array<[string, string]>>;
+externalPerpPxs: Array<[string, string]>;
 }
-type
-RegisterAssetRequest
-{
-coin: string
-;
-szDecimals
-:
-number
-;
-oraclePx
-:
-string
-;
-marginTableId
-:
-number
-;
-onlyIsolated
-:
-boolean
-;
+type RegisterAssetRequest {
+coin: string;
+szDecimals: number;
+oraclePx: string;
+marginTableId: number;
+onlyIsolated: boolean;
 }
 /**
-*
-@
-param
-fullName
-- Full name of the perp dex
-*
-@
-param
-collateralToken
-- Collateral token index
-*
-@
-param
-oracleUpdater
-- User to update oracles. If not provided, then deployer is assumed to be oracle updater.
+* @param fullName - Full name of the perp dex
+* @param collateralToken - Collateral token index
+* @param oracleUpdater - User to update oracles. If not provided, then deployer is assumed to be oracle updater.
 */
-type
-PerpDexSchemaInput
-{
-fullName: string
-;
-collateralToken
-:
-int
-;
-oracleUpdater
-?:
-string
-;
+type PerpDexSchemaInput {
+fullName: string;
+collateralToken: int;
+oracleUpdater?: string;
 }
 /**
 * A list (sorted by key) of asset and funding multiplier.
 * Multipliers must be between 0 and 10 and are used to scale the funding rate.
 */
-type
-SetFundingMultipliers
-=
-Array
-<
-[
-string
-,
-string
-]
->;
+type SetFundingMultipliers = Array<[string, string]>;
 /**
 * A list (sorted by key) of asset and margin table ids.
 * Margin table ids must be non-zero.
 */
-type
-SetMarginTableIds
-=
-Array
-<
-[
-string
-,
-number
-]
->;
+type SetMarginTableIds = Array<[string, number]>;
 /**
 * Inserts margin table to dex
 */
-type
-InsertMarginTable
-{
-dex: string
-;
-marginTable
-:
-RawMarginTable
-;
+type InsertMarginTable {
+dex: string;
+marginTable: RawMarginTable;
 }
 /**
 * marginTiers must be sorted in order of increasing lower bound and decreasing maxLeverage
 * marginTiers has a maximum length of 3.
 */
-type
-RawMarginTable
-{
-description: string
-;
-marginTiers
-:
-Array
-<
-RawMarginTier
->
-;
+type RawMarginTable {
+description: string;
+marginTiers: Array<RawMarginTier>;
 }
 /**
 * lowerBound is a position notional value above which the leverage is constrained by maxLeverage
 */
-type
-RawMarginTier
-{
-lowerBound: int
-;
-maxLeverage
-:
-MaxLeverage
-;
+type RawMarginTier {
+lowerBound: int;
+maxLeverage: MaxLeverage;
 }
 /**
 * Max leverage is in the range [1, 50]
 */
-type
-MaxLeverage
-=
-number
-;
+type MaxLeverage = number;
 /**
 * A list (sorted by key) of asset and open interest cap notionals.
 * Open interest caps must be at least the maximum of 1_000_000 (1 size unit of collateral asset) or half of the current open interest.
 */
-type
-SetOpenInterestCaps
-=
-Array
-<
-[
-string
-,
-number
-]
->;
+type SetOpenInterestCaps = Array<[string, number]>;
 /**
 * A modification to sub-deployer permissions
 */
-type
-SubDeployerInput
-{
-variant: string
-;
-// corresponds to a variant of PerpDeployAction. For example, "haltTrading" or "setOracle"
-user
-:
-String
-;
-allowed
-:
-boolean
-;
-// add or remove the subDeployer from the authorized set for the action variant
+type SubDeployerInput {
+variant: string; // corresponds to a variant of PerpDeployAction. For example, "haltTrading" or "setOracle"
+user: String;
+allowed: boolean; // add or remove the subDeployer from the authorized set for the action variant
 }
-See
-https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-information-about-the-perp-deploy-auction
-for how to query for the perp deploy auction status.
-Open interest caps
-Builder-deployed perp markets are subject to two types of open interest caps: notional (sum of absolute position size times mark price) and size (sum of absolute position sizes).
-Notional open interest caps are enforced on the total open interest summed over all assets within the DEX, as well as per-asset. Perp deployers can set a custom open interest cap per asset, which is documented in
-https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions
-.
-Size-denominated open interest caps are only enforced per-asset. Size-denominated open interest caps are currently a constant 1B per asset, so a reasonable default would be to set
-szDecimals
-such that the minimal size increment is $1-10 at the initial mark price.
-Last updated
-9 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions-1.md
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions-1#open-interest-caps
-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions
-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-information-about-the-perp-deploy-auction | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-information-about-the-perp-deploy-auction
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+```
+See <https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-information-about-the-perp-deploy-auction> for how to query for the perp deploy auction status.
+## Open interest caps
+Builder-deployed perp markets are subject to two types of open interest caps: notional (sum of absolute position size times mark price) and size (sum of absolute position sizes).&#x20;
+Notional open interest caps are enforced on the total open interest summed over all assets within the DEX, as well as per-asset. Perp deployers can set a custom open interest cap per asset, which is documented in <https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/hip-3-deployer-actions>.
+Size-denominated open interest caps are only enforced per-asset. Size-denominated open interest caps are currently a constant 1B per asset, so a reasonable default would be to set `szDecimals` such that the minimal size increment is $1-10 at the initial mark price.

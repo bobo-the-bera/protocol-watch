@@ -1,23 +1,4 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Liquidations
-If a borrower’s LTV rises above the maximum limit, any user can liquidate the position by repaying the loan. In return, the liquidator receives collateral, along with a liquidation fee.
-The liquidation fee is different if the liquidator repays the entire position (
-cleanLiquidationFee
-) or only a portion (
-dirtyLiquidationFee
-, 90% of the clean fee).
-Previous
-↪ key-concepts
-Next
-↪ interest rates
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/isolated-pools/liquidations.md
-LINK | Next ↪ interest rates | https://docs.hyperlend.finance/developer-documentation/isolated-pools/interest-rates
-LINK | Previous ↪ key-concepts | https://docs.hyperlend.finance/developer-documentation/isolated-pools/key-concepts
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/isolated-pools/liquidations.md).
+# ↪ liquidations
+**Liquidations** If a borrower’s LTV rises above the maximum limit, any user can liquidate the position by repaying the loan. In return, the liquidator receives collateral, along with a liquidation fee.
+The liquidation fee is different if the liquidator repays the entire position (`cleanLiquidationFee`) or only a portion (`dirtyLiquidationFee`, 90% of the clean fee).

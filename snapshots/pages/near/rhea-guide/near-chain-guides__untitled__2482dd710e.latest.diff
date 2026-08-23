@@ -1,12 +1,14 @@
 --- near/rhea-guide/near-chain-guides__untitled__2482dd710e:previous
 +++ near/rhea-guide/near-chain-guides__untitled__2482dd710e:current
-@@ -0,0 +1,9 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides/untitled.md
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,9 +1,2 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/untitled.md
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/untitled.md).
++# Untitled

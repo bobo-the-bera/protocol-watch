@@ -1,51 +1,74 @@
 --- near/rhea-guide/developers__guardians__7f78a20638:previous
 +++ near/rhea-guide/developers__guardians__7f78a20638:current
-@@ -0,0 +1,48 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Problem
-+When issues arise (performance issue, critical bug, malicious attempts, etc.), it is important that RHEA Finance has a plan to mitigate (i) the risks of contagion and (ii) the impact of such an event (including potential loss of funds).
-+Often, turning off the frontend/user interface is not good enough because it does not prevent bots from operating, for example.
-+Solution
-+The Guardians can be defined as specific NEAR addresses that have the privilege/ability to pause the main contract (v2.ref-finance.near). They are the key participants of a fail-safe procedure, being able to respond in the event of a specific type of failure.
-+Event/situation that can be defined as, but not limited to:
-+Ongoing attack and/or exploit
-+Critical bug identified in production (not yet exploited)
-+Release/Deployment causing a potential security vulnerability
-+Procedure
-+Prerequisite
-+The Guardians MUST know how to handle the NEAR Command-Line Interface (CLI).
-+Process
-+Process Owner: The Guardian
-+Identify a situation that justifies pausing the contract (v2.ref-finance.near)
-+Double check the facts/situation
-+Inform the other Guardians
-+Pause the contract (v2.ref-finance.near)
-+Inform the Team and the DAO/owner of the contract (ref-finance.sputnik-dao.near)
-+Inform the Community
-+Identify the steps to reactivate the contract (v2.ref-finance.near)
-+Only the owner of the contract can reactivate it (v2.ref-finance.near)
-+Finally, anyone can see the list of the Guardians by calling the following view method via CLI:
-+More info:
-+https://github.com/ref-finance/ref-contracts/pull/50
-+Previous
-+Contracts
-+Next
-+Oracles
-+Last updated
-+10 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/developers/guardians.md
-+LINK | Next Oracles | https://guide.rhea.finance/developers/oracles
-+LINK | Previous Contracts | https://guide.rhea.finance/developers/contracts
-+LINK | [no text] | https://guide.rhea.finance/developers/guardians#prerequisite
-+LINK | [no text] | https://guide.rhea.finance/developers/guardians#problem
-+LINK | [no text] | https://guide.rhea.finance/developers/guardians#procedure
-+LINK | [no text] | https://guide.rhea.finance/developers/guardians#process
-+LINK | [no text] | https://guide.rhea.finance/developers/guardians#solution
-+LINK | https://github.com/ref-finance/ref-contracts/pull/50 | https://github.com/ref-finance/ref-contracts/pull/50
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,48 +1,31 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Problem
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/developers/guardians.md).
++# Guardians
++## Problem
+ When issues arise (performance issue, critical bug, malicious attempts, etc.), it is important that RHEA Finance has a plan to mitigate (i) the risks of contagion and (ii) the impact of such an event (including potential loss of funds).
+ Often, turning off the frontend/user interface is not good enough because it does not prevent bots from operating, for example.
+-Solution
++## Solution
+ The Guardians can be defined as specific NEAR addresses that have the privilege/ability to pause the main contract (v2.ref-finance.near). They are the key participants of a fail-safe procedure, being able to respond in the event of a specific type of failure.
+ Event/situation that can be defined as, but not limited to:
+-Ongoing attack and/or exploit
+-Critical bug identified in production (not yet exploited)
+-Release/Deployment causing a potential security vulnerability
+-Procedure
+-Prerequisite
++* Ongoing attack and/or exploit
++* Critical bug identified in production (not yet exploited)
++* Release/Deployment causing a potential security vulnerability
++## **Procedure**
++### **Prerequisite**
+ The Guardians MUST know how to handle the NEAR Command-Line Interface (CLI).
+-Process
++### **Process**
+ Process Owner: The Guardian
+-Identify a situation that justifies pausing the contract (v2.ref-finance.near)
+-Double check the facts/situation
+-Inform the other Guardians
+-Pause the contract (v2.ref-finance.near)
+-Inform the Team and the DAO/owner of the contract (ref-finance.sputnik-dao.near)
+-Inform the Community
+-Identify the steps to reactivate the contract (v2.ref-finance.near)
++1. Identify a situation that justifies pausing the contract (v2.ref-finance.near)
++2. Double check the facts/situation
++3. Inform the other Guardians
++4. Pause the contract (v2.ref-finance.near)
++5. Inform the Team and the DAO/owner of the contract (ref-finance.sputnik-dao.near)&#x20;
++6. Inform the Community
++7. Identify the steps to reactivate the contract (v2.ref-finance.near)
++{% hint style="info" %}
+ Only the owner of the contract can reactivate it (v2.ref-finance.near)
++{% endhint %}
+ Finally, anyone can see the list of the Guardians by calling the following view method via CLI:
+-More info:
+-https://github.com/ref-finance/ref-contracts/pull/50
+-Previous
+-Contracts
+-Next
+-Oracles
+-Last updated
+-10 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/developers/guardians.md
+-LINK | Next Oracles | https://guide.rhea.finance/developers/oracles
+-LINK | Previous Contracts | https://guide.rhea.finance/developers/contracts
+-LINK | [no text] | https://guide.rhea.finance/developers/guardians#prerequisite
+-LINK | [no text] | https://guide.rhea.finance/developers/guardians#problem
+-LINK | [no text] | https://guide.rhea.finance/developers/guardians#procedure
+-LINK | [no text] | https://guide.rhea.finance/developers/guardians#process
+-LINK | [no text] | https://guide.rhea.finance/developers/guardians#solution
+-LINK | https://github.com/ref-finance/ref-contracts/pull/50 | https://github.com/ref-finance/ref-contracts/pull/50
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++```
++near view v2.ref-finance.near metadata
++```
++More info: <https://github.com/ref-finance/ref-contracts/pull/50>

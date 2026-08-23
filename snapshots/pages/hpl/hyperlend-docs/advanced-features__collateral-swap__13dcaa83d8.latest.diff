@@ -1,26 +1,34 @@
 --- hpl/hyperlend-docs/advanced-features__collateral-swap__13dcaa83d8:previous
 +++ hpl/hyperlend-docs/advanced-features__collateral-swap__13dcaa83d8:current
-@@ -0,0 +1,23 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Optimize your portfolio efficiently with our
-+Collateral Swap
-+feature, located on your Dashboard under Supplied Assets. This tool allows you to exchange supplied asset for another in a single transaction, bypassing the need to manually withdraw and re-deposit funds.
-+Quick Guide:
-+Pick your currentt collateral asset: Choose which supplied asset you want to swap.
-+Choose your target asset: Select the asset you’d rather use as collateral.
-+Swap: Confirm the amount and swap in one click.
-+Previous
-+FAQ
-+Next
-+Bridge
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/collateral-swap.md
-+LINK | Next Bridge | https://docs.hyperlend.finance/advanced-features/bridge
-+LINK | Previous FAQ | https://docs.hyperlend.finance/advanced-features/hypertrack/faq
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,23 +1,8 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Optimize your portfolio efficiently with our
+-Collateral Swap
+-feature, located on your Dashboard under Supplied Assets. This tool allows you to exchange supplied asset for another in a single transaction, bypassing the need to manually withdraw and re-deposit funds.
+-Quick Guide:
+-Pick your currentt collateral asset: Choose which supplied asset you want to swap.
+-Choose your target asset: Select the asset you’d rather use as collateral.
+-Swap: Confirm the amount and swap in one click.
+-Previous
+-FAQ
+-Next
+-Bridge
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/collateral-swap.md
+-LINK | Next Bridge | https://docs.hyperlend.finance/advanced-features/bridge
+-LINK | Previous FAQ | https://docs.hyperlend.finance/advanced-features/hypertrack/faq
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/collateral-swap.md).
++# Collateral Swap
++Optimize your portfolio efficiently with our **Collateral Swap** feature, located on your Dashboard under Supplied Assets. This tool allows you to exchange supplied asset for another in a single transaction, bypassing the need to manually withdraw and re-deposit funds.
++<figure><img src="/files/cN065ELMjVDNWoSzweZj" alt=""><figcaption></figcaption></figure>
++**Quick Guide:**
++1. Pick your currentt collateral asset: Choose which supplied asset you want to swap.
++2. Choose your target asset: Select the asset you’d rather use as collateral.
++3. Swap: Confirm the amount and swap in one click.

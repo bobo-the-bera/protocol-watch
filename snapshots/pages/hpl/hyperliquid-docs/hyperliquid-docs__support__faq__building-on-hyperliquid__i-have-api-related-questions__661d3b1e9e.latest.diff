@@ -1,29 +1,34 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__building-on-hyperliquid__i-have-api-related-questions__661d3b1e9e:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__building-on-hyperliquid__i-have-api-related-questions__661d3b1e9e:current
-@@ -0,0 +1,26 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Here are the API docs:
-+https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
-+Please do not open any tickets about API related questions. If you have questions about the API, you can ask in the #api-traders channel in the Discord server:
-+https://discord.gg/hyperliquid
-+. You can also search the message history since many people have similar questions.
-+API announcements:
-+https://t.me/hyperliquid_api
-+Previous
-+Building on Hyperliquid
-+Next
-+I want to deploy a spot token or list a perp
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-have-api-related-questions.md
-+LINK | Next I want to deploy a spot token or list a perp | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-want-to-deploy-a-spot-token-or-list-a-perp
-+LINK | Previous Building on Hyperliquid | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid
-+LINK | https://discord.gg/hyperliquid | https://discord.gg/hyperliquid
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
-+LINK | https://t.me/hyperliquid_api | https://t.me/hyperliquid_api
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,26 +1,5 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Here are the API docs:
+-https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
+-Please do not open any tickets about API related questions. If you have questions about the API, you can ask in the #api-traders channel in the Discord server:
+-https://discord.gg/hyperliquid
+-. You can also search the message history since many people have similar questions.
+-API announcements:
+-https://t.me/hyperliquid_api
+-Previous
+-Building on Hyperliquid
+-Next
+-I want to deploy a spot token or list a perp
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-have-api-related-questions.md
+-LINK | Next I want to deploy a spot token or list a perp | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-want-to-deploy-a-spot-token-or-list-a-perp
+-LINK | Previous Building on Hyperliquid | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid
+-LINK | https://discord.gg/hyperliquid | https://discord.gg/hyperliquid
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
+-LINK | https://t.me/hyperliquid_api | https://t.me/hyperliquid_api
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/building-on-hyperliquid/i-have-api-related-questions.md).
++# I have API related questions
++Here are the API docs: <https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api>
++Please do not open any tickets about API related questions. If you have questions about the API, you can ask in the #api-traders channel in the Discord server: <https://discord.gg/hyperliquid>. You can also search the message history since many people have similar questions.&#x20;
++API announcements: <https://t.me/hyperliquid_api>

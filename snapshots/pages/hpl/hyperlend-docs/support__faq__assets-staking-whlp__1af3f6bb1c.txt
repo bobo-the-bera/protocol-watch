@@ -1,50 +1,26 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Why is there a difference of 1 HYPE when I deposit? (e.g., 300 stHYPE to 299 wstHYPE)
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/support/faq/assets-staking-whlp.md).
+# Assets, staking, wHLP
+<details>
+<summary>Why is there a difference of 1 HYPE when I deposit? (e.g., 300 stHYPE to 299 wstHYPE)</summary>
 wstHYPE and stHYPE are not 1:1.
-stHYPE:
-A rebasing token that stays 1:1 with HYPE but increases in quantity.
-wstHYPE:
-An "auto-compounding" token that stays the same in quantity but increases in value relative to HYPE. You can check the current ratio on the
-contract here
-(see
-balancePerShare
-).
-What oracles are used for wstHYPE and kHYPE
-We use
-Exchange Rate Oracles
-(fundamental value) rather than secondary market prices.
-wstHYPE:
-exchange ratio directly from stHYPE contract * HYPE/USD price from Redstone oracle
-kHYPE:
-Uses a Redstone oracle based on internal protocol accounting. This protects users from liquidations caused by short-term depegs on DEXs.
-Why do I get less HYPE when closing a HyperLoop position?
+* **stHYPE:** A rebasing token that stays 1:1 with HYPE but increases in quantity.
+* **wstHYPE:** An "auto-compounding" token that stays the same in quantity but increases in value relative to HYPE. You can check the current ratio on the [contract here](https://purrsec.com/address/0xffaa4a3d97fe9107cef8a3f48c069f577ff76cc1/contract) (see `balancePerShare`).
+</details>
+<details>
+<summary>What oracles are used for wstHYPE and kHYPE</summary>
+We use **Exchange Rate Oracles** (fundamental value) rather than secondary market prices.
+* **wstHYPE:** exchange ratio directly from stHYPE contract \* HYPE/USD price from Redstone oracle
+* **kHYPE:** Uses a Redstone oracle based on internal protocol accounting. This protects users from liquidations caused by short-term depegs on DEXs.
+</details>
+<details>
+<summary>Why do I get less HYPE when closing a HyperLoop position?</summary>
 HyperLoop uses flashloans and swaps, meaning it cannot wait the 7-day redemption period for stHYPE. If stHYPE is slightly depegged on the secondary market (e.g., 0.22%), your swap will reflect that price plus a slippage fee.
-Why can't I lend/borrow against my Valantis deposits?
+</details>
+<details>
+<summary>Why can't I lend/borrow against my Valantis deposits?</summary>
 Valantis uses Hyperlend to optimize AMM reserves. When you deposit on Valantis, you are providing liquidity to traders, not directly depositing into a lending pool, so you cannot borrow against those specific assets.
-How do I check wHLP withdrawal status?
-wHLP withdrawals remain pending even if you lack sufficient balance. You can check the status of a specific user by replacing
-USER_ADDRESS_HERE
-in this link:
-Check wHLP Status
-Previous
-Lending, Borrowing & Liquidations
-Next
-Building on HyperLend
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | Check wHLP Status | https://backend.nucleusearn.io/v1/protocol/withdrawals?chainId=999&vaultAddress=0x1359b05241ca5076c9f59605214f4f84114c0de8&all=false&user=USER_ADDRESS_HERE&status=all&page=1&limit=20
-LINK | Markdown | https://docs.hyperlend.finance/support/faq/assets-staking-whlp.md
-LINK | Next Building on HyperLend | https://docs.hyperlend.finance/support/faq/building-on-hyperlend
-LINK | Previous Lending, Borrowing & Liquidations | https://docs.hyperlend.finance/support/faq/lending-borrowing-and-liquidations
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/assets-staking-whlp#how-do-i-check-whlp-withdrawal-status
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/assets-staking-whlp#what-oracles-are-used-for-wsthype-and-khype
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/assets-staking-whlp#why-cant-i-lend-borrow-against-my-valantis-deposits
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/assets-staking-whlp#why-do-i-get-less-hype-when-closing-a-hyperloop-position
-LINK | [no text] | https://docs.hyperlend.finance/support/faq/assets-staking-whlp#why-is-there-a-difference-of-1-hype-when-i-deposit-e.g.-300-sthype-to-299-wsthype
-LINK | contract here | https://purrsec.com/address/0xffaa4a3d97fe9107cef8a3f48c069f577ff76cc1/contract
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+</details>
+<details>
+<summary>How do I check wHLP withdrawal status?</summary>
+wHLP withdrawals remain pending even if you lack sufficient balance. You can check the status of a specific user by replacing `USER_ADDRESS_HERE` in this link: [Check wHLP Status](https://backend.nucleusearn.io/v1/protocol/withdrawals?chainId=999\&vaultAddress=0x1359b05241ca5076c9f59605214f4f84114c0de8\&all=false\&user=USER_ADDRESS_HERE\&status=all\&page=1\&limit=20)
+</details>

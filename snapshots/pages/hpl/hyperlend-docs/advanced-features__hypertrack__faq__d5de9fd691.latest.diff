@@ -1,74 +1,114 @@
 --- hpl/hyperlend-docs/advanced-features__hypertrack__faq__d5de9fd691:previous
 +++ hpl/hyperlend-docs/advanced-features__hypertrack__faq__d5de9fd691:current
-@@ -0,0 +1,71 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+How do I add an address to track?
-+Use the
-+Add Address
-+command from the menu or type
-+/add [address]
-+in the chat. This will start tracking the specified address for transactions and health factor alerts.
-+What types of alerts can I receive?
-+The bot provides the following alerts:
-+Health Factor Alerts
-+: Notifies you if the health factor of a tracked address reaches a certain threshold.
-+Borrow Rate Alerts
-+: Alerts you when the borrow rate of a tracked address hits specified levels.
-+Liquidation Alerts
-+: Informs you of liquidation events for any tracked address.
-+How often will I receive alerts?
-+Health factor and borrow rate alerts are updated hourly, with one notification per day. Liquidation alerts are sent immediately when an event occurs.
-+How do I enable or disable liquidation alerts?
-+Use the
-+Liquidation Alerts
-+option in the menu to toggle liquidation notifications on or off for tracked addresses.
-+What should I do if I'm not receiving notifications?
-+Try the following troubleshooting steps:
-+Ensure notifications are enabled in your Telegram settings.
-+Use the
-+Refresh Data
-+option in the menu to reload your settings.
-+Make sure you have correctly added addresses for tracking.
-+Check if the alert frequency settings are set as desired.
-+How do I update my notification settings?
-+Go to
-+Settings
-+in the menu to adjust your notification preferences, including sound, frequency, and type of alerts.
-+Can I track multiple addresses at once?
-+Yes, you can add multiple addresses for tracking. Each address will have its name and a own set of alerts that you can customize.
-+Is my data secure with this bot?
-+Yes, your data privacy is a priority. The bot only tracks the addresses you add and does not store personal information beyond the tracking requirements.
-+Who should I contact for support?
-+Use the
-+Help & Support
-+option in the menu for assistance or visit the
-+Official Twitter
-+or
-+Website
-+for more resources and contact options.
-+Previous
-+↪ Advanced Approach
-+Next
-+Collateral Swap
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/faq.md
-+LINK | Next Collateral Swap | https://docs.hyperlend.finance/advanced-features/collateral-swap
-+LINK | Official Twitter | https://x.com/hyperlendx
-+LINK | Previous ↪ Advanced Approach | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach
-+LINK | Website | https://hyperlend.finance/home
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#can-i-track-multiple-addresses-at-once
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-add-an-address-to-track
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-enable-or-disable-liquidation-alerts
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-update-my-notification-settings
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-often-will-i-receive-alerts
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#is-my-data-secure-with-this-bot
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#what-should-i-do-if-im-not-receiving-notifications
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#what-types-of-alerts-can-i-receive
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#who-should-i-contact-for-support
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,71 +1,45 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-How do I add an address to track?
+-Use the
+-Add Address
+-command from the menu or type
+-/add [address]
+-in the chat. This will start tracking the specified address for transactions and health factor alerts.
+-What types of alerts can I receive?
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/faq.md).
++# FAQ
++<details>
++<summary>How do I add an address to track?</summary>
++Use the **Add Address** command from the menu or type `/add [address]` in the chat. This will start tracking the specified address for transactions and health factor alerts.
++</details>
++<details>
++<summary>What types of alerts can I receive?</summary>
+ The bot provides the following alerts:
+-Health Factor Alerts
+-: Notifies you if the health factor of a tracked address reaches a certain threshold.
+-Borrow Rate Alerts
+-: Alerts you when the borrow rate of a tracked address hits specified levels.
+-Liquidation Alerts
+-: Informs you of liquidation events for any tracked address.
+-How often will I receive alerts?
++* **Health Factor Alerts**: Notifies you if the health factor of a tracked address reaches a certain threshold.
++* **Borrow Rate Alerts**: Alerts you when the borrow rate of a tracked address hits specified levels.
++* **Liquidation Alerts**: Informs you of liquidation events for any tracked address.
++</details>
++<details>
++<summary>How often will I receive alerts?</summary>
+ Health factor and borrow rate alerts are updated hourly, with one notification per day. Liquidation alerts are sent immediately when an event occurs.
+-How do I enable or disable liquidation alerts?
+-Use the
+-Liquidation Alerts
+-option in the menu to toggle liquidation notifications on or off for tracked addresses.
+-What should I do if I'm not receiving notifications?
++</details>
++<details>
++<summary>How do I enable or disable liquidation alerts?</summary>
++Use the **Liquidation Alerts** option in the menu to toggle liquidation notifications on or off for tracked addresses.
++</details>
++<details>
++<summary>What should I do if I'm not receiving notifications?</summary>
+ Try the following troubleshooting steps:
+-Ensure notifications are enabled in your Telegram settings.
+-Use the
+-Refresh Data
+-option in the menu to reload your settings.
+-Make sure you have correctly added addresses for tracking.
+-Check if the alert frequency settings are set as desired.
+-How do I update my notification settings?
+-Go to
+-Settings
+-in the menu to adjust your notification preferences, including sound, frequency, and type of alerts.
+-Can I track multiple addresses at once?
++* Ensure notifications are enabled in your Telegram settings.
++* Use the **Refresh Data** option in the menu to reload your settings.
++* Make sure you have correctly added addresses for tracking.
++* Check if the alert frequency settings are set as desired.
++</details>
++<details>
++<summary>How do I update my notification settings?</summary>
++Go to **Settings** in the menu to adjust your notification preferences, including sound, frequency, and type of alerts.
++</details>
++<details>
++<summary>Can I track multiple addresses at once?</summary>
+ Yes, you can add multiple addresses for tracking. Each address will have its name and a own set of alerts that you can customize.
+-Is my data secure with this bot?
++</details>
++<details>
++<summary>Is my data secure with this bot?</summary>
+ Yes, your data privacy is a priority. The bot only tracks the addresses you add and does not store personal information beyond the tracking requirements.
+-Who should I contact for support?
+-Use the
+-Help & Support
+-option in the menu for assistance or visit the
+-Official Twitter
+-or
+-Website
+-for more resources and contact options.
+-Previous
+-↪ Advanced Approach
+-Next
+-Collateral Swap
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/faq.md
+-LINK | Next Collateral Swap | https://docs.hyperlend.finance/advanced-features/collateral-swap
+-LINK | Official Twitter | https://x.com/hyperlendx
+-LINK | Previous ↪ Advanced Approach | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach
+-LINK | Website | https://hyperlend.finance/home
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#can-i-track-multiple-addresses-at-once
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-add-an-address-to-track
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-enable-or-disable-liquidation-alerts
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-do-i-update-my-notification-settings
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#how-often-will-i-receive-alerts
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#is-my-data-secure-with-this-bot
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#what-should-i-do-if-im-not-receiving-notifications
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#what-types-of-alerts-can-i-receive
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/faq#who-should-i-contact-for-support
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++</details>
++<details>
++<summary>Who should I contact for support?</summary>
++Use the **Help & Support** option in the menu for assistance or visit the [**Official Twitter**](https://x.com/hyperlendx) or [**Website**](https://hyperlend.finance/home) for more resources and contact options.
++</details>

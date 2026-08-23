@@ -1,33 +1,17 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Becoming a spot quote asset is permissionless.
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/permissionless-spot-quote-assets.md).
+# Permissionless spot quote assets
+Becoming a spot quote asset is permissionless.&#x20;
 The requirements for becoming a permissionless spot quote asset are as follows:
-Wei decimals of 8 and size decimals of 2
-Zero deployer fee share on the quote token
-200k HYPE staked, subject to the following slashing criteria based on validator voting:
-A peg mechanism to a price of 1 USD. A future network upgrade could increase the scope to other non-dollar stable assets
-QUOTE/USDC should have 100k USDC size on both sides within the price range from 0.998 to 1.002, inclusive
-QUOTE/USDC should have 1M USDC size on both sides within 0.99 and 1.01, inclusive
-A liquid HYPE/QUOTE book
-HYPE/QUOTE should have 50k QUOTE size on both sides within a spread of 0.5%, inclusive
-USDC and USDT are not subject to the staking requirement due to their longstanding track record and established scale.
-The 200k HYPE staked by the deployer are subject to slashing based on validator vote for poor quality quote assets. Upon deployment, this stake is committed for 3 years, after which it can be unstaked. This gives builders and users some assurance when choosing a quote asset.
-For any of the conditions above, if there is a three-day period during which the condition is not satisfied for a majority of uniformly spaced 1 second samples, the quote asset will be considered slashable. Validators will vote on the amount to slash when such conditions are violated.
-Becoming a quote asset is now permissionless on testnet, where the staking requirement is 50 HYPE for ease of testing. Once the requirements above are met, the token deployer sends an
-enableQuoteToken
-transaction to convert the token into a quote token. This deployer action is irreversible and has no gas cost.
+1. Wei decimals of 8 and size decimals of 2
+2. Zero deployer fee share on the quote token
+3. 200k HYPE staked, subject to the following slashing criteria based on validator voting:&#x20;
+1. A peg mechanism to a price of 1 USD. A future network upgrade could increase the scope to other non-dollar stable assets&#x20;
+1. QUOTE/USDC should have 100k USDC size on both sides within the price range from 0.998 to 1.002, inclusive&#x20;
+2. QUOTE/USDC should have 1M USDC size on both sides within 0.99 and 1.01, inclusive&#x20;
+2. A liquid HYPE/QUOTE book&#x20;
+1. HYPE/QUOTE should have 50k QUOTE size on both sides within a spread of 0.5%, inclusive
+USDC and USDT are not subject to the staking requirement due to their longstanding track record and established scale.&#x20;
+The 200k HYPE staked by the deployer are subject to slashing based on validator vote for poor quality quote assets. Upon deployment, this stake is committed for 3 years, after which it can be unstaked. This gives builders and users some assurance when choosing a quote asset.&#x20;
+For any of the conditions above, if there is a three-day period during which the condition is not satisfied for a majority of uniformly spaced 1 second samples, the quote asset will be considered slashable. Validators will vote on the amount to slash when such conditions are violated.&#x20;
+Becoming a quote asset is now permissionless on testnet, where the staking requirement is 50 HYPE for ease of testing. Once the requirements above are met, the token deployer sends an `enableQuoteToken` transaction to convert the token into a quote token. This deployer action is irreversible and has no gas cost.&#x20;
 Transfer fees for new accounts can be paid in 1 unit of a spot quote asset.
-Previous
-Multi-sig
-Next
-Aligned quote assets
-Last updated
-2 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/permissionless-spot-quote-assets.md
-LINK | Next Aligned quote assets | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/aligned-quote-assets
-LINK | Previous Multi-sig | https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/multi-sig
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt

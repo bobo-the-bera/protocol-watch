@@ -1,173 +1,245 @@
 --- near/rhea-guide/near-chain-guides__yield-boost__xrhea-farming-boost__a6af8f2149:previous
 +++ near/rhea-guide/near-chain-guides__yield-boost__xrhea-farming-boost__a6af8f2149:current
-@@ -0,0 +1,170 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Overview
-+xRHEA Farming Boost allows users to lock xRHEA tokens in exchange for boosted incentive rewards on their
-+farm APYs
-+. The longer the lock-up period, the greater the boost — up to a maximum of 6 months.
-+xRHEA Farming Boost
-+interface with boost ratio range and lock-up period up to 6 months
-+List of 7 Boosted farm Pools on RHEA
-+Farm Pools
-+Link
-+rNEAR-NEAR
-+https://app.rhea.finance/sauce/6494
-+RHEA-NEAR
-+https://app.rhea.finance/pool/6458
-+NEAR-ZEC
-+https://app.rhea.finance/pool/6065
-+NEAR-PUBLIC
-+https://app.rhea.finance/pool/6503
-+mpDAO - STNEAR
-+https://app.rhea.finance/pool/5438
-+nBTC - NEAR
-+https://app.rhea.finance/sauce/5949
-+DOG - NBTC
-+https://app.rhea.finance/pool/6424
-+How it works
-+Lock xRHEA → Earn Weight → Get Boosted APYs on Farming
-+The program operates in two sections:
-+Weight Algorithm – Calculates your Weight based on the amount and duration of xRHEA locked.
-+Farming Multiplier Algorithm – Converts your Weight into a reward boost factor.
-+1. Weight Algorithm
-+Your Weight is determined by:
-+Where:
-+Y = Weight
-+X = The amount of xRHEA locked
-+D = Lock duration (from 30 to 180 days)
-+D_min = 30
-+D_max = 180
-+M_min = 10,000
-+M_max = 30,000
-+Example Weight Table
-+xRHEA Locked
-+Lock Duration
-+Weight Received
-+100 xRHEA
-+1 Month
-+100
-+100 xRHEA
-+3.5 Months
-+200
-+100 xRHEA
-+6 Months
-+300
-+The longer you lock, the higher the Weight (up to 3x boost at 180 days)
-+2. Farming Multiplier Algorithm
-+Once Weight is calculated, it’s converted into a Farming Multiplier, which boosts the user’s share of the incentive rewards pool.
-+Where:
-+Y = user's Weight
-+boost_suppress_factor = 100
-+base = 38634105686174997042188779520
-+Farming Multiplier Table
-+Weight Amount
-+Farming Multiplier
-+1,500
-+1.111x
-+15,000
-+1.205x
-+150,000
-+1.300x
-+1,500,000
-+1.394x
-+15,000,000
-+1.488x
-+Example: How Rewards Are Distributed
-+Imagine the rNEAR-NEAR farm emits 9.89% APY in incentive rewards.
-+Case 1: New User Without xRHEA Lock when farming
-+User
-+USD value staked in farm
-+Weight
-+Multiplier
-+APY
-+Boosted APY
-+Charlie
-+1,000
-+0
-+1.000x
-+9.89%
-+-
-+Case 2: xRHEA Lock Boosted Users when farming
-+User
-+USD value staked in farm
-+Weight
-+Multiplier
-+APY
-+Boosted APY
-+Alice
-+500
-+150,000
-+1.300x
-+9.89%
-+12.85%
-+Bob
-+50
-+150
-+1.056x
-+9.89%
-+10.44%
-+Updated incentive rewards allocation for rNEAR-NEAR farm
-+Alice: 12.85% APY
-+Bob: 10.44% APY
-+Charlie: 9.89% APY (Not Boosted)
-+How to stake xRHEA for farming boost: Step by Step walkthrough
-+Step 1: Go to
-+https://app.rhea.finance/stake
-+and connect your wallet
-+Step 2: Click Farming Boost:
-+Step 3: Choose RHEA or xRHEA:
-+Stake requires minimum of 1.7 RHEA/xRHEA
-+Step 4: Pick Boost Ratio Range based on your Lock time.
-+Lock-up period from 1~6 month
-+Step 4.1: If you hover to the Boosted ratio text, there will be a quick preview pop-up of your Boosted Farm APYs based on Stake Amount and Lock time of xRHEA
-+Step 5: Click Stake and you're done!
-+Step 6: you head over to the
-+farms section
-+on Liquidity tab, you can now see your boosted APY figures under the APYs.
-+Previous
-+Yield Boost
-+Next
-+xRHEA Lending Boost
-+Last updated
-+11 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost.md
-+LINK | Next xRHEA Lending Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-lending-boost
-+LINK | Previous Yield Boost | https://guide.rhea.finance/near-chain-guides/yield-boost
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#case-1-new-user-without-xrhea-lock-when-farming
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#case-2-xrhea-lock-boosted-users-when-farming
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#example-how-rewards-are-distributed
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#example-weight-table
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#farming-multiplier-table
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#how-it-works
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#how-to-stake-xrhea-for-farming-boost-step-by-step-walkthrough
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#id-1.-weight-algorithm
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#id-2.-farming-multiplier-algorithm
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#list-of-7-boosted-farm-pools-on-rhea
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#overview
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-1-go-to-https-app.rhea.finance-stake-and-connect-your-wallet
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-2-click-farming-boost
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-3-choose-rhea-or-xrhea
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-4-pick-boost-ratio-range-based-on-your-lock-time
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-4.1-if-you-hover-to-the-boosted-ratio-text-there-will-be-a-quick-preview-pop-up-of-your-boosted
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-5-click-stake-and-youre-done
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-6-you-head-over-to-the-farms-section-on-liquidity-tab-you-can-now-see-your-boosted-apy-figures
-+LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#updated-incentive-rewards-allocation-for-rnear-near-farm
-+LINK | farm APYs | https://app.rhea.finance/pools?activeTab=farm
-+LINK | farms section | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-1-go-to-https-app.rhea.finance-stake-and-connect-your-wallet
-+LINK | https://app.rhea.finance/pool/5438 | https://app.rhea.finance/pool/5438
-+LINK | https://app.rhea.finance/pool/6065 | https://app.rhea.finance/pool/6065
-+LINK | https://app.rhea.finance/pool/6424 | https://app.rhea.finance/pool/6424
-+LINK | https://app.rhea.finance/pool/6458 | https://app.rhea.finance/pool/6458
-+LINK | https://app.rhea.finance/pool/6503 | https://app.rhea.finance/pool/6503
-+LINK | https://app.rhea.finance/sauce/5949 | https://app.rhea.finance/sauce/5949
-+LINK | https://app.rhea.finance/sauce/6494 | https://app.rhea.finance/sauce/6494
-+LINK | https://app.rhea.finance/stake | https://app.rhea.finance/stake
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
-+LINK | xRHEA Farming Boost | https://app.rhea.finance/stake
+@@ -1,170 +1,79 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Overview
+-xRHEA Farming Boost allows users to lock xRHEA tokens in exchange for boosted incentive rewards on their
+-farm APYs
+-. The longer the lock-up period, the greater the boost — up to a maximum of 6 months.
+-xRHEA Farming Boost
+-interface with boost ratio range and lock-up period up to 6 months
+-List of 7 Boosted farm Pools on RHEA
+-Farm Pools
+-Link
+-rNEAR-NEAR
+-https://app.rhea.finance/sauce/6494
+-RHEA-NEAR
+-https://app.rhea.finance/pool/6458
+-NEAR-ZEC
+-https://app.rhea.finance/pool/6065
+-NEAR-PUBLIC
+-https://app.rhea.finance/pool/6503
+-mpDAO - STNEAR
+-https://app.rhea.finance/pool/5438
+-nBTC - NEAR
+-https://app.rhea.finance/sauce/5949
+-DOG - NBTC
+-https://app.rhea.finance/pool/6424
+-How it works
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost.md).
++# xRHEA Farming Boost
++### Overview
++xRHEA Farming Boost allows users to lock xRHEA tokens in exchange for boosted incentive rewards on their [farm APYs](https://app.rhea.finance/pools?activeTab=farm). The longer the lock-up period, the greater the boost — up to a maximum of 6 months.
++<div data-full-width="true"><figure><img src="/files/RkE43mRGiZCpbRF0UPcA" alt="" width="563"><figcaption><p><a href="https://app.rhea.finance/stake"> xRHEA Farming Boost</a> interface with boost ratio range and lock-up period up to 6 months</p></figcaption></figure></div>
++### List of 7 Boosted farm Pools on RHEA
++| Farm Pools | Link |
++| -------------- | ------------------------------------- |
++| rNEAR-NEAR | <https://app.rhea.finance/sauce/6494> |
++| RHEA-NEAR | <https://app.rhea.finance/pool/6458> |
++| NEAR-ZEC | <https://app.rhea.finance/pool/6065> |
++| NEAR-PUBLIC | <https://app.rhea.finance/pool/6503> |
++| mpDAO - STNEAR | <https://app.rhea.finance/pool/5438> |
++| nBTC - NEAR | <https://app.rhea.finance/sauce/5949> |
++| DOG - NBTC | <https://app.rhea.finance/pool/6424> |
++### How it works
+ Lock xRHEA → Earn Weight → Get Boosted APYs on Farming
+ The program operates in two sections:
+-Weight Algorithm – Calculates your Weight based on the amount and duration of xRHEA locked.
+-Farming Multiplier Algorithm – Converts your Weight into a reward boost factor.
+-1. Weight Algorithm
++1. Weight Algorithm – Calculates your Weight based on the amount and duration of xRHEA locked.
++2. Farming Multiplier Algorithm – Converts your Weight into a reward boost factor.
++### 1. Weight Algorithm
+ Your Weight is determined by:
++<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcK-zvUam_7OLgZSrZecUvTX29tv-8DFbtOY6-QNkVTB5c8GnGMUsgEs3-E2AuqxlkqffiIBH3xSXW0bhyElyJp3ysTbblAI57GFpYB0r4wmIs3eBngR-4OPKkf1v16e2PwZXFgjw?key=eHiEe45NobqJ6LiYnRuSDg" alt=""><figcaption></figcaption></figure>
+ Where:
+-Y = Weight
+-X = The amount of xRHEA locked
+-D = Lock duration (from 30 to 180 days)
+-D_min = 30
+-D_max = 180
+-M_min = 10,000
+-M_max = 30,000
+-Example Weight Table
+-xRHEA Locked
+-Lock Duration
+-Weight Received
+-100 xRHEA
+-1 Month
+-100
+-100 xRHEA
+-3.5 Months
+-200
+-100 xRHEA
+-6 Months
+-300
+-The longer you lock, the higher the Weight (up to 3x boost at 180 days)
+-2. Farming Multiplier Algorithm
++* Y = Weight
++* X = The amount of xRHEA locked
++* D = Lock duration (from 30 to 180 days)
++* D\_min = 30
++* D\_max = 180
++* M\_min = 10,000
++M\_max = 30,000
++### Example Weight Table&#x20;
++| xRHEA Locked | Lock Duration | Weight Received |
++| ------------ | ------------- | --------------- |
++| 100 xRHEA | 1 Month | 100 |
++| 100 xRHEA | 3.5 Months | 200 |
++| 100 xRHEA | 6 Months | 300 |
++> The longer you lock, the higher the Weight (up to 3x boost at 180 days)
++### 2. Farming Multiplier Algorithm
+ Once Weight is calculated, it’s converted into a Farming Multiplier, which boosts the user’s share of the incentive rewards pool.
++<figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcK09JUsm53m6a0pSoXwiZeeeyL0UgYuCJCVztKYFq2N_a3BdOQBfLlAgfhbmibp3a-ejRVcZVWRswzD5ZrXZs_KLw33B3edUfFSAFkTtzuD52v6nnvfk5J0z6MMw4ScIVMGhqMTg?key=eHiEe45NobqJ6LiYnRuSDg" alt=""><figcaption></figcaption></figure>
+ Where:
+-Y = user's Weight
+-boost_suppress_factor = 100
+-base = 38634105686174997042188779520
+-Farming Multiplier Table
+-Weight Amount
+-Farming Multiplier
+-1,500
+-1.111x
+-15,000
+-1.205x
+-150,000
+-1.300x
+-1,500,000
+-1.394x
+-15,000,000
+-1.488x
+-Example: How Rewards Are Distributed
++* Y = user's Weight
++* boost\_suppress\_factor = 100
++* base = 38634105686174997042188779520
++#### Farming Multiplier Table
++| Weight Amount | Farming Multiplier |
++| ------------- | ------------------ |
++| 1,500 | 1.111x |
++| 15,000 | 1.205x |
++| 150,000 | 1.300x |
++| 1,500,000 | 1.394x |
++| 15,000,000 | 1.488x |
++### Example: How Rewards Are Distributed
+ Imagine the rNEAR-NEAR farm emits 9.89% APY in incentive rewards.
+-Case 1: New User Without xRHEA Lock when farming
+-User
+-USD value staked in farm
+-Weight
+-Multiplier
+-APY
+-Boosted APY
+-Charlie
+-1,000
+-0
+-1.000x
+-9.89%
+--
+-Case 2: xRHEA Lock Boosted Users when farming
+-User
+-USD value staked in farm
+-Weight
+-Multiplier
+-APY
+-Boosted APY
+-Alice
+-500
+-150,000
+-1.300x
+-9.89%
+-12.85%
+-Bob
+-50
+-150
+-1.056x
+-9.89%
+-10.44%
+-Updated incentive rewards allocation for rNEAR-NEAR farm
+-Alice: 12.85% APY
+-Bob: 10.44% APY
+-Charlie: 9.89% APY (Not Boosted)
+-How to stake xRHEA for farming boost: Step by Step walkthrough
+-Step 1: Go to
+-https://app.rhea.finance/stake
+-and connect your wallet
+-Step 2: Click Farming Boost:
+-Step 3: Choose RHEA or xRHEA:
+-Stake requires minimum of 1.7 RHEA/xRHEA
+-Step 4: Pick Boost Ratio Range based on your Lock time.
+-Lock-up period from 1~6 month
+-Step 4.1: If you hover to the Boosted ratio text, there will be a quick preview pop-up of your Boosted Farm APYs based on Stake Amount and Lock time of xRHEA
+-Step 5: Click Stake and you're done!
+-Step 6: you head over to the
+-farms section
+-on Liquidity tab, you can now see your boosted APY figures under the APYs.
+-Previous
+-Yield Boost
+-Next
+-xRHEA Lending Boost
+-Last updated
+-11 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost.md
+-LINK | Next xRHEA Lending Boost | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-lending-boost
+-LINK | Previous Yield Boost | https://guide.rhea.finance/near-chain-guides/yield-boost
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#case-1-new-user-without-xrhea-lock-when-farming
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#case-2-xrhea-lock-boosted-users-when-farming
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#example-how-rewards-are-distributed
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#example-weight-table
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#farming-multiplier-table
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#how-it-works
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#how-to-stake-xrhea-for-farming-boost-step-by-step-walkthrough
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#id-1.-weight-algorithm
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#id-2.-farming-multiplier-algorithm
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#list-of-7-boosted-farm-pools-on-rhea
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#overview
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-1-go-to-https-app.rhea.finance-stake-and-connect-your-wallet
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-2-click-farming-boost
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-3-choose-rhea-or-xrhea
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-4-pick-boost-ratio-range-based-on-your-lock-time
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-4.1-if-you-hover-to-the-boosted-ratio-text-there-will-be-a-quick-preview-pop-up-of-your-boosted
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-5-click-stake-and-youre-done
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-6-you-head-over-to-the-farms-section-on-liquidity-tab-you-can-now-see-your-boosted-apy-figures
+-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#updated-incentive-rewards-allocation-for-rnear-near-farm
+-LINK | farm APYs | https://app.rhea.finance/pools?activeTab=farm
+-LINK | farms section | https://guide.rhea.finance/near-chain-guides/yield-boost/xrhea-farming-boost#step-1-go-to-https-app.rhea.finance-stake-and-connect-your-wallet
+-LINK | https://app.rhea.finance/pool/5438 | https://app.rhea.finance/pool/5438
+-LINK | https://app.rhea.finance/pool/6065 | https://app.rhea.finance/pool/6065
+-LINK | https://app.rhea.finance/pool/6424 | https://app.rhea.finance/pool/6424
+-LINK | https://app.rhea.finance/pool/6458 | https://app.rhea.finance/pool/6458
+-LINK | https://app.rhea.finance/pool/6503 | https://app.rhea.finance/pool/6503
+-LINK | https://app.rhea.finance/sauce/5949 | https://app.rhea.finance/sauce/5949
+-LINK | https://app.rhea.finance/sauce/6494 | https://app.rhea.finance/sauce/6494
+-LINK | https://app.rhea.finance/stake | https://app.rhea.finance/stake
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+-LINK | xRHEA Farming Boost | https://app.rhea.finance/stake
++#### Case 1: New User Without xRHEA Lock when farming
++<table><thead><tr><th width="82.4423828125">User</th><th width="207.7041015625">USD value staked in farm</th><th width="107.9534912109375">Weight </th><th width="111.199951171875">Multiplier</th><th width="79.728515625">APY</th><th>Boosted APY</th></tr></thead><tbody><tr><td>Charlie</td><td>1,000</td><td>0</td><td>1.000x</td><td>9.89%</td><td>-</td></tr></tbody></table>
++#### Case 2: xRHEA Lock Boosted Users when farming&#x20;
++<table><thead><tr><th width="87.64453125">User</th><th width="207.65869140625">USD value staked in farm</th><th width="96.72119140625">Weight </th><th width="110.9932861328125">Multiplier</th><th width="86.28125">APY</th><th>Boosted APY </th></tr></thead><tbody><tr><td>Alice </td><td>500</td><td>150,000</td><td>1.300x</td><td>9.89%</td><td>12.85%</td></tr><tr><td>Bob</td><td>50</td><td>150</td><td>1.056x</td><td>9.89%</td><td>10.44%</td></tr></tbody></table>
++### Updated incentive rewards allocation for rNEAR-NEAR farm
++**Alice: 12.85% APY**
++**Bob: 10.44% APY**
++**Charlie: 9.89% APY (Not Boosted)**
++## How to stake xRHEA for farming boost: Step by Step walkthrough
++### Step 1: Go to <https://app.rhea.finance/stake> and connect your wallet&#x20;
++### Step 2: Click Farming Boost: &#x20;
++<figure><img src="/files/jkGwdGy2ZtTWkUcYNFnv" alt=""><figcaption></figcaption></figure>
++<p align="center"></p>
++### Step 3: Choose RHEA or xRHEA: &#x20;
++<figure><img src="/files/PZvtEvSlcwPG9a2l7viv" alt=""><figcaption><p>Stake requires minimum of 1.7 RHEA/xRHEA</p></figcaption></figure>
++### Step 4: Pick Boost Ratio Range based on your Lock time.&#x20;
++<figure><img src="/files/SNxQqSPNOf44SreuqX6g" alt=""><figcaption><p>Lock-up period from 1~6 month</p></figcaption></figure>
++### Step 4.1: If you hover to the Boosted ratio text, there will be a quick preview pop-up of your Boosted Farm APYs based on Stake Amount and Lock time of xRHEA
++<figure><img src="/files/Ks0Vw6rBzR0lYwhMLHIo" alt=""><figcaption></figcaption></figure>
++<p align="center"></p>
++### Step 5: Click Stake and you're done!&#x20;
++<figure><img src="/files/PZ73fQS03oGPWvOdjEJo" alt=""><figcaption></figcaption></figure>
++### Step 6: you head over to the [farms section](#step-1-go-to-https-app.rhea.finance-stake-and-connect-your-wallet) on Liquidity tab, you can now see your boosted APY figures under the APYs.&#x20;
++<figure><img src="/files/WTHKQf8UHZBnDyPdBPxh" alt=""><figcaption></figcaption></figure>

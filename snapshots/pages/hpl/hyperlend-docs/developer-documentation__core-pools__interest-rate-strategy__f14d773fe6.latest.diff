@@ -1,163 +1,250 @@
 --- hpl/hyperlend-docs/developer-documentation__core-pools__interest-rate-strategy__f14d773fe6:previous
 +++ hpl/hyperlend-docs/developer-documentation__core-pools__interest-rate-strategy__f14d773fe6:current
-@@ -0,0 +1,160 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Implements the computation of interest rates based on the current state of the reserve. This interest rate model utilizes two distinct slopes: one applicable before reaching the
-+OPTIMAL_USAGE_RATIO
-+, and another that applies from that point up to full utilization (100%).
-+Due to caching of the
-+PoolAddressesProvider
-+, an instance of this contract cannot be shared across different Hyperlend markets.
-+The source code is available on GitHub.
-+View Methods
-+getVariableRateSlope1
-+Copy
-+function
-+getVariableRateSlope1
-+(
-+address
-+reserve
-+)
-+external
-+view
-+returns
-+(
-+uint256
-+)
-+Provides the variable rate slope for the specified reserve when the usage ratio is below the optimal threshold. This rate is relevant when the usage ratio ranges from 0 up to
-+OPTIMAL_USAGE_RATIO
-+.
-+Input Parameters:
-+Name
-+Type
-+Description
-+reserve
-+address
-+The address of the reserve asset
-+Return Values:
-+Type
-+Description
-+uint256
-+The variable rate slope value
-+getVariableRateSlope2
-+Copy
-+function
-+getVariableRateSlope2
-+(
-+address
-+reserve
-+)
-+external
-+view
-+returns
-+(
-+uint256
-+)
-+Provides the variable rate slope for the specified reserve when the usage ratio exceeds the optimal threshold. This rate applies when the usage ratio is greater than
-+OPTIMAL_USAGE_RATIO
-+.
-+Input Parameters:
-+Name
-+Type
-+Description
-+reserve
-+address
-+The address of the reserve asset
-+Return Values:
-+Type
-+Description
-+uint256
-+The variable rate slope value
-+getBaseVariableBorrowRate
-+Returns the base variable borrow rate for the given reserve.
-+Input Parameters:
-+Name
-+Type
-+Description
-+reserve
-+address
-+The address of the reserve asset
-+Return Values:
-+Type
-+Description
-+uint256
-+The base variable borrow rate, in ray
-+getMaxVariableBorrowRate
-+Returns the maximum variable borrow rate for the specified reserve.
-+Input Parameters:
-+Name
-+Type
-+Description
-+reserve
-+address
-+The address of the reserve asset
-+Return Values:
-+Type
-+Description
-+uint256
-+The maximum variable borrow rate, in ray
-+calculateInterestRates
-+Calculates the interest rates based on the reserve's current state and configurations. This function returns two values: the liquidity rate and the variable borrow rate.
-+Input Parameters:
-+Name
-+Type
-+Description
-+params
-+DataTypes.CalculateInterestRatesParams
-+Parameters required to compute interest rates
-+The
-+DataTypes.CalculateInterestRatesParams
-+struct includes the following fields:
-+Name
-+Type
-+Description
-+unbacked
-+uint256
-+The amount of unbacked tokens
-+liquidityAdded
-+uint256
-+Liquidity added during the operation
-+liquidityTaken
-+uint256
-+Liquidity withdrawn during the operation
-+totalDebt
-+uint256
-+Total amount borrowed from the reserve
-+reserveFactor
-+uint256
-+Portion of interest allocated to the market's treasury
-+reserve
-+address
-+The address of the reserve
-+usingVirtualBalance
-+bool
-+Indicates if a virtual balance is being utilized
-+virtualUnderlyingBalance
-+uint256
-+Virtual balance of the underlying asset for mintable assets
-+Return Values:
-+Name
-+Type
-+Description
-+liquidityRate
-+uint256
-+The liquidity rate, expressed in ray
-+variableBorrowRate
-+uint256
-+The variable borrow rate, expressed in ray
-+Previous
-+↪ dual-oracles
-+Next
-+↪ flash-loans
-+Last updated
-+4 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy.md
-+LINK | Next ↪ flash-loans | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans
-+LINK | Previous ↪ dual-oracles | https://docs.hyperlend.finance/developer-documentation/core-pools/dual-oracles
-+LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy#view-methods
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,160 +1,91 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Implements the computation of interest rates based on the current state of the reserve. This interest rate model utilizes two distinct slopes: one applicable before reaching the
+-OPTIMAL_USAGE_RATIO
+-, and another that applies from that point up to full utilization (100%).
+-Due to caching of the
+-PoolAddressesProvider
+-, an instance of this contract cannot be shared across different Hyperlend markets.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy.md).
++# ↪ interest rate strategy
++**Implements the computation of interest rates based on the current state of the reserve. This interest rate model utilizes two distinct slopes: one applicable before reaching the `OPTIMAL_USAGE_RATIO`, and another that applies from that point up to full utilization (100%).**
++Due to caching of the `PoolAddressesProvider`, an instance of this contract cannot be shared across different Hyperlend markets.
+ The source code is available on GitHub.
+-View Methods
+-getVariableRateSlope1
+-Copy
+-function
+-getVariableRateSlope1
+-(
+-address
+-reserve
+-)
+-external
+-view
+-returns
+-(
+-uint256
+-)
+-Provides the variable rate slope for the specified reserve when the usage ratio is below the optimal threshold. This rate is relevant when the usage ratio ranges from 0 up to
+-OPTIMAL_USAGE_RATIO
+-.
+-Input Parameters:
+-Name
+-Type
+-Description
+-reserve
+-address
+-The address of the reserve asset
+-Return Values:
+-Type
+-Description
+-uint256
+-The variable rate slope value
+-getVariableRateSlope2
+-Copy
+-function
+-getVariableRateSlope2
+-(
+-address
+-reserve
+-)
+-external
+-view
+-returns
+-(
+-uint256
+-)
+-Provides the variable rate slope for the specified reserve when the usage ratio exceeds the optimal threshold. This rate applies when the usage ratio is greater than
+-OPTIMAL_USAGE_RATIO
+-.
+-Input Parameters:
+-Name
+-Type
+-Description
+-reserve
+-address
+-The address of the reserve asset
+-Return Values:
+-Type
+-Description
+-uint256
+-The variable rate slope value
+-getBaseVariableBorrowRate
++***
++#### View Methods
++**`getVariableRateSlope1`**
++```solidity
++function getVariableRateSlope1(address reserve) external view returns (uint256)
++```
++Provides the variable rate slope for the specified reserve when the usage ratio is below the optimal threshold. This rate is relevant when the usage ratio ranges from 0 up to `OPTIMAL_USAGE_RATIO`.
++**Input Parameters:**
++| Name | Type | Description |
++| ------- | ------- | -------------------------------- |
++| reserve | address | The address of the reserve asset |
++**Return Values:**
++| Type | Description |
++| ------- | ----------------------------- |
++| uint256 | The variable rate slope value |
++***
++**`getVariableRateSlope2`**
++```solidity
++function getVariableRateSlope2(address reserve) external view returns (uint256)
++```
++Provides the variable rate slope for the specified reserve when the usage ratio exceeds the optimal threshold. This rate applies when the usage ratio is greater than `OPTIMAL_USAGE_RATIO`.
++**Input Parameters:**
++| Name | Type | Description |
++| ------- | ------- | -------------------------------- |
++| reserve | address | The address of the reserve asset |
++**Return Values:**
++| Type | Description |
++| ------- | ----------------------------- |
++| uint256 | The variable rate slope value |
++***
++**`getBaseVariableBorrowRate`**
++```solidity
++function getBaseVariableBorrowRate(address reserve) external view override returns (uint256)
++```
+ Returns the base variable borrow rate for the given reserve.
+-Input Parameters:
+-Name
+-Type
+-Description
+-reserve
+-address
+-The address of the reserve asset
+-Return Values:
+-Type
+-Description
+-uint256
+-The base variable borrow rate, in ray
+-getMaxVariableBorrowRate
++**Input Parameters:**
++| Name | Type | Description |
++| ------- | ------- | -------------------------------- |
++| reserve | address | The address of the reserve asset |
++**Return Values:**
++| Type | Description |
++| ------- | ------------------------------------- |
++| uint256 | The base variable borrow rate, in ray |
++***
++**`getMaxVariableBorrowRate`**
++```solidity
++function getMaxVariableBorrowRate(address reserve) external view override returns (uint256)
++```
+ Returns the maximum variable borrow rate for the specified reserve.
+-Input Parameters:
+-Name
+-Type
+-Description
+-reserve
+-address
+-The address of the reserve asset
+-Return Values:
+-Type
+-Description
+-uint256
+-The maximum variable borrow rate, in ray
+-calculateInterestRates
++**Input Parameters:**
++| Name | Type | Description |
++| ------- | ------- | -------------------------------- |
++| reserve | address | The address of the reserve asset |
++**Return Values:**
++| Type | Description |
++| ------- | ---------------------------------------- |
++| uint256 | The maximum variable borrow rate, in ray |
++***
++**`calculateInterestRates`**
++```solidity
++function calculateInterestRates(
++DataTypes.CalculateInterestRatesParams memory params
++) external view override returns (uint256, uint256)
++```
+ Calculates the interest rates based on the reserve's current state and configurations. This function returns two values: the liquidity rate and the variable borrow rate.
+-Input Parameters:
+-Name
+-Type
+-Description
+-params
+-DataTypes.CalculateInterestRatesParams
+-Parameters required to compute interest rates
+-The
+-DataTypes.CalculateInterestRatesParams
+-struct includes the following fields:
+-Name
+-Type
+-Description
+-unbacked
+-uint256
+-The amount of unbacked tokens
+-liquidityAdded
+-uint256
+-Liquidity added during the operation
+-liquidityTaken
+-uint256
+-Liquidity withdrawn during the operation
+-totalDebt
+-uint256
+-Total amount borrowed from the reserve
+-reserveFactor
+-uint256
+-Portion of interest allocated to the market's treasury
+-reserve
+-address
+-The address of the reserve
+-usingVirtualBalance
+-bool
+-Indicates if a virtual balance is being utilized
+-virtualUnderlyingBalance
+-uint256
+-Virtual balance of the underlying asset for mintable assets
+-Return Values:
+-Name
+-Type
+-Description
+-liquidityRate
+-uint256
+-The liquidity rate, expressed in ray
+-variableBorrowRate
+-uint256
+-The variable borrow rate, expressed in ray
+-Previous
+-↪ dual-oracles
+-Next
+-↪ flash-loans
+-Last updated
+-4 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy.md
+-LINK | Next ↪ flash-loans | https://docs.hyperlend.finance/developer-documentation/core-pools/flash-loans
+-LINK | Previous ↪ dual-oracles | https://docs.hyperlend.finance/developer-documentation/core-pools/dual-oracles
+-LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/core-pools/interest-rate-strategy#view-methods
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++**Input Parameters:**
++| Name | Type | Description |
++| ------ | -------------------------------------- | --------------------------------------------- |
++| params | DataTypes.CalculateInterestRatesParams | Parameters required to compute interest rates |
++The `DataTypes.CalculateInterestRatesParams` struct includes the following fields:
++| Name | Type | Description |
++| ------------------------ | ------- | ----------------------------------------------------------- |
++| unbacked | uint256 | The amount of unbacked tokens |
++| liquidityAdded | uint256 | Liquidity added during the operation |
++| liquidityTaken | uint256 | Liquidity withdrawn during the operation |
++| totalDebt | uint256 | Total amount borrowed from the reserve |
++| reserveFactor | uint256 | Portion of interest allocated to the market's treasury |
++| reserve | address | The address of the reserve |
++| usingVirtualBalance | bool | Indicates if a virtual balance is being utilized |
++| virtualUnderlyingBalance | uint256 | Virtual balance of the underlying asset for mintable assets |
++**Return Values:**
++| Name | Type | Description |
++| ------------------ | ------- | ------------------------------------------ |
++| liquidityRate | uint256 | The liquidity rate, expressed in ray |
++| variableBorrowRate | uint256 | The variable borrow rate, expressed in ray |
++***

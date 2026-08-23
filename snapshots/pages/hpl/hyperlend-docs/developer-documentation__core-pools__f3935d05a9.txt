@@ -1,59 +1,27 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-HyperLend Core Pools are based on Aave V3 contracts.
-The source code of the HyperLend Core contracts is available on
-GitHub
-.
-Pool
-The
-Pool
-contract is the main entry point into the Hyperlend Core Pools. Most user interactions with the protocol occur through this contract.
-PoolConfigurator
-The
-PoolConfigurator
-provides configuration methods for the
-Pool
-contract. The write methods in this contract can only be called by addresses with the appropriate permissioned system roles managed by the
-ACLManager
-.
-PoolAddressesProvider
-The
-PoolAddressesProvider
-acts as a registry for various protocol components, including the
-Pool
-contract. It also can modify the implementation of proxy contracts.
-Oracle
-The
-Oracle
-is the registry of oracles used to fetch asset prices and manage price sources.
-ProtocolDataProvider
-The
-ProtocolDataProvider
-collects and preprocesses information from the
-Pool
-contract, making it easier to use.
-InterestRateStrategy
-The
-InterestRateStrategy
-contract calculates the interest rates based on the state of the reserve.
-hToken
-hTokens
-are yield-generating tokens minted and burned upon the supply and withdrawal of assets to and from the Hyperlend Pool.
-VariableDebtToken
-VariableDebtTokens
-are non-transferable tokens that accrue interest, representing borrow positions with variable borrow rates.
-Previous
-Contract Addresses
-Next
-↪ pool
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | GitHub | https://github.com/hyperlendx/hyperlend-core
-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/core-pools.md
-LINK | Next ↪ pool | https://docs.hyperlend.finance/developer-documentation/core-pools/pool
-LINK | Previous Contract Addresses | https://docs.hyperlend.finance/developer-documentation/contract-addresses
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/core-pools.md).
+# Core Pools
+{% hint style="info" %}
+**HyperLend Core Pools are based on Aave V3 contracts.**
+{% endhint %}
+The source code of the HyperLend Core contracts is available on [GitHub](https://github.com/hyperlendx/hyperlend-core).
+***
+**Pool**
+The `Pool` contract is the main entry point into the Hyperlend Core Pools. Most user interactions with the protocol occur through this contract.&#x20;
+**PoolConfigurator**
+The `PoolConfigurator` provides configuration methods for the `Pool` contract. The write methods in this contract can only be called by addresses with the appropriate permissioned system roles managed by the `ACLManager`.
+***
+**PoolAddressesProvider**
+The `PoolAddressesProvider` acts as a registry for various protocol components, including the `Pool`contract. It also can modify the implementation of proxy contracts.
+***
+**Oracle**
+The `Oracle` is the registry of oracles used to fetch asset prices and manage price sources.
+**ProtocolDataProvider**
+The `ProtocolDataProvider`collects and preprocesses information from the `Pool`contract, making it easier to use.
+**InterestRateStrategy**
+The `InterestRateStrategy` contract calculates the interest rates based on the state of the reserve.
+***
+**hToken**
+`hTokens` are yield-generating tokens minted and burned upon the supply and withdrawal of assets to and from the Hyperlend Pool.
+**VariableDebtToken**
+`VariableDebtTokens` are non-transferable tokens that accrue interest, representing borrow positions with variable borrow rates.
+***

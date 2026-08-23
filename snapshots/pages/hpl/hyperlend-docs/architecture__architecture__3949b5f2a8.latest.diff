@@ -1,59 +1,71 @@
 --- hpl/hyperlend-docs/architecture__architecture__3949b5f2a8:previous
 +++ hpl/hyperlend-docs/architecture__architecture__3949b5f2a8:current
-@@ -0,0 +1,56 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+HyperLend's design centers around a
-+lending pool
-+where users can
-+deposit and borrow cryptocurrency
-+. The platform employs an
-+algorithm
-+to set
-+interest rates
-+based on
-+supply and demand
-+, ensuring
-+competitive rates
-+. It also offers
-+flash loans
-+, allowing users to borrow funds
-+without collateral
-+for
-+short-term needs
-+.
-+Security
-+is a top priority, with all
-+smart contracts audited by third parties
-+to
-+protect user funds
-+.
-+HyperLend is a
-+friendly fork
-+of
-+Aave v3.6
-+.
-+Core Components
-+• Core Pools
-+Core Pools are the lending pools that allow the supplying or borrowing of multiple tokens in a single pool. This increases the capital efficiency, but also the risk, since if one of the assets in the pool fails (e.g. market manipulation, infinite mint exploits...), the entire pool is at risk.
-+• E-mode (Efficiency Mode):
-+E-mode allows users to borrow with higher LTV when both the collateral and borrowed assets are from the same correlated category, such as stablecoins or staking derivatives. It increases capital efficiency while keeping risk isolated. When enabled, borrowing and supplying are restricted to assets within that category.
-+• Isolated Pools
-+Isolated Pools isolate the risk since each market only consists of 2 tokens, one that can be used as collateral and one that can be borrowed.
-+Previous
-+↪ How to Stake HPL
-+Next
-+Risks
-+Last updated
-+2 months ago
-+[[LINK TARGETS]]
-+LINK | Aave v3.6 | https://github.com/hyperlendx/hyperlend-core/tree/v3.6.0
-+LINK | Markdown | https://docs.hyperlend.finance/architecture/architecture.md
-+LINK | Next Risks | https://docs.hyperlend.finance/architecture/risks
-+LINK | Previous ↪ How to Stake HPL | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-stake-hpl
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/architecture#core-components
-+LINK | friendly fork | https://governance.aave.com/t/arfc-recognize-hyperlend-as-a-friendly-fork/21129
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,56 +1,15 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-HyperLend's design centers around a
+-lending pool
+-where users can
+-deposit and borrow cryptocurrency
+-. The platform employs an
+-algorithm
+-to set
+-interest rates
+-based on
+-supply and demand
+-, ensuring
+-competitive rates
+-. It also offers
+-flash loans
+-, allowing users to borrow funds
+-without collateral
+-for
+-short-term needs
+-.
+-Security
+-is a top priority, with all
+-smart contracts audited by third parties
+-to
+-protect user funds
+-.
+-HyperLend is a
+-friendly fork
+-of
+-Aave v3.6
+-.
+-Core Components
+-• Core Pools
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/architecture.md).
++# Architecture
++HyperLend's design centers around a **lending pool** where users can **deposit and borrow cryptocurrency**. The platform employs an **algorithm** to set **interest rates** based on **supply and demand**, ensuring **competitive rates**. It also offers **flash loans**, allowing users to borrow funds **without collateral** for **short-term needs**. **Security** is a top priority, with all **smart contracts audited by third parties** to **protect user funds**.
++HyperLend is a [friendly fork](https://governance.aave.com/t/arfc-recognize-hyperlend-as-a-friendly-fork/21129) of [Aave v3.6](https://github.com/hyperlendx/hyperlend-core/tree/v3.6.0).
++<figure><img src="/files/sa6T9j3Ikg5SD9j3xXlW" alt=""><figcaption></figcaption></figure>
++### Core Components <a href="#core-components" id="core-components"></a>
++**• Core Pools**
+ Core Pools are the lending pools that allow the supplying or borrowing of multiple tokens in a single pool. This increases the capital efficiency, but also the risk, since if one of the assets in the pool fails (e.g. market manipulation, infinite mint exploits...), the entire pool is at risk.
+-• E-mode (Efficiency Mode):
++***
++**• E-mode (Efficiency Mode):**
+ E-mode allows users to borrow with higher LTV when both the collateral and borrowed assets are from the same correlated category, such as stablecoins or staking derivatives. It increases capital efficiency while keeping risk isolated. When enabled, borrowing and supplying are restricted to assets within that category.
+-• Isolated Pools
++<figure><img src="/files/ErGxlOu45CL84zws44ju" alt=""><figcaption></figcaption></figure>
++***
++**• Isolated Pools**
+ Isolated Pools isolate the risk since each market only consists of 2 tokens, one that can be used as collateral and one that can be borrowed.
+-Previous
+-↪ How to Stake HPL
+-Next
+-Risks
+-Last updated
+-2 months ago
+-[[LINK TARGETS]]
+-LINK | Aave v3.6 | https://github.com/hyperlendx/hyperlend-core/tree/v3.6.0
+-LINK | Markdown | https://docs.hyperlend.finance/architecture/architecture.md
+-LINK | Next Risks | https://docs.hyperlend.finance/architecture/risks
+-LINK | Previous ↪ How to Stake HPL | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-stake-hpl
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/architecture#core-components
+-LINK | friendly fork | https://governance.aave.com/t/arfc-recognize-hyperlend-as-a-friendly-fork/21129
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt

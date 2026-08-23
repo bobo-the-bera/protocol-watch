@@ -1,117 +1,53 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-For users:
-How do I add the HyperEVM to my wallet extension?
-You can add the HyperEVM to your wallet extension by using Chainlist (
-https://chainlist.org/chain/999
-) or following these steps:
-In your wallet extension, click “Add Custom Network” and enter the information below:
-Chain ID: 999
-Network Name: Hyperliquid
-RPC URL:
-https://rpc.hyperliquid.xyz/evm
-Block explorer URL (optional):
-https://hyperevmscan.io/
-https://www.hyperscan.com/
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm.md).
+# How to use the HyperEVM
+## For users:
+### How do I add the HyperEVM to my wallet extension?
+You can add the HyperEVM to your wallet extension by using Chainlist (<https://chainlist.org/chain/999>) or following these steps: [ ](https://chainlist.org/chain/999)
+In your wallet extension, click “Add Custom Network” and enter the information below: &#x20;
+Chain ID: 999&#x20;
+Network Name: Hyperliquid&#x20;
+RPC URL:[ https://rpc.hyperliquid.xyz/evm](https://rpc.hyperliquid.xyz/evm)&#x20;
+Block explorer URL (optional):&#x20;
+1. <https://hyperevmscan.io/>
+2. <https://www.hyperscan.com/>
 Currency Symbol: HYPE
-How do I move assets to and from the HyperEVM?
-You can send assets to the HyperEVM from your Spot balances on HyperCore and vice versa by clicking the “Transfer to/from EVM” button on the Balances table of the Trade or Portfolio pages or clicking the "EVM <-> Core Transfer" button at the top of the Portfolio page.
-You can also send your HYPE to 0x2222222222222222222222222222222222222222 from either your Spot balances or from the EVM to transfer. Note that this only works for HYPE; sending other assets will lead to them being lost. Each spot asset has a unique transfer address.
-Sending from the HyperEVM to your Spot balances costs gas in HYPE on the HyperEVM. Sending from your Spot balances to the HyperEVM cost gas in HYPE on HyperCore (Spot).
-What can I do on the HyperEVM?
+<figure><img src="/files/LskykzrVNR4ujRcNMC6t" alt="" width="375"><figcaption></figcaption></figure>
+### How do I move assets to and from the HyperEVM?
+You can send assets to the HyperEVM from your Spot balances on HyperCore and vice versa by clicking the “Transfer to/from EVM” button on the Balances table of the Trade or Portfolio pages or clicking the "EVM <-> Core Transfer" button at the top of the Portfolio page. &#x20;
+You can also send your HYPE to 0x2222222222222222222222222222222222222222 from either your Spot balances or from the EVM to transfer. Note that this only works for HYPE; sending other assets will lead to them being lost. Each spot asset has a unique transfer address.&#x20;
+Sending from the HyperEVM to your Spot balances costs gas in HYPE on the HyperEVM. Sending from your Spot balances to the HyperEVM cost gas in HYPE on HyperCore (Spot). &#x20;
+<figure><img src="/files/YA6pPZxJyhtnJNNBhAJf" alt="" width="375"><figcaption></figcaption></figure>
+### What can I do on the HyperEVM?
 Various teams are building applications, tooling, etc. on the HyperEVM. There are many community initiatives to track new releases on the HyperEVM, including:
-https://www.hypurr.co/ecosystem-projects
-,
-https://data.asxn.xyz/dashboard/hyperliquid-ecosystem
-,
-https://hl.eco/
-, and the #hyperevm-eco channel in
-https://discord.gg/hyperliquid
-How does the HyperEVM interact with the rest of the Hyperliquid blockchain?
+<https://www.hypurr.co/ecosystem-projects>, <https://data.asxn.xyz/dashboard/hyperliquid-ecosystem>, <https://hl.eco/>, and the #hyperevm-eco channel in <https://discord.gg/hyperliquid>&#x20;
+### How does the HyperEVM interact with the rest of the Hyperliquid blockchain?&#x20;
 Hyperliquid is one state with HyperCore state (e.g., perps, spot, order books, other trading features) and HyperEVM state. Because everything is secured by the same HyperBFT consensus, there will ultimately be seamless integration between the two. You can build an application on the HyperEVM involving lending, trading, yield generation, etc. That application can directly access the liquidity on the order books, so that defi has CEX-like functionality for the first time. The application token can also list on native Hyperliquid trading permissionlessly, so that trading happens on the same chain as building.
-Why does gas spike?
+### Why does gas spike?
 While the Hyperliquid native blockchain is one of the most performant, high throughput blockchains today, the HyperEVM was intentionally launched with lower initial throughput. Because HyperCore and the HyperEVM share the same state, it is technically risky to allow the HyperEVM to consume more bandwidth on initial launch. The HyperEVM throughput will be increased over time in a gradual technical rollout.
-Gas spikes on any chain when there is more demand than supply of blockspace. The HyperEVM uses the same gas system as Ethereum and many L2s, where there is a base fee and a priority fee: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md
-Can I send HYPE on the HyperEVM to a centralized exchange?
-First confirm with the CEX that they support the HyperEVM. Note that the HyperEVM is one part of the Hyperliquid blockchain. HyperCore (e.g., perps, spot, and other trading features) and the HyperEVM are separate parts of the same blockchain. Some CEXs support sending and receiving HYPE from Spot balances on HyperCore, but not the HyperEVM. Always remember to do a test transaction when you are trying something for the first time.
-How do I bridge assets to the HyperEVM from another chain?
-There are many different bridges / swaps, including:
-Stargate (Powered by LayerZero):
-https://stargate.finance/
-DeBridge:
-https://app.debridge.finance/
-Gas.zip:
-https://www.gas.zip/
-Jumper:
-https://jumper.exchange/
-Cortex for HYPE:
-https://cortexprotocol.com/agent?q=buy%20hype
-Garden for BTC:
-https://app.garden.finance/
-Mintify for ETH:
-https://mintify.xyz/crypto
-USDT0 for USDT0:
-https://usdt0.to/transfer
-Stargate for USDe:
-https://stargate.finance/bridge?srcChain=ethereum&srcToken=0x4c9EDD5852cd905f086C759E8383e09bff1E68B3&dstChain=hyperliquid&dstToken=0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34
-For builders:
-What can I build on the HyperEVM?
+Gas spikes on any chain when there is more demand than supply of blockspace. The HyperEVM uses the same gas system as Ethereum and many L2s, where there is a base fee and a priority fee: <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md>
+### Can I send HYPE on the HyperEVM to a centralized exchange?
+First confirm with the CEX that they support the HyperEVM. Note that the HyperEVM is one part of the Hyperliquid blockchain. HyperCore (e.g., perps, spot, and other trading features) and the HyperEVM are separate parts of the same blockchain. Some CEXs support sending and receiving HYPE from Spot balances on HyperCore, but not the HyperEVM. Always remember to do a test transaction when you are trying something for the first time.&#x20;
+### How do I bridge assets to the HyperEVM from another chain?&#x20;
+There are many different bridges / swaps, including:&#x20;
+* Stargate (Powered by LayerZero): <https://stargate.finance/>
+* DeBridge: [https://app.debridge.finance/](https://app.debridge.finance/?inputChain=1\&outputChain=999\&inputCurrency=\&outputCurrency=\&dlnMode=simple)
+* Gas.zip: <https://www.gas.zip/>
+* Jumper: <https://jumper.exchange/>
+* Cortex for HYPE: <https://cortexprotocol.com/agent?q=buy%20hype>
+* Garden for BTC: <https://app.garden.finance/>&#x20;
+* Mintify for ETH: <https://mintify.xyz/crypto>
+* USDT0 for USDT0: <https://usdt0.to/transfer>
+* Stargate for USDe: <https://stargate.finance/bridge?srcChain=ethereum&srcToken=0x4c9EDD5852cd905f086C759E8383e09bff1E68B3&dstChain=hyperliquid&dstToken=0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34>
+## For builders:&#x20;
+### What can I build on the HyperEVM?
 Any application from other chains can already be built with the limited launch. The HyperEVM is a fully functional EVM of its own. Other features live on testnet will gradually roll out to mainnet.
-How do I set up an RPC? What RPCs are available?
-There is one rpc hosted at rpc.hyperliquid.xyz/evm. Other builders are launching their own as well. Users may run a node, but it is not a requirement to serve an RPC, as all data is uploaded real-time to S3. See Python SDK for an example: https://github.com/hyperliquid-dex/hyperliquid-python-sdk/blob/master/examples/evm_block_indexer.py.
-How do I get gas on the HyperEVM?
-The native token, HYPE, is the gas token on the HyperEVM. You can buy HYPE with USDC on Hyperliquid and then transfer from HyperCore to the HyperEVM. You can also use the bridges mentioned in
-How do I bridge assets to the HyperEVM from another chain?
-What version of the EVM is the HyperEVM based on?
+### How do I set up an RPC? What RPCs are available?
+There is one rpc hosted at rpc.hyperliquid.xyz/evm. Other builders are launching their own as well. Users may run a node, but it is not a requirement to serve an RPC, as all data is uploaded real-time to S3. See Python SDK for an example: <https://github.com/hyperliquid-dex/hyperliquid-python-sdk/blob/master/examples/evm\\_block\\_indexer.py>.
+### How do I get gas on the HyperEVM?
+The native token, HYPE, is the gas token on the HyperEVM. You can buy HYPE with USDC on Hyperliquid and then transfer from HyperCore to the HyperEVM. You can also use the bridges mentioned in [#how-do-i-bridge-assets-to-the-hyperevm-from-another-chain](#how-do-i-bridge-assets-to-the-hyperevm-from-another-chain "mention")
+### What version of the EVM is the HyperEVM based on?
 Cancun without blobs.
-What is the difference between the HyperEVM and other EVMs, like Ethereum?
+### What is the difference between the HyperEVM and other EVMs, like Ethereum?
 Functionality is largely the same, which makes it easy to build similar tooling and applications. The main differences are:
-Dual block system: fast small blocks and slow big blocks
-Interactions with HyperCore: allowing HyperEVM users to access the order book liquidity, etc.
-Previous
-How to start trading
-Next
-How to stake HYPE
-Last updated
-6 days ago
-[[LINK TARGETS]]
-LINK | How do I bridge assets to the HyperEVM from another chain? | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-bridge-assets-to-the-hyperevm-from-another-chain
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm.md
-LINK | Next How to stake HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype
-LINK | Previous How to start trading | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
-LINK | [no text] | https://chainlist.org/chain/999
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#can-i-send-hype-on-the-hyperevm-to-a-centralized-exchange
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#for-builders
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#for-users
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-add-the-hyperevm-to-my-wallet-extension
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-bridge-assets-to-the-hyperevm-from-another-chain
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-get-gas-on-the-hyperevm
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-set-up-an-rpc-what-rpcs-are-available
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-does-the-hyperevm-interact-with-the-rest-of-the-hyperliquid-blockchain
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-build-on-the-hyperevm
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-is-the-difference-between-the-hyperevm-and-other-evms-like-ethereum
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-version-of-the-evm-is-the-hyperevm-based-on
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#why-does-gas-spike
-LINK | https://app.debridge.finance/ | https://app.debridge.finance/?inputChain=1&outputChain=999&inputCurrency=&outputCurrency=&dlnMode=simple
-LINK | https://app.garden.finance/ | https://app.garden.finance/
-LINK | https://chainlist.org/chain/999 | https://chainlist.org/chain/999
-LINK | https://cortexprotocol.com/agent?q=buy%20hype | https://cortexprotocol.com/agent?q=buy%20hype
-LINK | https://data.asxn.xyz/dashboard/hyperliquid-ecosystem | https://data.asxn.xyz/dashboard/hyperliquid-ecosystem
-LINK | https://discord.gg/hyperliquid | https://discord.gg/hyperliquid
-LINK | https://hl.eco/ | https://hl.eco/
-LINK | https://hyperevmscan.io/ | https://hyperevmscan.io/
-LINK | https://jumper.exchange/ | https://jumper.exchange/
-LINK | https://mintify.xyz/crypto | https://mintify.xyz/crypto
-LINK | https://rpc.hyperliquid.xyz/evm | https://rpc.hyperliquid.xyz/evm
-LINK | https://stargate.finance/ | https://stargate.finance/
-LINK | https://stargate.finance/bridge?srcChain=ethereum&srcToken=0x4c9EDD5852cd905f086C759E8383e09bff1E68B3&dstChain=hyperliquid&dstToken=0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34 | https://stargate.finance/bridge?srcChain=ethereum&srcToken=0x4c9EDD5852cd905f086C759E8383e09bff1E68B3&dstChain=hyperliquid&dstToken=0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34
-LINK | https://usdt0.to/transfer | https://usdt0.to/transfer
-LINK | https://www.gas.zip/ | https://www.gas.zip/
-LINK | https://www.hyperscan.com/ | https://www.hyperscan.com/
-LINK | https://www.hypurr.co/ecosystem-projects | https://www.hypurr.co/ecosystem-projects
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+1. Dual block system: fast small blocks and slow big blocks
+2. Interactions with HyperCore: allowing HyperEVM users to access the order book liquidity, etc.

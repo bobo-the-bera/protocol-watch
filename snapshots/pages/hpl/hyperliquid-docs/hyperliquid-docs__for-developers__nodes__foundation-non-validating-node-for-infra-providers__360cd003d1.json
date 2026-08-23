@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:40+00:00",
+  "content_changed_at": "2026-08-23T12:29:10+00:00",
   "protocol": "hpl",
-  "sha256": "3943f8c1f32fd05b74d3719fb15e1da7ed046a71f526c6d6fcd3a82d19b04825",
+  "sha256": "bb4ed05e3e49d1e630b2c51fba8809eec09880753be9c8d4a96ae248db80967b",
   "slug": "hyperliquid-docs__for-developers__nodes__foundation-non-validating-node-for-infra-providers__360cd003d1",
   "tags": [
     "hyperliquid",

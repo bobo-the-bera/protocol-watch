@@ -1,50 +1,73 @@
 --- hpl/hyperlend-docs/how-to__how-to-hyperlend__how-to-share-your-yield-in-style__225fe04e8f:previous
 +++ hpl/hyperlend-docs/how-to__how-to-hyperlend__how-to-share-your-yield-in-style__225fe04e8f:current
-@@ -0,0 +1,47 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Why Share Your Yield?
-+↝
-+Advantages of Sharing
-+Showcase Your Success
-+: Display your earnings and APY to inspire others.
-+Earn Referrals
-+: Boost your rewards by sharing your personalized referral link embedded in the graphic.
-+Community Engagement
-+: Join the HyperLend community by sharing your unique designs.
-+How to Share Your Yield
-+↝
-+Steps to Create and Share Graphics
-+Access the Share Feature
-+Go to the
-+Markets
-+section, select your supplied asset, and click the
-+Share
-+button in the bottom right.
-+Customize Your Graphic
-+Choose a Design
-+: Select from four stylish graphics to match your vibe.
-+Add Your Twitter Username
-+: Enter your handle to personalize the design.
-+Profile Picture Option
-+: Toggle on/off to include your Twitter profile picture.
-+Preview Your Design
-+Verify your earnings, APY, and personalization are displayed correctly.
-+Share or Download
-+Share
-+: Instantly post on social media platforms.
-+Download Image
-+: Save the graphic for manual sharing.
-+Start sharing your yield today and join the vibrant HyperLend community!
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style.md
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#access-the-share-feature
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#customize-your-graphic
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#preview-your-design
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#share-or-download
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,47 +1,24 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Why Share Your Yield?
+-↝
+-Advantages of Sharing
+-Showcase Your Success
+-: Display your earnings and APY to inspire others.
+-Earn Referrals
+-: Boost your rewards by sharing your personalized referral link embedded in the graphic.
+-Community Engagement
+-: Join the HyperLend community by sharing your unique designs.
+-How to Share Your Yield
+-↝
+-Steps to Create and Share Graphics
+-Access the Share Feature
+-Go to the
+-Markets
+-section, select your supplied asset, and click the
+-Share
+-button in the bottom right.
+-Customize Your Graphic
+-Choose a Design
+-: Select from four stylish graphics to match your vibe.
+-Add Your Twitter Username
+-: Enter your handle to personalize the design.
+-Profile Picture Option
+-: Toggle on/off to include your Twitter profile picture.
+-Preview Your Design
+-Verify your earnings, APY, and personalization are displayed correctly.
+-Share or Download
+-Share
+-: Instantly post on social media platforms.
+-Download Image
+-: Save the graphic for manual sharing.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style.md).
++# ↪ How to Share your Yield in Style
++**Why Share Your Yield?**
++↝ **Advantages of Sharing**
++* **Showcase Your Success**: Display your earnings and APY to inspire others.
++* **Earn Referrals**: Boost your rewards by sharing your personalized referral link embedded in the graphic.
++* **Community Engagement**: Join the HyperLend community by sharing your unique designs.
++***
++**How to Share Your Yield**
++↝ **Steps to Create and Share Graphics**
++#### Access the Share Feature <a href="#access-the-share-feature" id="access-the-share-feature"></a>
++* Go to the **Markets** section, select your supplied asset, and click the **Share** button in the bottom right.
++<figure><img src="https://hyperlendnotstaging.gitbook.io/notstaging/DDsbEDiCKODk1pFG9mPe/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FmUCJaqeE7OrRjdsphXwY%2Fblobs%2FfEyeN4oMsOojWfqDONNB%2Fimage&#x26;width=768&#x26;dpr=3&#x26;quality=100&#x26;sign=d4bde7cf&#x26;sv=2" alt=""><figcaption></figcaption></figure>
++#### Customize Your Graphic <a href="#customize-your-graphic" id="customize-your-graphic"></a>
++1. **Choose a Design**: Select from four stylish graphics to match your vibe.
++2. **Add Your Twitter Username**: Enter your handle to personalize the design.
++3. **Profile Picture Option**: Toggle on/off to include your Twitter profile picture.
++#### Preview Your Design <a href="#preview-your-design" id="preview-your-design"></a>
++* Verify your earnings, APY, and personalization are displayed correctly.
++#### Share or Download <a href="#share-or-download" id="share-or-download"></a>
++* **Share**: Instantly post on social media platforms.
++* **Download Image**: Save the graphic for manual sharing.
+ Start sharing your yield today and join the vibrant HyperLend community!
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style.md
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#access-the-share-feature
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#customize-your-graphic
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#preview-your-design
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style#share-or-download
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++<figure><img src="https://hyperlendnotstaging.gitbook.io/notstaging/DDsbEDiCKODk1pFG9mPe/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FmUCJaqeE7OrRjdsphXwY%2Fblobs%2FRdCbJOompsw10YG7skAR%2Fimage&#x26;width=768&#x26;dpr=3&#x26;quality=100&#x26;sign=3503ff75&#x26;sv=2" alt=""><figcaption></figcaption></figure>

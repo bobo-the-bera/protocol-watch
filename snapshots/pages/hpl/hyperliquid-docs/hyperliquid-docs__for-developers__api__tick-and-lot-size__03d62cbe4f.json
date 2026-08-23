@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:33+00:00",
+  "content_changed_at": "2026-08-23T12:29:03+00:00",
   "protocol": "hpl",
-  "sha256": "040da60809171b1310d516339a507f83e0b65375e7c9358ddee1f7b984006bab",
+  "sha256": "295db2bf58c09e2fbcce27f4f8eb112774c1d17ad9c02dd8fd8815c4b42c152f",
   "slug": "hyperliquid-docs__for-developers__api__tick-and-lot-size__03d62cbe4f",
   "tags": [
     "hyperliquid",

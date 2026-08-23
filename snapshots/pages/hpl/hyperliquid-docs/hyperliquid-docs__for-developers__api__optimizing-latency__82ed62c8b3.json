@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:30+00:00",
+  "content_changed_at": "2026-08-23T12:29:01+00:00",
   "protocol": "hpl",
-  "sha256": "fa59dad23921ca34aaa3b7239e4e1848e4400f731aa3be4f5050977fb7db208f",
+  "sha256": "a4aa0afafdf663235fa0eb2ea6e42b560000572bc9adecf93032bd393a6cd4d0",
   "slug": "hyperliquid-docs__for-developers__api__optimizing-latency__82ed62c8b3",
   "tags": [
     "hyperliquid",

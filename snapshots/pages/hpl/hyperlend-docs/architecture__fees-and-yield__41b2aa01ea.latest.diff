@@ -1,54 +1,66 @@
 --- hpl/hyperlend-docs/architecture__fees-and-yield__41b2aa01ea:previous
 +++ hpl/hyperlend-docs/architecture__fees-and-yield__41b2aa01ea:current
-@@ -0,0 +1,51 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Fees
-+HyperLend charges
-+three types of fees
-+:
-+Reserve factor
-+: Part of the interest paid by borrowers goes to the
-+insurance fund and treasury
-+.
-+Liquidation fees
-+: When a position is liquidated, a portion of the
-+liquidation bonus
-+is paid to the treasury.
-+Flash-loan fees
-+: A small
-+0.04% fee
-+for utilizing flash loans.
-+Deposits & Withdrawals: ZERO FEES
-+Yield
-+HyperLend offers
-+dynamic and competitive yield rates
-+for lenders.
-+Interest rates
-+are determined by supply and demand within the liquidity pool, with higher demand resulting in higher returns. Additionally,
-+E-Mode
-+in Core Pools enhances capital efficiency for assets with correlated prices, maximizing
-+yield opportunities
-+.
-+We also offer fixed private credit through our private line,
-+Aviya
-+. We launched this first in partnership with Hyperion; read the announcement
-+here
-+.
-+Previous
-+Oracle
-+Next
-+Tokenization
-+Last updated
-+4 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/architecture/fees-and-yield.md
-+LINK | Next Tokenization | https://docs.hyperlend.finance/architecture/tokenization
-+LINK | Previous Oracle | https://docs.hyperlend.finance/architecture/oracle
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/fees-and-yield#fees-and-yield
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/fees-and-yield#yield
-+LINK | here | https://ir.hyperiondefi.com/news-events/press-releases/detail/304/hyperion-defi-announces-private-lending-pool-built-by-hyperlend
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,51 +1,12 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Fees
+-HyperLend charges
+-three types of fees
+-:
+-Reserve factor
+-: Part of the interest paid by borrowers goes to the
+-insurance fund and treasury
+-.
+-Liquidation fees
+-: When a position is liquidated, a portion of the
+-liquidation bonus
+-is paid to the treasury.
+-Flash-loan fees
+-: A small
+-0.04% fee
+-for utilizing flash loans.
+-Deposits & Withdrawals: ZERO FEES
+-Yield
+-HyperLend offers
+-dynamic and competitive yield rates
+-for lenders.
+-Interest rates
+-are determined by supply and demand within the liquidity pool, with higher demand resulting in higher returns. Additionally,
+-E-Mode
+-in Core Pools enhances capital efficiency for assets with correlated prices, maximizing
+-yield opportunities
+-.
+-We also offer fixed private credit through our private line,
+-Aviya
+-. We launched this first in partnership with Hyperion; read the announcement
+-here
+-.
+-Previous
+-Oracle
+-Next
+-Tokenization
+-Last updated
+-4 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/architecture/fees-and-yield.md
+-LINK | Next Tokenization | https://docs.hyperlend.finance/architecture/tokenization
+-LINK | Previous Oracle | https://docs.hyperlend.finance/architecture/oracle
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/fees-and-yield#fees-and-yield
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/fees-and-yield#yield
+-LINK | here | https://ir.hyperiondefi.com/news-events/press-releases/detail/304/hyperion-defi-announces-private-lending-pool-built-by-hyperlend
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/fees-and-yield.md).
++# Fees and Yield
++### Fees <a href="#fees-and-yield" id="fees-and-yield"></a>
++HyperLend charges **three types of fees**:
++* **Reserve factor**: Part of the interest paid by borrowers goes to the **insurance fund and treasury**.
++* **Liquidation fees**: When a position is liquidated, a portion of the **liquidation bonus** is paid to the treasury.
++* **Flash-loan fees**: A small **0.04% fee** for utilizing flash loans.
++* **Deposits & Withdrawals: ZERO FEES**
++***
++### Yield
++HyperLend offers **dynamic and competitive yield rates** for lenders. **Interest rates** are determined by supply and demand within the liquidity pool, with higher demand resulting in higher returns. Additionally, **E-Mode** in Core Pools enhances capital efficiency for assets with correlated prices, maximizing **yield opportunities**.
++We also offer fixed private credit through our private line, **Aviya**. We launched this first in partnership with Hyperion; read the announcement [here](https://ir.hyperiondefi.com/news-events/press-releases/detail/304/hyperion-defi-announces-private-lending-pool-built-by-hyperlend).

@@ -1,31 +1,39 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__onboarding__5b2b77a4c3:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__onboarding__5b2b77a4c3:current
-@@ -0,0 +1,28 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+How to start trading
-+How to use the HyperEVM
-+How to stake HYPE
-+Connect mobile via QR code
-+Export your email wallet
-+Testnet faucet
-+Previous
-+Core contributors
-+Next
-+How to start trading
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Connect mobile via QR code | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code
-+LINK | Export your email wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet
-+LINK | How to stake HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype
-+LINK | How to start trading | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
-+LINK | How to use the HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding.md
-+LINK | Next How to start trading | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
-+LINK | Previous Core contributors | https://hyperliquid.gitbook.io/hyperliquid-docs/about-hyperliquid/core-contributors
-+LINK | Testnet faucet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/testnet-faucet
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,28 +1,8 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-How to start trading
+-How to use the HyperEVM
+-How to stake HYPE
+-Connect mobile via QR code
+-Export your email wallet
+-Testnet faucet
+-Previous
+-Core contributors
+-Next
+-How to start trading
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Connect mobile via QR code | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code
+-LINK | Export your email wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet
+-LINK | How to stake HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype
+-LINK | How to start trading | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
+-LINK | How to use the HyperEVM | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding.md
+-LINK | Next How to start trading | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading
+-LINK | Previous Core contributors | https://hyperliquid.gitbook.io/hyperliquid-docs/about-hyperliquid/core-contributors
+-LINK | Testnet faucet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/testnet-faucet
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding.md).
++# Onboarding
++- [How to start trading](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading.md)
++- [How to use the HyperEVM](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm.md)
++- [How to stake HYPE](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype.md)
++- [Connect mobile via QR code](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code.md)
++- [Export your email wallet](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet.md)
++- [Testnet faucet](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/testnet-faucet.md)

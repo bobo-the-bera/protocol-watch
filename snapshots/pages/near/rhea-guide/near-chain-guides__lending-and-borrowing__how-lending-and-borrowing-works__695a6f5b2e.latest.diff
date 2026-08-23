@@ -1,26 +1,32 @@
 --- near/rhea-guide/near-chain-guides__lending-and-borrowing__how-lending-and-borrowing-works__695a6f5b2e:previous
 +++ near/rhea-guide/near-chain-guides__lending-and-borrowing__how-lending-and-borrowing-works__695a6f5b2e:current
-@@ -0,0 +1,23 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Health Factor
-+Interest Rate Model
-+Liquidations
-+Oracle
-+Previous
-+LP as Collateral
-+Next
-+Health Factor
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Health Factor | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor
-+LINK | Interest Rate Model | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model
-+LINK | Liquidations | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/liquidations
-+LINK | Markdown | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md
-+LINK | Next Health Factor | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor
-+LINK | Oracle | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/oracle
-+LINK | Previous LP as Collateral | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/lp-as-collateral
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,23 +1,6 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Health Factor
+-Interest Rate Model
+-Liquidations
+-Oracle
+-Previous
+-LP as Collateral
+-Next
+-Health Factor
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Health Factor | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor
+-LINK | Interest Rate Model | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model
+-LINK | Liquidations | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/liquidations
+-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md
+-LINK | Next Health Factor | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor
+-LINK | Oracle | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/oracle
+-LINK | Previous LP as Collateral | https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/lp-as-collateral
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works.md).
++# How Lending & Borrowing works
++- [Health Factor](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/health-factor.md)
++- [Interest Rate Model](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/interest-rate-model.md)
++- [Liquidations](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/liquidations.md)
++- [Oracle](https://guide.rhea.finance/near-chain-guides/lending-and-borrowing/how-lending-and-borrowing-works/oracle.md)

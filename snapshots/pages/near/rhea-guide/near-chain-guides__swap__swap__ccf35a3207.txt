@@ -1,28 +1,12 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-To start trading on the Lite version:
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/near-chain-guides/swap/swap.md).
+# Swap
+## To start trading on the Lite version:
 Make sure you are connected to RHEA Finance with your wallet.
-Step 1: Select the pair you want to swap, such as NEAR to DAI.
-Step 2: Review and adjust your Transaction Settings if necessary.
-Step 3: Click on Details and verify the transaction elements.
-Step 4: Initiate the swap & approve the transaction (i.e. using NEAR wallet).
-Previous
-RFQ DEX
-Next
-Limit Orders
-Last updated
-7 months ago
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Markdown | https://guide.rhea.finance/near-chain-guides/swap/swap.md
-LINK | Next Limit Orders | https://guide.rhea.finance/near-chain-guides/swap/limit-orders
-LINK | Previous RFQ DEX | https://guide.rhea.finance/near-chain-guides/swap
-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/swap/swap#step-1-select-the-pair-you-want-to-swap-such-as-near-to-dai
-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/swap/swap#step-2-review-and-adjust-your-transaction-settings-if-necessary
-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/swap/swap#step-3-click-on-details-and-verify-the-transaction-elements
-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/swap/swap#step-4-initiate-the-swap-and-approve-the-transaction-i.e.-using-near-wallet
-LINK | [no text] | https://guide.rhea.finance/near-chain-guides/swap/swap#to-start-trading-on-the-lite-version
-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+### Step 1: Select the pair you want to swap, such as NEAR to DAI.
+<figure><img src="/files/8Mz7XcXMFUvleNbyIji0" alt="" width="375"><figcaption></figcaption></figure>
+### Step 2: Review and adjust your Transaction Settings if necessary.
+<figure><img src="/files/p3C0yYyK9l8XwZAstjSy" alt="" width="375"><figcaption></figcaption></figure>
+### Step 3: Click on Details and verify the transaction elements.
+<figure><img src="/files/AyhCqa4IwqklUwcS3vEJ" alt="" width="375"><figcaption></figcaption></figure>
+### Step 4: Initiate the swap & approve the transaction (i.e. using NEAR wallet).
+<img src="/files/aUoaMXDDjDrU9WxNC8zd" alt="" width="365">

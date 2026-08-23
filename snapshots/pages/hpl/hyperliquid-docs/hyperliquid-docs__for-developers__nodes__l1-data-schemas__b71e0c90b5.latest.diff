@@ -1,199 +1,512 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__l1-data-schemas__b71e0c90b5:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__for-developers__nodes__l1-data-schemas__b71e0c90b5:current
-@@ -0,0 +1,196 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+The node writes data to
-+~/hl/data
-+. With default settings, the network will generate around 100 GB of logs per day, so it is recommended to archive or delete old files.
-+The command line flags to generate the auxiliary data below can be found at
-+https://github.com/hyperliquid-dex/node
-+Transaction blocks
-+Blocks parsed as transactions are streamed to
-+Copy
-+~/hl/data/replica_cmds/{start_time}/{date}/{height}
-+State snapshots
-+State snapshots are saved every 10,000 blocks to
-+Copy
-+~/hl/data/periodic_abci_states/{date}/{height}.rmp
-+Trades
-+Trades data is saved to
-+Copy
-+~/hl/data/node_trades/hourly/{date}/{hour}
-+Copy
-+// Example trade
+@@ -1,196 +1,326 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-The node writes data to
+-~/hl/data
+-. With default settings, the network will generate around 100 GB of logs per day, so it is recommended to archive or delete old files.
+-The command line flags to generate the auxiliary data below can be found at
+-https://github.com/hyperliquid-dex/node
+-Transaction blocks
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas.md).
++# L1 data schemas
++The node writes data to `~/hl/data`. With default settings, the network will generate around 100 GB of logs per day, so it is recommended to archive or delete old files.
++The command line flags to generate the auxiliary data below can be found at <https://github.com/hyperliquid-dex/node>&#x20;
++#### Transaction blocks
+ Blocks parsed as transactions are streamed to
+-Copy
++```
+ ~/hl/data/replica_cmds/{start_time}/{date}/{height}
+-State snapshots
++```
++**State snapshots**
+ State snapshots are saved every 10,000 blocks to
+-Copy
++```
+ ~/hl/data/periodic_abci_states/{date}/{height}.rmp
+-Trades
+-Trades data is saved to
+-Copy
++```
++#### Trades
++Trades data is saved to&#x20;
++```
+ ~/hl/data/node_trades/hourly/{date}/{hour}
+-Copy
++```
++```json
+ // Example trade
+ {
+-"
+-coin
+-"
+-:
+-"
+-COMP
+-"
+-,
+-"
+-side
+-"
+-:
+-"
+-B
+-"
+-,
+-"
+-time
+-"
+-:
+-"
+-2024-07-26T08:26:25.899
+-"
+-,
+-"
+-px
+-"
+-:
+-"
+-51.367
+-"
+-,
+-"
+-sz
+-"
+-:
+-"
+-0.31
+-"
+-,
+-"
+-hash
+-"
+-:
+-"
+-0xad8e0566e813bdf98176040e6d51bd011100efa789e89430cdf17964235f55d8
+-"
+-,
+-"
+-trade_dir_override
+-"
+-:
+-"
+-Na
+-"
+-,
++"coin": "COMP",
++"side": "B",
++"time": "2024-07-26T08:26:25.899",
++"px": "51.367",
++"sz": "0.31",
++"hash": "0xad8e0566e813bdf98176040e6d51bd011100efa789e89430cdf17964235f55d8",
++"trade_dir_override":"Na",
+ // side_info always has length 2
+ // side_info[0] is the buyer
+ // side_info[1] is the seller
+-"
+-side_info
+-"
+-:
++"side_info": [
 +{
-+"
-+coin
-+"
-+:
-+"
-+COMP
-+"
-+,
-+"
-+side
-+"
-+:
-+"
-+B
-+"
-+,
-+"
-+time
-+"
-+:
-+"
-+2024-07-26T08:26:25.899
-+"
-+,
-+"
-+px
-+"
-+:
-+"
-+51.367
-+"
-+,
-+"
-+sz
-+"
-+:
-+"
-+0.31
-+"
-+,
-+"
-+hash
-+"
-+:
-+"
-+0xad8e0566e813bdf98176040e6d51bd011100efa789e89430cdf17964235f55d8
-+"
-+,
-+"
-+trade_dir_override
-+"
-+:
-+"
-+Na
-+"
-+,
-+// side_info always has length 2
-+// side_info[0] is the buyer
-+// side_info[1] is the seller
-+"
-+side_info
-+"
-+:
-+[
-+{
-+"
-+user
-+"
-+:
-+"
-+0xc64cc00b46101bd40aa1c3121195e85c0b0918d8
-+"
-+,
-+"
-+start_pos
-+"
-+:
-+"
-+996.67
-+"
-+,
-+"
-+oid
-+"
-+:
-+12212201265
-+,
-+"
-+twap_id
-+"
-+:
-+null
-+,
-+"
-+cloid
-+"
-+:
-+null
++"user": "0xc64cc00b46101bd40aa1c3121195e85c0b0918d8",
++"start_pos": "996.67",
++"oid": 12212201265,
++"twap_id": null,
++"cloid": null
 +},
 +{
-+"
-+user
-+"
-+:
-+"
-+0x768484f7e2ebb675c57838366c02ae99ba2a9b08
-+"
-+,
-+"
-+start_pos
-+"
-+:
-+"
-+-996.7
-+"
-+,
-+"
-+oid
-+"
-+:
-+12212198275
-+,
-+"
-+twap_id
-+"
-+:
-+null
-+,
-+"
-+cloid
-+"
-+:
-+null
++"user": "0x768484f7e2ebb675c57838366c02ae99ba2a9b08",
++"start_pos": "-996.7",
++"oid": 12212198275,
++"twap_id": null,
++"cloid": null
 +}
 +]
 +}
-+Order statuses
++```
++#### Order statuses
 +Order status data is saved to
-+Raw book diffs
++```
++~/hl/data/node_order_statuses/hourly/{date}/{hour}
++```
++```json
++// Example order status
++{
++"time": "2024-07-26T08:31:48.717",
++"user": "0xc64cc00b46101bd40aa1c3121195e85c0b0918d8",
++"status": "canceled",
++"order": {
++"coin": "INJ",
++"side": "A",
++"limitPx": "25.381",
++// filled size
++"sz": "257.0",
++"oid": 12212359592,
++"timestamp": 1721982700270,
++"triggerCondition": "N/A",
++"isTrigger": false,
++"triggerPx": "0.0",
++"children": [],
++"isPositionTpsl": false,
++"reduceOnly": false,
++"orderType": "Limit",
++// original order size
++"origSz": "257.0",
++"tif": "Alo",
++"cloid": null
++}
++```
++#### Raw book diffs
 +Raw book diffs data is saved to
-+Miscellaneous events
++```
++~/hl/data/node_raw_book_diffs/hourly/{date}/{hour}
++```
++```json
++// Example raw book diffs
++// new resting order
++{
++"user":"0x768484f7e2ebb675c57838366c02ae99ba2a9b08",
++"oid":35061046831,
++"coin":"CHILLGUY",
++"side": "Bid",
++"px": "1.36",
++"raw_book_diff": {
++"new":{"sz":"186910.0"}
++}
++// resting order update
++{
++"user":"0x768484f7e2ebb675c57838366c02ae99ba2a9b08",
++"oid":35061055064,
++"coin":"BTC",
++"side": "Bid",
++"px": "115323.2",
++"raw_book_diff": {
++"update":{"origSz":"0.2086","newSz":"0.2076"}
++}
++// order removal
++{
++"user":"0xc64cc00b46101bd40aa1c3121195e85c0b0918d8",
++"oid":35061057543,
++"side": "Ask",
++"px": "115200.2"
++"coin":"HYPE",
++"raw_book_diff":"remove"
++}
++```
++#### Miscellaneous events
 +Miscellaneous event data is saved to
++```
++~/hl/data/misc_events/hourly/{date}/{hour}
++```
 +Miscellaneous events currently include the following
-+Staking deposits
-+Staking delegations
-+Staking withdrawals
-+Validator rewards
-+Ledger updates (funding distributions, spot transfers, etc)
-+L4 snapshots
-+Given an abci state, the node can compute an L4 book snapshot, which is the entire order book with full information about the orders for each level. This can be used as a checkpoint upon which the order statuses stream may be applied, allowing users to stream an L4 book in realtime.
-+Orders in the snapshot are sorted in time-order at the same price level. Trigger orders come at the end and be differentiated with
-+isTrigger
-+.
-+Previous
-+Nodes
-+Next
-+Foundation non-validating node
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas.md
-+LINK | Next Foundation non-validating node | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node
-+LINK | Previous Nodes | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#l4-snapshots
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#miscellaneous-events
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#order-statuses
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#raw-book-diffs
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#trades
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#transaction-blocks
-+LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++* Staking deposits
++* Staking delegations
++* Staking withdrawals
++* Validator rewards
++* Ledger updates (funding distributions, spot transfers, etc)
++<pre class="language-typescript"><code class="lang-typescript"><strong>type MiscEvent = {
++</strong><strong> time: string;
++</strong><strong> hash: string;
++</strong><strong> inner: MiscEventInner;
++</strong><strong>}
++</strong><strong>
++</strong><strong>type MiscEventInner = CDeposit | Delegation | CWithdrawal | ValidatorRewards | Funding | LedgerUpdate;
++</strong>
++type CDeposit = {
++user: string;
++amount: number;
++}
++type Delegation = {
++user: string;
++validator: string;
++amount: number;
++is_undelegate: boolean;
++}
++type CWithdrawal = {
++user: string;
++amount: number;
++is_finalized: boolean;
++}
++type ValidatorRewards = {
++validator_to_reward: Array&#x3C;[string, number]>;
++}
++type Funding {
++coin: string;
++usdc: number;
++szi: number;
++fundingRate: number;
++nSamples: number;
++}
++type LedgerUpdate = {
++users: Array&#x3C;string>;
++delta: LedgerDelta;
++}
++// InternalTransfer means Perp USDC transfer
++// RewardsClaim is for builder and referrer fees
++// Deposit/Withdraw refer to Arbitrum USDC bridge
++type LedgerDelta = Withdraw
++| Deposit
++| VaultCreate
++| VaultDeposit
++| VaultWithdraw
++| VaultDistribution
++| VaultLeaderCommission
++| Liquidation
++| InternalTransfer
++| SubAccountTransfer
++| SpotTransfer
++| SpotGenesis
++| RewardsClaim
++| AccountActivationGas
++| PerpDexClassTransfer
++| DeployGasAuction;
++type Withdraw = {
++usdc: number;
++nonce: number;
++fee: number;
++}
++type Deposit = {
++usdc: number;
++}
++type VaultCreate {
++vault: string;
++usdc: number;
++fee: number;
++}
++type VaultWithdraw {
++vault: string;
++user: string;
++requestedUsd: number;
++commission: number;
++closingCost: number;
++basis: number;
++}
++type VaultDistribution {
++vault: string;
++usdc: number;
++}
++type Liquidation {
++liquidatedNtlPos: number;
++accountValue: number;
++leverageType: string;
++liquidatedPositions: Array&#x3C;LiquidatedPosition>;
++}
++type LiquidatedPosition {
++coin: string;
++szi: number;
++}
++type InternalTransfer {
++usdc: number;
++user: string;
++destination: string;
++fee: number;
++}
++type AccountClassTransfer {
++usdc: number;
++toPerp: boolean;
++}
++type SubAccountTransfer {
++usdc: number;
++user: string;
++destination: string;
++}
++type SpotTransfer {
++token: string;
++amount: number;
++usdcValue: number;
++user: string;
++destination: string;
++fee: number;
++nativeTokenFee: number;
++}
++type SpotGenesis {
++token: string;
++amount: number;
++}
++type RewardsClaim {
++amount: number;
++}
++type AccountActivationGas {
++amount: number;
++token: string;
++}
++type PerpDexClassTransfer {
++amount: number;
++token: string;
++dex: string;
++toPerp: boolean;
++}
++type DeployGasAuction {
++token: string;
++amount: number;
++}
++</code></pre>
++#### L4 snapshots
++Given an abci state, the node can compute an L4 book snapshot, which is the entire order book with full information about the orders for each level. This can be used as a checkpoint upon which the order statuses stream may be applied, allowing users to stream an L4 book in realtime.&#x20;
++Orders in the snapshot are sorted in time-order at the same price level. Trigger orders come at the end and be differentiated with `isTrigger` .
++```json
+ [
+-{
+-"
+-user
+-"
+-:
+-"
+-0xc64cc00b46101bd40aa1c3121195e85c0b0918d8
+-"
+-,
+-"
+-start_pos
+-"
+-:
+-"
+-996.67
+-"
+-,
+-"
+-oid
+-"
+-:
+-12212201265
+-,
+-"
+-twap_id
+-"
+-:
+-null
+-,
+-"
+-cloid
+-"
+-:
+-null
++"BTC", // coin
++[
++[ // bids
++{
++"coin": "BTC",
++"side": "B",
++"limitPx": "103988.0",
++"sz": "0.2782",
++"oid": 30112287571,
++"timestamp": 1747157301016,
++"triggerCondition": "N/A",
++"isTrigger": false,
++"triggerPx": "0.0",
++"children": [],
++"isPositionTpsl": false,
++"reduceOnly": false,
++"orderType": "Limit",
++"origSz": "0.2782",
++"tif": "Alo",
++"cloid": null
+ },
+-{
+-"
+-user
+-"
+-:
+-"
+-0x768484f7e2ebb675c57838366c02ae99ba2a9b08
+-"
+-,
+-"
+-start_pos
+-"
+-:
+-"
+--996.7
+-"
+-,
+-"
+-oid
+-"
+-:
+-12212198275
+-,
+-"
+-twap_id
+-"
+-:
+-null
+-,
+-"
+-cloid
+-"
+-:
+-null
+-}
++..
++],
++[ // asks
++{
++"coin": "BTC",
++"side": "A",
++"limitPx": "93708.0",
++"sz": "0.00047",
++"oid": 30073539988,
++"timestamp": 1747128626867,
++"triggerCondition": "Price below 101856",
++"isTrigger": true,
++"triggerPx": "101856.0",
++"children": [],
++"isPositionTpsl": false,
++"reduceOnly": true,
++"orderType": "Stop Market",
++"origSz": "0.00047",
++"tif": null,
++"cloid": null
++},
++..
+ ]
+-}
+-Order statuses
+-Order status data is saved to
+-Raw book diffs
+-Raw book diffs data is saved to
+-Miscellaneous events
+-Miscellaneous event data is saved to
+-Miscellaneous events currently include the following
+-Staking deposits
+-Staking delegations
+-Staking withdrawals
+-Validator rewards
+-Ledger updates (funding distributions, spot transfers, etc)
+-L4 snapshots
+-Given an abci state, the node can compute an L4 book snapshot, which is the entire order book with full information about the orders for each level. This can be used as a checkpoint upon which the order statuses stream may be applied, allowing users to stream an L4 book in realtime.
+-Orders in the snapshot are sorted in time-order at the same price level. Trigger orders come at the end and be differentiated with
+-isTrigger
+-.
+-Previous
+-Nodes
+-Next
+-Foundation non-validating node
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas.md
+-LINK | Next Foundation non-validating node | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/foundation-non-validating-node
+-LINK | Previous Nodes | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#l4-snapshots
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#miscellaneous-events
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#order-statuses
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#raw-book-diffs
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#trades
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/nodes/l1-data-schemas#transaction-blocks
+-LINK | https://github.com/hyperliquid-dex/node | https://github.com/hyperliquid-dex/node
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++],
++[
++"ETH",
++..
++],
++[
++"SOL",
++..
++]
++```

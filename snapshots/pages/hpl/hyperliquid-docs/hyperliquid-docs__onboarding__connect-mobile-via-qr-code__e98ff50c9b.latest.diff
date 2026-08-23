@@ -1,23 +1,29 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__onboarding__connect-mobile-via-qr-code__e98ff50c9b:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__onboarding__connect-mobile-via-qr-code__e98ff50c9b:current
-@@ -0,0 +1,20 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Connect via your wallet extension (e.g., Rabby, MetaMask) on desktop
-+On your phone, click the "Connect" button and select the option "Link Desktop Wallet." You will be prompted to activate your camera and scan a QR code
-+On your desktop, click the PC+mobile icon in the top right of the navigation bar and sign the pop-up in your wallet extension. A QR code will appear
-+Use your phone camera to scan the QR code
-+Previous
-+How to stake HYPE
-+Next
-+Export your email wallet
-+Last updated
-+5 days ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code.md
-+LINK | Next Export your email wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet
-+LINK | Previous How to stake HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,20 +1,6 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Connect via your wallet extension (e.g., Rabby, MetaMask) on desktop
+-On your phone, click the "Connect" button and select the option "Link Desktop Wallet." You will be prompted to activate your camera and scan a QR code
+-On your desktop, click the PC+mobile icon in the top right of the navigation bar and sign the pop-up in your wallet extension. A QR code will appear
+-Use your phone camera to scan the QR code
+-Previous
+-How to stake HYPE
+-Next
+-Export your email wallet
+-Last updated
+-5 days ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code.md
+-LINK | Next Export your email wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/export-your-email-wallet
+-LINK | Previous How to stake HYPE | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-stake-hype
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/connect-mobile-via-qr-code.md).
++# Connect mobile via QR code
++1. Connect via your wallet extension (e.g., Rabby, MetaMask) on desktop
++2. On your phone, click the "Connect" button and select the option "Link Desktop Wallet." You will be prompted to activate your camera and scan a QR code&#x20;
++3. On your desktop, click the PC+mobile icon in the top right of the navigation bar and sign the pop-up in your wallet extension. A QR code will appear
++4. Use your phone camera to scan the QR code&#x20;

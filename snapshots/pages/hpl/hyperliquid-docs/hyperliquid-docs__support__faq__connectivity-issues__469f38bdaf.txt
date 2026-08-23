@@ -1,20 +1,8 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Connected via wallet
-Connected via email
-Previous
-Read Me - Support Guide
-Next
-Connected via wallet
-Last updated
-1 year ago
-[[LINK TARGETS]]
-LINK | Connected via email | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/connectivity-issues/connected-via-email
-LINK | Connected via wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/connectivity-issues/connected-via-wallet
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/connectivity-issues.md
-LINK | Next Connected via wallet | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/connectivity-issues/connected-via-wallet
-LINK | Previous Read Me - Support Guide | https://hyperliquid.gitbook.io/hyperliquid-docs/support
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/connectivity-issues.md).
+# Connectivity issues
+{% content-ref url="/pages/fuET4Sl2n78Sr7UUNoEn" %}
+[Connected via wallet](/hyperliquid-docs/support/faq/connectivity-issues/connected-via-wallet.md)
+{% endcontent-ref %}
+{% content-ref url="/pages/w9u38SRorf94EAEN5xHi" %}
+[Connected via email](/hyperliquid-docs/support/faq/connectivity-issues/connected-via-email.md)
+{% endcontent-ref %}

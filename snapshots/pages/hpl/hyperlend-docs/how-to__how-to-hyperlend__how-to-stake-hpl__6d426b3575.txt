@@ -1,31 +1,16 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-You will need HPL in your Spot Balance on HyperEVM (if you hold HPL in HyperCore you can use our bridge to bridge it to HyperEVM).
-Go to:
-https://app.hyperlend.finance/staking
-Choose the amount you'd like to stake.
-Stake and approve in your wallet
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-stake-hpl.md).
+# ↪ How to Stake HPL
+1. You will need HPL in your Spot Balance on HyperEVM (if you hold HPL in HyperCore you can use our bridge to bridge it to HyperEVM).
+2. Go to: <https://app.hyperlend.finance/staking>
+<figure><img src="/files/BUXf4siHuBZTa5OGKf3O" alt="" width="375"><figcaption></figcaption></figure>
+1. Choose the amount you'd like to stake.
+2. Stake and approve in your wallet
+{% hint style="info" %}
 Staking thas no lockup period.
+{% endhint %}
 To unstake, follow the same process in reverse
-Navigate to the unstake
-Choose the amount you'd like to ustake.
-Unstake and approve in your wallet
-For further information about borrowing discounts and staking you can refer to the
-Staking
-section.
-Previous
-↪ How to Refer on HyperLend
-Next
-Architecture
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-stake-hpl.md
-LINK | Next Architecture | https://docs.hyperlend.finance/architecture/architecture
-LINK | Previous ↪ How to Refer on HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend
-LINK | Staking | https://hyperlendnotstaging.gitbook.io/notstaging/DDsbEDiCKODk1pFG9mPe/protocol-architecture/staking
-LINK | https://app.hyperlend.finance/staking | https://app.hyperlend.finance/staking
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+1. Navigate to the unstake
+2. Choose the amount you'd like to ustake.
+3. Unstake and approve in your wallet
+<figure><img src="/files/NVkCZ4k8lRsn6tuFYFtd" alt="" width="375"><figcaption></figcaption></figure>
+For further information about borrowing discounts and staking you can refer to the [Staking](https://hyperlendnotstaging.gitbook.io/notstaging/DDsbEDiCKODk1pFG9mPe/protocol-architecture/staking) section.

@@ -1,197 +1,43 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-HPL Token
-Name
-Address
-HPL token (HyperCore)
-0x5e887f0c6c3deec190c36186bf23369f
-HPL Token (HyperEVM)
-0xbd6dab50f03a305a80037294fa8d1a9dc0cac91b
-Core Pools contracts
-Name
-Address
-Pool
-0x00A89d7a5A02160f20150EbEA7a2b5E4879A1A8b
-PoolImplementation
-0xBEBb62C7FF8B96dB4325D9481c44e09A92d49B06
-PoolConfigurator
-0x8CB4310dD38F6fD59388C9DE225f328092bdC379
-PoolConfigurator (impl)
-0x6fDdde45f777a4E461B0721a578b169b44579623
-PoolAddressesProvider
-0x72c98246a98bFe64022a3190e7710E157497170C
-PoolAddressesProviderRegistry
-0x24E301BcBa5C098B3b41eA61a52bFe95Cb728b20
-hToken (impl)
-0x410Aa1ab680B886c875e99a7A4bfaf188508a7A3
-VariableDebtToken (impl)
-0x8158e5569475a443a5723ccaC462930F590449Ed
-Oracle
-0xC9Fb4fbE842d57EAc1dF3e641a281827493A630e
-ACLManager
-0x10914Ee2C2dd3F3dEF9EFFB75906CA067700a04A
-DefaultInterestRateStrategy
-0xD01E9AA0ba6a4a06E756BC8C79579E6cef070822
-ProtocolDataProvider
-0x4f4d4cA1e0a8A21FE0B460613bEbe917f2eb4326
-WrappedTokenGateway
-0x49558c794ea2aC8974C9F27886DDfAa951E99171
-RewardsController (impl)
-0x484b0C602819d5A85bFFaC26E5B28c69F38c2941
-RewardsController
-0x2aF0d6754A58723c50b5e73E45D964bFDD99fE2F
-StaticATokenFactory (impl)
-0xe1A9577C8c9ca4182669E192C8167ACd9F7325df
-StaticATokenFactory
-0x561879b3430dbFc0071004aE3BF640020a1aa9AD
-StaticAToken (impl)
-0x4376C06D866557faC5d0B5813526639c403BfcF5
-TransparentProxyFactory
-0x390d2B4AFCCB4071fd163bcED7c715Bde06F0f4a
-ProxyAdmin
-0xdb3Bf3e22380780F75D7F57C772e71fCa7EBA027
-Treasury
-0xA9A7e0E91689C49bf9F2A15a768cAebBA6A5EEC5
-Treasury (impl)
-0x6A14A52bC00F60F6f13b960790Cf9a3D90267503
-EmissionManager
-0xF8f60F84a43D05316ccff66407fC466b50c3c2B3
-ConfigEngine
-0xEe9d3EDbeDa35156681EF28765e760Eb75ccFB6f
-UiPoolDataProvider
-0xfc05a3fbf47094f53a8f98fda5dd8abdd336b9d4
-UiIncentiveDataProvider
-0xD47dc1F30994539B3fA000C70bB5E5D0bE203b54
-WalletBalanceProvider
-0x99478e5c8d0597730844Fd93dB8AB4723b96e149
-Governance
-Name
-Address
-Governance Multisig
-0x2110E7B8e925C387A88259CEac9bd82c47868E9C
-Timelock A
-0xaAaaaAAAa810beD1EDA93A18FEC940857ED17879
-Timelock B
-0xbbBBbbBB81e9B92918AA51e0CDfB3B53f7D72432
-Executor
-0x1a54A8C3C49127FcF17F45B842d760f877746B22
-Treasury Multisig
-0xCBF400610DBF462fE316D8A7db6Ba78d57E43d7b
-EmergencyAdmin Multisig
-0xC2A0F2c78dd7E37C82aA3A8e37fc712a3ddb7cAc
-Timelock C (isolated pools)
-0xCCcCCcCCC4B6CD09594E7c5bF108695F79313115
-HyperLend Foundation Multisig
-0xf4BdE1E0755DD24255bB4dD49Ef20BBBd153F327
-HyperLabs Ops Multisig
-0x96F0feDe38E23BaC200a158f947d0C9955809691
-Governance Overview
-Assets
-Ticker
-Contract
-hToken
-VariableDebtToken
-wHYPE
-0x5555555555555555555555555555555555555555
-0x0D745EAA9E70bb8B6e2a0317f85F1d536616bD34
-0x747d0d4Ba0a2083651513cd008deb95075683e82
-wstHYPE
-0x94e8396e0869c9F2200760aF0621aFd240E1CF38
-0x0Ab8AAE3335Ed4B373A33D9023b6A6585b149D33
-0x45686A849e77CCb909F5d575F51C372bf26103D6
-UBTC
-0x9FDBdA0A5e284c32744D2f17Ee5c74B284993463
-0xd2012c6DfF7634f9513A56a1871b93e4505EA851
-0xE16a14972bcDE3f9Bd637502C86384533F27DA07
-UETH
-0xBe6727B535545C67d5cAa73dEa54865B92CF7907
-0xdBA3B25643C11be9BDF457D6b3926992A735c523
-0x14E10FA4E016183a024c74ACF539bb875c54e70C
-USDe
-0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34
-0x333819c04975554260AaC119948562a0E24C2bd6
-0x1EFA0f7A12cEF73e23dE30b7013a252231Ea50f9
-USDT0
-0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb
-0x10982ad645D5A112606534d8567418Cf64c14cB5
-0x1EF897622D62335e7FC88Fb0605FbBa28eC0b01d
-sUSDe
-0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2
-0xf6ba4169e1a1B467D32B8884C4B42de6454B4E4f
-0x044388Eed86eF67c126Db5A66428F30797B0ABF5
-USDHL
-0xb50A96253aBDF803D85efcDce07Ad8becBc52BD5
-0x0b936DE4370E4B2bE947C01fe0a6FB5f987c4709
-0x94c03Ed369B706Ad6957cF42aFB0b5b02F924099
-kHYPE
-0xfD739d4e423301CE9385c1fb8850539D657C296D
-0xa55DE93CDE5A34c5521B7584022846829CB74366
-0x185697d814330430b8D4B3121fAB9c811B59798D
-USDC
-0xb88339CB7199b77E23DB6E890353E22632Ba630f
-0x744E4f26ee30213989216E1632D9BE3547C4885b
-0xD612513cB3b2C52abCD6d4b338374C09AdA4657d
-USR
-0x0aD339d66BF4AeD5ce31c64Bc37B3244b6394A77
-0x2A2d7663Cb77220de9BA55Aa9aAe2b360F2c23fC
-0xd1b2c6Be5Ae55F3aBfdDE8070fD3322e87Cfb895
-USDH
-0x111111a1a0667d36bD57c0A9f569b98057111111
-0x143A24569a73AFB856A2ee3D554AbcA860118785
-0x51aF159cF648B59efC7de2830134FA5Ca7109fDd
-PT-kHYPE-19MAR2026
-0xea84ca9849D9e76a78B91F221F84e9Ca065FC9f5
-0x7686fEdD785663e437a409abB55a9BB36fA2DCf2
-0xffc3d92cFb1F160De9AdecF449a1b41c9e72453C
-beHYPE
-0xd8FC8F0b03eBA61F64D08B0bef69d80916E5DdA9
-0x48a278aA1eab4de5b74897230Ae57FB9e7B1497A
-0x3f6f19E098e3c0C996d11cE4d4816aC470C40708
-USOL
-0x068f321Fa8Fb9f0D135f290Ef6a3e2813e1c8A29
-0xE14b4526438Ae5ee26596de1936280E4d6bDDEb5
-0x64dF524260FECd833258d26A3a7AeB415d20C512
-PT-kHYPE-13NOV2025
-0x311dB0FDe558689550c68355783c95eFDfe25329
-0x329FebbBF38A6C202786fCc8Ac02DbD2f40D5a18
-0x957fb7538cA456824314051A7fc6F0eAC5E7345c
-PT-sUSDe-25SEP2025
-0xb7379d395F3c83952ad794896205f7E33E358735
-0xec2767311eBf57C02de9866fDACdfefAc4AdAe6B
-0x5533124cE92737bc209d2730836114F118BFeAf0
-Isolated
-Name
-Contract
-Code
-PairDeployer
-0xD5B33d3c6e750A51fd4E90dbf4AFa2586E33d02c
-https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairDeployer.sol
-PairRegistry
-0xf55AF86c9EC3a7d5fa6367c00a120E6B262f718d
-https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairRegistry.sol
-Looping
-Name
-Contract
-StrategyManagerFactory
-0xc3Ed646181Ca80562e96d9e6CF4AF317d22F34b0
-LoopingHelper
-0x2f5F23ED499ABcDef7116f75e3365C553D2b4913
-Previous
-SDK
-Next
-Core Pools
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | 0x5e887f0c6c3deec190c36186bf23369f | https://app.hyperliquid.xyz/explorer/token/0x5e887f0c6c3deec190c36186bf23369f
-LINK | 0xbd6dab50f03a305a80037294fa8d1a9dc0cac91b | http://hyperevmscan.io/address/0xbd6dab50f03a305a80037294fa8d1a9dc0cac91b
-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/contract-addresses.md
-LINK | Next Core Pools | https://docs.hyperlend.finance/developer-documentation/core-pools
-LINK | Previous SDK | https://docs.hyperlend.finance/developer-documentation/sdk
-LINK | [no text] | https://docs.hyperlend.finance/developer-documentation/contract-addresses#assets
-LINK | https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairDeployer.sol | https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairDeployer.sol
-LINK | https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairRegistry.sol | https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairRegistry.sol
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/contract-addresses.md).
+# Contract Addresses
+**HPL Token**
+| Name | Address |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| HPL token (HyperCore) | [0x5e887f0c6c3deec190c36186bf23369f](https://app.hyperliquid.xyz/explorer/token/0x5e887f0c6c3deec190c36186bf23369f) |
+| HPL Token (HyperEVM) | [0xbd6dab50f03a305a80037294fa8d1a9dc0cac91b](http://hyperevmscan.io/address/0xbd6dab50f03a305a80037294fa8d1a9dc0cac91b) |
+| | |
+**Core Pools contracts**
+<table><thead><tr><th width="303">Name</th><th>Address</th><th data-hidden></th></tr></thead><tbody><tr><td>Pool</td><td>0x00A89d7a5A02160f20150EbEA7a2b5E4879A1A8b</td><td></td></tr><tr><td>PoolImplementation</td><td>0xBEBb62C7FF8B96dB4325D9481c44e09A92d49B06</td><td></td></tr><tr><td>PoolConfigurator</td><td>0x8CB4310dD38F6fD59388C9DE225f328092bdC379</td><td></td></tr><tr><td>PoolConfigurator (impl)</td><td>0x6fDdde45f777a4E461B0721a578b169b44579623</td><td></td></tr><tr><td>PoolAddressesProvider</td><td>0x72c98246a98bFe64022a3190e7710E157497170C</td><td></td></tr><tr><td>PoolAddressesProviderRegistry</td><td>0x24E301BcBa5C098B3b41eA61a52bFe95Cb728b20</td><td></td></tr><tr><td>hToken (impl)</td><td>0x410Aa1ab680B886c875e99a7A4bfaf188508a7A3</td><td></td></tr><tr><td>VariableDebtToken (impl)</td><td>0x8158e5569475a443a5723ccaC462930F590449Ed</td><td></td></tr><tr><td>Oracle</td><td>0xC9Fb4fbE842d57EAc1dF3e641a281827493A630e</td><td></td></tr><tr><td>ACLManager</td><td>0x10914Ee2C2dd3F3dEF9EFFB75906CA067700a04A</td><td></td></tr><tr><td>DefaultInterestRateStrategy</td><td>0xD01E9AA0ba6a4a06E756BC8C79579E6cef070822</td><td></td></tr><tr><td>ProtocolDataProvider</td><td>0x4f4d4cA1e0a8A21FE0B460613bEbe917f2eb4326</td><td></td></tr><tr><td>WrappedTokenGateway</td><td>0x49558c794ea2aC8974C9F27886DDfAa951E99171</td><td></td></tr><tr><td>RewardsController (impl)</td><td>0x484b0C602819d5A85bFFaC26E5B28c69F38c2941</td><td></td></tr><tr><td>RewardsController</td><td>0x2aF0d6754A58723c50b5e73E45D964bFDD99fE2F</td><td></td></tr><tr><td>StaticATokenFactory (impl)</td><td>0xe1A9577C8c9ca4182669E192C8167ACd9F7325df</td><td></td></tr><tr><td>StaticATokenFactory</td><td>0x561879b3430dbFc0071004aE3BF640020a1aa9AD</td><td></td></tr><tr><td>StaticAToken (impl)</td><td>0x4376C06D866557faC5d0B5813526639c403BfcF5</td><td></td></tr><tr><td>TransparentProxyFactory</td><td>0x390d2B4AFCCB4071fd163bcED7c715Bde06F0f4a</td><td></td></tr><tr><td>ProxyAdmin</td><td>0xdb3Bf3e22380780F75D7F57C772e71fCa7EBA027</td><td></td></tr><tr><td>Treasury</td><td>0xA9A7e0E91689C49bf9F2A15a768cAebBA6A5EEC5</td><td></td></tr><tr><td>Treasury (impl)</td><td>0x6A14A52bC00F60F6f13b960790Cf9a3D90267503</td><td></td></tr><tr><td>EmissionManager</td><td>0xF8f60F84a43D05316ccff66407fC466b50c3c2B3</td><td></td></tr><tr><td>ConfigEngine</td><td>0xEe9d3EDbeDa35156681EF28765e760Eb75ccFB6f</td><td></td></tr><tr><td>UiPoolDataProvider</td><td>0xfc05a3fbf47094f53a8f98fda5dd8abdd336b9d4</td><td></td></tr><tr><td>UiIncentiveDataProvider</td><td>0xD47dc1F30994539B3fA000C70bB5E5D0bE203b54</td><td></td></tr><tr><td>WalletBalanceProvider</td><td>0x99478e5c8d0597730844Fd93dB8AB4723b96e149</td><td></td></tr></tbody></table>
+**Governance**
+<table><thead><tr><th width="236">Name</th><th>Address</th><th data-hidden></th></tr></thead><tbody><tr><td>Governance Multisig</td><td>0x2110E7B8e925C387A88259CEac9bd82c47868E9C</td><td></td></tr><tr><td>Timelock A</td><td>0xaAaaaAAAa810beD1EDA93A18FEC940857ED17879</td><td></td></tr><tr><td>Timelock B</td><td>0xbbBBbbBB81e9B92918AA51e0CDfB3B53f7D72432</td><td></td></tr><tr><td>Executor</td><td>0x1a54A8C3C49127FcF17F45B842d760f877746B22</td><td></td></tr><tr><td>Treasury Multisig</td><td>0xCBF400610DBF462fE316D8A7db6Ba78d57E43d7b</td><td></td></tr><tr><td>EmergencyAdmin Multisig</td><td>0xC2A0F2c78dd7E37C82aA3A8e37fc712a3ddb7cAc</td><td></td></tr><tr><td>Timelock C (isolated pools)</td><td>0xCCcCCcCCC4B6CD09594E7c5bF108695F79313115</td><td></td></tr><tr><td>HyperLend Foundation Multisig</td><td>0xf4BdE1E0755DD24255bB4dD49Ef20BBBd153F327</td><td></td></tr><tr><td>HyperLabs Ops Multisig</td><td>0x96F0feDe38E23BaC200a158f947d0C9955809691</td><td></td></tr></tbody></table>
+<figure><img src="/files/mVGnsY7aIBMSfOfdVXFA" alt=""><figcaption><p>Governance Overview</p></figcaption></figure>
+#### Assets
+| Ticker | Contract | hToken | VariableDebtToken |
+| ------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| wHYPE | 0x5555555555555555555555555555555555555555 | 0x0D745EAA9E70bb8B6e2a0317f85F1d536616bD34 | 0x747d0d4Ba0a2083651513cd008deb95075683e82 |
+| wstHYPE | 0x94e8396e0869c9F2200760aF0621aFd240E1CF38 | 0x0Ab8AAE3335Ed4B373A33D9023b6A6585b149D33 | 0x45686A849e77CCb909F5d575F51C372bf26103D6 |
+| UBTC | 0x9FDBdA0A5e284c32744D2f17Ee5c74B284993463 | 0xd2012c6DfF7634f9513A56a1871b93e4505EA851 | 0xE16a14972bcDE3f9Bd637502C86384533F27DA07 |
+| UETH | 0xBe6727B535545C67d5cAa73dEa54865B92CF7907 | 0xdBA3B25643C11be9BDF457D6b3926992A735c523 | 0x14E10FA4E016183a024c74ACF539bb875c54e70C |
+| USDe | 0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34 | 0x333819c04975554260AaC119948562a0E24C2bd6 | 0x1EFA0f7A12cEF73e23dE30b7013a252231Ea50f9 |
+| USDT0 | 0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb | 0x10982ad645D5A112606534d8567418Cf64c14cB5 | 0x1EF897622D62335e7FC88Fb0605FbBa28eC0b01d |
+| sUSDe | 0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2 | 0xf6ba4169e1a1B467D32B8884C4B42de6454B4E4f | 0x044388Eed86eF67c126Db5A66428F30797B0ABF5 |
+| USDHL | 0xb50A96253aBDF803D85efcDce07Ad8becBc52BD5 | 0x0b936DE4370E4B2bE947C01fe0a6FB5f987c4709 | 0x94c03Ed369B706Ad6957cF42aFB0b5b02F924099 |
+| kHYPE | 0xfD739d4e423301CE9385c1fb8850539D657C296D | 0xa55DE93CDE5A34c5521B7584022846829CB74366 | 0x185697d814330430b8D4B3121fAB9c811B59798D |
+| USDC | 0xb88339CB7199b77E23DB6E890353E22632Ba630f | 0x744E4f26ee30213989216E1632D9BE3547C4885b | 0xD612513cB3b2C52abCD6d4b338374C09AdA4657d |
+| USR | 0x0aD339d66BF4AeD5ce31c64Bc37B3244b6394A77 | 0x2A2d7663Cb77220de9BA55Aa9aAe2b360F2c23fC | 0xd1b2c6Be5Ae55F3aBfdDE8070fD3322e87Cfb895 |
+| USDH | 0x111111a1a0667d36bD57c0A9f569b98057111111 | 0x143A24569a73AFB856A2ee3D554AbcA860118785 | 0x51aF159cF648B59efC7de2830134FA5Ca7109fDd |
+| PT-kHYPE-19MAR2026 | 0xea84ca9849D9e76a78B91F221F84e9Ca065FC9f5 | 0x7686fEdD785663e437a409abB55a9BB36fA2DCf2 | 0xffc3d92cFb1F160De9AdecF449a1b41c9e72453C |
+| beHYPE | 0xd8FC8F0b03eBA61F64D08B0bef69d80916E5DdA9 | 0x48a278aA1eab4de5b74897230Ae57FB9e7B1497A | 0x3f6f19E098e3c0C996d11cE4d4816aC470C40708 |
+| USOL | 0x068f321Fa8Fb9f0D135f290Ef6a3e2813e1c8A29 | 0xE14b4526438Ae5ee26596de1936280E4d6bDDEb5 | 0x64dF524260FECd833258d26A3a7AeB415d20C512 |
+| PT-kHYPE-13NOV2025 | 0x311dB0FDe558689550c68355783c95eFDfe25329 | 0x329FebbBF38A6C202786fCc8Ac02DbD2f40D5a18 | 0x957fb7538cA456824314051A7fc6F0eAC5E7345c |
+| PT-sUSDe-25SEP2025 | 0xb7379d395F3c83952ad794896205f7E33E358735 | 0xec2767311eBf57C02de9866fDACdfefAc4AdAe6B | 0x5533124cE92737bc209d2730836114F118BFeAf0 |
+**Isolated**
+| Name | Contract | Code |
+| ------------ | ------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| PairDeployer | 0xD5B33d3c6e750A51fd4E90dbf4AFa2586E33d02c | <https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairDeployer.sol> |
+| PairRegistry | 0xf55AF86c9EC3a7d5fa6367c00a120E6B262f718d | <https://github.com/hyperlendx/hyperlend-isolated/blob/master/contracts/HyperlendPairRegistry.sol> |
+**Looping**
+| Name | Contract |
+| ---------------------- | ------------------------------------------ |
+| StrategyManagerFactory | 0xc3Ed646181Ca80562e96d9e6CF4AF317d22F34b0 |
+| LoopingHelper | 0x2f5F23ED499ABcDef7116f75e3365C553D2b4913 |

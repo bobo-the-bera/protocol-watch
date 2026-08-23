@@ -1,31 +1,15 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/support/i-got-scammed-hacked.md).
+# I got scammed/hacked
 If you suspect your wallet has been compromised, you see unauthorized transactions, or your funds are missing, time is of the essence. Hyperlend is a non-custodial protocol, so we do not have control over your private keys or the ability to "freeze" individual user accounts.
 Follow the steps below immediately to secure any remaining assets:
-Revoke All Approvals
+**Revoke All Approvals**
 If a malicious contract has permission to spend your tokens, it can continue to drain your wallet even if you change your password or disconnect from the site.
-Go to a revocation tool like
-Revoke.cash
-Revoke all active permissions
-Move Remaining Funds
+* Go to a revocation tool like [Revoke.cash](https://revoke.cash/)
+* Revoke all active permissions
+**Move Remaining Funds**
 If your seed phrase or private key has been compromised, the entire wallet is "dirty."
-Do not continue using this wallet, consider it "burned"
-Create a completely new wallet (preferably using a trusted hardware wallet)
-Transfer any remaining assets to the new, clean address immediately
-Clear your browser's cache and cookies
-especially if you suspect there may be malware or phishing
-Previous
-Help
-Next
-FAQ
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/support/i-got-scammed-hacked.md
-LINK | Next FAQ | https://docs.hyperlend.finance/support/faq
-LINK | Previous Help | https://docs.hyperlend.finance/support/help
-LINK | Revoke.cash | https://revoke.cash/
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+* Do not continue using this wallet, consider it "burned"
+* Create a completely new wallet (preferably using a trusted hardware wallet)
+* Transfer any remaining assets to the new, clean address immediately
+**Clear your browser's cache and cookies**
+* especially if you suspect there may be malware or phishing

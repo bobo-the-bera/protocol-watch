@@ -1,71 +1,91 @@
 --- hpl/hyperlend-docs/architecture__liquid-perpetual-positions__ff7f6e9781:previous
 +++ hpl/hyperlend-docs/architecture__liquid-perpetual-positions__ff7f6e9781:current
-@@ -0,0 +1,68 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Liquid Perpetual Positions will be a financial service enabled by HyperLend.
-+It will allow you to open a leveraged position on the EVM while being able to use it as collateral in our isolated pools section.
-+At the begining you will be able to open a position with USDC (eventually other assets as well) which then transfers it to Hyperliquid L1 exchange, where it's used as a margin to open a futures position. Profits (or losses) + funding fees are accrued to the user.
-+To redeem the underlying USDC, shares are burned, a proportional portion of the position is closed and USDC is transferred back to the vault where it can be claimed.
-+sharePrice = (perpPositionMargin + PnL + fundingFees) / totalShares
-+If the futures position is losing money, the share price declines (and if the position is profitable, the share price increases).
-+Behind the scene;
-+They are a type of ERC-4626 vaults that allows users to use their Hyperliquid perpetual futures positions as collateral on HyperLend.
-+Yield-Bearing Perpetuals
-+In short;
-+it means you will be earning yield by using your perpatual position as collateral (+funding fees).
-+?
-+How
-+- you open a position, get token shares in return representing that position and use it in our Isolated pools as collateral and then use that collateral in the ecosystem.
-+Concrete Example with theoretical numbers:
-+Open a
-+2x leveraged BTC-perp
-+(for a total notional size of
-+2,000,000 USDC
-+using
-+1,000,000 USDC of margin
-+) for
-+1 month
-+.
-+Over one month, your position generates a
-+profit of 150,000 USDC
-+and
-+40,000 USDC in funding fees
-+— raising your vault balance to
-+1,190,000 USDC
-+.
-+You put the token shares into our Isolated pools and borrow 200,000 USDC
-+(10% LTV) and
-+deposit that into a HLP (Hyperliquid Provider Vault)
-+earning ~20% APR, which yields
-+~3,333 USDC
-+over the same period.
-+Total profit: 193,333 USDC
-+= 190,000 USDC (trade + funding gains) + 3,333 USDC (vault yield from borrowed capital)
-+While holding a leveraged perp position, you used your token shares as collateral to earn an additional
-+3,333 USDC
-+without risking extra capital.
-+Use Cases:
-+Yield-on-Margin:
-+Profitable positions that users don’t want to touch (to avoid liquidation risk) can be borrowed against. Funds borrowed can earn yield elsewhere without adjusting the margin, capturing
-+additional yield
-+.
-+Basis Trade Leverage:
-+Basis trades often hit a cap due to rebalancing and risk management, by looping capital from one leg (e.g. taking a loan against the long), you can amplify returns without disturbing hedged structure.
-+Delta-Neutral Risk Transfer:
-+Liquidators or hedgers can
-+atomically buy a short position
-+to offset directional risk, perp positions as transferable tokens make them tradable in secondary venues—less reliance on on-book execution.
-+MM Strategy Vaults:
-+Market makers could tokenise their perp inventory, retail-facing platforms or originators route trades to these tokenised perps instead of public book, vaults can be created to take part in order flow PnL from MMs.
-+Last updated
-+4 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions.md
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#concrete-example-with-theoretical-numbers
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#use-cases
-+LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#yield-bearing-perpetuals
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,68 +1,25 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/architecture/liquid-perpetual-positions.md).
++# Liquid Perpetual Positions
+ Liquid Perpetual Positions will be a financial service enabled by HyperLend.
+ It will allow you to open a leveraged position on the EVM while being able to use it as collateral in our isolated pools section.
+ At the begining you will be able to open a position with USDC (eventually other assets as well) which then transfers it to Hyperliquid L1 exchange, where it's used as a margin to open a futures position. Profits (or losses) + funding fees are accrued to the user.
+ To redeem the underlying USDC, shares are burned, a proportional portion of the position is closed and USDC is transferred back to the vault where it can be claimed.
+-sharePrice = (perpPositionMargin + PnL + fundingFees) / totalShares
++`sharePrice = (perpPositionMargin + PnL + fundingFees) / totalShares`
+ If the futures position is losing money, the share price declines (and if the position is profitable, the share price increases).
+-Behind the scene;
+-They are a type of ERC-4626 vaults that allows users to use their Hyperliquid perpetual futures positions as collateral on HyperLend.
+-Yield-Bearing Perpetuals
+-In short;
+-it means you will be earning yield by using your perpatual position as collateral (+funding fees).
+-?
+-How
+-- you open a position, get token shares in return representing that position and use it in our Isolated pools as collateral and then use that collateral in the ecosystem.
+-Concrete Example with theoretical numbers:
+-Open a
+-2x leveraged BTC-perp
+-(for a total notional size of
+-2,000,000 USDC
+-using
+-1,000,000 USDC of margin
+-) for
+-1 month
+-.
+-Over one month, your position generates a
+-profit of 150,000 USDC
+-and
+-40,000 USDC in funding fees
+-— raising your vault balance to
+-1,190,000 USDC
+-.
+-You put the token shares into our Isolated pools and borrow 200,000 USDC
+-(10% LTV) and
+-deposit that into a HLP (Hyperliquid Provider Vault)
+-earning ~20% APR, which yields
+-~3,333 USDC
+-over the same period.
+-Total profit: 193,333 USDC
+-= 190,000 USDC (trade + funding gains) + 3,333 USDC (vault yield from borrowed capital)
+-While holding a leveraged perp position, you used your token shares as collateral to earn an additional
+-3,333 USDC
+-without risking extra capital.
+-Use Cases:
+-Yield-on-Margin:
+-Profitable positions that users don’t want to touch (to avoid liquidation risk) can be borrowed against. Funds borrowed can earn yield elsewhere without adjusting the margin, capturing
+-additional yield
+-.
+-Basis Trade Leverage:
+-Basis trades often hit a cap due to rebalancing and risk management, by looping capital from one leg (e.g. taking a loan against the long), you can amplify returns without disturbing hedged structure.
+-Delta-Neutral Risk Transfer:
+-Liquidators or hedgers can
+-atomically buy a short position
+-to offset directional risk, perp positions as transferable tokens make them tradable in secondary venues—less reliance on on-book execution.
+-MM Strategy Vaults:
+-Market makers could tokenise their perp inventory, retail-facing platforms or originators route trades to these tokenised perps instead of public book, vaults can be created to take part in order flow PnL from MMs.
+-Last updated
+-4 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions.md
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#concrete-example-with-theoretical-numbers
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#use-cases
+-LINK | [no text] | https://docs.hyperlend.finance/architecture/liquid-perpetual-positions#yield-bearing-perpetuals
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++**Behind the scene;** They are a type of ERC-4626 vaults that allows users to use their Hyperliquid perpetual futures positions as collateral on HyperLend.
++***
++### Yield-Bearing Perpetuals
++**In short;** it means you will be earning yield by using your perpatual position as collateral (+funding fees).
++? **How** - you open a position, get token shares in return representing that position and use it in our Isolated pools as collateral and then use that collateral in the ecosystem.
++#### **Concrete Example with theoretical numbers:**
++* Open a **2x leveraged BTC-perp** (for a total notional size of **2,000,000 USDC** using **1,000,000 USDC of margin**) for **1 month**.
++* Over one month, your position generates a **profit of 150,000 USDC** and **40,000 USDC in funding fees** — raising your vault balance to **1,190,000 USDC**.
++* **You put the token shares into our Isolated pools and borrow 200,000 USDC** (10% LTV) and **deposit that into a HLP (Hyperliquid Provider Vault)** earning \~20% APR, which yields **\~3,333 USDC** over the same period.
++* **Total profit: 193,333 USDC** = 190,000 USDC (trade + funding gains) + 3,333 USDC (vault yield from borrowed capital)
++> While holding a leveraged perp position, you used your token shares as collateral to earn an additional **3,333 USDC** without risking extra capital.
++***
++### **Use Cases:**
++1. **Yield-on-Margin:** Profitable positions that users don’t want to touch (to avoid liquidation risk) can be borrowed against. Funds borrowed can earn yield elsewhere without adjusting the margin, capturing *additional yield*.
++2. **Basis Trade Leverage:** Basis trades often hit a cap due to rebalancing and risk management, by looping capital from one leg (e.g. taking a loan against the long), you can amplify returns without disturbing hedged structure.
++3. **Delta-Neutral Risk Transfer:** Liquidators or hedgers can **atomically buy a short position** to offset directional risk, perp positions as transferable tokens make them tradable in secondary venues—less reliance on on-book execution.
++4. **MM Strategy Vaults:** Market makers could tokenise their perp inventory, retail-facing platforms or originators route trades to these tokenised perps instead of public book, vaults can be created to take part in order flow PnL from MMs.

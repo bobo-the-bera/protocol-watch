@@ -1,49 +1,70 @@
 --- hpl/hyperlend-docs/advanced-features__hypertrack__bot-functions__borrow-rate__28e6c9887c:previous
 +++ hpl/hyperlend-docs/advanced-features__hypertrack__bot-functions__borrow-rate__28e6c9887c:current
-@@ -0,0 +1,46 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Set up alerts for specific borrow rate thresholds. You’ll be notified if the borrow rate for a tracked address reaches or exceeds the threshold you set.
-+How to Use "Borrow Rate Alert"
-+Access the Feature
-+:
-+Click on the
-+"Borrow Rate Alert"
-+button in the bot interface. A menu will appear, allowing you to set up a new alert or manage existing ones.
-+Choose Your Action
-+:
-+Select
-+"Add Borrow Rate Alert"
-+if you want to set up a new alert.
-+Choose
-+"Manage Existing Alert"
-+if you need to edit or remove an existing one.
-+Input Details
-+:
-+The bot will prompt you to enter the name, asset address, and the maximum borrow rate (APY) you want to monitor.
-+An example format will be shown for clarity:
-+JohnDoe 0x123...abc 15
-+. Here, the number "15" represents the maximum Annual Percentage Yield (APY) in percentage terms.
-+Enter your details in the correct format, ensuring that the APY threshold reflects your risk tolerance or interest in monitoring specific borrowing conditions.
-+Confirmation
-+:
-+After you input the details, the bot will confirm that the borrow rate alert has been added.
-+You will receive notifications if the APY for the specified asset exceeds the set threshold, helping you manage your exposure to changing borrowing costs.
-+Alert Functionality
-+:
-+Once configured, the bot will keep an eye on the borrow rate and notify you when it reaches or surpasses your specified limit (e.g., 15% APY), keeping you informed about important interest rate fluctuations.
-+Previous
-+↪ Health Factor
-+Next
-+↪ Advanced Approach
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate.md
-+LINK | Next ↪ Advanced Approach | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach
-+LINK | Previous ↪ Health Factor | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/health-factor
-+LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate#how-to-use-borrow-rate-alert
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,46 +1,22 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate.md).
++# ↪ Borrow Rate
++<figure><img src="/files/OnwWh6hrBgIPOUU0aWYj" alt=""><figcaption></figcaption></figure>
++***
+ Set up alerts for specific borrow rate thresholds. You’ll be notified if the borrow rate for a tracked address reaches or exceeds the threshold you set.
+-How to Use "Borrow Rate Alert"
+-Access the Feature
+-:
+-Click on the
+-"Borrow Rate Alert"
+-button in the bot interface. A menu will appear, allowing you to set up a new alert or manage existing ones.
+-Choose Your Action
+-:
+-Select
+-"Add Borrow Rate Alert"
+-if you want to set up a new alert.
+-Choose
+-"Manage Existing Alert"
+-if you need to edit or remove an existing one.
+-Input Details
+-:
+-The bot will prompt you to enter the name, asset address, and the maximum borrow rate (APY) you want to monitor.
+-An example format will be shown for clarity:
+-JohnDoe 0x123...abc 15
+-. Here, the number "15" represents the maximum Annual Percentage Yield (APY) in percentage terms.
+-Enter your details in the correct format, ensuring that the APY threshold reflects your risk tolerance or interest in monitoring specific borrowing conditions.
+-Confirmation
+-:
+-After you input the details, the bot will confirm that the borrow rate alert has been added.
+-You will receive notifications if the APY for the specified asset exceeds the set threshold, helping you manage your exposure to changing borrowing costs.
+-Alert Functionality
+-:
+-Once configured, the bot will keep an eye on the borrow rate and notify you when it reaches or surpasses your specified limit (e.g., 15% APY), keeping you informed about important interest rate fluctuations.
+-Previous
+-↪ Health Factor
+-Next
+-↪ Advanced Approach
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate.md
+-LINK | Next ↪ Advanced Approach | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/advanced-approach
+-LINK | Previous ↪ Health Factor | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/health-factor
+-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/borrow-rate#how-to-use-borrow-rate-alert
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++***
++#### How to Use "Borrow Rate Alert"
++1. **Access the Feature**:
++* Click on the **"Borrow Rate Alert"** button in the bot interface. A menu will appear, allowing you to set up a new alert or manage existing ones.
++2. **Choose Your Action**:
++* Select **"Add Borrow Rate Alert"** if you want to set up a new alert.
++* Choose **"Manage Existing Alert"** if you need to edit or remove an existing one.
++3. **Input Details**:
++* The bot will prompt you to enter the name, asset address, and the maximum borrow rate (APY) you want to monitor.
++* An example format will be shown for clarity: **JohnDoe 0x123...abc 15**. Here, the number "15" represents the maximum Annual Percentage Yield (APY) in percentage terms.
++* Enter your details in the correct format, ensuring that the APY threshold reflects your risk tolerance or interest in monitoring specific borrowing conditions.
++4. **Confirmation**:
++* After you input the details, the bot will confirm that the borrow rate alert has been added.
++* You will receive notifications if the APY for the specified asset exceeds the set threshold, helping you manage your exposure to changing borrowing costs.
++5. **Alert Functionality**:
++* Once configured, the bot will keep an eye on the borrow rate and notify you when it reaches or surpasses your specified limit (e.g., 15% APY), keeping you informed about important interest rate fluctuations.
++***

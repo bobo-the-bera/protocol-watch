@@ -1,32 +1,16 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/remove-address.md).
+# ↪ Remove Address
+<figure><img src="/files/Nu0EAk1xg5neDXfgl1RZ" alt=""><figcaption></figcaption></figure>
+***
 Select this option to stop tracking an address. This will remove it from your list, and you’ll no longer receive notifications for it.
-How to Use "Remove Address"
-Access the Feature
-:
-Click on the
-"Remove Address"
-button in the bot interface. This will take you to a list of addresses you are currently monitoring.
-Select an Address
-:
-The bot will display a list of names and addresses you have previously added for monitoring.
-Choose the name or address you wish to stop monitoring. If the address you want is listed, simply click on it. If not, you can manually enter the name or address.
-Confirmation
-:
-Once you select or input the address, the bot will confirm that monitoring for the chosen address has been removed.
-You’ll see a message indicating that monitoring has been successfully stopped, along with the address that was removed.
-Previous
-↪ Watch Address
-Next
-↪ Liquidations Alert
-Last updated
-1 year ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/remove-address.md
-LINK | Next ↪ Liquidations Alert | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/liquidations-alert
-LINK | Previous ↪ Watch Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address
-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/remove-address#how-to-use-remove-address
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+***
+#### How to Use "Remove Address"
+1. **Access the Feature**:
+* Click on the **"Remove Address"** button in the bot interface. This will take you to a list of addresses you are currently monitoring.
+2. **Select an Address**:
+* The bot will display a list of names and addresses you have previously added for monitoring.
+* Choose the name or address you wish to stop monitoring. If the address you want is listed, simply click on it. If not, you can manually enter the name or address.
+3. **Confirmation**:
+* Once you select or input the address, the bot will confirm that monitoring for the chosen address has been removed.
+* You’ll see a message indicating that monitoring has been successfully stopped, along with the address that was removed.
+***

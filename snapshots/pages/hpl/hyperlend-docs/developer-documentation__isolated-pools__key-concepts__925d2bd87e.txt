@@ -1,31 +1,16 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-HyperLend Borrowing and Lending Overview
-Token Pairs
-Each market pair in HyperLend operates as an isolated environment for borrowing one ERC-20 token, called the Asset Token, by providing another ERC-20 token as collateral, referred to as the Collateral Token.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/developer-documentation/isolated-pools/key-concepts.md).
+# ↪ key-concepts
+**HyperLend Borrowing and Lending Overview**
+**Token Pairs** Each market pair in HyperLend operates as an isolated environment for borrowing one ERC-20 token, called the Asset Token, by providing another ERC-20 token as collateral, referred to as the Collateral Token.
 Isolated market pair contracts are ERC-4626 compatible.
 Lenders who supply Asset Tokens to a market receive hTokens, which are ERC-20 tokens that represent their share of the deposited assets. These hTokens can be redeemed for the original Asset Tokens, which accrue interest over time, meaning that the value of hTokens increases as interest accumulates.
 Borrowers, on the other hand, deposit Collateral Tokens into the pair, enabling them to borrow Asset Tokens in return.
-Loan-To-Value (LTV) Ratio
-Each borrowing position in HyperLend is defined by a Loan-To-Value (LTV) ratio, which compares the value of borrowed assets to the value of the provided collateral. This ratio fluctuates with changes in the exchange rate between Asset and Collateral Tokens or when interest is added to the loan.
+***
+**Loan-To-Value (LTV) Ratio** Each borrowing position in HyperLend is defined by a Loan-To-Value (LTV) ratio, which compares the value of borrowed assets to the value of the provided collateral. This ratio fluctuates with changes in the exchange rate between Asset and Collateral Tokens or when interest is added to the loan.
 If the LTV exceeds the maximum allowable level, the position becomes unhealthy. To remedy this, borrowers can either deposit more collateral or repay a portion of their loan to bring the LTV back within a safe range, otherwise they can get liquidated.
-Interest Rate Mechanisms
-Interest rates for each pair are determined by the specific rate calculator applied during deployment.
-Linear Time-Weighted Variable Interest Rate
-: Provides immediate rate adjustments based on utilization, with faster changes when utilization crosses the target threshold. Over time, prolonged periods of high or low utilization will alter the rate curve to fit the conditions.
-hToken Share Price
-When lenders provide Asset Tokens, they receive hTokens based on the current share price. These tokens represent their portion of the total assets in the market, including capitalized interest. As interest accrues, the share price of the hTokens increases, meaning lenders can redeem them for a larger amount of Asset Tokens.
-Previous
-Isolated Pools
-Next
-↪ liquidations
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/developer-documentation/isolated-pools/key-concepts.md
-LINK | Next ↪ liquidations | https://docs.hyperlend.finance/developer-documentation/isolated-pools/liquidations
-LINK | Previous Isolated Pools | https://docs.hyperlend.finance/developer-documentation/isolated-pools
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+***
+**Interest Rate Mechanisms** Interest rates for each pair are determined by the specific rate calculator applied during deployment.
+1. **Linear Time-Weighted Variable Interest Rate**: Provides immediate rate adjustments based on utilization, with faster changes when utilization crosses the target threshold. Over time, prolonged periods of high or low utilization will alter the rate curve to fit the conditions.
+***
+**hToken Share Price** When lenders provide Asset Tokens, they receive hTokens based on the current share price. These tokens represent their portion of the total assets in the market, including capitalized interest. As interest accrues, the share price of the hTokens increases, meaning lenders can redeem them for a larger amount of Asset Tokens.&#x20;
+***

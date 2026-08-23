@@ -1,170 +1,81 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Why Borrow Instead of Selling Your Assets?
-↝ Advantages of Borrowing
-Liquidity
-: Borrowing provides liquidity (working capital) without selling your assets.
-Asset Appreciation
-: By keeping your assets, you can still benefit from any potential increase in their value.
-Financial Flexibility
-: Users typically borrow for unexpected expenses, leveraging holdings, or pursuing new investment opportunities.
-• How to Borrow
-↝ Steps to Borrow
-Supply any asset to be used as collateral (refer to the "
-How to Lend
-" section for more information).
-Navigate to the "
-Borrow
-" section and select the asset you wish to borrow.
-Set the
-desired amount
-based on your available collateral.
-↝ Borrowing Limits
-The maximum borrow amount depends on the
-value of your supplied assets
-and the
-available liquidity
-.
-You cannot borrow more than the available liquidity or beyond what your
-health factor allows
-.
-Check the
-risk parameters section
-for details on collateral requirements and specific borrowing limits.
-↝ Repayment Details
-Loans must be repaid in the
-same asset
-that was borrowed. For example, if you borrow 1 ETH, you repay 1 ETH plus any accrued interest.
-You can also
-repay your debt using collateral directly.
-To do this:
-Toggle on the “Repay with Collateral” option.
-Select the collateral asset you wish to use for repayment.
-Choose the desired amount and proceed with the repayment.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend.md).
+# ↪ How to Borrow from HyperLend
+### Why Borrow Instead of Selling Your Assets? <a href="#why-borrow-instead-of-selling-your-assets" id="why-borrow-instead-of-selling-your-assets"></a>
+#### ↝ Advantages of Borrowing <a href="#advantages-of-borrowing" id="advantages-of-borrowing"></a>
+* **Liquidity**: Borrowing provides liquidity (working capital) without selling your assets.
+* **Asset Appreciation**: By keeping your assets, you can still benefit from any potential increase in their value.
+* **Financial Flexibility**: Users typically borrow for unexpected expenses, leveraging holdings, or pursuing new investment opportunities.
+***
+### • How to Borrow <a href="#how-to-borrow" id="how-to-borrow"></a>
+#### **↝ Steps to Borrow** <a href="#steps-to-borrow" id="steps-to-borrow"></a>
+1. Supply any asset to be used as collateral (refer to the "[*How to Lend*](https://docs.google.com/document/d/1iRYNakiJCs4GZfHuze9hJebrFMaKrpX3kYmX_dMTh7o/edit?tab=t.m0ckjwj8j4vn#heading=h.e33kncb6bibh)" section for more information).
+2. Navigate to the "**Borrow**" section and select the asset you wish to borrow.
+3. Set the **desired amount** based on your available collateral.
+<figure><img src="/files/YFpTqQ77Bw19gw8waHr6" alt="" width="309"><figcaption></figcaption></figure>
+#### **↝ Borrowing Limits** <a href="#borrowing-limits" id="borrowing-limits"></a>
+* The maximum borrow amount depends on the **value of your supplied assets** and the **available liquidity**.
+* You cannot borrow more than the available liquidity or beyond what your **health factor allows**.
+* Check the **risk parameters section** for details on collateral requirements and specific borrowing limits.
+#### **↝ Repayment Details** <a href="#repayment-details" id="repayment-details"></a>
+* Loans must be repaid in the **same asset** that was borrowed. For example, if you borrow 1 ETH, you repay 1 ETH plus any accrued interest.
+You can also **repay your debt using collateral directly.** To do this:
+1. Toggle on the “Repay with Collateral” option.
+2. Select the collateral asset you wish to use for repayment.
+3. Choose the desired amount and proceed with the repayment.
 This method allows you to reduce your debt without needing to withdraw or swap assets manually.
-↝ Interest Rate
-Variable Rate
-: Fluctuates based on
-market conditions
-and the
-supply-demand ratio
-for the asset. This rate can change over time.
-Interest Rate Payments
-: The borrowing rate for users is variable for each asset. This rate is determined by the asset's supply and demand dynamics, based on the specific Interest Rate Models applied to that asset.
-Interest rate payments are accrued in each block, in the form of borrowed assets.
-Flash Loan Fees
-: Flash Loan takers pay a fee, which is currently set at 0.04% of the Flash Loan volume.
-You can view your current borrowing rate in the Borrowings section of your dashboard.
-↝ Health Factor
-The health factor measures the
-safety
-of your deposited assets against your borrowed assets.
-A higher health factor indicates a
-safer position
-.
-If the health factor drops to 1 or below,
-liquidation
-of your deposits will occur.
-Detailed information on collateral parameters and health factor calculations can be found in the
-risk parameters section
-.
-Impact of Health Factor Changes
-Fluctuations in the value of your supplied assets will affect your health factor.
-An
-increased health factor
-improves your borrow position, reducing liquidation risk.
-A
-decreased health factor
-increases the risk of liquidation.
-For
-safety reasons
-, the default UI only allows borrowing or withdrawing up to the point where your health factor remains at or above 1.2
-↝
-Danger Zone Mode
-Users can manually enable "
-Danger Zone Mode
-" to override safety threshold and borrow or withdraw more, even if the health factor falls below 1.2.
-To activate Danger Zone mode, navigate to your dashboard and select "
-Settings
-" from the top-right corner. Simply toggle the switch to "
-On
-" to enable it.
-Users must
-use this with caution
--overextending can drop your health factor below 1 and
-lead to self-liquidation.
-Loan Repayment
-↝ When to Repay
-There is no
-fixed period
-for loan repayment. You can borrow for an indefinite period as long as your position remains safe.
-Over time, accrued interest will reduce your health factor, potentially increasing the risk of liquidation.
-↝How to Repay
-Go to the Borrowings section of your dashboard and select the repay option for the borrowed asset.
-Choose the amount to repay and confirm the transaction.
-• Avoiding Liquidation
-↝ Strategies to Prevent Liquidation
-Repay the loan
-to improve your health factor.
-Deposit more assets
-to increase your collateral value.
-Liquidation guard
-Liquidation Guard is an opt-in
-safety mechanism
-designed to protect your positions from forced liquidation. When your account’s Health Factor drops below a predefined threshold, the system
-automatically attempts to repay
-a portion of your debt- effectively "
-rescuing
-" the account before third-party liquidators can intervene.
+#### **↝ Interest Rate** <a href="#interest-rate" id="interest-rate"></a>
+* **Variable Rate**: Fluctuates based on **market conditions** and the **supply-demand ratio** for the asset. This rate can change over time.
+**Interest Rate Payments**: The borrowing rate for users is variable for each asset. This rate is determined by the asset's supply and demand dynamics, based on the specific Interest Rate Models applied to that asset.
+*Interest rate payments are accrued in each block, in the form of borrowed assets.*
+**Flash Loan Fees**: Flash Loan takers pay a fee, which is currently set at 0.04% of the Flash Loan volume.
+*You can view your current borrowing rate in the Borrowings section of your dashboard.*
+#### **↝ Health Factor** <a href="#health-factor" id="health-factor"></a>
+* The health factor measures the **safety** of your deposited assets against your borrowed assets.
+* A higher health factor indicates a **safer position**.
+* If the health factor drops to 1 or below, **liquidation** of your deposits will occur.
+* Detailed information on collateral parameters and health factor calculations can be found in the **risk parameters section**.
+**Impact of Health Factor Changes**
+* Fluctuations in the value of your supplied assets will affect your health factor.
+* An **increased health factor** improves your borrow position, reducing liquidation risk.
+* A **decreased health factor** increases the risk of liquidation.
+{% hint style="info" %}
+For **safety reasons**, the default UI only allows borrowing or withdrawing up to the point where your health factor remains at or above 1.2
+{% endhint %}
+#### **↝** Danger Zone Mode <a href="#danger-zone-mode" id="danger-zone-mode"></a>
+* Users can manually enable "**Danger Zone Mode**" to override safety threshold and borrow or withdraw more, even if the health factor falls below 1.2.
+To activate Danger Zone mode, navigate to your dashboard and select "*Settings*" from the top-right corner. Simply toggle the switch to "*On*" to enable it.
+<figure><img src="/files/xvpKRv7sFjNEMrfibifo" alt="" width="375"><figcaption></figcaption></figure>
+{% hint style="info" %}
+Users must **use this with caution**-overextending can drop your health factor below 1 and **lead to self-liquidation.**
+{% endhint %}
+### Loan Repayment <a href="#loan-repayment" id="loan-repayment"></a>
+#### **↝ When to Repay** <a href="#when-to-repay" id="when-to-repay"></a>
+* There is no **fixed period** for loan repayment. You can borrow for an indefinite period as long as your position remains safe.
+* Over time, accrued interest will reduce your health factor, potentially increasing the risk of liquidation.
+**↝How to Repay**
+1. Go to the Borrowings section of your dashboard and select the repay option for the borrowed asset.
+2. Choose the amount to repay and confirm the transaction.
+### • Avoiding Liquidation <a href="#avoiding-liquidation" id="avoiding-liquidation"></a>
+#### **↝ Strategies to Prevent Liquidation** <a href="#strategies-to-prevent-liquidation" id="strategies-to-prevent-liquidation"></a>
+* **Repay the loan** to improve your health factor.
+* **Deposit more assets** to increase your collateral value.
+#### **Liquidation guard** <a href="#liquidation-guard" id="liquidation-guard"></a>
+Liquidation Guard is an opt-in **safety mechanism** designed to protect your positions from forced liquidation. When your account’s Health Factor drops below a predefined threshold, the system **automatically attempts to repay** a portion of your debt- effectively "**rescuing**" the account before third-party liquidators can intervene.
+{% hint style="info" %}
 Disclaimer: While Liquidation Guard is built to provide an extra layer of security, execution is not guaranteed. Success remains subject to prevailing market conditions and liquidity.
-Configuration Guide
+{% endhint %}
+**Configuration Guide**
 Click on the guard icon on your dashboard and toggle liquidation guard on.
+<figure><img src="/files/IBkOCxRDSxMS2b9mW8gx" alt="" width="375"><figcaption></figcaption></figure>
 To set up your protection, you must configure the following parameters:
-1. Health Factor Threshold
-Use the slider to determine the point at which the Guard activates.
+**1. Health Factor Threshold**
+* Use the slider to determine the point at which the Guard activates.
 Recommendation: For a moderate risk profile, it is suggested to set the threshold between 1.1 and 1.3 HF.
-2. Asset Caps (Set the Cap)
-You can precisely control
-which assets are used to repay
-your debt and in what quantities.
-Set the Cap:
-Manually enter a specific limit for each asset. This is the maximum amount of that particular token the Guard is authorized to pull from your wallet to cover your debt.
-3. Dynamic Max
-For more flexible protection, you can enable the Dynamic Max toggle for specific assets.
-Enabling this gives Liquidation Guard
-permission to use your entire available wallet
-balance for that asset to repay debt. This ensures the maximum possible "rescue" attempt if a fixed cap would otherwise be insufficient.
-By following these guidelines, you can manage your borrowings effectively on HyperLend, ensuring
-liquidity
-while maintaining the potential for
-asset value appreciation
-.
-Previous
-↪How to Lend on HyperLend
-Next
-↪ How to HyperLoop
-Last updated
-4 months ago
-[[LINK TARGETS]]
-LINK | How to Lend | https://docs.google.com/document/d/1iRYNakiJCs4GZfHuze9hJebrFMaKrpX3kYmX_dMTh7o/edit?tab=t.m0ckjwj8j4vn#heading=h.e33kncb6bibh
-LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend.md
-LINK | Next ↪ How to HyperLoop | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop
-LINK | Previous ↪How to Lend on HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#advantages-of-borrowing
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#avoiding-liquidation
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#borrowing-limits
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#danger-zone-mode
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#health-factor
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#how-to-borrow
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#interest-rate
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#liquidation-guard
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#loan-repayment
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#repayment-details
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#steps-to-borrow
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#strategies-to-prevent-liquidation
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#when-to-repay
-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend#why-borrow-instead-of-selling-your-assets
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+**2. Asset Caps (Set the Cap)**
+* You can precisely control **which assets are used to repay** your debt and in what quantities.
+* **Set the Cap:** Manually enter a specific limit for each asset. This is the maximum amount of that particular token the Guard is authorized to pull from your wallet to cover your debt.
+**3. Dynamic Max**
+* For more flexible protection, you can enable the Dynamic Max toggle for specific assets.
+* Enabling this gives Liquidation Guard **permission to use your entire available wallet** balance for that asset to repay debt. This ensures the maximum possible "rescue" attempt if a fixed cap would otherwise be insufficient.
+***
+By following these guidelines, you can manage your borrowings effectively on HyperLend, ensuring **liquidity** while maintaining the potential for **asset value appreciation**.

@@ -1,41 +1,21 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address.md).
+# ↪ Watch Address
+<figure><img src="/files/XlqSq5gUJ8Mnnqam0jVd" alt=""><figcaption></figcaption></figure>
+***
 Use this option to add an address for tracking. Once added, you’ll receive alerts for any relevant activities on that address, such as health factor changes and liquidation risks.
 Here's the revised step-by-step guide for the "Watch Address" feature:
-How to Use "Watch Address"
-Access the Feature
-:
-Click on the
-"Watch Address"
-button in the bot interface. This will initiate the process to monitor a specific wallet address.
-Input Details
-:
-The bot will prompt you to enter the name and address you want to monitor for transactions.
-You’ll see a helpful message with an example:
-JohnDoe 0x123...abc
-. Use this format when entering your information.
-Type in the name you wish to assign to the address and then the wallet address itself. For example, input
-testing 0xB6D69449d5EEb5c7a6490d30cE9a71e34EDB933
-.
-Receive Confirmation
-:
-After you submit the details, the bot will activate transaction monitoring for the address and display a confirmation message.
-The message will confirm that monitoring has been activated and will include:
-The name you assigned to the address.
-The wallet address being monitored.
-You’ll now receive alerts for all transactions related to this address, ensuring you are promptly informed of any activity.
-Previous
-Bot Functions
-Next
-↪ Remove Address
-Last updated
-1 year ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address.md
-LINK | Next ↪ Remove Address | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/remove-address
-LINK | Previous Bot Functions | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions
-LINK | [no text] | https://docs.hyperlend.finance/advanced-features/hypertrack/bot-functions/watch-address#how-to-use-watch-address
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+***
+#### How to Use "Watch Address"
+1. **Access the Feature**:
+* Click on the **"Watch Address"** button in the bot interface. This will initiate the process to monitor a specific wallet address.
+2. **Input Details**:
+* The bot will prompt you to enter the name and address you want to monitor for transactions.
+* You’ll see a helpful message with an example: **JohnDoe 0x123...abc**. Use this format when entering your information.
+* Type in the name you wish to assign to the address and then the wallet address itself. For example, input `testing 0xB6D69449d5EEb5c7a6490d30cE9a71e34EDB933`.
+3. **Receive Confirmation**:
+* After you submit the details, the bot will activate transaction monitoring for the address and display a confirmation message.
+* The message will confirm that monitoring has been activated and will include:
+* The name you assigned to the address.
+* The wallet address being monitored.
+* You’ll now receive alerts for all transactions related to this address, ensuring you are promptly informed of any activity.
+***

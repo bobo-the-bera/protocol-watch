@@ -1,46 +1,30 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Order types:
-Market: An order that executes immediately at the current market price
-Limit: An order that executes at the selected limit price or better
-Chase: A Post Only (ALO) limit order that automatically re-prices to track the best bid or ask until it is filled or terminated. The order rests one tick above the best bid (for buys) or one tick below the best ask (for sells), or at the best bid/ask when the spread is a single tick. Chase orders run in the browser tab where they are created, and up to 5 can be active at once
-Stop Market: A market order that is activated when the price reaches the selected trigger price. For long orders, the trigger price needs to be higher than the mid price. For short orders, the trigger price needs to be lower than the mid price
-Stop Limit: A limit order that is activated when the price reaches the selected trigger price
-Take Market: A market order that is activated when the price reaches the selected trigger price. For long orders, the trigger price needs to be lower than the mid price. For short orders, the trigger price needs to be higher than the mid price
-Take Limit: A limit order that is activated when the price reaches the selected trigger price
-Scale: Multiple limit orders in a set price range
-TWAP: A large order divided into smaller suborders and executed at regular intervals, based on order size and running time inputs. Intervals are a minimum of 30 seconds. TWAP suborders have a maximum slippage of 3%
-Randomize: If enabled, the size of each sub-order will be adjusted randomly up to ±20% of the original trade size
-Trigger Price: The TWAP order will be activated when the mark price reaches the trigger price set
-Max/Min Price: The TWAP order will be terminated when the mark price reaches the stop price set
-TWAP details:
-During execution, a TWAP order attempts to meet an execution target which is defined as the elapsed time divided by the total time times the total size. Suborders are sent at a fixed interval, calculated from the total size and running time inputs. Larger orders over shorter durations are split into suborders sent as often as every 30 seconds; smaller orders over longer durations are split into suborders spaced further apart. Running time can be set from 5 minutes to 7 days, with a $100 minimum total order size.
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types.md).
+# Order types
+### Order types:
+* Market: An order that executes immediately at the current market price
+* Limit: An order that executes at the selected limit price or better
+* Chase: A Post Only (ALO) limit order that automatically re-prices to track the best bid or ask until it is filled or terminated. The order rests one tick above the best bid (for buys) or one tick below the best ask (for sells), or at the best bid/ask when the spread is a single tick. Chase orders run in the browser tab where they are created, and up to 5 can be active at once
+* Stop Market: A market order that is activated when the price reaches the selected trigger price. For long orders, the trigger price needs to be higher than the mid price. For short orders, the trigger price needs to be lower than the mid price
+* Stop Limit: A limit order that is activated when the price reaches the selected trigger price
+* Take Market: A market order that is activated when the price reaches the selected trigger price. For long orders, the trigger price needs to be lower than the mid price. For short orders, the trigger price needs to be higher than the mid price
+* Take Limit: A limit order that is activated when the price reaches the selected trigger price
+* Scale: Multiple limit orders in a set price range &#x20;
+* TWAP: A large order divided into smaller suborders and executed at regular intervals, based on order size and running time inputs. Intervals are a minimum of 30 seconds. TWAP suborders have a maximum slippage of 3%
+* Randomize: If enabled, the size of each sub-order will be adjusted randomly up to ±20% of the original trade size
+* Trigger Price: The TWAP order will be activated when the mark price reaches the trigger price set
+* Max/Min Price: The TWAP order will be terminated when the mark price reaches the stop price set
+### TWAP details:&#x20;
+During execution, a TWAP order attempts to meet an execution target which is defined as the elapsed time divided by the total time times the total size. Suborders are sent at a fixed interval, calculated from the total size and running time inputs. Larger orders over shorter durations are split into suborders sent as often as every 30 seconds; smaller orders over longer durations are split into suborders spaced further apart. Running time can be set from 5 minutes to 7 days, with a $100 minimum total order size.\
+\
 Example:
-A $10,000 order over 1 hour is split into ~121 suborders of ~$83, sent every 30 seconds
-A $10,000 order over 4 days is split into ~1,000 suborders of ~$10, sent roughly every 6 minutes
+* A $10,000 order over 1 hour is split into \~121 suborders of \~$83, sent every 30 seconds
+* A $10,000 order over 4 days is split into \~1,000 suborders of \~$10, sent roughly every 6 minutes
 A suborder is constrained to have a max slippage of 3%. When suborders do not fully fill because of market conditions (e.g., wide spread, low liquidity, etc.), the TWAP may fall behind its execution target. In this case, the TWAP will try to catch up to this execution target during later suborders. These later suborders will be larger but subject to the constraint of 3 times the normal suborder size (defined as total TWAP size divided by number of suborders). It is possible that if too many suborders did not fill then the TWAP order may not fully catch up to the total size by the end. Like normal market orders, TWAP suborders do not fill during the post-only period of a network upgrade.
-Order options:
-Reduce Only: An order that reduces a current position as opposed to opening a new position in the opposite direction
-Good Til Cancel (GTC): An order that rests on the order book until it is filled or canceled
-Post Only (ALO): An order that is added to the order book but doesn’t execute immediately. It is only executed as a resting order
-Immediate or Cancel (IOC): An order that will be canceled if it is not immediately filled
-Take Profit: An order that triggers when the Take Profit (TP) price is reached.
-Stop Loss: An order that triggers when the Stop Loss (SL) price is reached
-TP and SL orders are often used by traders to set targets and protect profits or minimize losses on positions. TP and SL are automatically market orders. You can set a limit price and configure the amount of the position to have a TP or SL
-Previous
-Order book
-Next
-Take profit and stop loss orders (TP/SL)
-Last updated
-22 days ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types.md
-LINK | Next Take profit and stop loss orders (TP/SL) | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
-LINK | Previous Order book | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-book
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types#order-options
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types#order-types
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types#twap-details
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+### Order options:
+* Reduce Only: An order that reduces a current position as opposed to opening a new position in the opposite direction&#x20;
+* Good Til Cancel (GTC): An order that rests on the order book until it is filled or canceled&#x20;
+* Post Only (ALO): An order that is added to the order book but doesn’t execute immediately. It is only executed as a resting order
+* Immediate or Cancel (IOC): An order that will be canceled if it is not immediately filled
+* Take Profit: An order that triggers when the Take Profit (TP) price is reached.
+* Stop Loss: An order that triggers when the Stop Loss (SL) price is reached
+* TP and SL orders are often used by traders to set targets and protect profits or minimize losses on positions. TP and SL are automatically market orders. You can set a limit price and configure the amount of the position to have a TP or SL

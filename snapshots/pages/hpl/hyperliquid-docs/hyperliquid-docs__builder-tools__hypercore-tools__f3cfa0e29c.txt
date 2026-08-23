@@ -1,122 +1,40 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Analytics - perps and order book data
-ASXN (most comprehensive):
-https://hyperscreener.asxn.xyz/home
-Artemis:
-https://app.artemis.xyz/project/hyperliquid
-Blockliquidity:
-https://blockliquidity.xyz/
-Coinalyze:
-https://coinalyze.net/markets/?exchange=H
-DefiLlama (note that TVL is tracked differently on order books and AMMs):
-https://defillama.com/perps/chains/hyperliquid
-Flowscan:
-https://www.flowscan.xyz/
-HyperDash:
-https://legacy.hyperdash.com/
-HyperTracker:
-https://app.coinmarketman.com/hypertracker
-Laevitas:
-https://app.laevitas.ch/exchanges/perpswaps/HYPERLIQUID/screener
-Velo:
-https://velo.xyz/futures/
-APIs
-API Docs:
-https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
-SDKs:
-Python SDK:
-https://github.com/hyperliquid-dex/hyperliquid-python-sdk
-Rust SDK by community member, Infinite Field:
-https://github.com/infinitefield/hypersdk
-Typescript SDKs by community members:
-https://github.com/nktkas/hyperliquid
-,
-https://github.com/nomeida/hyperliquid
-CCXT integrations in multiple languages that conform with the standard CCXT API:
-https://docs.ccxt.com/#/exchanges/hyperliquid
-Dwellir (gRPC):
-https://www.dwellir.com/docs/hyperliquid/grpc/
-Dwellir (websocket):
-https://www.dwellir.com/docs/hyperliquid/websocket-api
-Hydromancer (non-rate-limited APIs and indexing):
-https://docs.hydromancer.xyz/
-Explorers
-Hyperliquid.xyz:
-https://app.hyperliquid.xyz/explorer
-Flowscan:
-flowscan.xyz
-HypurrScan:
-https://hypurrscan.io
-Indexing
-Allium:
-https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid
-Hydromancer historical data:
-https://docs.hydromancer.xyz/reservoir
-HypeDexer by Enigma:
-https://www.hypedexer.com/
-SonarX:
-https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid
-Multisig, MPC, and qualified custodians
-Anchorage Digital (custodian):
-https://www.anchorage.com/insights/anchorage-digital-offers-support-hype-custody-staking-full-support-across-hypeevm-hypercore
-FalconX (custodian):
-https://www.falconx.io/
-HyperSig (multisig):
-https://www.hypersig.xyz/
-Komainu (custodian):
-https://komainu.com/komainu-announces-institutional-grade-custody-and-staking-support-for-hyperliquid-hype/
-Tholos (MPC):
-https://www.tholos.app/
-Node peers
-Hydromancer:
-https://docs.hydromancer.xyz/peering
-Previous
-HyperEVM Tools
-Last updated
-15 days ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools.md
-LINK | Previous HyperEVM Tools | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hyperevm-tools
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#analytics-perps-and-order-book-data
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#apis
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#explorers
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#indexing
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#multisig-mpc-and-qualified-custodians
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools#node-peers
-LINK | flowscan.xyz | https://flowscan.xyz
-LINK | https://app.artemis.xyz/project/hyperliquid | https://app.artemis.xyz/project/hyperliquid
-LINK | https://app.coinmarketman.com/hypertracker | https://app.coinmarketman.com/hypertracker
-LINK | https://app.hyperliquid.xyz/explorer | https://app.hyperliquid.xyz/explorer
-LINK | https://app.laevitas.ch/exchanges/perpswaps/HYPERLIQUID/screener | https://app.laevitas.ch/exchanges/perpswaps/HYPERLIQUID/screener
-LINK | https://blockliquidity.xyz/ | https://blockliquidity.xyz/
-LINK | https://coinalyze.net/markets/?exchange=H | https://coinalyze.net/markets/?exchange=H
-LINK | https://defillama.com/perps/chains/hyperliquid | https://defillama.com/perps/chains/hyperliquid
-LINK | https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid | https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid
-LINK | https://docs.ccxt.com/#/exchanges/hyperliquid | https://docs.ccxt.com/#/exchanges/hyperliquid
-LINK | https://docs.hydromancer.xyz/ | https://docs.hydromancer.xyz/
-LINK | https://docs.hydromancer.xyz/peering | https://docs.hydromancer.xyz/peering
-LINK | https://docs.hydromancer.xyz/reservoir | https://docs.hydromancer.xyz/reservoir
-LINK | https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid | https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid
-LINK | https://github.com/hyperliquid-dex/hyperliquid-python-sdk | https://github.com/hyperliquid-dex/hyperliquid-python-sdk
-LINK | https://github.com/infinitefield/hypersdk | https://github.com/infinitefield/hypersdk
-LINK | https://github.com/nktkas/hyperliquid | https://github.com/nktkas/hyperliquid
-LINK | https://github.com/nomeida/hyperliquid | https://github.com/nomeida/hyperliquid
-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api | https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api
-LINK | https://hyperscreener.asxn.xyz/home | https://hyperscreener.asxn.xyz/home
-LINK | https://hypurrscan.io | https://hypurrscan.io/
-LINK | https://komainu.com/komainu-announces-institutional-grade-custody-and-staking-support-for-hyperliquid-hype/ | https://komainu.com/komainu-announces-institutional-grade-custody-and-staking-support-for-hyperliquid-hype/
-LINK | https://legacy.hyperdash.com/ | https://legacy.hyperdash.com/
-LINK | https://velo.xyz/futures/ | https://velo.xyz/futures/
-LINK | https://www.anchorage.com/insights/anchorage-digital-offers-support-hype-custody-staking-full-support-across-hypeevm-hypercore | https://www.anchorage.com/insights/anchorage-digital-offers-support-hype-custody-staking-full-support-across-hypeevm-hypercore
-LINK | https://www.dwellir.com/docs/hyperliquid/grpc/ | https://www.dwellir.com/docs/hyperliquid/grpc/
-LINK | https://www.dwellir.com/docs/hyperliquid/websocket-api | https://www.dwellir.com/docs/hyperliquid/websocket-api
-LINK | https://www.falconx.io/ | https://www.falconx.io/
-LINK | https://www.flowscan.xyz/ | https://www.flowscan.xyz/
-LINK | https://www.hypedexer.com/ | https://www.hypedexer.com/
-LINK | https://www.hypersig.xyz/ | https://www.hypersig.xyz/
-LINK | https://www.tholos.app/ | https://www.tholos.app/
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/builder-tools/hypercore-tools.md).
+# HyperCore Tools
+### Analytics - perps and order book data
+* ASXN (most comprehensive): <https://hyperscreener.asxn.xyz/home>
+* Artemis: <https://app.artemis.xyz/project/hyperliquid>
+* Blockliquidity: [https://blockliquidity.xyz/](< https://blockliquidity.xyz/>)
+* Coinalyze: <https://coinalyze.net/markets/?exchange=H>
+* DefiLlama (note that TVL is tracked differently on order books and AMMs): <https://defillama.com/perps/chains/hyperliquid>
+* Flowscan: <https://www.flowscan.xyz/>
+* HyperDash: <https://legacy.hyperdash.com/>
+* HyperTracker: <https://app.coinmarketman.com/hypertracker>
+* Laevitas: <https://app.laevitas.ch/exchanges/perpswaps/HYPERLIQUID/screener>
+* Velo: <https://velo.xyz/futures/>
+### APIs
+* API Docs: <https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api>
+* SDKs:&#x20;
+* Python SDK: <https://github.com/hyperliquid-dex/hyperliquid-python-sdk>
+* Rust SDK by community member, Infinite Field: <https://github.com/infinitefield/hypersdk>
+* Typescript SDKs by community members: <https://github.com/nktkas/hyperliquid>, <https://github.com/nomeida/hyperliquid>
+* CCXT integrations in multiple languages that conform with the standard CCXT API: <https://docs.ccxt.com/#/exchanges/hyperliquid>
+* Dwellir (gRPC): <https://www.dwellir.com/docs/hyperliquid/grpc/>
+* Dwellir (websocket): <https://www.dwellir.com/docs/hyperliquid/websocket-api>
+* Hydromancer (non-rate-limited APIs and indexing): <https://docs.hydromancer.xyz/>
+### Explorers
+* Hyperliquid.xyz: <https://app.hyperliquid.xyz/explorer>
+* Flowscan: [flowscan.xyz](https://flowscan.xyz)
+* HypurrScan: [https://hypurrscan.io](https://hypurrscan.io/)
+### Indexing
+* Allium: <https://docs.allium.so/historical-chains/supported-blockchains/hyperliquid>
+* Hydromancer historical data: <https://docs.hydromancer.xyz/reservoir>
+* HypeDexer by Enigma: <https://www.hypedexer.com/>
+* SonarX: <https://docs.sonarx.com/datasets/HYPERLIQUID/Hyperliquid>
+### Multisig, MPC, and qualified custodians
+* Anchorage Digital (custodian): <https://www.anchorage.com/insights/anchorage-digital-offers-support-hype-custody-staking-full-support-across-hypeevm-hypercore>
+* FalconX (custodian): <https://www.falconx.io/>
+* HyperSig (multisig): <https://www.hypersig.xyz/>
+* Komainu (custodian): <https://komainu.com/komainu-announces-institutional-grade-custody-and-staking-support-for-hyperliquid-hype/>
+* Tholos (MPC): <https://www.tholos.app/>&#x20;
+### Node peers
+* Hydromancer: <https://docs.hydromancer.xyz/peering>

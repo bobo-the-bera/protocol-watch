@@ -1,47 +1,40 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Supply
-Step 1: Access
-https://lending.rhea.finance/
-and connect your wallet
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide.md).
+# Step by Step Guide
+## Supply
+Step 1: Access <https://lending.rhea.finance/> and connect your wallet
+<figure><img src="/files/KYnMoi32XJQmG031DMFZ" alt=""><figcaption></figcaption></figure>
 Step 2: Select one asset from the list and click “Supply”
+<figure><img src="/files/dcSLtK0RefcxQMM3Q6Gy" alt=""><figcaption></figcaption></figure>
 Step 3: Enter your desired number and turn on “Use as Collateral” (Optional)
+<div data-full-width="false"><figure><img src="/files/dtzvHeKqkEOp9oUXeSYr" alt="" width="375"><figcaption></figcaption></figure></div>
 Step 4: Supply and sign the transaction
-Borrow
+<figure><img src="/files/siizd38gCVsOLb1ZweAL" alt="" width="352"><figcaption></figcaption></figure>
+## Borrow
 Make sure you have already supplied your asset (and turned on Use as collateral button) first before borrowing.
+<figure><img src="/files/MPaKIEsRl6CZp4rKo14K" alt=""><figcaption></figcaption></figure>
 Step 1: Select a token you want to borrow
 I will borrow $DAI using $USDT as collateral in this situation
+<figure><img src="/files/LiXQD6X4HyALIi1tzzsY" alt=""><figcaption></figcaption></figure>
 Step 2: Choose an appropriate amount
+<figure><img src="/files/yBhTpe48NqgvONW82Io8" alt="" width="375"><figcaption></figcaption></figure>
 Step 3: Verify all the details and confirm the transaction
-Repay
+### Repay
 Step 1: Click on Repay Button
-Step 2: Enter an appropriate amount
+<figure><img src="/files/SEbsMa36WL4Lx2SqyS9F" alt=""><figcaption></figcaption></figure>
+Step 2: Enter an appropriate amount&#x20;
+<figure><img src="/files/eDXvByDunmTysrCji1Ll" alt="" width="375"><figcaption></figcaption></figure>
 Notice that Health Factor changes every time you increase/decrease the repayment amount
 Step 3: Confirm the transaction
-Withdraw
-Step 1: Click the
-Dashboard
-button & choose the token you wish to withdraw
+### Withdraw
+Step 1: Click the [Dashboard](https://lending.rhea.finance/dashboard) button & choose the token you wish to withdraw
+<figure><img src="/files/SDSHUgG55OiwLNmA4siX" alt=""><figcaption></figcaption></figure>
 Step 2: Choose an appropriate amount
+<figure><img src="/files/nGRhAybclsk9GFtwtfac" alt="" width="375"><figcaption></figcaption></figure>
 Step 3: Verify the details and confirm your transaction
-Adjusting collateral
+### Adjusting collateral
 Step 1: Select the token and click "Adjust" button
-Step 2: Enter an appropriate amount
+<figure><img src="/files/WPmedSc2YAmxV0UJy9yG" alt=""><figcaption></figcaption></figure>
+Step 2: Enter an appropriate amount&#x20;
 Keep an eye on your Health Factor since it will adjust following your collateral position
+<figure><img src="/files/33doXa58VMkO47GN0rHB" alt="" width="375"><figcaption></figcaption></figure>
 Step 3: Confirm the transaction
-Last updated
-1 year ago
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Dashboard | https://lending.rhea.finance/dashboard
-LINK | Markdown | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide.md
-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#adjusting-collateral
-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#borrow
-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#repay
-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#supply
-LINK | [no text] | https://guide.rhea.finance/x-chain-guides/lending-and-borrowing/step-by-step-guide#withdraw
-LINK | https://lending.rhea.finance/ | https://lending.rhea.finance/
-LINK | llms.txt | https://guide.rhea.finance/llms.txt

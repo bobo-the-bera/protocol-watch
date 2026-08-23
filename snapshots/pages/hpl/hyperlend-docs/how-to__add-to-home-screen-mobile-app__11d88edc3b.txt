@@ -1,21 +1,9 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-This feature was built so you can
-see your personal wallet positions anytime
-, directly from your phone.
-How to set it up:
-Click the mobile app button in the bottom-right corner
-Scan the QR code with your phone
-Tap “Add to Home Screen” when prompted
-You can view a simple video guide
-here
-.
-Last updated
-5 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://docs.hyperlend.finance/how-to/add-to-home-screen-mobile-app.md
-LINK | here | https://x.com/hyperlendx/status/1914016238163870088
-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/how-to/add-to-home-screen-mobile-app.md).
+# Add to Home Screen (Mobile App)
+This feature was built so you can **see your personal wallet positions anytime**, directly from your phone.
+**How to set it up:**
+1. Click the mobile app button in the bottom-right corner
+2. Scan the QR code with your phone
+3. Tap “Add to Home Screen” when prompted
+You can view a simple video guide [here](https://x.com/hyperlendx/status/1914016238163870088).
+<figure><img src="/files/xnPFBZ9GvYUgcfMANQ0J" alt=""><figcaption></figcaption></figure>

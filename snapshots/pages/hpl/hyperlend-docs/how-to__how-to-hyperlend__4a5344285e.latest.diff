@@ -1,36 +1,39 @@
 --- hpl/hyperlend-docs/how-to__how-to-hyperlend__4a5344285e:previous
 +++ hpl/hyperlend-docs/how-to__how-to-hyperlend__4a5344285e:current
-@@ -0,0 +1,33 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+LEND
-+How to Lend on HyperLend?
-+BORROW
-+How to Borrow on HyperLend?
-+LOOPING
-+How to Loop on HyperLend?
-+REFER
-+How to Refer a Friend?
-+SHARE
-+How to Share your Yield in Style!
-+GOVERNANCE
-+How to Create a Proposal
-+Previous
-+Brand Kit
-+Next
-+↪How to Lend on HyperLend
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend.md
-+LINK | Next ↪How to Lend on HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend
-+LINK | Previous Brand Kit | https://docs.hyperlend.finance/essentials/brand-kit
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend
-+LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,33 +1,3 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-LEND
+-How to Lend on HyperLend?
+-BORROW
+-How to Borrow on HyperLend?
+-LOOPING
+-How to Loop on HyperLend?
+-REFER
+-How to Refer a Friend?
+-SHARE
+-How to Share your Yield in Style!
+-GOVERNANCE
+-How to Create a Proposal
+-Previous
+-Brand Kit
+-Next
+-↪How to Lend on HyperLend
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/how-to/how-to-hyperlend.md
+-LINK | Next ↪How to Lend on HyperLend | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend
+-LINK | Previous Brand Kit | https://docs.hyperlend.finance/essentials/brand-kit
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-borrow-from-hyperlend
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-hyperloop
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-lend-on-hyperlend
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-refer-on-hyperlend
+-LINK | [no text] | https://docs.hyperlend.finance/how-to/how-to-hyperlend/how-to-share-your-yield-in-style
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/how-to/how-to-hyperlend.md).
++# How to HyperLend?
++<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>LEND</strong></td><td>How to Lend on HyperLend?</td><td></td><td><a href="/files/7J9NInW68TtxoODMnIAQ">/files/7J9NInW68TtxoODMnIAQ</a></td><td><a href="/pages/RMjrsWFyMPtkB8npjuRD">/pages/RMjrsWFyMPtkB8npjuRD</a></td></tr><tr><td><strong>BORROW</strong></td><td>How to Borrow on HyperLend?</td><td></td><td><a href="/files/MBqTTXdup15LvNk49Nlx">/files/MBqTTXdup15LvNk49Nlx</a></td><td><a href="/pages/APwOwkRqt2lAD0QJrPN3">/pages/APwOwkRqt2lAD0QJrPN3</a></td></tr><tr><td><strong>LOOPING</strong></td><td>How to Loop on HyperLend?</td><td></td><td><a href="/files/4xlpQv5qWzpx8E5ETfLN">/files/4xlpQv5qWzpx8E5ETfLN</a></td><td><a href="/pages/wbOhIUv2crdl5M3KzDQ2">/pages/wbOhIUv2crdl5M3KzDQ2</a></td></tr><tr><td><strong>REFER</strong></td><td>How to Refer a Friend?</td><td></td><td><a href="/files/EohDll48yXaA39e7lCyh">/files/EohDll48yXaA39e7lCyh</a></td><td><a href="/pages/BRPuwGghju03BcPmu2Xf">/pages/BRPuwGghju03BcPmu2Xf</a></td></tr><tr><td><strong>SHARE</strong></td><td>How to Share your Yield in Style!</td><td></td><td><a href="/files/u8K5unFTLfQ2tUJIZcbx">/files/u8K5unFTLfQ2tUJIZcbx</a></td><td><a href="/pages/DJ1ecX96A0xdCBNyYTFH">/pages/DJ1ecX96A0xdCBNyYTFH</a></td></tr><tr><td><strong>GOVERNANCE</strong></td><td>How to Create a Proposal</td><td></td><td><a href="/files/O1J6wPeRuX1cVIXSwcvm">/files/O1J6wPeRuX1cVIXSwcvm</a></td><td><a href="/pages/bn6Ms0qpHJAX1GsgV916">/pages/bn6Ms0qpHJAX1GsgV916</a></td></tr></tbody></table>

@@ -1,38 +1,42 @@
 --- hpl/hyperlend-docs/essentials__partners__caaebccf30:previous
 +++ hpl/hyperlend-docs/essentials__partners__caaebccf30:current
-@@ -0,0 +1,35 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Our valued partners play a crucial role in supporting and advancing our mission. We are proud to collaborate with industry leaders and innovators who share our vision for the future, such as:
-+Aave
-+Block Analitica
-+RedStone
-+Pyth
-+Kinetiq
-+Hypernative
-+Ackee Blockchain Security
-+Cantina
-+Pashov Audit Group
-+Chainlink
-+Circle
-+Ethena
-+Hyperbeat
-+Looping Collective
-+Native Markets
-+Unit
-+USDT0
-+Valantis
-+Previous
-+Key Features and Benefits
-+Next
-+Audits & Risk
-+Last updated
-+4 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/essentials/partners.md
-+LINK | Next Audits & Risk | https://docs.hyperlend.finance/essentials/audits-and-risk
-+LINK | Previous Key Features and Benefits | https://docs.hyperlend.finance/essentials/key-features-and-benefits
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,35 +1,4 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Our valued partners play a crucial role in supporting and advancing our mission. We are proud to collaborate with industry leaders and innovators who share our vision for the future, such as:
+-Aave
+-Block Analitica
+-RedStone
+-Pyth
+-Kinetiq
+-Hypernative
+-Ackee Blockchain Security
+-Cantina
+-Pashov Audit Group
+-Chainlink
+-Circle
+-Ethena
+-Hyperbeat
+-Looping Collective
+-Native Markets
+-Unit
+-USDT0
+-Valantis
+-Previous
+-Key Features and Benefits
+-Next
+-Audits & Risk
+-Last updated
+-4 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/essentials/partners.md
+-LINK | Next Audits & Risk | https://docs.hyperlend.finance/essentials/audits-and-risk
+-LINK | Previous Key Features and Benefits | https://docs.hyperlend.finance/essentials/key-features-and-benefits
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/essentials/partners.md).
++# Partners
++Our valued partners play a crucial role in supporting and advancing our mission. We are proud to collaborate with industry leaders and innovators who share our vision for the future, such as:&#x20;
++<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Aave</td><td><a href="/files/KYy2e1APZpKQMP4FhK6r">/files/KYy2e1APZpKQMP4FhK6r</a></td></tr><tr><td>Block Analitica</td><td><a href="/files/dDP5wk1yZSEbfUlhphkA">/files/dDP5wk1yZSEbfUlhphkA</a></td></tr><tr><td>RedStone</td><td><a href="/files/DJ2dRhQZqyarCrla7xc5">/files/DJ2dRhQZqyarCrla7xc5</a></td></tr><tr><td>Pyth</td><td><a href="/files/kbXQCrIVvwFJmjvz2dqY">/files/kbXQCrIVvwFJmjvz2dqY</a></td></tr><tr><td>Kinetiq</td><td><a href="/files/bWJE1RSuaVLoeNvVsyGG">/files/bWJE1RSuaVLoeNvVsyGG</a></td></tr><tr><td>Hypernative</td><td><a href="/files/HFOhNIHherzg31MwUCRK">/files/HFOhNIHherzg31MwUCRK</a></td></tr><tr><td>Ackee Blockchain Security</td><td><a href="/files/OXpE352By3FCh0QYBDEB">/files/OXpE352By3FCh0QYBDEB</a></td></tr><tr><td>Cantina</td><td><a href="/files/F0abF0rEviDR8b6klMOh">/files/F0abF0rEviDR8b6klMOh</a></td></tr><tr><td>Pashov Audit Group</td><td><a href="/files/fxn6KEnXLAAFpzKnDmm6">/files/fxn6KEnXLAAFpzKnDmm6</a></td></tr><tr><td>Chainlink</td><td><a href="/files/9JpL4PHSBEcrhiikhIrU">/files/9JpL4PHSBEcrhiikhIrU</a></td></tr><tr><td>Circle</td><td><a href="/files/NZENoY9ssNQYYqKASdqT">/files/NZENoY9ssNQYYqKASdqT</a></td></tr><tr><td>Ethena</td><td><a href="/files/sFeoZQmaWlRgXdRSKhh7">/files/sFeoZQmaWlRgXdRSKhh7</a></td></tr><tr><td>Hyperbeat</td><td><a href="/files/WnxHq5fKqYeHEYhmUdMK">/files/WnxHq5fKqYeHEYhmUdMK</a></td></tr><tr><td>Looping Collective</td><td><a href="/files/XDgbEzVUq1C6LH43OSTW">/files/XDgbEzVUq1C6LH43OSTW</a></td></tr><tr><td>Native Markets</td><td><a href="/files/YBhIWZDdSVlAwRnGP7Ub">/files/YBhIWZDdSVlAwRnGP7Ub</a></td></tr><tr><td>Unit</td><td><a href="/files/9C6l2dQEeGWMi8iNqAmo">/files/9C6l2dQEeGWMi8iNqAmo</a></td></tr><tr><td>USDT0</td><td><a href="/files/xIb2HJcBZLBF2N7j6eU2">/files/xIb2HJcBZLBF2N7j6eU2</a></td></tr><tr><td>Valantis</td><td><a href="/files/BWFAAoE050cLA7INsoqA">/files/BWFAAoE050cLA7INsoqA</a></td></tr></tbody></table>

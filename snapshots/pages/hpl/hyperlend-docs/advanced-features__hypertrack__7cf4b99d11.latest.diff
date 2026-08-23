@@ -1,26 +1,32 @@
 --- hpl/hyperlend-docs/advanced-features__hypertrack__7cf4b99d11:previous
 +++ hpl/hyperlend-docs/advanced-features__hypertrack__7cf4b99d11:current
-@@ -0,0 +1,23 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+The
-+HyperLend Alerts Bot
-+is designed to keep you updated on critical activities within your HyperLend account. With customizable alerts for health factors, borrow rates, and liquidations, you can track specific addresses and receive timely notifications straight to your Telegram. Whether you're monitoring transactions or managing risk thresholds, this bot makes it easy to stay informed and respond quickly to changes that matter most.
-+We value your feedback, and any suggestions will be rewarded—just send us a DM on
-+Twitter
-+.
-+Previous
-+UTA // Portfolio-Margin
-+Next
-+Getting Started
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack.md
-+LINK | Next Getting Started | https://docs.hyperlend.finance/advanced-features/hypertrack/getting-started
-+LINK | Previous UTA // Portfolio-Margin | https://docs.hyperlend.finance/advanced-features/uta-portfolio-margin
-+LINK | Twitter | https://x.com/hyperlendx
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,23 +1,6 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-The
+-HyperLend Alerts Bot
+-is designed to keep you updated on critical activities within your HyperLend account. With customizable alerts for health factors, borrow rates, and liquidations, you can track specific addresses and receive timely notifications straight to your Telegram. Whether you're monitoring transactions or managing risk thresholds, this bot makes it easy to stay informed and respond quickly to changes that matter most.
+-We value your feedback, and any suggestions will be rewarded—just send us a DM on
+-Twitter
+-.
+-Previous
+-UTA // Portfolio-Margin
+-Next
+-Getting Started
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/advanced-features/hypertrack.md
+-LINK | Next Getting Started | https://docs.hyperlend.finance/advanced-features/hypertrack/getting-started
+-LINK | Previous UTA // Portfolio-Margin | https://docs.hyperlend.finance/advanced-features/uta-portfolio-margin
+-LINK | Twitter | https://x.com/hyperlendx
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/advanced-features/hypertrack.md).
++# HyperTrack
++The **HyperLend Alerts Bot** is designed to keep you updated on critical activities within your HyperLend account. With customizable alerts for health factors, borrow rates, and liquidations, you can track specific addresses and receive timely notifications straight to your Telegram. Whether you're monitoring transactions or managing risk thresholds, this bot makes it easy to stay informed and respond quickly to changes that matter most.
++{% hint style="info" %}
++We value your feedback, and any suggestions will be rewarded—just send us a DM on [Twitter](https://x.com/hyperlendx).
++{% endhint %}

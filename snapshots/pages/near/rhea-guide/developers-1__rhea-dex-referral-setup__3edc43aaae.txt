@@ -1,93 +1,83 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
+> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/developers-1/rhea-dex-referral-setup.md).
+# RHEA Dex Referral Setup
 Command-line interface usage for referral setup on:
-REF_EX
-REF_DCL
-The following guide will help you register, verify, and check referral-related data via CLI.
+* REF\_EX
+* REF\_DCL
+The following guide will help you register, verify, and check referral-related data via CLI.<br>
 We will use:
-$REF_EX
-for the REF_EX contract account
-$REF_DCL
-for the REF_DCL contract account
-$USER_ID
-for the user account
-$REFERRAL_ID
-for the referral account or referral identifier
-$POOL_TOKEN_ID
-for the pool MFT token ID
-REF_EX
-Command-line interface usage for referral setup on REF_EX.
-For a referral to work on REF_EX, the referral must first be registered in the contract. After that, the referral account must also register the corresponding pool MFT.
-Referrals
+* `$REF_EX` for the REF\_EX contract account
+* `$REF_DCL` for the REF\_DCL contract account
+* `$USER_ID` for the user account
+* `$REFERRAL_ID` for the referral account or referral identifier
+* `$POOL_TOKEN_ID` for the pool MFT token ID
+## REF\_EX
+Command-line interface usage for referral setup on REF\_EX.\
+\
+For a referral to work on REF\_EX, the referral must first be registered in the contract. After that, the referral account must also register the corresponding pool MFT.
+### Referrals
 To view the current list of registered referrals:
-Copy
+```
 near view $REF_EX list_referrals
-Register
+```
+### Register
 If the referral has not been added yet, please reach out to RHEA Finance to submit an application.
-MFT Status
+### MFT Status
 After the referral is registered, the corresponding pool MFT must also be registered for the referral account.
 To check whether the MFT has already been registered:
-MFT Register
+```
+near view $REF_EX mft_has_registered "{\"token_id\": \"$POOL_TOKEN_ID\", \"account_id\": \"$USER_ID\"}"
+```
+### MFT Register
 If the MFT has not been registered yet, the referral account must register it manually:
+```
+near call $REF_EX mft_register "{\"token_id\": \"$POOL_TOKEN_ID\", \"account_id\": \"$USER_ID\"}" --account_id=$USER_ID --amount=0.01
+```
 This step should be completed by the referral account owner.
-Check Balance
+### Check Balance
 To query the MFT balance for the referral account:
-Flow
-A typical REF_EX referral setup flow is:
-​Check whether the referral already exists
-​Register the referral if needed
-​Check whether the related pool MFT is registered
-​Register the pool MFT if needed
-​Query the referral MFT balance
+```
+near view $REF_EX mft_balance_of "{\"token_id\": \"$POOL_TOKEN_ID\", \"account_id\": \"$USER_ID\"}"
+```
+### Flow
+A typical REF\_EX referral setup flow is:
+1. ​Check whether the referral already exists
+2. ​Register the referral if needed
+3. ​Check whether the related pool MFT is registered
+4. ​Register the pool MFT if needed
+5. ​Query the referral MFT balance
 ​
-REF_DCL
-Command-line interface usage for referral setup on REF_DCL.
+## REF\_DCL
+Command-line interface usage for referral setup on REF\_DCL.
 ​
-For a referral to work on REF_DCL, the referral account must first be added to the whitelist. Once it is valid, the referral can be included in swap calls and its internal asset balance can be checked later.
-Whitelist
+For a referral to work on REF\_DCL, the referral account must first be added to the whitelist. Once it is valid, the referral can be included in swap calls and its internal asset balance can be checked later.
+### Whitelist
 To view the current referral whitelist:
-Validate
+```
+near view $REF_DCL get_referral_whitelist
+```
+### Validate
 To check whether a referral account is already approved:
-Register
+```
+near view $REF_DCL is_valid_referral '{"account_id": "**.near"}'
+```
+### Register
 If the referral has not been added yet, please reach out to RHEA Finance to submit an application.​
-Result
+### Result
 Upon completion of registration, enter the parameters as shown below.
-Check Balance
+```
+near call 17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1 ft_transfer_call '{"receiver_id": "'$REF_DCL'", "amount": "1000000", "msg": "{\"Swap\":{\"pool_ids\":[\"17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1|wrap.near|2000\"],\"output_token\":\"wrap.near\",\"min_output_amount\":\"1000000\",\"referral_id\":\"ma***.near\"}}"}' --depositYocto=1 --gas=300$TGAS --account_id=li***.near
+```
+### Check Balance
 To view the internal asset balance for a referral account
-Flow
-A typical REF_DCL referral setup flow is:
-​Query the current whitelist
-​Check whether the referral account is valid
-​Register the referral if needed
-​Include the referral_id in the swap call
-​Query the referral account’s internal assets
+```
+near view $REF_DCL list_user_assets '{"account_id": "ma***.near"}'
+```
+### Flow
+A typical REF\_DCL referral setup flow is:
+1. ​Query the current whitelist
+2. ​Check whether the referral account is valid
+3. ​Register the referral if needed
+4. ​Include the referral\_id in the swap call
+5. ​Query the referral account’s internal assets
 ​
-Previous
-RHEA SDK
-Next
-RHEA Tokenomics
-Last updated
-4 months ago
-Was this helpful?
-[[LINK TARGETS]]
-LINK | Markdown | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup.md
-LINK | Next RHEA Tokenomics | https://guide.rhea.finance/docs/tokenomics
-LINK | Previous RHEA SDK | https://guide.rhea.finance/developers-1/rhea-sdk
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#check-balance
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#check-balance-1
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#flow
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#flow-1
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#mft-register
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#mft-status
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#ref_dcl
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#ref_ex
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#referrals
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#register
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#register-1
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#result
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#validate
-LINK | [no text] | https://guide.rhea.finance/developers-1/rhea-dex-referral-setup#whitelist
-LINK | llms.txt | https://guide.rhea.finance/llms.txt
+<br>

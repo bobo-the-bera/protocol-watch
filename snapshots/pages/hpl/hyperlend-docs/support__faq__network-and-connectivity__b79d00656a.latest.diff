@@ -1,45 +1,59 @@
 --- hpl/hyperlend-docs/support__faq__network-and-connectivity__b79d00656a:previous
 +++ hpl/hyperlend-docs/support__faq__network-and-connectivity__b79d00656a:current
-@@ -0,0 +1,42 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+How do I manually add the Hyperliquid Network to my wallet?
-+If the automatic prompt fails, you can manually add the network to your wallet using the following details:
-+Network Name:
-+Hyperliquid
-+RPC URL:
-+https://rpc.hyperliquid.xyz/evm/
-+Chain ID:
-+999
-+Currency Symbol:
-+HYPE
-+• What does “Internal JSON-RPC error. Contract Call: error” mean?
-+This indicates that the RPC provider is currently congested or experiencing issues.
-+Fix:
-+Wait a few minutes and try again. If the issue persists, check alternative RPC URLs:
-+https://hyperliquid.drpc.org/
-+https://rpc.hyperliquid.xyz/evm
-+https://rpc.hyperlend.finance/
-+https://rpc.hypurrscan.io/
-+https://hyperliquid-json-rpc.stakely.io/
-+Previous
-+FAQ
-+Next
-+Transaction Issues
-+Last updated
-+5 months ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://docs.hyperlend.finance/support/faq/network-and-connectivity.md
-+LINK | Next Transaction Issues | https://docs.hyperlend.finance/support/faq/transaction-issues
-+LINK | Previous FAQ | https://docs.hyperlend.finance/support/faq
-+LINK | [no text] | https://docs.hyperlend.finance/support/faq/network-and-connectivity#how-do-i-manually-add-the-hyperliquid-network-to-my-wallet
-+LINK | [no text] | https://docs.hyperlend.finance/support/faq/network-and-connectivity#what-does-internal-json-rpc-error.-contract-call-error-mean
-+LINK | https://hyperliquid-json-rpc.stakely.io/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
-+LINK | https://hyperliquid.drpc.org/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
-+LINK | https://rpc.hyperlend.finance/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
-+LINK | https://rpc.hyperliquid.xyz/evm | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
-+LINK | https://rpc.hypurrscan.io/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
-+LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
+@@ -1,42 +1,16 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-How do I manually add the Hyperliquid Network to my wallet?
++> For the complete documentation index, see [llms.txt](https://docs.hyperlend.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.hyperlend.finance/support/faq/network-and-connectivity.md).
++# Network & Connectivity
++### How do I manually add the Hyperliquid Network to my wallet? <a href="#how-do-i-manually-add-the-hyperliquid-network-to-my-wallet" id="how-do-i-manually-add-the-hyperliquid-network-to-my-wallet"></a>
+ If the automatic prompt fails, you can manually add the network to your wallet using the following details:
+-Network Name:
+-Hyperliquid
+-RPC URL:
+-https://rpc.hyperliquid.xyz/evm/
+-Chain ID:
+-999
+-Currency Symbol:
+-HYPE
+-• What does “Internal JSON-RPC error. Contract Call: error” mean?
++* **Network Name:** Hyperliquid
++* **RPC URL:** `https://rpc.hyperliquid.xyz/evm/`
++* **Chain ID:** 999
++* **Currency Symbol:** HYPE
++### • What does “Internal JSON-RPC error. Contract Call: error” mean? <a href="#what-does-internal-json-rpc-error.-contract-call-error-mean" id="what-does-internal-json-rpc-error.-contract-call-error-mean"></a>
+ This indicates that the RPC provider is currently congested or experiencing issues.
+-Fix:
+-Wait a few minutes and try again. If the issue persists, check alternative RPC URLs:
+-https://hyperliquid.drpc.org/
+-https://rpc.hyperliquid.xyz/evm
+-https://rpc.hyperlend.finance/
+-https://rpc.hypurrscan.io/
+-https://hyperliquid-json-rpc.stakely.io/
+-Previous
+-FAQ
+-Next
+-Transaction Issues
+-Last updated
+-5 months ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://docs.hyperlend.finance/support/faq/network-and-connectivity.md
+-LINK | Next Transaction Issues | https://docs.hyperlend.finance/support/faq/transaction-issues
+-LINK | Previous FAQ | https://docs.hyperlend.finance/support/faq
+-LINK | [no text] | https://docs.hyperlend.finance/support/faq/network-and-connectivity#how-do-i-manually-add-the-hyperliquid-network-to-my-wallet
+-LINK | [no text] | https://docs.hyperlend.finance/support/faq/network-and-connectivity#what-does-internal-json-rpc-error.-contract-call-error-mean
+-LINK | https://hyperliquid-json-rpc.stakely.io/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
+-LINK | https://hyperliquid.drpc.org/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
+-LINK | https://rpc.hyperlend.finance/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
+-LINK | https://rpc.hyperliquid.xyz/evm | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
+-LINK | https://rpc.hypurrscan.io/ | https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/
+-LINK | llms.txt | https://docs.hyperlend.finance/llms.txt
++* **Fix:** Wait a few minutes and try again. If the issue persists, check alternative RPC URLs:&#x20;
++* [https://hyperliquid.drpc.org/ ](https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/)
++* [https://rpc.hyperliquid.xyz/evm ](https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/)
++* [https://rpc.hyperlend.finance/ ](https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/)
++* [https://rpc.hypurrscan.io/ ](https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/)
++* [https://hyperliquid-json-rpc.stakely.io/](https://hyperliquid.drpc.org/https://rpc.hyperliquid.xyz/evmhttps://rpc.hyperlend.finance/https://rpc.hypurrscan.io/https://hyperliquid-json-rpc.stakely.io/)

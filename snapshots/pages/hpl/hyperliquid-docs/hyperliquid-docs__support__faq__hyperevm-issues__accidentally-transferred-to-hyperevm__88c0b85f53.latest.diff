@@ -1,31 +1,37 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__hyperevm-issues__accidentally-transferred-to-hyperevm__88c0b85f53:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__hyperevm-issues__accidentally-transferred-to-hyperevm__88c0b85f53:current
-@@ -0,0 +1,28 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+How do I transfer it back to Spot?
-+Your funds are not lost. They went from HyperCore to the HyperEVM. HyperCore and the HyperEVM are two parts of the Hyperliquid blockchain. You can visualize what that means here:
-+https://hyperliquid.gitbook.io/hyperliquid-docs
-+If you want to move your tokens back to Spot, you can follow this guide here:
-+https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm
-+. You will need HYPE on the EVM for gas. If you transferred something other than HYPE to the EVM, you can buy HYPE on Spot and use the same “Transfer to/from EVM” feature to move HYPE to the EVM for gas.
-+You can find out more about what you can do on the EVM here:
-+https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm
-+Previous
-+HyperEVM issues
-+Next
-+Can’t see my HyperEVM assets in wallet extension
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/accidentally-transferred-to-hyperevm.md
-+LINK | Next Can’t see my HyperEVM assets in wallet extension | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/cant-see-my-hyperevm-assets-in-wallet-extension
-+LINK | Previous HyperEVM issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/accidentally-transferred-to-hyperevm#transfer-back-to-spot
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs | https://hyperliquid.gitbook.io/hyperliquid-docs
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,28 +1,6 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-How do I transfer it back to Spot?
+-Your funds are not lost. They went from HyperCore to the HyperEVM. HyperCore and the HyperEVM are two parts of the Hyperliquid blockchain. You can visualize what that means here:
+-https://hyperliquid.gitbook.io/hyperliquid-docs
+-If you want to move your tokens back to Spot, you can follow this guide here:
+-https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm
+-. You will need HYPE on the EVM for gas. If you transferred something other than HYPE to the EVM, you can buy HYPE on Spot and use the same “Transfer to/from EVM” feature to move HYPE to the EVM for gas.
+-You can find out more about what you can do on the EVM here:
+-https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm
+-Previous
+-HyperEVM issues
+-Next
+-Can’t see my HyperEVM assets in wallet extension
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/accidentally-transferred-to-hyperevm.md
+-LINK | Next Can’t see my HyperEVM assets in wallet extension | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/cant-see-my-hyperevm-assets-in-wallet-extension
+-LINK | Previous HyperEVM issues | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/accidentally-transferred-to-hyperevm#transfer-back-to-spot
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs | https://hyperliquid.gitbook.io/hyperliquid-docs
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm | https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/hyperevm-issues/accidentally-transferred-to-hyperevm.md).
++# Accidentally transferred to HyperEVM
++### How do I transfer it back to Spot? <a href="#transfer-back-to-spot" id="transfer-back-to-spot"></a>
++* Your funds are not lost. They went from HyperCore to the HyperEVM. HyperCore and the HyperEVM are two parts of the Hyperliquid blockchain. You can visualize what that means here: <https://hyperliquid.gitbook.io/hyperliquid-docs>
++* If you want to move your tokens back to Spot, you can follow this guide here: <https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#how-do-i-move-assets-to-and-from-the-hyperevm>. You will need HYPE on the EVM for gas. If you transferred something other than HYPE to the EVM, you can buy HYPE on Spot and use the same “Transfer to/from EVM” feature to move HYPE to the EVM for gas.
++* You can find out more about what you can do on the EVM here: <https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-use-the-hyperevm#what-can-i-do-on-the-hyperevm>

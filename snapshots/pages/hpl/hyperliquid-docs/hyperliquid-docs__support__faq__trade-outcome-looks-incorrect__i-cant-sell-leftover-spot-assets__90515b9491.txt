@@ -1,26 +1,7 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-Reasoning
-Each spot deployer sets the minimum lot size for trading.
-For JEFF, the minimum lot size is 1, so you cannot sell less than that on the order book. If you have <1 JEFF that you would like to sell, you can use a community member’s site that swaps JEFF for USDC:
-https://www.heyjeff.fun/
-For RUB, you can only sell in units of 0.00001
-For XAUT, the minimum lot size is 0.01, so you cannot sell less than that on the order book. You can try transferring to the HyperEVM and swapping it on protocols there or bridge out using
-https://gold.usdt0.to/transfer
-Previous
-Why was my chase order canceled?
-Next
-What does "Action already expired" mean?
-Last updated
-8 months ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/i-cant-sell-leftover-spot-assets.md
-LINK | Next What does "Action already expired" mean? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/what-does-action-already-expired-mean
-LINK | Previous Why was my chase order canceled? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/why-was-my-chase-order-canceled
-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/i-cant-sell-leftover-spot-assets#reasoning
-LINK | https://gold.usdt0.to/transfer | https://gold.usdt0.to/transfer
-LINK | https://www.heyjeff.fun/ | https://www.heyjeff.fun/
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/i-cant-sell-leftover-spot-assets.md).
+# I can't sell leftover spot assets
+### Reasoning&#x20;
+* Each spot deployer sets the minimum lot size for trading.&#x20;
+* For JEFF, the minimum lot size is 1, so you cannot sell less than that on the order book. If you have <1 JEFF that you would like to sell, you can use a community member’s site that swaps JEFF for USDC: <https://www.heyjeff.fun/>
+* For RUB, you can only sell in units of 0.00001
+* For XAUT, the minimum lot size is 0.01, so you cannot sell less than that on the order book. You can try transferring to the HyperEVM and swapping it on protocols there or bridge out using <https://gold.usdt0.to/transfer>

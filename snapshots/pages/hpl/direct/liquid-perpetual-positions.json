@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:14:06+00:00",
+  "content_changed_at": "2026-08-23T12:31:59+00:00",
   "protocol": "hpl",
-  "sha256": "0b60d6a4ba712ada936ff04e969c48d9c9dc1e28019dbbf764e2df11942ad469",
+  "sha256": "e74f3e6207d49381bdb02b105dc09a17e6e9f5999097a4429762a7a5db9b9e8d",
   "slug": "liquid-perpetual-positions",
   "tags": [
     "liquid-perps",

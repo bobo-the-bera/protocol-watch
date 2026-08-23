@@ -1,7 +1,7 @@
 {
-  "content_changed_at": "2026-08-23T12:12:05+00:00",
+  "content_changed_at": "2026-08-23T12:28:03+00:00",
   "protocol": "hpl",
-  "sha256": "0fa23385f22a9ba30bd0d0481dba5ef2b1c7be4632585793bc8b0f0ad1b72a94",
+  "sha256": "80594ded662010ffdd4b26aa40bc5a3619c49d0b83801d6da624ac8b33d0e726",
   "slug": "advanced-features__borrow-against-l1-spot-positions__1a72bba061",
   "tags": [
     "hyperlend",

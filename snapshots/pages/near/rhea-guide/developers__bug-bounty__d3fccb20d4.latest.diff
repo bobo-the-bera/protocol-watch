@@ -1,29 +1,33 @@
 --- near/rhea-guide/developers__bug-bounty__d3fccb20d4:previous
 +++ near/rhea-guide/developers__bug-bounty__d3fccb20d4:current
-@@ -0,0 +1,26 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+RHEA Finance bug bounty program is on
-+Immunefi
-+.
-+Details about the program, payouts, and assets in scope can be found on the following
-+link
-+.
-+If you have found a vulnerability, please make sure to submit it through the Immunefi platform.
-+Previous
-+Previous Audits
-+Next
-+Incident Response Plan and Escalation Procedures
-+Last updated
-+10 months ago
-+Was this helpful?
-+[[LINK TARGETS]]
-+LINK | Immunefi | https://immunefi.com
-+LINK | Markdown | https://guide.rhea.finance/developers/bug-bounty.md
-+LINK | Next Incident Response Plan and Escalation Procedures | https://guide.rhea.finance/developers/incident-response-plan-and-escalation-procedures
-+LINK | Previous Previous Audits | https://guide.rhea.finance/developers/audits/previous-audits
-+LINK | link | https://immunefi.com/bounty/reffinance/
-+LINK | llms.txt | https://guide.rhea.finance/llms.txt
+@@ -1,26 +1,5 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-RHEA Finance bug bounty program is on
+-Immunefi
+-.
+-Details about the program, payouts, and assets in scope can be found on the following
+-link
+-.
++> For the complete documentation index, see [llms.txt](https://guide.rhea.finance/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://guide.rhea.finance/developers/bug-bounty.md).
++# Bug Bounty
++RHEA Finance bug bounty program is on [Immunefi](https://immunefi.com).
++Details about the program, payouts, and assets in scope can be found on the following [link](https://immunefi.com/bounty/reffinance/).
+ If you have found a vulnerability, please make sure to submit it through the Immunefi platform.
+-Previous
+-Previous Audits
+-Next
+-Incident Response Plan and Escalation Procedures
+-Last updated
+-10 months ago
+-Was this helpful?
+-[[LINK TARGETS]]
+-LINK | Immunefi | https://immunefi.com
+-LINK | Markdown | https://guide.rhea.finance/developers/bug-bounty.md
+-LINK | Next Incident Response Plan and Escalation Procedures | https://guide.rhea.finance/developers/incident-response-plan-and-escalation-procedures
+-LINK | Previous Previous Audits | https://guide.rhea.finance/developers/audits/previous-audits
+-LINK | link | https://immunefi.com/bounty/reffinance/
+-LINK | llms.txt | https://guide.rhea.finance/llms.txt

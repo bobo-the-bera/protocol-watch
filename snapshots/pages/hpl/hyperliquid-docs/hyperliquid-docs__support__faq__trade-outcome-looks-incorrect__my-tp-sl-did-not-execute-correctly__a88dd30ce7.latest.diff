@@ -1,72 +1,119 @@
 --- hpl/hyperliquid-docs/hyperliquid-docs__support__faq__trade-outcome-looks-incorrect__my-tp-sl-did-not-execute-correctly__a88dd30ce7:previous
 +++ hpl/hyperliquid-docs/hyperliquid-docs__support__faq__trade-outcome-looks-incorrect__my-tp-sl-did-not-execute-correctly__a88dd30ce7:current
-@@ -0,0 +1,69 @@
-+For the complete documentation index, see
-+llms.txt
-+. This page is also available as
-+Markdown
-+.
-+Situation 1: My TP executed and made a loss although it was triggered at a profitable price.
-+Take Profit (TP) and Stop Loss (SL) orders can be set as market or limit orders. TP/SL are triggered by mark price, and then executed. Trade price and mark price are different
-+By default, market TP/SL orders have a 10% slippage tolerance, which means the execution price can deviate, especially for larger positions or illiquid tokens
-+So even if your TP was triggered at a profitable price, the actual fill might have occurred at a worse price due to market conditions, such as low liquidity and/or sudden volatility, resulting in a loss
-+To avoid this, you can:
-+Use limit TP/SL orders to specify the exact price you want
-+Break up large positions into smaller chunks to reduce slippage
-+Check the order book before placing orders to understand available liquidity
-+Situation 2: My TP/SL orders did not behave correctly, how do TP/SL for long and short positions work on Hyperliquid?
-+You can read about TP/SL in the Docs here:
-+https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
-+Long positions
-+Stop-Loss (SL):
-+A SL order to close a long position with a trigger price of $10 and limit price of $10 will place a limit sell order at $10 once the mark price falls below $10
-+If the price drops sharply from $11 to $9, this order may rest at $10 without filling
-+If the limit price is set lower, say $8, the order has a better chance of filling somewhere between $9 and $8
-+Take-Profit (TP):
-+A TP order with a trigger price of $12 and limit price of $11.80 will place a limit sell order at $11.80 once the mark price rises above $12
-+This prevents the order from filling below $11.80 if the price pulls back after triggering
-+Short positions
-+Stop-Loss (SL):
-+A SL order to close a short position with a trigger price of $11 and limit price of $11 will place a limit buy order at $11 when the mark price rises above $11
-+If the price spikes quickly from $10 to $12, this order may not fill
-+If the limit price is set higher, like $13, the order has a better chance of filling between $12 and $13
-+Take-Profit (TP):
-+A TP order with a trigger price of $9 and limit price of $9.20 will place a limit buy order at $9.20 once the mark price drops below $9
-+This ensures it won't fill at a worse price (above $9.20) if the price bounces back up after triggering
-+Situation 3: How do Stop Market orders work on Hyperliquid?
-+A Stop Market order is triggered when the price reaches the selected stop price.
-+Entering a Long Position
-+Stop Price: The price at which you want to trigger your buy order (above current market price)
-+Used when: You want to place a long only if the price is higher than the current price
-+Entering a Short Position
-+Stop Price: The price at which you want to trigger your sell order (below current market price)
-+Used when: You want to place a short only if the price is lower than the current price
-+Situation 4: How do Stop Limit orders work on Hyperliquid?
-+A Stop-Limit Order is a conditional order that combines a stop (trigger) price and a limit price. When the stop price is hit, a limit order is placed on the order book. That limit order only executes if it can be filled at or better than your limit price
-+Entering a Long Position (Buy Stop Limit):
-+Stop Price: The price at which you want to trigger your buy order (above current market price)
-+Limit Price: The max price you're willing to pay (typically lower than the stop price, otherwise orders will likely fill immediately upon triggering)
-+Used when: You want to place a long only if the price is higher than the current price, but want to set a limit price (not willing to buy higher than $x)
-+Entering a Short position (Sell Stop Limit)
-+Stop Price: The price at which you want to trigger your sell order (below current market price)
-+Limit Price: The lowest price you're willing to sell at (typically higher than the stop price, otherwise orders will likely fill immediately upon triggering)
-+Used when: You want to place a short only if the price is lower than the current price, but want to set a limit price (not willing to sell lower than $x)
-+Explore different order types here:
-+https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
-+Previous
-+How does margining work?
-+Next
-+Why was my chase order canceled?
-+Last updated
-+1 year ago
-+[[LINK TARGETS]]
-+LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly.md
-+LINK | Next Why was my chase order canceled? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/why-was-my-chase-order-canceled
-+LINK | Previous How does margining work? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/how-does-margining-work
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#stop-limit-101
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#stop-market-101
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#tp-made-a-loss
-+LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#tp-sl-101
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
-+LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
-+LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+@@ -1,69 +1,47 @@
+-For the complete documentation index, see
+-llms.txt
+-. This page is also available as
+-Markdown
+-.
+-Situation 1: My TP executed and made a loss although it was triggered at a profitable price.
+-Take Profit (TP) and Stop Loss (SL) orders can be set as market or limit orders. TP/SL are triggered by mark price, and then executed. Trade price and mark price are different
+-By default, market TP/SL orders have a 10% slippage tolerance, which means the execution price can deviate, especially for larger positions or illiquid tokens
+-So even if your TP was triggered at a profitable price, the actual fill might have occurred at a worse price due to market conditions, such as low liquidity and/or sudden volatility, resulting in a loss
+-To avoid this, you can:
+-Use limit TP/SL orders to specify the exact price you want
+-Break up large positions into smaller chunks to reduce slippage
+-Check the order book before placing orders to understand available liquidity
+-Situation 2: My TP/SL orders did not behave correctly, how do TP/SL for long and short positions work on Hyperliquid?
+-You can read about TP/SL in the Docs here:
+-https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
+-Long positions
+-Stop-Loss (SL):
+-A SL order to close a long position with a trigger price of $10 and limit price of $10 will place a limit sell order at $10 once the mark price falls below $10
+-If the price drops sharply from $11 to $9, this order may rest at $10 without filling
+-If the limit price is set lower, say $8, the order has a better chance of filling somewhere between $9 and $8
+-Take-Profit (TP):
+-A TP order with a trigger price of $12 and limit price of $11.80 will place a limit sell order at $11.80 once the mark price rises above $12
+-This prevents the order from filling below $11.80 if the price pulls back after triggering
+-Short positions
+-Stop-Loss (SL):
+-A SL order to close a short position with a trigger price of $11 and limit price of $11 will place a limit buy order at $11 when the mark price rises above $11
+-If the price spikes quickly from $10 to $12, this order may not fill
+-If the limit price is set higher, like $13, the order has a better chance of filling between $12 and $13
+-Take-Profit (TP):
+-A TP order with a trigger price of $9 and limit price of $9.20 will place a limit buy order at $9.20 once the mark price drops below $9
+-This ensures it won't fill at a worse price (above $9.20) if the price bounces back up after triggering
+-Situation 3: How do Stop Market orders work on Hyperliquid?
+-A Stop Market order is triggered when the price reaches the selected stop price.
+-Entering a Long Position
+-Stop Price: The price at which you want to trigger your buy order (above current market price)
+-Used when: You want to place a long only if the price is higher than the current price
+-Entering a Short Position
+-Stop Price: The price at which you want to trigger your sell order (below current market price)
+-Used when: You want to place a short only if the price is lower than the current price
+-Situation 4: How do Stop Limit orders work on Hyperliquid?
+-A Stop-Limit Order is a conditional order that combines a stop (trigger) price and a limit price. When the stop price is hit, a limit order is placed on the order book. That limit order only executes if it can be filled at or better than your limit price
+-Entering a Long Position (Buy Stop Limit):
+-Stop Price: The price at which you want to trigger your buy order (above current market price)
+-Limit Price: The max price you're willing to pay (typically lower than the stop price, otherwise orders will likely fill immediately upon triggering)
+-Used when: You want to place a long only if the price is higher than the current price, but want to set a limit price (not willing to buy higher than $x)
+-Entering a Short position (Sell Stop Limit)
+-Stop Price: The price at which you want to trigger your sell order (below current market price)
+-Limit Price: The lowest price you're willing to sell at (typically higher than the stop price, otherwise orders will likely fill immediately upon triggering)
+-Used when: You want to place a short only if the price is lower than the current price, but want to set a limit price (not willing to sell lower than $x)
+-Explore different order types here:
+-https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
+-Previous
+-How does margining work?
+-Next
+-Why was my chase order canceled?
+-Last updated
+-1 year ago
+-[[LINK TARGETS]]
+-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly.md
+-LINK | Next Why was my chase order canceled? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/why-was-my-chase-order-canceled
+-LINK | Previous How does margining work? | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/how-does-margining-work
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#stop-limit-101
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#stop-market-101
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#tp-made-a-loss
+-LINK | [no text] | https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly#tp-sl-101
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types
+-LINK | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl
+-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
++> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/support/faq/trade-outcome-looks-incorrect/my-tp-sl-did-not-execute-correctly.md).
++# My TP/SL did not execute correctly
++### Situation 1: My TP executed and made a loss although it was triggered at a profitable price. <a href="#tp-made-a-loss" id="tp-made-a-loss"></a>
++* Take Profit (TP) and Stop Loss (SL) orders can be set as market or limit orders. TP/SL are triggered by mark price, and then executed. Trade price and mark price are different&#x20;
++* By default, market TP/SL orders have a 10% slippage tolerance, which means the execution price can deviate, especially for larger positions or illiquid tokens
++* So even if your TP was triggered at a profitable price, the actual fill might have occurred at a worse price due to market conditions, such as low liquidity and/or sudden volatility, resulting in a loss
++* To avoid this, you can:
++* Use limit TP/SL orders to specify the exact price you want
++* Break up large positions into smaller chunks to reduce slippage
++* Check the order book before placing orders to understand available liquidity
++### Situation 2: My TP/SL orders did not behave correctly, how do TP/SL for long and short positions work on Hyperliquid? <a href="#tp-sl-101" id="tp-sl-101"></a>
++* You can read about TP/SL in the Docs here: <https://hyperliquid.gitbook.io/hyperliquid-docs/trading/take-profit-and-stop-loss-orders-tp-sl>
++* Long positions
++* Stop-Loss (SL):
++* A SL order to close a long position with a trigger price of $10 and limit price of $10 will place a limit sell order at $10 once the mark price falls below $10
++* If the price drops sharply from $11 to $9, this order may rest at $10 without filling
++* If the limit price is set lower, say $8, the order has a better chance of filling somewhere between $9 and $8
++* Take-Profit (TP):
++* A TP order with a trigger price of $12 and limit price of $11.80 will place a limit sell order at $11.80 once the mark price rises above $12
++* This prevents the order from filling below $11.80 if the price pulls back after triggering
++* Short positions
++* Stop-Loss (SL):
++* A SL order to close a short position with a trigger price of $11 and limit price of $11 will place a limit buy order at $11 when the mark price rises above $11
++* If the price spikes quickly from $10 to $12, this order may not fill
++* If the limit price is set higher, like $13, the order has a better chance of filling between $12 and $13
++* Take-Profit (TP):
++* A TP order with a trigger price of $9 and limit price of $9.20 will place a limit buy order at $9.20 once the mark price drops below $9
++* This ensures it won't fill at a worse price (above $9.20) if the price bounces back up after triggering
++### Situation 3: How do Stop Market orders work on Hyperliquid? <a href="#stop-market-101" id="stop-market-101"></a>
++* A Stop Market order is triggered when the price reaches the selected stop price.
++* Entering a Long Position
++* Stop Price: The price at which you want to trigger your buy order (above current market price)
++* Used when: You want to place a long only if the price is higher than the current price&#x20;
++* Entering a Short Position
++* Stop Price: The price at which you want to trigger your sell order (below current market price)
++* Used when: You want to place a short only if the price is lower than the current price
++### Situation 4: How do Stop Limit orders work on Hyperliquid? <a href="#stop-limit-101" id="stop-limit-101"></a>
++* A Stop-Limit Order is a conditional order that combines a stop (trigger) price and a limit price. When the stop price is hit, a limit order is placed on the order book. That limit order only executes if it can be filled at or better than your limit price
++* Entering a Long Position (Buy Stop Limit):&#x20;
++* Stop Price: The price at which you want to trigger your buy order (above current market price)
++* Limit Price: The max price you're willing to pay (typically lower than the stop price, otherwise orders will likely fill immediately upon triggering)
++* Used when: You want to place a long only if the price is higher than the current price, but want to set a limit price (not willing to buy higher than $x)
++* Entering a Short position (Sell Stop Limit)
++* Stop Price: The price at which you want to trigger your sell order (below current market price)
++* Limit Price: The lowest price you're willing to sell at (typically higher than the stop price, otherwise orders will likely fill immediately upon triggering)
++* Used when: You want to place a short only if the price is lower than the current price, but want to set a limit price (not willing to sell lower than $x)
++Explore different order types here: <https://hyperliquid.gitbook.io/hyperliquid-docs/trading/order-types>

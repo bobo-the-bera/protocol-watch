@@ -1,20 +1,5 @@
-For the complete documentation index, see
-llms.txt
-. This page is also available as
-Markdown
-.
-There is no DMM program, special rebates / fees, or latency advantages. You can find the Python SDK here: https://github.com/hyperliquid-dex/hyperliquid-python-sdk
-If you have technical integration questions, it's recommended to start in the Discord channel for #api-traders:
-https://discord.gg/hyperliquid
-Previous
-Delisting
-Next
-Portfolio graphs
-Last updated
-6 days ago
-[[LINK TARGETS]]
-LINK | Markdown | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making.md
-LINK | Next Portfolio graphs | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/portfolio-graphs
-LINK | Previous Delisting | https://hyperliquid.gitbook.io/hyperliquid-docs/trading/delisting
-LINK | https://discord.gg/hyperliquid | https://discord.gg/hyperliquid
-LINK | llms.txt | https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt
+> For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/market-making.md).
+# Market making
+There is no DMM program, special rebates / fees, or latency advantages. You can find the Python SDK here: <https://github.com/hyperliquid-dex/hyperliquid-python-sdk\\>
+\
+If you have technical integration questions, it's recommended to start in the Discord channel for #api-traders: <https://discord.gg/hyperliquid>
