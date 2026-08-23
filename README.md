@@ -47,8 +47,4 @@ pytest -q
 To add a protocol or site, edit only `config/watch.yaml`.
 
 
-## Recommended repository setup
 
-Use a **private** repository if the watchlist itself is part of your trading edge. The sources are public, but the list of what you care about does not need to be. When creating the repository, leave GitHub's "Add a README", `.gitignore`, and license options unchecked; this project already includes its own README and `.gitignore`.
-
-GitHub Actions is the compute layer. On schedule GitHub starts a temporary runner, checks out this repository, executes the snapshotter, pushes a commit only if something changed, and destroys the runner. There is no persistent server to maintain.
