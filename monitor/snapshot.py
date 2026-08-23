@@ -240,7 +240,6 @@ def discover_sitemap_urls(crawl: CrawlTarget, max_sitemaps: int = 25) -> list[st
 def snapshot_target(target: Target, snapshot_dir: Path, global_ignores: tuple[str, ...], namespace: str = "direct") -> dict:
     """Persist normalized text only when content actually differs from the previous baseline."""
     response = fetch(target.url)
-    response = fetch(target.url)
 
     if target.mode == "text":
         extracted = response.text
