@@ -1,6 +1,6 @@
 > For the complete documentation index, see [llms.txt](https://hyperliquid.gitbook.io/hyperliquid-docs/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/deploying-hip-1-and-hip-2-assets.md).
 # Deploying HIP-1 and HIP-2 assets
-The API for deploying HIP-1 and HIP-2 assets is a five-step process which involves sending the first 5 variants (the last two are optional) of the enum in the order below.
+The API for deploying HIP-1 and HIP-2 assets is a five-step process which involves sending the first 5 variants (the remaining variants are optional) of the enum in the order below.
 ```typescript
 type SpotDeployAction =
 | {
@@ -42,6 +42,14 @@ disableQuoteToken: { token: number };
 | { /* note: must be sent after disableQuoteToken */
 type: "spotDeploy";
 disableAlignedQuoteToken: { token: number };
+}
+| {
+type: "spotDeploy";
+setTokenAnnotation: SetTokenAnnotation;
+}
+| {
+type: "spotDeploy";
+setDeployerLabel: SetDeployerLabel;
 };
 type RegisterToken2 = {
 spec: TokenSpec;
@@ -109,5 +117,29 @@ nSeededLevels?: number;
 type SetDeployerTradingFeeShare {
 token: number;
 share: string;
+}
+/**
+* This is an optional action that can be performed at any time after
+* RegisterToken2. The annotation can be changed at most once per day.
+* @param token - The token
+* @param annotation - The annotation to display for the token.
+*/
+type SetTokenAnnotation = {
+token: number;
+annotation: {
+category: string; // <= 15 characters
+description: string; // <= 400 characters
+displayName: string | null; // <= 9 characters
+keywords: Array<string>; // <= 2 keywords, each keyword <= 10 characters
+};
+}
+/**
+* This is an optional action that sets a label displayed for the deployer's tokens.
+* The label can only be set once per deployer.
+* @param label - The deployer label (2-4 lowercase characters). Must be unique
+* across perp dexs and other deployer labels.
+*/
+type SetDeployerLabel = {
+label: string;
 }
 ```

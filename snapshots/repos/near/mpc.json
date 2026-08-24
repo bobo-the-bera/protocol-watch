@@ -1,10 +1,10 @@
 {
-  "committed_at": "2026-08-21T10:43:58Z",
-  "html_url": "https://github.com/near/mpc/commit/b0b6b7167e89c015ad59bfb4b0bbc78fcc8432cc",
-  "message": "feat: expose finality status for e2e test framework and unify syntax with codebase (#4205)",
+  "committed_at": "2026-08-24T08:05:03Z",
+  "html_url": "https://github.com/near/mpc/commit/ee96d674ad2d068b6e6ddcc15cb86952c8d306fd",
+  "message": "feat(mpc-contract): cancel_node_migration() function in contract (#3886)",
   "protocol": "near",
   "repo": "near/mpc",
-  "sha": "b0b6b7167e89c015ad59bfb4b0bbc78fcc8432cc",
+  "sha": "ee96d674ad2d068b6e6ddcc15cb86952c8d306fd",
   "slug": "mpc",
   "tags": [
     "mpc",
