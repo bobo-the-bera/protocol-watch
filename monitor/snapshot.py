@@ -248,19 +248,46 @@ def snapshot_target(target: Target, snapshot_dir: Path, global_ignores: tuple[st
         # Prefer those over dynamic HTML whenever available.
         from urllib.parse import urljoin
     
-        soup = BeautifulSoup(response.text, "html.parser")
-        markdown_link = soup.select_one('a[href$=".md"]')
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Only follow Markdown links hosted on the same documentation domain.
+# This prevents "Edit on GitHub" .md links from being archived as GitHub HTML.
+target_host = urlparse(target.url).netloc.lower()
+markdown_url = None
+
+for link in soup.select('a[href$=".md"]'):
+    href = link.get("href")
+    if not href:
+        continue
+
+    candidate = urljoin(target.url, href)
+
+    if urlparse(candidate).netloc.lower() == target_host:
+        markdown_url = candidate
+        break
+
+if markdown_url:
+    markdown_response = fetch(markdown_url)
+    markdown_body = markdown_response.text
+
+    # Safety fallback in case a supposed .md endpoint actually returns HTML.
+    stripped = markdown_body.lstrip().lower()
+
+    if stripped.startswith("<!doctype html") or stripped.startswith("<html"):
+        extracted = extract_html_text(
+            response.text,
+            target.url,
+            include_scripts="frontend-bundles" in target.tags,
+        )
+    else:
+        extracted = markdown_body
+else:
+    extracted = extract_html_text(
+        response.text,
+        target.url,
+        include_scripts="frontend-bundles" in target.tags,
+    )
     
-        if markdown_link and markdown_link.get("href"):
-            markdown_url = urljoin(target.url, markdown_link["href"])
-            markdown_response = fetch(markdown_url)
-            extracted = markdown_response.text
-        else:
-            extracted = extract_html_text(
-                response.text,
-                target.url,
-                include_scripts="frontend-bundles" in target.tags,
-            )
     normalized = normalize_text(extracted, (*global_ignores, *target.ignore_patterns))
 
     protocol_dir = snapshot_dir / "pages" / target.protocol / namespace
