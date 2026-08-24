@@ -1,10 +1,10 @@
 {
-  "committed_at": "2026-08-24T08:05:03Z",
-  "html_url": "https://github.com/near/mpc/commit/ee96d674ad2d068b6e6ddcc15cb86952c8d306fd",
-  "message": "feat(mpc-contract): cancel_node_migration() function in contract (#3886)",
+  "committed_at": "2026-08-24T10:41:42Z",
+  "html_url": "https://github.com/near/mpc/commit/547caa8e3e381c677c805b9ad95174408829c42f",
+  "message": "refactor: add typed init call to mpc contract interface (#4207)",
   "protocol": "near",
   "repo": "near/mpc",
-  "sha": "ee96d674ad2d068b6e6ddcc15cb86952c8d306fd",
+  "sha": "547caa8e3e381c677c805b9ad95174408829c42f",
   "slug": "mpc",
   "tags": [
     "mpc",
