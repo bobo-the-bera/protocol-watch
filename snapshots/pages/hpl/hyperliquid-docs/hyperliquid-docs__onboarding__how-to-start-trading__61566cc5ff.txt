@@ -41,7 +41,7 @@ With perpetual contracts, you use USDC as collateral to long or short the token 
 3. Arbitrum is a common chain to receive USDC, if your centralized exchange does not directly support Hyperliquid.
 1. To get USDC on Arbitrum, you can use various bridges, such as <https://bridge.arbitrum.io/>, <https://app.debridge.finance/>, <https://swap.mayan.finance/>, <https://app.across.to/bridge?>, <https://routernitro.com/swap>, <https://jumper.exchange/>, <https://synapseprotocol.com/>, and <https://relay.link/bridge>
 2. Alternatively, you can move funds directly to Arbitrum from a centralized exchange, if you’re already using one.
-3. Once you have ETH and USDC on Arbitrum, you can deposit by clicking the “Deposit” button on [https://app.hyperliquid.xyz/trade](https://hyperliquid.xyz/trade)
+3. Once you have ETH and USDC on Arbitrum, you can deposit by clicking the “Deposit” button on <https://app.hyperliquid.xyz/trade>
 ### How do I withdraw USDC from Hyperliquid?
-1. On [https://app.hyperliquid.xyz/trade](https://hyperliquid.xyz/trade), click the “Withdraw” button in the bottom right.
+1. On <https://app.hyperliquid.xyz/trade>, click the “Withdraw” button in the bottom right.
 2. Follow the steps. Depending on the withdrawal chain and method, there may be small gas fees to process the withdrawal.
